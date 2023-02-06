@@ -1,31 +1,28 @@
-# Windows {#windows}
+Windows {#windows}
+=====
 
-**[Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)**
-
-**[Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)**
-
+[Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
+[Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
 [Helpful Command Line Commands](https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/)
 
 Basic
 
-* cd or chdir Change directory (Linux = cd)
-* dir List directory contents (Linux = ls)
-* md or mkdir Create directory (Linux = mkdir)
-* copy Copy file (Linux = cp)
-* move Move (Cut/Paste) files (Linux = mv)
-* clip  Copies to Clipboard
-* del or erase Delete files/directories (Linux = rm or shred)
-* rd or rmdir Remove directory if empty (Linux = rm)
-* find Search a file for a specific string (Linux = grep)
-* exit Close CMD (Linux = exit)
-* type Show contents of file (Linux = cat)
-* cls Clear screen
-* findstr Find string
-* clip - Add to clipboard
+cd or chdir Change directory (Linux = cd)
+dir List directory contents (Linux = ls)
+md or mkdir Create directory (Linux = mkdir)
+copy Copy file (Linux = cp)
+move Move (Cut/Paste) files (Linux = mv)
+clip  Copies to Clipboard
+del or erase Delete files/directories (Linux = rm or shred)
+rd or rmdir Remove directory if empty (Linux = rm)
+find Search a file for a specific string (Linux = grep)
+exit Close CMD (Linux = exit)
+type Show contents of file (Linux = cat)
+cls Clear screen
+findstr Find string
+clip - Add to clipboard
 
 Environment Variables
-
-
 
 * set Shows all PC Environment Variables
 * %CD%	 Current Directory
@@ -137,6 +134,8 @@ System Management
 
 
 ### Cmdlets to monitor as replacements for WMIC {#cmdlets-to-monitor-as-replacements-for-wmic}
+
+
 
 * Export-BinaryMiLog
 * Get-CimAssociatedInstance
