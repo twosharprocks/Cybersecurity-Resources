@@ -14,7 +14,7 @@ Linux - Bash Commands
 
 [BASH Cheat Sheet \[Top 25\]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 
-Basic Bash
+#Basic Bash
 ----------
 
 `↑ ↓` - Scrolls through previous commands, → Completes partial path with available file/dir
