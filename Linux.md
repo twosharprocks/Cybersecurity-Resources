@@ -1,2 +1,191 @@
-<body class="c14 doc-content"><h1 class="c15 c22" id="h.l4q92qdl4kkn"><span class="c19">Linux</span></h1><p class="c0"><span class="c1"></span></p><p class="c6"><span class="c9"><a class="c8" href="https://www.google.com/url?q=https://linuxcommand.org/lc3_resources.php&amp;sa=D&amp;source=editors&amp;ust=1675654420279698&amp;usg=AOvVaw2Ux43W4_Khn12VamWzVVXn">Linux Command Resources</a></span><span class="c1">&nbsp;[HUGE Resource with links to more]</span></p><p class="c6"><span class="c9"><a class="c8" href="https://www.google.com/url?q=https://www.kernel.org/doc/man-pages/&amp;sa=D&amp;source=editors&amp;ust=1675654420280064&amp;usg=AOvVaw3_yJhPj0oEpnSD62WVaDLc">Linux man-pages project</a></span></p><p class="c6"><span class="c9"><a class="c8" href="https://www.google.com/url?q=https://man7.org/linux/man-pages/index.html&amp;sa=D&amp;source=editors&amp;ust=1675654420280387&amp;usg=AOvVaw2UtrMfeEppcVVPHZ5d7WJ6">Linux MAN Pages</a></span></p><p class="c0"><span class="c1"></span></p><h2 class="c15 c20" id="h.exiwdqma2o74"><span class="c18">Basic Bash</span></h2><p class="c6"><span class="c9"><a class="c8" href="https://www.google.com/url?q=https://programminghistorian.org/en/lessons/intro-to-bash&amp;sa=D&amp;source=editors&amp;ust=1675654420280857&amp;usg=AOvVaw2iokTNsMFdq8miUjiTW4D6">Full &ldquo;Intro to BASH&rdquo; Reference</a></span></p><p class="c6"><span class="c9"><a class="c8" href="https://www.google.com/url?q=https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html&amp;sa=D&amp;source=editors&amp;ust=1675654420281160&amp;usg=AOvVaw2R5DpTs52fpVbg0xKTF8Xj">BASH Beginners Guide [HUGE reference]</a></span></p><p class="c6"><span class="c9"><a class="c8" href="https://www.google.com/url?q=https://www.educative.io/blog/bash-shell-command-cheat-sheet&amp;sa=D&amp;source=editors&amp;ust=1675654420281499&amp;usg=AOvVaw0eLxnRT8mBkhUX7JpzknBs">BASH Cheat Sheet [Top 25]</a></span></p><p class="c0"><span class="c1"></span></p>
-<p class="c6"><span class="c2">&uarr; &darr;</span><span>&nbsp;- Scrolls through previous commands, </span><span class="c2">&rarr;</span><span class="c1">&nbsp;Completes partial path with available file/dir</span></p><p class="c6"><span class="c2">CtrlC</span><span>&nbsp;- Cancels/stops your current line/command (displays as </span><span class="c3">^C</span><span class="c1">)</span></p><p class="c6"><span class="c2">clear</span><span>&nbsp;Clear console, </span><span class="c2">reset</span><span>&nbsp;Reset console, </span><span class="c2">exit</span><span class="c1">&nbsp;Close console</span></p><p class="c0"><span class="c1"></span></p><p class="c6"><span class="c2">start</span><span>&nbsp;Start argument (eg. </span><span class="c3">start foldername</span><span class="c1">&nbsp;will open foldername)</span></p><p class="c6"><span class="c2">man</span><span class="c1">&nbsp;Manual &amp; options for whatever command follows it</span></p><p class="c6"><span class="c2">--help</span><span>&nbsp;Help for whatever command you put in front (eg. </span><span class="c3">ls --help</span><span class="c1">&nbsp;shows help for &ldquo;ls&rdquo;)</span></p><p class="c6"><span class="c2">whatis </span><span class="c1">shorter version of &ldquo;man&rdquo;</span></p><p class="c6"><span class="c2">which </span></p><p class="c6"><span class="c2">whereis</span><span class="c1">&nbsp;all locations of a thing</span></p><p class="c0"><span class="c1"></span></p><h3 class="c6 c15" id="h.hfnctipb5sv7"><span class="c17 c12 c10">Directories</span></h3><p class="c6"><span class="c2">ls</span><span class="c1">&nbsp;List</span></p><p class="c6"><span>Options: </span><span class="c2">-la</span><span>&nbsp;show size &amp; permissions (&amp; hidden files), </span><span class="c2">-s</span><span>&nbsp;file sizes, </span><span class="c2">-S</span><span>&nbsp;largest first ln link a file</span></p><p class="c6"><span class="c2">pwd</span><span>&nbsp;Print Working Directory,</span><span class="c2">cd</span><span class="c1">&nbsp;Change Directory (eg. cd /tmp/var), </span></p><p class="c6"><span class="c2">mkdir</span><span>&nbsp;Make Directory, </span><span class="c2">rm</span><span>&nbsp;or </span><span class="c2">rmdir</span><span>&nbsp;Remove Directory, </span><span class="c2">mv</span><span>&nbsp;or </span><span class="c2">mvdir</span><span class="c1">&nbsp;(eg. mvdir folder /new/dir)</span></p><ul class="c13 lst-kix_ok47ax8ndwn8-0 start"><li class="c6 c7 c16 li-bullet-0"><span class="c2">mkdir -p parent/{F1,F2,F3}/{temp1,temp2}</span><span class="c1">&nbsp;creates folder &ldquo;Parent&rdquo; with sub-directories F1, F2 &amp; F3 each with temp1 &amp; temp2 directores inside each sub-directory.</span></li><li class="c6 c7 c16 li-bullet-0"><span class="c2">-r</span><span>&nbsp;or </span><span class="c2">-R</span><span class="c1">&nbsp;Recursive, applies command throughout (eg. rm -r folder removes folder &amp; contents)</span></li></ul><p class="c6"><span class="c2">..</span><span>&nbsp;Parent Directory (One level above), </span><span class="c2">//</span><span class="c1">&nbsp;Root directory</span></p><p class="c0"><span class="c1"></span></p><h3 class="c6 c15" id="h.razlokx2f74d"><span class="c17 c12 c10">Files</span></h3><p class="c6"><span class="c2">touch</span><span>&nbsp;Create new file (eg. </span><span class="c3">touch dir/sample.txt)</span></p><p class="c6"><span class="c2">cp</span><span>&nbsp;Copy (eg. </span><span class="c3">cp test.txt dir/test2.txt</span><span class="c1">)</span></p><p class="c6"><span class="c2">rm</span><span class="c1">&nbsp;to remove file</span></p><p class="c6"><span class="c2">shred</span><span class="c1">&nbsp;to permanently delete file</span></p><p class="c0"><span class="c4 c2"></span></p><p class="c6"><span class="c2">&gt;</span><span>&nbsp;Create/write to file (eg. </span><span class="c3">echo &ldquo;Hello world&rdquo; &gt; Hi.txt</span><span class="c1">&nbsp;creates Hi.txt with &ldquo;Hello world&rdquo; inside)</span></p><p class="c6"><span class="c2">&gt;&gt;</span><span class="c1">&nbsp;Append to file (eg. Creates file if it doesn&rsquo;t exist, add to existing file if it does)</span></p><p class="c0"><span class="c4 c2"></span></p><p class="c6"><span class="c2">cat</span><span class="c1">&nbsp;Concatenate (combine &amp; display) [Using cat]</span></p><p class="c6"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eg. </span><span class="c3">cat 1.txt 2.txt</span><span class="c1">&nbsp;combines files, displays output on console</span></p>
+# Linux
+
+[Linux Command Resources](https://linuxcommand.org/lc3_resources.php) [HUGE Resource with links to more]
+
+[Linux man-pages project](https://www.kernel.org/doc/man-pages/)
+
+[Linux MAN Pages](https://man7.org/linux/man-pages/index.html)
+
+
+## Basic Bash
+
+[Full “Intro to BASH” Reference](https://programminghistorian.org/en/lessons/intro-to-bash)
+
+[BASH Beginners Guide [HUGE reference]](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
+
+[BASH Cheat Sheet [Top 25]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
+
+↑ ↓ - Scrolls through previous commands, → Completes partial path with available file/dir
+
+CtrlC - Cancels/stops your current line/command (displays as _^C_)
+
+clear Clear console, reset Reset console, exit Close console
+
+start Start argument (eg. _start foldername_ will open foldername)
+
+man Manual & options for whatever command follows it
+
+--help Help for whatever command you put in front (eg. _ls --help_ shows help for “ls”)
+
+whatis shorter version of “man”
+
+which 
+
+whereis all locations of a thing
+
+
+### **<span style="text-decoration:underline;">Directories</span>**
+
+ls List
+
+Options: -la show size & permissions (& hidden files), -s file sizes, -S largest first ln link a file
+
+pwd Print Working Directory,cd Change Directory (eg. cd /tmp/var), 
+
+mkdir Make Directory, rm or rmdir Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
+
+
+
+* mkdir -p parent/{F1,F2,F3}/{temp1,temp2} creates folder “Parent” with sub-directories F1, F2 & F3 each with temp1 & temp2 directores inside each sub-directory.
+* -r or -R Recursive, applies command throughout (eg. rm -r folder removes folder & contents)
+
+.. Parent Directory (One level above), // Root directory
+
+
+### **<span style="text-decoration:underline;">Files</span>**
+
+touch Create new file (eg. _touch dir/sample.txt)_
+
+cp Copy (eg. _cp test.txt dir/test2.txt_)
+
+rm to remove file
+
+shred to permanently delete file
+
+> Create/write to file (eg. _echo “Hello world” > Hi.txt_ creates Hi.txt with “Hello world” inside)
+
+>> Append to file (eg. Creates file if it doesn’t exist, add to existing file if it does)
+
+cat Concatenate (combine & display) [Using cat]
+
+	eg. _cat 1.txt 2.txt_ combines files, displays output on console
+
+	eg. _cat 1.txt 2.txt **>** 1_2.txt_ combines & writes 1_2.txt (<span style="text-decoration:underline;">overwrites</span> if 1_2.txt exists)
+
+	eg. _cat 1.txt 2.txt **>>** 1_2.txt_ combines & writes 1_2.txt (<span style="text-decoration:underline;">appends</span> if 1_2.txt exists)
+
+[Options](https://man7.org/linux/man-pages/man1/cat.1.html): -s suppress repeated empty output lines, -n display line numbers, -e $ at end of line, -b # of nonempty lines
+
+more Display file one page at a time, spacebar for next page.
+
+less Greater flexibility.  Scroll horizontally/forward/backward one line at a time
+
+	q to exit file line display 
+
+head Display top 10 lines (eg. _head -n 4 logfile1.txt_ displays first 4 lines with line #’s)
+
+tail Display bottom 10 lines (eg. _tail -26 test.rtf_ shows last 26 lines of test.rtf)
+
+cmp Compare files
+
+diff Show differences between files
+
+sed Edits a stream sed s/(old value)/(replacement value)/ [<span style="text-decoration:underline;">CAUTION: sed overwrites</span>]
+
+eg. “The Dog chased a Ball”, _sed s/Ball/Cat/_ changes it to “The Dog chased a Cat”
+
+awk Data processing and extracting/reporting from streams [[Using awk](https://opensource.com/article/20/9/awk-ebook)]
+
+eg. _awk -F, '{print $(field#)}'_ then awk isolates column (field#) with ‘,’ separating data
+
+eg. _awk -F ‘{print $4, $7}’_ reads a new column for each space, prints columns 4 & 7
+
+find Searches for file/directory names [[Using find] function](https://www.diskinternals.com/linux-reader/bash-find-command/)
+
+[Options](https://man7.org/linux/man-pages/man1/find.1.html): iname ignore case, -type file (f) or directory (d),
+
+
+    eg. _find -type f -iname `*.txt’_ finds all .txt files
+
+
+    eg. _find -type d -iname rogers*_ finds directories starting with “rogers” ignoring case
+
+
+    eg. _find /directory/folder -type f -iname `log.txt`_” searches different directory
+
+grep Sarching inside files for data [[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)]
+
+	[Options:](https://man7.org/linux/man-pages/man1/grep.1.html) -c count, -r recursive, -i case insensitive, -l list filename
+
+
+    eg. _grep bob log1.txt_ finds ‘bob’ in log1.txt
+
+
+    eg. _grep -i bob log1.txt_” find ‘bob’ regardless of casing
+
+
+    eg. _grep -il bob *.txt_ finds ‘bob’ in all text files, but only returns filenames
+
+xxd [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) a file
+
+	xxd [options] [file]
+
+
+### **<span style="text-decoration:underline;">Networking</span>**
+
+wget Get 
+
+curl Call a URL
+
+ifconfig (Needs install?)
+
+ip address (IP info)
+
+resolvectl status Provides DNS server
+
+ping Sends Ping
+
+	ping -c 5 Sends 5 pings
+
+netstat Shows open ports
+
+ss Shows socket statistics
+
+	-tulpn Shows tcp & udp sockets that are listening, processes using the sockets, without resolving service names
+
+iptables
+
+ufw
+
+	ufw allow 80 Allows port 80
+
+uname
+
+	uname -a
+
+nslookup
+
+host
+
+dig 
+
+neofetch (Needs install)
+
+cal Calender
+
+
+### **<span style="text-decoration:underline;">Special</span>**
+
+* Wildcard 
+
+eg. rm test/*-geoff removes all in test that end in “-geoff”
+
+eg. rm * will remove all files in the current directory
+
+&& Execute another command in the same line ONLY if the previous command worked
+
+  |   Pipe, Redirects command into another (from left to right)
+
+  ||  Double Pipe, operates as command 1 OR command 2
+
+  ;   Semicolon, starts an entirely new command regardless of what was before
