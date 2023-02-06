@@ -1,191 +1,178 @@
-# Linux
+Linux - Bash Commands
+=====
 
-[Linux Command Resources](https://linuxcommand.org/lc3_resources.php) [HUGE Resource with links to more]
+[Linux Command Resources](https://linuxcommand.org/lc3_resources.php) \[HUGE Resource with links to more\]
 
 [Linux man-pages project](https://www.kernel.org/doc/man-pages/)
 
 [Linux MAN Pages](https://man7.org/linux/man-pages/index.html)
 
 
-## Basic Bash
-
 [Full “Intro to BASH” Reference](https://programminghistorian.org/en/lessons/intro-to-bash)
 
-[BASH Beginners Guide [HUGE reference]](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
+[BASH Beginners Guide \[HUGE reference\]](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 
-[BASH Cheat Sheet [Top 25]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
+[BASH Cheat Sheet \[Top 25\]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 
-↑ ↓ - Scrolls through previous commands, → Completes partial path with available file/dir
+Basic Bash
+----------
 
-CtrlC - Cancels/stops your current line/command (displays as _^C_)
+`↑ ↓` - Scrolls through previous commands, → Completes partial path with available file/dir
 
-clear Clear console, reset Reset console, exit Close console
+`CtrlC` - Cancels/stops your current line/command (displays as _^C_)
 
-start Start argument (eg. _start foldername_ will open foldername)
+`clear` Clear console, reset Reset console, exit Close console
 
-man Manual & options for whatever command follows it
+`start` Start argument (eg. _start foldername_ will open foldername)
 
---help Help for whatever command you put in front (eg. _ls --help_ shows help for “ls”)
+`man` Manual & options for whatever command follows it
 
-whatis shorter version of “man”
+`--help` Help for whatever command you put in front (eg. _ls --help_ shows help for “ls”)
 
-which 
+`whatis` shorter version of “man”
 
-whereis all locations of a thing
+`which`
 
+`whereis` all locations of a thing
 
-### **<span style="text-decoration:underline;">Directories</span>**
+# **Directories**
 
-ls List
+`ls` List directory contents 
+* `-la` Show size & permissions (& hidden files), `-s` file sizes, `-S` largest first ln link a file
 
-Options: -la show size & permissions (& hidden files), -s file sizes, -S largest first ln link a file
+`pwd` Print Working Directory
 
-pwd Print Working Directory,cd Change Directory (eg. cd /tmp/var), 
+`cd` Change Directory (eg. cd /tmp/var),
 
-mkdir Make Directory, rm or rmdir Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
+`mkdir` Make Directory 
+*   `mkdir -p parent/{F1,F2,F3}/{temp1,temp2}` creates folder “Parent” with sub-directories F1, F2 & F3 each, with temp1 & temp2 directores inside each sub-directory.
 
+`rm` or `rmdir` Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
+* `-r` or `-R` "Recursive", applies command throughout (eg. `rm -r foldername` removes folder & it's contents)
 
+`..` Parent Directory (One level above), // Root directory
 
-* mkdir -p parent/{F1,F2,F3}/{temp1,temp2} creates folder “Parent” with sub-directories F1, F2 & F3 each with temp1 & temp2 directores inside each sub-directory.
-* -r or -R Recursive, applies command throughout (eg. rm -r folder removes folder & contents)
+# **Files**
 
-.. Parent Directory (One level above), // Root directory
+`touch` Create new file (eg. `touch dir/sample.txt)`
 
+`cp` Copy (eg. `cp test.txt dir/test2.txt` copies test.txt to directory dir and renames it test2.txt)
 
-### **<span style="text-decoration:underline;">Files</span>**
+`rm` to remove file
 
-touch Create new file (eg. _touch dir/sample.txt)_
+`shred` to permanently delete file
 
-cp Copy (eg. _cp test.txt dir/test2.txt_)
+`>` Create/write to file (eg. `echo “Hello world” > Hi.txt` creates Hi.txt with “Hello world” inside)
 
-rm to remove file
+`>>` Append to file (Creates file if it doesn’t exist, adds to existing file if it does)
 
-shred to permanently delete file
+`cat` Concatenate (combine & display)
+* Options: `-s` suppress repeated empty output lines, `-n` display line numbers, `-e` $ at end of line, `-b` # of non-empty lines
+* eg. `cat 1.txt 2.txt` combines files & displays on console
+* eg. `cat 1.txt 2.txt **\>** 1\_2.txt` combines & writes data to 1\_2.txt (overwrites if 1\_2.txt already exists)
+* eg. `cat 1.txt 2.txt **\>>** 1\_2.txt` combines & writes data to 1\_2.txt (appends if 1\_2.txt already exists)
 
-> Create/write to file (eg. _echo “Hello world” > Hi.txt_ creates Hi.txt with “Hello world” inside)
+`more` Display file one page at a time, spacebar for next page.
 
->> Append to file (eg. Creates file if it doesn’t exist, add to existing file if it does)
+`less` Greater flexibility. Scroll horizontally/forward/backward one line at a time
 
-cat Concatenate (combine & display) [Using cat]
+`q` to exit file line display
 
-	eg. _cat 1.txt 2.txt_ combines files, displays output on console
+`head` Display top 10 lines (eg. `head -n 4 logfile1.txt` displays first 4 lines with line #’s)
 
-	eg. _cat 1.txt 2.txt **>** 1_2.txt_ combines & writes 1_2.txt (<span style="text-decoration:underline;">overwrites</span> if 1_2.txt exists)
+`tail` Display bottom 10 lines (eg. `tail -26 test.rtf` shows last 26 lines of test.rtf)
 
-	eg. _cat 1.txt 2.txt **>>** 1_2.txt_ combines & writes 1_2.txt (<span style="text-decoration:underline;">appends</span> if 1_2.txt exists)
+`cmp` Compare files
 
-[Options](https://man7.org/linux/man-pages/man1/cat.1.html): -s suppress repeated empty output lines, -n display line numbers, -e $ at end of line, -b # of nonempty lines
+`diff` Show differences between files
 
-more Display file one page at a time, spacebar for next page.
+`sed` Edits a stream sed s/(old value)/(replacement value)/ \[CAUTION: `sed` overwrites\]
 
-less Greater flexibility.  Scroll horizontally/forward/backward one line at a time
+* eg. “The Dog chased a Ball”, `sed s/Ball/Cat/` changes it to “The Dog chased a Cat”
 
-	q to exit file line display 
+`awk` Data processing and extracting/reporting from streams \[[Using awk](https://opensource.com/article/20/9/awk-ebook)\]
 
-head Display top 10 lines (eg. _head -n 4 logfile1.txt_ displays first 4 lines with line #’s)
+* eg. `awk -F, '{print $(field#)}'` then awk isolates column (field#) with ‘,’ separating data
 
-tail Display bottom 10 lines (eg. _tail -26 test.rtf_ shows last 26 lines of test.rtf)
+* eg. `awk -F ‘{print $4, $7}’` reads a new column for each space, prints columns 4 & 7
 
-cmp Compare files
+`find` Searches for file/directory names \[[Using find function](https://www.diskinternals.com/linux-reader/bash-find-command/)]
+* [Options](https://man7.org/linux/man-pages/man1/find.1.html): iname ignore case, -type file (f) or directory (d),
 
-diff Show differences between files
+eg. `find -type f -iname \`\*.txt’` finds all .txt files
 
-sed Edits a stream sed s/(old value)/(replacement value)/ [<span style="text-decoration:underline;">CAUTION: sed overwrites</span>]
+eg. `find -type d -iname rogers\*` finds directories starting with “rogers” ignoring case
 
-eg. “The Dog chased a Ball”, _sed s/Ball/Cat/_ changes it to “The Dog chased a Cat”
+eg. `find /directory/folder -type f -iname \`log.txt\`` searches different directory
 
-awk Data processing and extracting/reporting from streams [[Using awk](https://opensource.com/article/20/9/awk-ebook)]
+`grep` Sarching inside files for data \[[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)\]
 
-eg. _awk -F, '{print $(field#)}'_ then awk isolates column (field#) with ‘,’ separating data
+* [Options:](https://man7.org/linux/man-pages/man1/grep.1.html) -c count, -r recursive, -i case insensitive, -l list filename
 
-eg. _awk -F ‘{print $4, $7}’_ reads a new column for each space, prints columns 4 & 7
+eg. `grep bob log1.txt` finds ‘bob’ in log1.txt
 
-find Searches for file/directory names [[Using find] function](https://www.diskinternals.com/linux-reader/bash-find-command/)
+eg. `grep -i bob log1.txt` find ‘bob’ regardless of casing
 
-[Options](https://man7.org/linux/man-pages/man1/find.1.html): iname ignore case, -type file (f) or directory (d),
+eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns filenames
 
+`xxd` [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) a file
 
-    eg. _find -type f -iname `*.txt’_ finds all .txt files
+`xxd` \[options\] \[file\]
 
+# **Networking**
 
-    eg. _find -type d -iname rogers*_ finds directories starting with “rogers” ignoring case
+`wget` Get
 
+`curl` Call a URL
 
-    eg. _find /directory/folder -type f -iname `log.txt`_” searches different directory
+`ifconfig` (Needs install?)
 
-grep Sarching inside files for data [[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)]
+`ip address` (IP info)
 
-	[Options:](https://man7.org/linux/man-pages/man1/grep.1.html) -c count, -r recursive, -i case insensitive, -l list filename
+`resolvectl` status Provides DNS server
 
+`ping` Sends Ping
 
-    eg. _grep bob log1.txt_ finds ‘bob’ in log1.txt
+* eg. `ping -c 5` Sends 5 pings
 
+`netstat` Shows open ports
 
-    eg. _grep -i bob log1.txt_” find ‘bob’ regardless of casing
+`ss` Shows socket statistics
 
+`-tulpn` Shows tcp & udp sockets that are listening, processes using the sockets, without resolving service names
 
-    eg. _grep -il bob *.txt_ finds ‘bob’ in all text files, but only returns filenames
+`iptables`
 
-xxd [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) a file
+`ufw`
 
-	xxd [options] [file]
+* eg. `ufw allow 80` Allows port 80
 
+`uname`
 
-### **<span style="text-decoration:underline;">Networking</span>**
+* Options: -a
 
-wget Get 
+`nslookup`
 
-curl Call a URL
+`host`
 
-ifconfig (Needs install?)
+`dig`
 
-ip address (IP info)
+`neofetch` (Needs install)
 
-resolvectl status Provides DNS server
+`cal` Calender
 
-ping Sends Ping
+# **Special**
 
-	ping -c 5 Sends 5 pings
+`*` Wildcard
 
-netstat Shows open ports
+* eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
 
-ss Shows socket statistics
+* eg. `rm *` will remove all files in the current directory
 
-	-tulpn Shows tcp & udp sockets that are listening, processes using the sockets, without resolving service names
+`&&` Execute another command in the same line ONLY if the previous command worked
 
-iptables
+`|` Pipe, Redirects command into another (from left to right)
 
-ufw
+`||` Double Pipe, operates as command 1 OR command 2
 
-	ufw allow 80 Allows port 80
-
-uname
-
-	uname -a
-
-nslookup
-
-host
-
-dig 
-
-neofetch (Needs install)
-
-cal Calender
-
-
-### **<span style="text-decoration:underline;">Special</span>**
-
-* Wildcard 
-
-eg. rm test/*-geoff removes all in test that end in “-geoff”
-
-eg. rm * will remove all files in the current directory
-
-&& Execute another command in the same line ONLY if the previous command worked
-
-  |   Pipe, Redirects command into another (from left to right)
-
-  ||  Double Pipe, operates as command 1 OR command 2
-
-  ;   Semicolon, starts an entirely new command regardless of what was before
+`;` Semicolon, starts an entirely new command regardless of what was before
