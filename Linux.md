@@ -14,10 +14,10 @@ Linux - Bash Commands
 
 [BASH Cheat Sheet \[Top 25\]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 
-#Basic Bash
+# **Basics**
 ----------
 
-`↑ ↓` - Scrolls through previous commands, → Completes partial path with available file/dir
+`↑ ↓` - Scrolls through previous commands, `→` Completes partial path with available file/dir
 
 `CtrlC` - Cancels/stops your current line/command (displays as _^C_)
 
@@ -29,13 +29,7 @@ Linux - Bash Commands
 
 `--help` Help for whatever command you put in front (eg. _ls --help_ shows help for “ls”)
 
-`whatis` shorter version of “man”
-
-`which`
-
-`whereis` all locations of a thing
-
-# **Directories**
+`whatis` Provides a shorter version of “man”
 
 `ls` List directory contents 
 * `-la` Show size & permissions (& hidden files), `-s` file sizes, `-S` largest first ln link a file
@@ -48,11 +42,10 @@ Linux - Bash Commands
 *   `mkdir -p parent/{F1,F2,F3}/{temp1,temp2}` creates folder “Parent” with sub-directories F1, F2 & F3 each, with temp1 & temp2 directores inside each sub-directory.
 
 `rm` or `rmdir` Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
-* `-r` or `-R` "Recursive", applies command throughout (eg. `rm -r foldername` removes folder & it's contents)
+* `-r` or `-R` "Recursive", applies command throughout 
+* eg. `rm -r foldername` removes folder & it's contents
 
 `..` Parent Directory (One level above), // Root directory
-
-# **Files**
 
 `touch` Create new file (eg. `touch dir/sample.txt)`
 
@@ -61,6 +54,22 @@ Linux - Bash Commands
 `rm` to remove file
 
 `shred` to permanently delete file
+
+`*` Wildcard
+
+* eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
+
+* eg. `rm *` will remove all files in the current directory
+
+`&&` Execute another command in the same line ONLY if the previous command worked
+
+`|` Pipe, Redirects command into another (from left to right)
+
+`||` Double Pipe, operates as command 1 OR command 2
+
+`;` Semicolon, starts an entirely new command regardless of what was before
+
+# **Writing & Finding Data**
 
 `>` Create/write to file (eg. `echo “Hello world” > Hi.txt` creates Hi.txt with “Hello world” inside)
 
@@ -97,17 +106,19 @@ Linux - Bash Commands
 * eg. `awk -F ‘{print $4, $7}’` reads a new column for each space, prints columns 4 & 7
 
 `find` Searches for file/directory names \[[Using find function](https://www.diskinternals.com/linux-reader/bash-find-command/)]
-* [Options](https://man7.org/linux/man-pages/man1/find.1.html): iname ignore case, -type file (f) or directory (d),
+* [Options](https://man7.org/linux/man-pages/man1/find.1.html): `iname` ignores case, `-type` file (`f`) or directory (`d`),
 
-eg. `find -type f -iname \`\*.txt’` finds all .txt files
+eg. `find -type f -iname *.txt’` finds all .txt files
 
-eg. `find -type d -iname rogers\*` finds directories starting with “rogers” ignoring case
+eg. `find -type d -iname rogers/*` finds directories starting with “rogers” ignoring case
 
-eg. `find /directory/folder -type f -iname \`log.txt\`` searches different directory
+eg. `find /directory/folder -type f -iname /log.txt` searches different directory
 
-`grep` Sarching inside files for data \[[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)\]
+`whereis` all locations of a file
 
-* [Options:](https://man7.org/linux/man-pages/man1/grep.1.html) -c count, -r recursive, -i case insensitive, -l list filename
+`grep` Searches inside files for a string \[[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)\]
+
+* [Options:](https://man7.org/linux/man-pages/man1/grep.1.html) `-c` count, `-r` recursive, `-i` case insensitive, `-l` list filename
 
 eg. `grep bob log1.txt` finds ‘bob’ in log1.txt
 
@@ -115,9 +126,7 @@ eg. `grep -i bob log1.txt` find ‘bob’ regardless of casing
 
 eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns filenames
 
-`xxd` [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) a file
-
-`xxd` \[options\] \[file\]
+`xxd` Provides a [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) for a file
 
 # **Networking**
 
@@ -160,19 +169,3 @@ eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns fi
 `neofetch` (Needs install)
 
 `cal` Calender
-
-# **Special**
-
-`*` Wildcard
-
-* eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
-
-* eg. `rm *` will remove all files in the current directory
-
-`&&` Execute another command in the same line ONLY if the previous command worked
-
-`|` Pipe, Redirects command into another (from left to right)
-
-`||` Double Pipe, operates as command 1 OR command 2
-
-`;` Semicolon, starts an entirely new command regardless of what was before
