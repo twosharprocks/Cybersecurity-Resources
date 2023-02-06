@@ -2,7 +2,9 @@ Windows
 =====
 
 [Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
+
 [Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+
 [Helpful Command Line Commands](https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/)
 
 # **Basics**
