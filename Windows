@@ -5,7 +5,8 @@ Windows
 [Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
 [Helpful Command Line Commands](https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/)
 
-Basic
+# **Basics**
+----------
 
 cd or chdir Change directory (Linux = cd)
 dir List directory contents (Linux = ls)
