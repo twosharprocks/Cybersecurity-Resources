@@ -1,4 +1,4 @@
-# Career {#career}
+# Career
 
 Cybersecurity Job Domains
 
