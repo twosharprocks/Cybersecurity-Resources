@@ -1,4 +1,4 @@
-# Cryptography {#cryptography}
+# Cryptography
 
 **Cryptography** is the art and science of keeping information secure through the use of mathematical concepts and techniques.
 
@@ -44,32 +44,32 @@ Goals of Cryptography - P.A.I.N.
 
 [Heartbleed Vulnerability](https://heartbleed.com/)
 
-openssl Initializes the OpenSSL program.
+`openssl` Initializes the OpenSSL program.
 
-enc Stands for “encryption.”
+`enc` Stands for “encryption.”
 
--pbkdf2 Specifies the encryption key type.
+`-pbkdf2` Specifies the encryption key type.
 
--nosalt Specifies that salting will not be applied.
+-nosalt` Specifies that salting will not be applied.
 
--aes-256-cbc Is the name of the cipher used
+`-aes-256-cbc` Is the name of the cipher used
 
--k KEY Defines the encryption key (“KEY” is the key)
+`-K` KEY Defines the encryption key (“KEY” is the key)
 
--iv INITIAL Defines the initialisation vector (IV) (“INITIAL” is the IV)
+`-iv` INITIAL Defines the initialisation vector (IV) (“INITIAL” is the IV)
 
--P > key_iv.txt Prints the key and IV to “key_iv.txt”
+`-P > key_iv.txt` Prints the key and IV to “key_iv.txt”
 
-<span style="text-decoration:underline;">Creating a key and IV</span>  \
-openssl enc -pbkdf2 -nosalt -aes-256-cbc -k mypassword -P > key_and_IV.txt
+<span style="text-decoration:underline;">Creating a key and IV</span>
+`openssl enc -pbkdf2 -nosalt -aes-256-cbc -k mypassword -P > key_and_IV.txt`
 
 <span style="text-decoration:underline;">Encrypting</span>
 
-openssl enc -pbkdf2 -nosalt -aes-256-cbc -in plaintextmsg.txt -out encodedmsg.txt.enc -base64 -K KEY_HERE -iv IV_HERE
+`openssl enc -pbkdf2 -nosalt -aes-256-cbc -in plaintextmsg.txt -out encodedmsg.txt.enc -base64 -K KEY_HERE -iv IV_HERE`
 
 <span style="text-decoration:underline;">Decrypting</span>
 
-openssl enc -pbkdf2 -nosalt -aes-256-cbc -in encodedmsg.txt.enc -d -base64 -K KEY_HERE -iv IV_HEREdf
+`openssl enc -pbkdf2 -nosalt -aes-256-cbc -in encodedmsg.txt.enc -d -base64 -K KEY_HERE -iv IV_HERE`
 
 
 ## Asymmetric Encryption {#asymmetric-encryption}
@@ -97,39 +97,37 @@ openssl enc -pbkdf2 -nosalt -aes-256-cbc -in encodedmsg.txt.enc -d -base64 -K KE
 
 [Quick and Easy GPG Cheetsheet](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/)
 
-gpg --gen-key Generate a new GPG key (requires name, email, comment & passphrase)
+`gpg --gen-key` Generate a new GPG key (requires name, email, comment & passphrase)
 
-gpg --list-keys List Public GPG keys on the system
+`gpg --list-keys` List Public GPG keys on the system
 
-gpg --list-secret-keys List Secret GPG keys on the system
+`gpg --list-secret-keys` List Secret GPG keys on the system
 
-gpg --edit-key &lt;targetemail> Edit key with adduid, trust, deluid and save
+`gpg --edit-key <targetemail>` Edit key with adduid, trust, deluid and save
 
-gpg --delete-key &lt;UID or Public Key> Delete Public Key of UID (or Public Key listed)
+`gpg --delete-key <UID or Public Key>` Delete Public Key of UID (or Public Key listed)
 
-gpg --delete-secret-key &lt;UID or Public Key> Delete Secret Key of UID (or Public Key listed)
+`gpg --delete-secret-key <UID or Public Key>` Delete Secret Key of UID (or Public Key listed)
 
-gpg --import &lt;targetname>.gpg Import someone’s Public Key
+`gpg --import <targetname>.gpg` Import someone’s Public Key
 
-gpg --output &lt;yourname>.gpg --export &lt;youremail> Export your Public Key
+`gpg --output &lt;yourname>.gpg --export <youremail>` Export your Public Key
 
-gpg --decrypt yourmsg.txt Decrypt yourmsg.txt sent by someone using your Public key
+`gpg --decrypt yourmsg.txt` Decrypt yourmsg.txt sent by someone using your Public key
 
-gpg --output secret.txt.enc --encrypt --recipient &lt;target> msg.txt  
+`gpg --output secret.txt.enc --encrypt --recipient &lt;target> msg.txt` Create encrypted file _secret.txt.enc_ for target using their Public key and _message.txt_
 
-Create encrypted file _secret.txt.enc_ for target using their Public key and _message.txt_
+`gpg --sign yourmsg.txt` Sign a file with GPG for verification (creates file _yourmsg.txt.gpg_)
 
-gpg --sign yourmsg.txt Sign a file with GPG for verification (creates file _yourmsg.txt.gpg_)
+	`--default-key` specifies default key if you have multiple keys on the system
 
-	--default-key specifies default key if you have multiple keys on the system
+`gpg --verify yourmsg.txt.gpg` Verify the signature of the document
 
-gpg --verify yourmsg.txt.gpg Verify the signature of the document
+`gpg --output yourmsg.txt --decrypt yourmsg.txt.gpg` Decrypt signed document
 
-gpg --output yourmsg.txt --decrypt yourmsg.txt.gpg Decrypt signed document
+`gpg --clearsign yourmsg.txt` Wrap file with ASCII-armored signature (no file modification)
 
-gpg --clearsign yourmsg.txt Wrap file with ASCII-armored signature (no file modification)
-
-gpg --output Signed.sig --detach-sig yourmsg.txt Create detached signature with signed file
+`gpg --output Signed.sig --detach-sig yourmsg.txt` Create detached signature with signed file
 
 
 ## Hashing  {#hashing}
@@ -168,14 +166,12 @@ gpg --output Signed.sig --detach-sig yourmsg.txt Create detached signature with 
 * BLAKE
     * Includes BLAKE, BLAKE2, and BLAKE3 
 
-md5sum * > hashes.txt
+`md5sum * > hashes.txt`
 
-md5sum -c hashes.txt
+`md5sum -c hashes.txt`
 
 
 ## Passwords
-
-
 
 * [How Passwords Work](https://delinea.com/blog/how-do-passwords-work)
 * [Using Ubuntu Keyring](https://itsfoss.com/ubuntu-keyring/)
@@ -221,8 +217,6 @@ md5sum -c hashes.txt
 **Replay Attack** invovles an attacker intercepting an encrypted message and replaying it to the receiving party to get access. (eg. detecting a car’s remote locking & rebroadcasting it)
 
 **Rainbow tables** are resources that contain precomputed hashes with the associated plaintext passwords. Mitigated by salting stored hashes.
-
-
 
 * [Understanding Rainbow Table Attacks](https://www.geeksforgeeks.org/understanding-rainbow-table-attack/)
 * [What are Salted Password Hashes?](https://www.okta.com/blog/2019/03/what-are-salted-passwords-and-password-hashing/) 
