@@ -1,4 +1,4 @@
-# Networking {#networking}
+# Basic Networking
 
 **<span style="text-decoration:underline;">Network security</span>** is the practices and policies used to protect and monitor a computer network’s resources against threats and risks.
 
@@ -21,8 +21,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * Advantages: Network speed/performance, security, versatility
 * Disadvantages: Limited to only sharing within their own network
 
-** \
-Wide Area Network (WAN)** is a network used to connect multiple LANs (Internet is a WAN)
+**Wide Area Network (WAN)** is a network used to connect multiple LANs (Internet is a WAN)
 
 
 
@@ -61,7 +60,7 @@ Wide Area Network (WAN)** is a network used to connect multiple LANs (Internet i
 
 **Bridge** Same as switch but only two connections, often used to tie two LANs together
 
-_Hub_ [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a switch but **cannot** be programmed
+**Hub** [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a switch but **cannot** be programmed
 
 **Network Interface Controller (NIC)** Connects Computer to a network
 
@@ -80,11 +79,9 @@ _Hub_ [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a swi
 
 **All-in-One Devices** Integrate Modems, WAPs, routers, and more.
 
+* Advantages: Easy to use, less equipment to setup/maintain
 
-    Advantages: Easy to use, less equipment to setup/maintain
-
-
-    Disadvantages: Single point of failure, difficult to troubleshoot.
+* Disadvantages: Single point of failure, difficult to troubleshoot.
 
 
 ## Network Security Devices {#network-security-devices}
@@ -97,14 +94,10 @@ _Hub_ [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a swi
 
 **Load Balancers** Distributes incoming traffic across multiple servers
 
-
-
 * Ensures no single server has too much traffic, protecting resource availability
 * Typically placed right after the firewall
 
 **Demilitarised Zone (DMZ)** Smaller subnetwork within a LAN to protect internal data
-
-
 
 * Typically has it’s own network security devices to detect/block before reaching internal networks
 
@@ -113,21 +106,17 @@ _Hub_ [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a swi
 
 **Linear** Each device is connected to the next via two-way link
 
-
-
 * Advantages: Adding devices to the network is easy.
 * Disadvantages: Single device failure can interrupt entire network. Variable latency between devices \
 
 
-**Ring** 	Each device is connected to the next in the loop (uni or bi-directional)
-
-
+**Ring** Each device is connected to the next in the loop (uni or bi-directional)
 
 * Advantages: Simple, no central node, adding is easy
 * Disadvantages: Every device is a failure point, variable latency \
 
 
-**Star** 	Each device is attached to a central node (eg. a server)
+**Star** Each device is attached to a central node (eg. a server)
 
 
 
@@ -135,7 +124,7 @@ _Hub_ [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a swi
 * Disadvantages: Network size limited by central node connections, difficult if central node is far from end devices \
 
 
-**Bus** 	Each device is attached to a central data link
+**Bus** Each device is attached to a central data link
 
 
 
@@ -143,7 +132,7 @@ _Hub_ [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a swi
 * Disadvantages: Bandwidth waste, devices cannot transmit simultaneously \
 
 
-**Tree** 	Each device has only one connection between any only connected 
+**Tree** Each device has only one connection between any only connected 
 
 
 
