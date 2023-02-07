@@ -8,8 +8,8 @@ Goals of Cryptography - P.A.I.N.
 
 * **Privacy** (Confidentiality) keeps data secure from unauthorized parties
 * **Authentication** is used to confirm the identities of the sender and receiver of data.
-* **Integrity **ensures a message isn’t altered in transit
-* **Non-Repudiation **prevents the original sender from denying they were the sender.
+* **Integrity** ensures a message isn’t altered in transit
+* **Non-Repudiation** prevents the original sender from denying they were the sender.
 
 [Cryptography [Wikibooks - Comprehensive Resource]](https://en.wikibooks.org/wiki/Cryptography)
 
@@ -23,21 +23,21 @@ Goals of Cryptography - P.A.I.N.
 
 [“Security Level”](https://en.wikipedia.org/wiki/Security_level) is the strength of the [cryptographic primitive](https://en.wikipedia.org/wiki/Cryptographic_primitive) 
 
-**Plaintext** Information in human-readable form.
+**Plaintext** - Information in human-readable form.
 
-**Ciphertext** Plaintext message that has been encrypted into an unreadable form
+**Ciphertext** - Plaintext message that has been encrypted into an unreadable form
 
-**Encryption** The process of converting plaintext to ciphertext.
+**Encryption** - The process of converting plaintext to ciphertext.
 
-**Decryption** The process of converting ciphertext to plaintext.
+**Decryption** - The process of converting ciphertext to plaintext.
 
-**Cipher** A method of performing encryption or decryption.
+**Cipher** - A method of performing encryption or decryption.
 
-**Key** A parameter specifying how plaintext is converted to ciphertext and vice versa.
+**Key** - A parameter specifying how plaintext is converted to ciphertext and vice versa.
 
-**Caesar Cipher **A type of cipher that shifts the letters in the alphabet by a fixed number.
+**Caesar Cipher** - A type of cipher that shifts the letters in the alphabet by a fixed number.
 
-**Enigma Cipher** A type of cipher used by Germany in World War II to encrypt messages.
+**Enigma Cipher** - A type of cipher used by Germany in World War II to encrypt messages.
 
 
 ## OpenSSL
@@ -50,7 +50,7 @@ Goals of Cryptography - P.A.I.N.
 
 `-pbkdf2` Specifies the encryption key type.
 
--nosalt` Specifies that salting will not be applied.
+`-nosalt` Specifies that salting will not be applied.
 
 `-aes-256-cbc` Is the name of the cipher used
 
@@ -117,8 +117,7 @@ Goals of Cryptography - P.A.I.N.
 
 `gpg --output secret.txt.enc --encrypt --recipient &lt;target> msg.txt` Create encrypted file _secret.txt.enc_ for target using their Public key and _message.txt_
 
-`gpg --sign yourmsg.txt` Sign a file with GPG for verification (creates file _yourmsg.txt.gpg_)
-
+`gpg --sign yourmsg.txt` Sign a file with GPG for verification (creates file _yourmsg.txt.gpg_) 
 	`--default-key` specifies default key if you have multiple keys on the system
 
 `gpg --verify yourmsg.txt.gpg` Verify the signature of the document
@@ -200,9 +199,7 @@ Goals of Cryptography - P.A.I.N.
 
 **Statistical Attack** exploits weakness in cryptographic algorithms by attempting to determine if the “random” values produced are actually predictable. 
 
-
-
-* **Frequency analysis** is a method for cracking substitution algorithms in a statistical attack.
+**Frequency analysis** is a method for cracking substitution algorithms in a statistical attack.
 
 **Brute Force Attack** involves attackers using many passwords or user and password combinations until one eventually works.
 
