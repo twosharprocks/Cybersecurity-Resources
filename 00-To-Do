@@ -1,7 +1,2 @@
 To Do
-* Cleanup: 02, 03, 05, 06, 07, 08
-* Fill out Linux/Networking
-* Expand Networking/Wireless
-* Add filters to Networking/Wireshark
-* Clean up Cryptography & OpenSSL
-* Add Misc/CTFs
+* Add Cryptography, Red/Blue Teams, GRC, Misc
