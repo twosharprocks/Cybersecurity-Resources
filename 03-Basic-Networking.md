@@ -28,7 +28,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * Disadvantages: Security Issues, Troubleshooting is challenging
 
 
-## Open Systems Interconnection (OSI) Model {#open-systems-interconnection-osi-model}
+## Open Systems Interconnection (OSI) Model
 
 <span style="text-decoration:underline;">Mnemonic: “Please do not throw sausage pizza away” </span>
 
@@ -47,7 +47,7 @@ Client-server model</span>** is a network computing model that defines how resou
 **Layer 7 - Application**: End User. Data Presentation. Enables Apps to access the net (SMTP, HTTP, FTP)
 
 
-## Network Devices {#network-devices}
+## Network Devices
 
 **Router** Used to connect two different LANS, two different WANs, or a LAN to a WAN 
 
@@ -71,8 +71,6 @@ Client-server model</span>** is a network computing model that defines how resou
 
 **Modem (Modulator-DeModulator)** Converts data to a format for the network
 
-
-
 * Computer speaks digital, ISP speaks analog
 
 **Wireless Access Point (WAP)** Provides wireless devices network connectivity
@@ -84,11 +82,9 @@ Client-server model</span>** is a network computing model that defines how resou
 * Disadvantages: Single point of failure, difficult to troubleshoot.
 
 
-## Network Security Devices {#network-security-devices}
+## Network Security Devices
 
 **Firewall** Monitors & manage incoming/outgoing traffic
-
-
 
 * Typically placed right at LAN entry point to protect confidentiality & integrity
 
@@ -102,7 +98,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * Typically has it’s own network security devices to detect/block before reaching internal networks
 
 
-## Network Topology {#network-topology}
+## Network Topology
 
 **Linear** Each device is connected to the next via two-way link
 
@@ -117,8 +113,6 @@ Client-server model</span>** is a network computing model that defines how resou
 
 
 **Star** Each device is attached to a central node (eg. a server)
-
-
 
 * Advantages: Consistent latency, easy to extend, node failure has no effect on network
 * Disadvantages: Network size limited by central node connections, difficult if central node is far from end devices \
@@ -153,21 +147,18 @@ Client-server model</span>** is a network computing model that defines how resou
 
 
 
-* Advantages/Disadvantages: Same as fully connected \
+* Advantages/Disadvantages: Same as fully connected
 
 
 **Hybrid** Mixture of different network topologies
 
 
-
 * Advantages/Disadvantages: Depend on network types being combined
 
 
-## IP Addresses {#ip-addresses}
+## IP Addresses
 
 **Internet Protocol (IP)** is a numerical network address associated with a device such as a computer, printer, router or server. 
-
-
 
 * [www.whatsmyip.org](http://www.whatsmyip.org) 
 * [iplocation.io](https://iplocation.io/) [Significant info from multiple sources, inc geolocation & ASN]
@@ -175,19 +166,9 @@ Client-server model</span>** is a network computing model that defines how resou
 
 <span style="text-decoration:underline;">IP Types</span>
 
-**IPv4** Four Octets (8 binary bits = one byte) ranging 0-255, separated by decimals 
+**IPv4** Four Octets (8 binary bits = one byte) ranging 0-255, separated by decimals (eg. 10.4.79.254)
 
-
-
-* _eg. 10.4.79.254_
-*  \
-
-
-**IPv6** Eight groups of 2 bytes encoded in hexidecimal (hex) separated by colon
-
-
-    _eg. 2001:0db8:85a3:0000:0000:8a2e:0370:7334_
-
+**IPv6** Eight groups of 2 bytes encoded in hexidecimal (hex) separated by colon (eg. 2001:0db8:85a3:0000:0000:8a2e:0370:7334)
 
 
 * IPv6 has <span style="text-decoration:underline;">not</span> been widely adopted and many devices need to be updated before accepting IPv6 addresses
@@ -196,34 +177,28 @@ Client-server model</span>** is a network computing model that defines how resou
 
 **Private IP addresses** are NOT exposed to the internet (typically within a LAN)
 
-
-
 * Assigned by LAN’s network administrator
 * Can be reused, won’t conflict across different networks, more secure
 * Private IPv4 ranges fall within:
-    * Class A Private = _10.0.0.0 - 10.255.255.255_ (16,777,216 available)
-    * Class B APIPA = _169.254.0.0 - 169.254.255.255_
+    * Class A Private = 10.0.0.0 - 10.255.255.255 (16,777,216 available)
+    * Class B APIPA = 169.254.0.0 - 169.254.255.255
         * Microsoft Windows feature automatically assigns this range if a Dynamic Host Configuration Protocol (DHCP) server is not available
     * Class B Private = _172.16.0.0 - 172.31.255.255_ (1,048,576 available)
-    * Class C Private = _192.168.0.0 - 192.168.255.255_	(65,536 available) \
+    * Class C Private = _192.168.0.0 - 192.168.255.255_	(65,536 available)
 
 
 **Public IP addresses** can be accessed over the internet
 
-
-
 * Assigned in IP ranges by an Internet Service Provider (ISP)
 * Any address **<span style="text-decoration:underline;">not</span>** within the Private IP4 ranges is **<span style="text-decoration:underline;">public</span>**
 * <span style="text-decoration:underline;">Public IPv4 can also be classed</span>:
-    * Class A (Large Org) 	= _1.0.0.0 - 127.0.0.0_ (1oct = 1-127)
-    * Class B (Medium Org)= _128.0.0.0 - 191.0.0.0_ (1oct = 128-191)
-    * Class C (Small LAN) 	= _192.0.0.0 - 223.255.255.0_ (1oct = 192-223)
-    * Class D (Multicasting)	= _224.0.0.0 - 239.255.255.255_ (1oct = 224-239)
-    * Class E (Research) 	= _240.0.0.0 - 255.255.255.255_ (1oct = 240-255)
+    * Class A (Large Org) 	    = 1.0.0.0 - 127.0.0.0 (1oct = 1-127)
+    * Class B (Medium Org)      = 128.0.0.0 - 191.0.0.0 (1oct = 128-191)
+    * Class C (Small LAN) 	    = 192.0.0.0 - 223.255.255.0 (1oct = 192-223)
+    * Class D (Multicasting)	= 224.0.0.0 - 239.255.255.255 (1oct = 224-239)
+    * Class E (Research) 	    = 240.0.0.0 - 255.255.255.255 (1oct = 240-255)
 
 **Loop-back addresses** are for network testing
-
-
 
 * Range 127.0.0.1 - 127.255.255.255
 * These are virtual IP addresses that cannot be assigned to a device, but are used to ping a computer’s TCP/IP network software driver
@@ -243,39 +218,36 @@ Client-server model</span>** is a network computing model that defines how resou
 
 
 * CIDR replaces the older A, B and C classes of IP addresses
-* _0_ & _255_ are reserved for the subnet ID and broadcasting respectively
-* <span style="text-decoration:underline;">Example:</span> _192.243.3.0 /24_ = 24 bits of the address (eg. 1st 3 octets) are static, so _192.243.3 _are fixed and up to 255 IP addresses are available with the final octet
+* 0 & 255 are reserved for the subnet ID and broadcasting respectively
+* <span style="text-decoration:underline;">Example:</span> 192.243.3.0 /24 = 24 bits of the address (eg. 1st 3 octets) are static, so 192.243.3 are fixed and up to 255 IP addresses are available with the final octet
 
 
 ## MAC Address {#mac-address}
 
 **Media Access Control (MAC) Addresses** are burned-in addresses assigned to network interface cards which must be unique to each NIC on the same network.
 
-
-
 * MAC addresses have 6 sets of alphanumeric characters separated by colons
 * First 24-bits (1st 3 octets) identify the device vendor/manufacturer
-* Example: _00:0a:95:9d:68:16_ where _00:0a:95_ is Apple, Inc.
+* Example: 00:0a:95:9d:68:16 where 00:0a:95 is Apple, Inc.
 * [MAC Address Lookup](https://macaddress.io/)
 
 **Address Resolution Protocol (ARP)** maps the MAC address to an IP address within a LAN
 
 
 
-* **_ARP cache poisoning_** or **_ARP spoofing_** is a MitM attack that allows attackers to intercept communication between network devices. [[ARP Spoofing Explainer]](https://www.imperva.com/learn/application-security/arp-spoofing/)
+* **ARP cache poisoning** or **ARP spoofing** is a MitM attack that allows attackers to intercept communication between network devices. [[ARP Spoofing Explainer]](https://www.imperva.com/learn/application-security/arp-spoofing/)
 
 
 ## DNS {#dns}
 
-**Domain Name System (DNS)** translates domain names to IP addresses, eg. _facebook.com_ translates to the IP address _31.13.65.36_ 
+**Domain Name System (DNS)** translates domain names to IP addresses, eg. facebook.com translates to the IP address 31.13.65.36 
 
 
 
 * [Cisco DNS Best Practice, Network Protections, and Attack Identification](https://sec.cloudapps.cisco.com/security/center/resources/dns_best_practices)
 * [DNS Records Explained (A, AAAA, CNAME, DNAME, MX, NS, PTR, SPF, ect)](https://ns1.com/resources/dns-records-explained)
 
-** \
-DNS Lookup** directs the browser to search a series of caches to find the IP address associated with the domain name. This search process is;
+** DNS Lookup** directs the browser to search a series of caches to find the IP address associated with the domain name. This search process is;
 
 
 
@@ -286,36 +258,31 @@ DNS Lookup** directs the browser to search a series of caches to find the IP add
 
 **Reverse DNS Lookup** provides the domain name for a given IP address, and is stored as a **PTR (Pointer) record** on the special **_.arpa_** domain name.
 
-
-
 * [Reverse DNS Lookup](https://www.whatsmydns.net/reverse-dns-lookup)
 * IPv4 “A” records are stored under the subdomain_ <code>.in-addr.arpa</code></em>
 * IPv6 “AAAA” records are stored under the subdomain <code><em>.ip6.arpa</em></code>
 
-<strong> \
-DNS hijacking</strong> Type of network attack that exploits DNS vulnerabilities to divert web traffic away from legitimate servers and to fake/malicious servers.
+<strong>DNS hijacking</strong> Type of network attack that exploits DNS vulnerabilities to divert web traffic away from legitimate servers and to fake/malicious servers.
 
 **Uniform Resource Locatior (URL)** is the specific location of a resource in a domain
 
-
-
 * Syntax: [URI scheme]://[subdomain].[domain].[TLD][/path/][filename]
-* Example:_ https://www.facebook.com/photos/catpicture.jpg_
-    * _https_ = Uniform Resource Identifer for “Secure Hypertext Transfer Protocol”
-    * _www_ = subdomain
-    * _facebook_ = primary domain
-    * _.com_ = Top-Level Domain 
-    * _/photos/_ = path where the resource is located
-    * _catpicture.jpg_ = resource being requested
+* Example: https://www.facebook.com/photos/catpicture.jpg
+    * https_ = Uniform Resource Identifer for “Secure Hypertext Transfer Protocol”
+    * www = subdomain
+    * facebook = primary domain
+    * .com = Top-Level Domain 
+    * /photos/ = path where the resource is located
+    * catpicture.jpg_ = resource being requested
 
 
-## Network Protocols  {#network-protocols}
+## Network Protocols
 
-**Network Protocols **ensure messages are fully sent and understood.
+**Network Protocols** ensure messages are fully sent and understood.
 
 
 
-* Example: _FIN_ is used by TCP messages to indicate the end of a message
+* Example: `FIN` is used by TCP messages to indicate the end of a message
 * Common Protocols
     * HTTP: Hypertext Transfer Protocol (Web traffic)
     * FTP: File Transfer Protocol (File transfer) **[INSECURE]**
@@ -323,7 +290,7 @@ DNS hijacking</strong> Type of network attack that exploits DNS vulnerabilities 
     * SMB: Server Message Block (Windows file sharing)
     * NetBIOS: Network Basic Input/Output System (LAN communication)
 
-**Network Packet **is a binary message adhering to protocol rules.
+**Network Packet** is a binary message adhering to protocol rules.
 
 
 
@@ -346,8 +313,8 @@ DNS hijacking</strong> Type of network attack that exploits DNS vulnerabilities 
 
 
 * **DHCP Four-way handshake**: Discover, Offer, Request, Acknowledge
-* **_DHCP Starvation_** is a type of DDos attack where a DHCP Server is flooded with Discover requests, and the DHCP server runs out of internal IP addresses to assign to legitimate users. 
-* **_DHCP Spoofing_** can follow _DHCP Starvation_ in order to provide a false DHCP server to allocate IP addresses to create a Man-In-The-Middle situation
+* **DHCP Starvation** is a type of DDos attack where a DHCP Server is flooded with Discover requests, and the DHCP server runs out of internal IP addresses to assign to legitimate users. 
+* **DHCP Spoofing** can follow _DHCP Starvation_ in order to provide a false DHCP server to allocate IP addresses to create a Man-In-The-Middle situation
 
 **Network Address Translation (NAT)** is a method of mapping a private IP address to a public IP address and vice versa.
 
@@ -360,8 +327,6 @@ DNS hijacking</strong> Type of network attack that exploits DNS vulnerabilities 
 * **Multicast**: A device sends a message to devices that have expressed interest in receiving the message.
 
 Routing can also be either static or dynamic
-
-
 
 * **Static routing** is the manual configuration of a network route, typically done by a network administrator.
     * <span style="text-decoration:underline;">Advantages</span>: Lower router CPU, admin has full control of routing behavior.
@@ -378,8 +343,6 @@ Routing can also be either static or dynamic
 **Internet Assigned Numbers Authority (IANA)** is the entity officially responsible for assigning port numbers for a designated purpose.
 
 **Port Numbers** range from 0 to 65535
-
-
 
 * **System ports (**0-1023) Restricted to the OS or administrator
     * [Well-Known Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports): 
@@ -412,25 +375,17 @@ Routing can also be either static or dynamic
 * **[Dynamic/Private ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Dynamic,_private_or_ephemeral_ports)** (49152-65535) “Source” ports for machine→machine
 
 
-## Wireless {#wireless}
+## Wireless
 
 **Basic Service Set Identifier (BSSID)** is used by a router to announce its MAC address in a beacon signal.
-
 
 ## Network Tools {#network-tools}
 
 <span style="text-decoration:underline;">NMap</span> - IP address & Port scanner
 
-
-
 * [NMap Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
 
-<span style="text-decoration:underline;">nslookup</span> - DNS lookup
-
-
 ### Wireshark {#wireshark}
-
-
 
 * [Wireshark User Manual](https://www.wireshark.org/docs/wsug_html_chunked/)
 * [Wireshark Learning Resources](https://www.wireshark.org/#learnWS)
