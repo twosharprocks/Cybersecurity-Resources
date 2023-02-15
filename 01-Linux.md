@@ -42,7 +42,7 @@ Linux - Bash Commands
 *   `mkdir -p parent/{F1,F2,F3}/{temp1,temp2}` creates folder “Parent” with sub-directories F1, F2 & F3 each, with temp1 & temp2 directores inside each sub-directory.
 
 `rm` or `rmdir` Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
-* `-r` or `-R` "Recursive", applies command throughout 
+* Options: `-r` or `-R` "Recursive", applies command throughout 
 * eg. `rm -r foldername` removes folder & it's contents
 
 `..` Parent Directory (One level above), // Root directory
@@ -170,7 +170,7 @@ eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns fi
 
 `cal` Calender
 
-# Archive & Compress {#archive-&-compress}
+# Archive & Compress
 
 Tar format is: tar [option(s)] [archive_name.tar] [objects_to_archive]
 Full tar options list [tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo]](https://linuxcommand.org/lc3_man_pages/tar1.html)
@@ -371,9 +371,7 @@ Command Format is: `sudo chmod <command> file`
     * `sudo systemctl start servicename` to start the service
     * Options: `stop`, `restart`, `reload`, `enable`, `disable`, `status, is-active`, `is-enabled`, `is-failed`, `list-units` (`--all`, `--state=inactive`, `type=service`), `list-all-files`, `cat`, `list-dependencies`, `show`, `-p` (Conflicts), `mask`, `unmask`, `edit`
 * `free` (system memory)
-    * `-h` (human readable)
-    * `-s` (runs for defined length)
-    * `-c n` (runs the command n# of times)
+    * Options: `-h` (human readable) `-s` (runs for defined length) `-c n` (runs the command n# of times)
 * `RANDOM` (generates random number between 0 & 32767)
 * `export` Allows a system-defined variable to be called by a script
 * `history` Shows all commands used
@@ -383,7 +381,7 @@ Command Format is: `sudo chmod <command> file`
     * [Crontab Generator](https://crontab-generator.org/)
     * [Crontab guru](https://crontab.guru/)
 * `journalctl` Log manager ([How to manage Log Files with Logrotate](https://www.digitalocean.com/community/tutorials/how-to-manage-log-files-with-logrotate-on-ubuntu-12-10))
-    * `logrotate` - rotation of logs for archiving, compress, ect ([logrotate MAN](https://man7.org/linux/man-pages/man8/logrotate.8.html))
+    * `logrotate` Rotation of logs for archiving, compress, ect ([logrotate MAN](https://man7.org/linux/man-pages/man8/logrotate.8.html))
     * `sudo nano /etc/logrotate.conf`  To edit log config
 * `timedatectl` Time/date manager
     * Options: `status`, `list-timezones` (List available timezones), `set-timezone` (Change timezone to string eg. Australia/Adelaide)
