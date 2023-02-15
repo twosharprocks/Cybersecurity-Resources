@@ -336,7 +336,7 @@ Routing can also be either static or dynamic
 [Types of Routing Protocols](https://www.comparitech.com/net-admin/routing-protocol-types-guide/) [Comprehensive]
 
 
-## Ports {#ports}
+## Ports
 
 **Ports** are access points for transmitting and receiving data
 
@@ -344,7 +344,7 @@ Routing can also be either static or dynamic
 
 **Port Numbers** range from 0 to 65535
 
-* **System ports (**0-1023) Restricted to the OS or administrator
+* **System ports** (0-1023) Restricted to the OS or administrator
     * [Well-Known Ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports): 
         * 20 (FTP - Transfer) 
         * 21 (FTP - Commands) 
