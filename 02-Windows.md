@@ -10,20 +10,20 @@ Windows
 # **Basics**
 ----------
 
-`cd` or `chdir` Change directory (Linux = cd)
-`dir` List directory contents (Linux = ls)
-`md` or `mkdir` Create directory (Linux = mkdir)
-`copy` Copy file (Linux = cp)
-`move` Move (Cut/Paste) files (Linux = mv)
-`clip`  Copies to Clipboard
-`del` or `erase` Delete files/directories (Linux = rm or shred)
-`rd` or `rmdir` Remove directory if empty (Linux = rm)
-`find` Search a file for a specific string (Linux = grep)
-`exit` Close CMD (Linux = exit)
-`type` Show contents of file (Linux = cat)
-`cls` Clear screen
-`findstr` Find string
-`clip` - Add to clipboard
+* `cd` or `chdir` Change directory (Linux = cd)
+* `dir` List directory contents (Linux = ls)
+* `md` or `mkdir` Create directory (Linux = mkdir)
+* `copy` Copy file (Linux = cp)
+* `move` Move (Cut/Paste) files (Linux = mv)
+* `clip`  Copies to Clipboard
+* `del` or `erase` Delete files/directories (Linux = rm or shred)
+* `rd` or `rmdir` Remove directory if empty (Linux = rm)
+* `find` Search a file for a specific string (Linux = grep)
+* `exit` Close CMD (Linux = exit)
+* `type` Show contents of file (Linux = cat)
+* `cls` Clear screen
+* `findstr` Find string
+* `clip` - Add to clipboard
 
 Environment Variables
 
@@ -83,8 +83,8 @@ System Management
     * `shutdown /r /fw /f /t 0` (reboot into BIOS)
 * `wmic` Windows Management Instrumentation Command-Line (Process management)
     * [wmic is being replaced with Powershell](https://research.nccgroup.com/2022/03/10/microsoft-announces-the-wmic-command-is-being-retired-long-live-powershell/)
-    * wmic Starts interactive mode (shell-like), commas used for multiple properties
-    * Input format: wmic [global switches] [alias] [verbs] [properties]
+    * `wmic` Starts interactive mode (shell-like), commas used for multiple properties
+    * Input format: `wmic [global switches] [alias] [verbs] [properties]`
         * eg. _wmic /APPEND:report.txt logicaldisk get caption, filesystem, freespace_
     * `Global Switches`
         * /APPEND
