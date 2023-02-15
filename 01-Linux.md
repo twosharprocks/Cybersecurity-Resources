@@ -130,49 +130,60 @@ eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns fi
 
 # **Networking**
 
-`wget` Get
+`wget` Download a file from a URL
+* Options: `‐‐output-document=filename.html example.com` (Rename file being downloaded), 
+* `‐‐directory-prefix=folder/subfolder example.com` (Download to specific folder), `‐‐continue example.com/big.file.iso` (Resume interrupted download), `‐‐continue ‐‐timestamping wordpress.org/latest.zip` (Download IF server has a newer version), `‐‐input list-of-file-urls.txt` (Download from multiple URLs listed in txt file), `http://example/{1..20}.jpg` (Download sequentially numbered files), `wget ‐‐page-requisites ‐‐span-hosts ‐‐convert-links ‐‐adjust-extension http://example.com/dir/file` (Download an entire webpage) 
+
+wget Download a file from a URL
+
+* Options: `‐‐output-document=filename.html example.com` Name file downloaded
+* `‐‐directory-prefix=folder/subfolder example.com` Download to specific folder
+* `‐‐continue example.com/big.file.iso` Resume interrupted download 
+* `‐‐continue ‐‐timestamping wordpress.org/latest.zip` Download IF newer version
+* `‐‐input list-of-file-urls.txt` Download from multiple URLs listed in txt file
+* `http://example/{1..20}.jpg` Download sequentially numbered files 
+ 
 
 `curl` Call a URL
 
-`ifconfig` (Needs install?)
-
-`ip address` (IP info)
-
-`resolvectl` status Provides DNS server
+* [Options:](https://gist.github.com/eneko/dc2d8edd9a4b25c5b0725dd123f98b10)  `--abstract-unix-socket <path>` Connect via abstract Unix domain socket
+* `-a, --append`  Append to target file when uploading
+* `-E, --cert &lt;certificate[:password]>` Client certificate file and password
+* `-K, --config <file>` Read config from a file
+* `-b, --cookie <data|filename>` Send cookies from string/file
+* `-c, --cookie-jar <filename>` Write cookies to <filename> after operation 
+* `-d, --data <data>` HTTP POST data
+* `-G, --get` Put the post data in the URL and use GET
+* `-x, --proxy [protocol://]host[:port]` Use this proxy
+* `-U, --proxy-user <user:password>` Proxy user and password
+* `--pubkey <key>` SSH Public key file name
+* `-u, --user <user:password>` Server user and password 
 
 `ping` Sends Ping
 
-* eg. `ping -c 5` Sends 5 pings
+	* Options: `ping -c 5` Sends 5 pings
 
 `netstat` Shows open ports
 
-`ss` Shows socket statistics
+`uname` OS & system hardware info
+* Options: `a (--all)` All system info, 
+* `-n (-- nodename)` System network name 
+* `-r (--kernal-release)` Kernel release 
+* `-v (--kernal-version)` Kernel version
+* `-s (--kernal-name)` Kernel name 
+* `-m (--machine)` Hardware name 
+* `-p (--processor)` Processor architecture 
+* `-i (--hardware-platform)` Hardware platform
+* `-o (--operating-system)` Operating system
 
-`-tulpn` Shows tcp & udp sockets that are listening, processes using the sockets, without resolving service names
+`nslookup` Lookup DNS Records
 
-`iptables`
+	Options: `-type=(any, soa, ns, a, mx, txt)` Displays DNS record type
 
-`ufw`
-
-* eg. `ufw allow 80` Allows port 80
-
-`uname`
-
-* Options: `-a`
-
-`nslookup`
-
-`host`
-
-`dig`
-
-`neofetch` (Needs install)
-
-`cal` Calender
 
 # Archive & Compress
 
-Tar format is: tar [option(s)] [archive_name.tar] [objects_to_archive]
+Tar format is: `tar [option(s)] [archive_name.tar] [objects_to_archive]`
 Full tar options list [tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo]](https://linuxcommand.org/lc3_man_pages/tar1.html)
 
 Tar short Options
