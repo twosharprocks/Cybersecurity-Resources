@@ -37,15 +37,16 @@
 
 ### Learning Cybersecurity Resources
 
-
-* [Command Challenge] (https://cmdchallenge.com/) [Resource for learning basic Linux commands - Free] 
+* [Command Challenge](https://cmdchallenge.com/) [Resource for learning basic Linux commands - Free] 
 * [OverTheWire Wargames](https://overthewire.org/wargames/) [Resource for learning complex Linux commands - Free]
 * [VulnHub](https://www.vulnhub.com/) [Huge collection of vulnerable VMs setup as challenges - Free] 
+* [Hack This Site](https://www.hackthissite.org/info/about) [Older resource (updated 2016) for practicing hacking - Free]
 * [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) [Vulnerable online shop for testing - Free]
       *  [Pwning OWASP Juice Shop](https://pwning.owasp-juice.shop/) [Online book for pwning Juice Shop]
 
 * [Hack The Box](https://app.hackthebox.com/) [Penetration Testing Focus - Free & Paid]
 * [Hacksplaining](https://www.hacksplaining.com/) [Free]
+* [Hacker 101](https://www.hacker101.com/) [Web security course with video & CTFs - Free]
 * [Safestack](https://safestack.io/) [Good for broad requirements & some software testing - Free & Paid]
 * [Ministry of Testing](https://www.ministryoftesting.com/) [Wide range of courses for software testing - Free & Paid]
 
