@@ -33,6 +33,7 @@
 
 * [Internxt](https://internxt.com/) - Secure cloud storage (up to 10GB free)
 * [Linode](https://www.linode.com/lp/youtube-viewers/?ifso=networkchuck&utm_source=influencer&utm_medium=video&utm_campaign=networkchuck) - Cloud Computing (with $100/60 day credit via NetworkChuck)
+* [DigitalOcean](https://try.digitalocean.com/developer-cloud/) - $200 credit & 60-day free trial
 
 
 ### Learning Cybersecurity Resources
@@ -45,6 +46,7 @@
       *  [Pwning OWASP Juice Shop](https://pwning.owasp-juice.shop/) [Online book for pwning Juice Shop]
 
 * [Hack The Box](https://app.hackthebox.com/) [Penetration Testing Focus - Free & Paid]
+* [PentesterLab](https://pentesterlab.com/) [Penetration Testing Focus - Free & Paid]
 * [Hacksplaining](https://www.hacksplaining.com/) [Free]
 * [Hacker 101](https://www.hacker101.com/) [Web security course with video & CTFs - Free]
 * [Safestack](https://safestack.io/) [Good for broad requirements & some software testing - Free & Paid]
@@ -52,6 +54,9 @@
 
 
 ### CTF
+* [CTF Time](https://ctftime.org/) [Global Rankings and list of Upcoming Events]
+
+
 * [Tools & Resources to prepare for a CTF](https://resources.infosecinstitute.com/topic/tools-of-trade-and-resources-to-prepare-in-a-hacker-ctf-competition-or-challenge/)
 * [CTF101](https://ctf101.org/) [Broad overwiew of challenges and techniques used in CTFs]
 * [Top 10 Essential CTF Tools for Solving Reversing Challanges](https://www.yeahhub.com/top-10-essential-ctf-tools-solving-reversing-challenges/)
