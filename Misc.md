@@ -19,7 +19,7 @@
 * [“CyberSecure” rating label generator](https://cybersecure.eigenmagic.com/)
 * [nwipe](https://en.m.wikipedia.org/wiki/Nwipe) - Secure File Destruction
     * [RedKey USB](https://redkeyusb.com/collections/data-wipe-tool)
-
+* [Keepass Open Source Password Manager] (https://keepass.info/)
 
 ### File & URL Checkers
 
