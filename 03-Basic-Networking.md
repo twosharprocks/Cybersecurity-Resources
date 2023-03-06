@@ -204,7 +204,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * These are virtual IP addresses that cannot be assigned to a device, but are used to ping a computer’s TCP/IP network software driver
 
 
-## Subnetting {#subnetting}
+## Subnetting
 
 **Subnetting** is the process of breaking up an IP address range into smaller, more specific networks of grouped devices.
 
@@ -222,7 +222,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * <span style="text-decoration:underline;">Example:</span> 192.243.3.0 /24 = 24 bits of the address (eg. 1st 3 octets) are static, so 192.243.3 are fixed and up to 255 IP addresses are available with the final octet
 
 
-## MAC Address {#mac-address}
+## MAC Address
 
 **Media Access Control (MAC) Addresses** are burned-in addresses assigned to network interface cards which must be unique to each NIC on the same network.
 
@@ -238,7 +238,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * **ARP cache poisoning** or **ARP spoofing** is a MitM attack that allows attackers to intercept communication between network devices. [[ARP Spoofing Explainer]](https://www.imperva.com/learn/application-security/arp-spoofing/)
 
 
-## DNS {#dns}
+## DNS
 
 **Domain Name System (DNS)** translates domain names to IP addresses, eg. facebook.com translates to the IP address 31.13.65.36 
 
@@ -374,25 +374,20 @@ Routing can also be either static or dynamic
     * 8333 (Bitcoin)
 * **[Dynamic/Private ports](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Dynamic,_private_or_ephemeral_ports)** (49152-65535) “Source” ports for machine→machine
 
-
-## Wireless
-
-**Basic Service Set Identifier (BSSID)** is used by a router to announce its MAC address in a beacon signal.
-
 ## Network Tools {#network-tools}
 
 <span style="text-decoration:underline;">NMap</span> - IP address & Port scanner
 
 * [NMap Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
 
-### Wireshark {#wireshark}
+### Wireshark
 
 * [Wireshark User Manual](https://www.wireshark.org/docs/wsug_html_chunked/)
 * [Wireshark Learning Resources](https://www.wireshark.org/#learnWS)
 * [General Wireshark Filters](https://www.wifi-professionals.com/2019/03/wireshark-display-filters)
 * [Wireshark MAN Page](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 * [Wireshark Filters (WifiNinjas Blog)](https://wifininjas.net/2019/05/29/wn-blog-002-wireshark-filters/)
-* [Wireshark Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2019/06/Wireshark-Cheat-Sheet-1.jpg) [Copy this out]
+* [Wireshark Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2019/06/Wireshark-Cheat-Sheet-1.jpg) [Important Cheat Sheet]
 
 frame contains “string” Searches all frames for a specific string
 
