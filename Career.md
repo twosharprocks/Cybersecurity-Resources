@@ -1,16 +1,16 @@
 # Career
 
 Entry-Level Jobs to Apply for:
-* Junior Security Operations Centre (SOC) **Analyst**
+* Junior Security Operations Centre (SOC) ***Analyst***
 * Systems Administrator
-* IT/Security **Specialist**
-* Risk **Analyst**
-* Information assurance **technician**
+* IT/Security ***Specialist***
+* Risk ***Analyst***
+* Information assurance ***technician***
 
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 ## 0-6 months after Bootcamp
 * UniOfAdel CompTIA Voucher for:
-   *  **[Security+](https://www.comptia.org/certifications/security)**
+   *  ***[Security+](https://www.comptia.org/certifications/security)***
       * [Professor Messer’s Free Security+ Course](https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/)
       * [ITU(Owned) - Security+](https://www.itulearning.com/course/index/6172)
    *  [Network+](https://www.comptia.org/certifications/network)
@@ -31,7 +31,8 @@ Entry-Level Jobs to Apply for:
       * [CertBros - CCNA Paid Course](https://certbros.teachable.com/p/cisco-ccna?coupon_code=PRELAUNCH21)
       * [ITPro - CCNA Paid Course](https://www.itpro.tv/courses/cisco/cisco-ccna-200-301-2022/)
       * [NetworkChuck - CCNA Paid Course](https://learn.networkchuck.com/courses/ccna)
-   * Azure Administrator
+   * ***Azure Administrator***
+      * [AZ-104 Training Collection - Microsoft](https://learn.microsoft.com/en-us/users/joshrichards-4736/collections/bookmarks)
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
    * AWS
       * [AWS Skill Builder](https://explore.skillbuilder.aws/learn)
@@ -56,12 +57,14 @@ Entry-Level Jobs to Apply for:
       *  [Stackskills(Owned) - OWASP ZAP](https://stackskills.com/courses/enrolled/709664)
 
 * Programming
-   * Python
+   * ***Python***
       * [Youtube - Python Cybersecurity For Beginners - Build a Port Scanner](https://www.youtube.com/watch?v=bH-3PuQC_n0&list=PLR0bgGon_WTIjs0lyCAUp3v1qAraXCJcH)
       * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
+      * ***[Datacamp(Owned) - Python Programmer Track](https://app.datacamp.com/learn/career-tracks/python-programmer)
       * [Stackskills(Owned) - Python3 Ethical Hacking](https://stackskills.com/courses/enrolled/1025194)
       * [Stackskills(Owned) - Hacking with Python](https://stackskills.com/courses/enrolled/376387)
       * [Stackskills(Owned) - Artificial Intelligence with Python (Book)](https://stackskills.com/courses/303786/lectures/4674836)
+      * [Kaggle(Owned) - Intro to Machine Learning (with Python)](https://www.kaggle.com/learn/intro-to-machine-learning)
       * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
       * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
       * [Learn Python.org](https://www.learnpython.org/)
@@ -84,10 +87,12 @@ Entry-Level Jobs to Apply for:
       * [Learn Ruby.org](https://www.learnrubyonline.org/)
 
 * Other Courses
+   *  ***[CodeRed(Owned) - Complete Cybersecurity Skill Builder](https://codered.eccouncil.org/learning-path/the-complete-cybersecurity-skill-builder)***
    *  [Stackskills(Owned) - Ethical Hacker Certification](https://stackskills.com/courses/enrolled/614031)
    *  [Stackskills(Owned) - Ethical Hacking and Penetration Testing](https://stackskills.com/courses/enrolled/1050508)
    *  [Stackskills(Owned) - Certified Ethical Hacking](https://stackskills.com/courses/enrolled/410134)
    *  [Stackskills(Owned) - Super-Sized Ethical Hacking Bundle](https://stackskills.com/courses/enrolled/1306705)
+   *  [ITPro - Many IT Courses](https://www.itpro.tv/courses/)
 
 ## Junior (1-2 years)
 * [PenTest+](https://www.comptia.org/certifications/pentest)
