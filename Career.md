@@ -11,9 +11,11 @@ Entry-Level Jobs to Apply for:
 ## 0-6 months after Bootcamp
 * UniOfAdel CompTIA Voucher for:
    *  **[Security+](https://www.comptia.org/certifications/security)**
+      * [Professor Messer’s Free Security+ Course](https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/)
       * [ITU(Owned) - Security+](https://www.itulearning.com/course/index/6172)
    *  [Network+](https://www.comptia.org/certifications/network)
-      * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008) 
+      * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
+      * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
    *  [Linux+](https://www.comptia.org/certifications/linux)
       *  [ITU(Owned) - Linux+](https://www.itulearning.com/course/index/3645)
    *  [Cloud+](https://www.comptia.org/certifications/cloud)
@@ -21,10 +23,20 @@ Entry-Level Jobs to Apply for:
    *  [Server+](https://www.comptia.org/certifications/server) 
 
 * Other Certifications
-   * CCNA
+   * [CCNA - Exam $300USD](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html)
+      * [Cisco E-Learning $800USD](https://learningnetworkstore.cisco.com/on-demand-e-learning/implementing-and-administering-cisco-solutions-ccna-v1.0/ELT-CCNA-V1-023587.html)
+      * [Youtube - Jeremy's IT Lab - Free CCNA Course](https://www.youtube.com/watch?v=H8W9oMNSuwo&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
+      * [Youtube - Network Chuck - Free CCNA Course](https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5Z6znCVb1P)
+      * [Amazon - CCNA All-in-One For Dummies](https://www.amazon.com/CCNA-Certification-All-One-Dummies/dp/0470489626/ref=d_pd_sbs_sccl_3_8/131-7058779-4268918)
+      * [CertBros - CCNA Paid Course](https://certbros.teachable.com/p/cisco-ccna?coupon_code=PRELAUNCH21)
+      * [ITPro - CCNA Paid Course](https://www.itpro.tv/courses/cisco/cisco-ccna-200-301-2022/)
+      * [NetworkChuck - CCNA Paid Course](https://learn.networkchuck.com/courses/ccna)
    * Azure Administrator
+      * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
    * AWS
       * [AWS Skill Builder](https://explore.skillbuilder.aws/learn)
+   * Google Cloud
+      * [Security Engineer Learning Path](https://www.cloudskillsboost.google/paths/15)
 
 * Software
    * Kali
@@ -35,25 +47,41 @@ Entry-Level Jobs to Apply for:
       * [Web Security Academy - Portswigger](https://portswigger.net/web-security)
       * [Stackskills(Owned) - BurpSuite General](https://stackskills.com/courses/enrolled/141010)
       * [Stackskills(Owned) - BurpSuite Bughunter](https://stackskills.com/courses/enrolled/1106769)
+   * Wireshark
+      * [Youtube - Learn Wireshark in 10 minutes (6-part Playlist)](https://www.youtube.com/watch?v=lb1Dw0elw0Q&list=PLR0bgGon_WTK9PHDzrlje4bqEh3p0NxxX)
    * Metasploit
       * [OffSec - Metasploit Unleashed](https://www.offsec.com/metasploit-unleashed/)
       * [Stackskills(Owned) - Metasploit](https://stackskills.com/courses/enrolled/369771)
-   * OWASP ZAP
-      *  
+   * [OWASP ZAP](https://www.zaproxy.org/)
+      *  [Stackskills(Owned) - OWASP ZAP](https://stackskills.com/courses/enrolled/709664)
 
 * Programming
    * Python
+      * [Youtube - Python Cybersecurity For Beginners - Build a Port Scanner](https://www.youtube.com/watch?v=bH-3PuQC_n0&list=PLR0bgGon_WTIjs0lyCAUp3v1qAraXCJcH)
+      * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
       * [Stackskills(Owned) - Python3 Ethical Hacking](https://stackskills.com/courses/enrolled/1025194)
       * [Stackskills(Owned) - Hacking with Python](https://stackskills.com/courses/enrolled/376387)
       * [Stackskills(Owned) - Artificial Intelligence with Python (Book)](https://stackskills.com/courses/303786/lectures/4674836)
       * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
       * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
+      * [Learn Python.org](https://www.learnpython.org/)
    * Go 
+      * [Learning Go - go.dev](https://go.dev/learn/)
+      * [Learn GoLang.org](https://www.learn-golang.org/)
    * Java
+      * [Learn Java.org](https://www.learnjavaonline.org/)
    * Javascript
-   * C/C++
+      * [Learn JavaScript.org](https://www.learn-js.org/)
+   * C/C++/C#
+      * [Learn C.org](https://www.learn-c.org/)
+      * [Learn C++ .org](https://www.learn-cpp.org/)
+      * [Learn C# .org](https://www.learncs.org/)
    * SQL
+      * [Learn SQL.org](https://www.learnsqlonline.org/)
    * PHP
+      * [Learn PHP.org](https://www.learn-php.org/)
+    * Ruby
+      * [Learn Ruby.org](https://www.learnrubyonline.org/)
 
 * Other Courses
    *  [Stackskills(Owned) - Ethical Hacker Certification](https://stackskills.com/courses/enrolled/614031)
@@ -62,15 +90,16 @@ Entry-Level Jobs to Apply for:
    *  [Stackskills(Owned) - Super-Sized Ethical Hacking Bundle](https://stackskills.com/courses/enrolled/1306705)
 
 ## Junior (1-2 years)
-* [PenTest+]
+* [PenTest+](https://www.comptia.org/certifications/pentest)
    * [ITU(Owned)](https://www.itulearning.com/course/index/2761)
    * [Youtube - CompTIA PenTest+ Full Course - 11 hrs](https://www.youtube.com/watch?v=WczBlBjoQeI)
    * [Youtube - CompTIA PenTest+ Exam - 1hr](https://www.youtube.com/watch?v=P_D7BCpxkS4)
 
 ## Intermediate (3+ years):
 * [Cybersecurity Analyst+ (CySA+)](
-   * [ITU(Owned)](https://www.itulearning.com/course/index/3637)
-* [Offensive Security Certified Professional (OSCP)]
+   * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
+* [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/)
+* [Offensive Security Certified Professional (OSCP)](https://www.offsec.com/courses/pen-200/)
    * [How To Become an OSCP](https://geekflare.com/oscp-certification/)
    * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
    * [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
