@@ -251,6 +251,7 @@ Avoid this by:
     * [CrackQ on GitHub](https://github.com/f0cker/crackq)
     * [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
 * [Hydra](https://www.kali.org/tools/hydra/)
+    * [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
 * [Burp Suite](https://portswigger.net/burp)
 * [Zed Attack Proxy](https://www.zaproxy.org/)
 * [Cain and Abel](https://sectools.org/tool/cain/) - Windows-only password recovery tool
