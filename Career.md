@@ -34,6 +34,7 @@ Entry-Level Jobs to Apply for:
    * ***Azure Administrator***
       * [AZ-104 Training Collection - Microsoft](https://learn.microsoft.com/en-us/users/joshrichards-4736/collections/bookmarks)
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
+      * [AZ-104 Exam Tips - LinkedIn Learning](https://www.linkedin.com/learning/exam-tips-azure-administrator-az-104)
    * AWS
       * [AWS Skill Builder](https://explore.skillbuilder.aws/learn)
    * Google Cloud
