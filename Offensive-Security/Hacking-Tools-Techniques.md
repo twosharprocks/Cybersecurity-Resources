@@ -211,15 +211,11 @@ Avoid this by:
 
 [Hacking Tools [RESOURCE]](https://en.m.wikibooks.org/wiki/Hacking/Tools)
 
-[Massive WPA WPA2 Word List](https://forums.hak5.org/topic/29308-13gb-44gb-compressed-wpa-wpa2-word-list-982963904-words/)
-
 [Wordlists & Rainbow Tables for WEP/WPA/WPA2](https://wifi0wn.wordpress.com/wepwpawpa2-cracking-dictionary/)
 
-[5 Google Dorks Every Hacker Needs to Know](https://thegrayarea.tech/5-google-dorks-every-hacker-needs-to-know-fed21022a906)
+
 
 <span style="text-decoration:underline;">Raspberry Pi</span>
-
-
 
 * [Make a Hacking machine with Raspberry pi ](https://maker.pro/raspberry-pi/projects/hacking-machine-with-raspberry-pi)
 * [Building a Hacking Kit with Raspberry Pi and Kali Linux](https://gbhackers.com/raspberry-pi-and-kali-linux/)
@@ -228,8 +224,6 @@ Avoid this by:
 
 
 ### <span style="text-decoration:underline;">Tool List</span> {#tool-list}
-
-
 
 * [Kali Linux](https://www.kali.org/)
     * [Kali’s Default Credentials (and tools shipped with)](https://www.kali.org/docs/introduction/default-credentials/)
@@ -253,6 +247,9 @@ Avoid this by:
 * [Hydra](https://www.kali.org/tools/hydra/)
     * [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
 * [Burp Suite](https://portswigger.net/burp)
+* [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Expensive Vulnerability scanner
+* [OpenVAS](https://www.openvas.org/) - Open Source Vulnerability Scanner
+   * [Installing OpenVAS on Kali](https://www.geeksforgeeks.org/installing-openvas-on-kali-linux/)
 * [Zed Attack Proxy](https://www.zaproxy.org/)
 * [Cain and Abel](https://sectools.org/tool/cain/) - Windows-only password recovery tool
 * [sqlmap](https://sqlmap.org/) - Automated scanning & exploitation of SQL injection vulnerabilities
@@ -288,4 +285,4 @@ Avoid this by:
 * [Dirsearch](https://github.com/maurosoria/dirsearch) - Brute force web path scanning
     * Find hidden/unhidden web directories & invalid pages
 * [Greenbone OpenVAS](https://www.openvas.org/) - Vulnerability scanner built into Kali Linux
-* [Binary Ninja](https://binary.ninja/demo/) - Software decompiler
+* [Ettercap](https://www.ettercap-project.org/) - Man in the middle attack platform
