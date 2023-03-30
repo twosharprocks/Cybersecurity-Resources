@@ -1,17 +1,14 @@
-## OSINT 
-[What is OSINT?](https://www.csoonline.com/article/3445357/what-is-osint-top-open-source-intelligence-tools.html)
-
-[Doing OSINT legally](https://mediasonar.com/2020/03/11/10-tips-for-doing-osint-legally/)
-
-* It’s not illegal to access the dark web provided there’s no criminal intent
-* Review the terms of service & legal implications
-* Create fake identities but don’t impersonate anyone
-* Don’t exploit a vulnerability to access the data
-* Don’t communicate with others on the dark web
-* Don’t share information
-* Don’t purchase stolen data
-* Keep a record (eg. screen captures)
-* Create detailed organisational guidelines for cybersecurity intelligence gathering
+# Google Dorking
+Easy dorks
+* Exclude boring pages with -ves, eg. `site:<domain> -www -shop -otherboringshit`
+* Combine dorks with | (include both ) or & (require both)
+* Leftover code
+   * `site:pastebin.com "targetsite.com"`
+   * `site:jsfiddle.net "targetsite.com"`
+   * `site:codebeautify.org "targetsite.com"`
+   * `site:codepen.io "targetsite.com"`
+* Find php files with ext:php, eg. `site:targetsite.com ext:php inurl:?`
+* Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
 
 [OSINT Framework (Free Tools)](https://osintframework.com/)
 
