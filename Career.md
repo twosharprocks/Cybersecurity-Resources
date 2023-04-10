@@ -102,6 +102,7 @@ Entry-Level Jobs to Apply for:
    * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
    * [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
    * [OSCP Study Resources](https://stefan-p-bargan.medium.com/oscp-study-resources-7571c864899)
+   * [OSCP - How to pass first time](https://www.garyruddell.com/articles/how-to-pass-the-oscp-first-time)
 
 ## Senior (5+ years):
 * [CISSP](https://www.isc2.org/Certifications/CISSP) 
