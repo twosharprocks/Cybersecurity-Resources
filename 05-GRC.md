@@ -155,6 +155,8 @@ afford to be unavailable for users and the business. This breaks down into:
     * <span style="text-decoration:underline;">Recovery Time Objective (RTO)</span>: Maximum tolerable amount of time needed to bring **all critical systems back online** after a disaster occurs.
     * <span style="text-decoration:underline;">Work Recovery Time (WRT)</span>: Time available to get the systems working again. WRT is the remainder of the MTD after the RTO. If MTD is four days and RTO is one day, WRT is three days.
 
+![alt-text](https://github.com/twosharprocks/Cybersecurity-Resources/blob/main/images/BIA%20Metrics.jpg)
+
 
 Disaster Recovery can also use <span style="text-decoration:underline;">Alternate sites</span>;
 
