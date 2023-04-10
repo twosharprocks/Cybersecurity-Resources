@@ -13,24 +13,16 @@ Entry-Level Jobs to Apply for:
    *  ***[Security+](https://www.comptia.org/certifications/security)***
       * [Professor Messer’s Free Security+ Course](https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/)
       * [ITU(Owned) - Security+](https://www.itulearning.com/course/index/6172)
-   *  [Network+](https://www.comptia.org/certifications/network)
+   *  *[Network+](https://www.comptia.org/certifications/network)
       * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
       * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
    *  [Linux+](https://www.comptia.org/certifications/linux)
       *  [ITU(Owned) - Linux+](https://www.itulearning.com/course/index/3645)
-   *  [Cloud+](https://www.comptia.org/certifications/cloud)
-      * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347)  
    *  [Server+](https://www.comptia.org/certifications/server) 
+   *  [Cloud+](https://www.comptia.org/certifications/cloud)
+      * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
 * Other Certifications
-   * [CCNA - Exam $300USD](https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html)
-      * [Cisco E-Learning $800USD](https://learningnetworkstore.cisco.com/on-demand-e-learning/implementing-and-administering-cisco-solutions-ccna-v1.0/ELT-CCNA-V1-023587.html)
-      * [Youtube - Jeremy's IT Lab - Free CCNA Course](https://www.youtube.com/watch?v=H8W9oMNSuwo&list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ)
-      * [Youtube - Network Chuck - Free CCNA Course](https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5Z6znCVb1P)
-      * [Amazon - CCNA All-in-One For Dummies](https://www.amazon.com/CCNA-Certification-All-One-Dummies/dp/0470489626/ref=d_pd_sbs_sccl_3_8/131-7058779-4268918)
-      * [CertBros - CCNA Paid Course](https://certbros.teachable.com/p/cisco-ccna?coupon_code=PRELAUNCH21)
-      * [ITPro - CCNA Paid Course](https://www.itpro.tv/courses/cisco/cisco-ccna-200-301-2022/)
-      * [NetworkChuck - CCNA Paid Course](https://learn.networkchuck.com/courses/ccna)
    * ***Azure Administrator***
       * [AZ-104 Training Collection - Microsoft](https://learn.microsoft.com/en-us/users/joshrichards-4736/collections/bookmarks)
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
@@ -109,6 +101,7 @@ Entry-Level Jobs to Apply for:
    * [How To Become an OSCP](https://geekflare.com/oscp-certification/)
    * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
    * [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
+   * [OSCP Study Resources](https://stefan-p-bargan.medium.com/oscp-study-resources-7571c864899)
 
 ## Senior (5+ years):
 * [CISSP](https://www.isc2.org/Certifications/CISSP) 
