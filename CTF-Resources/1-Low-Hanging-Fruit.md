@@ -50,11 +50,11 @@ Windows Post-exploitation: dir, type, find, net users
 * On Domain Controller: Run DC Sync for admin users eg. `dcsync_ntlm administrator`
 _______________________________________________________
 
-#Reversing
+# Reversing
 * Run "Strings <file> | grep flag" 
 * [Excellent Reversing Examples - NitroLabs](https://nitrolabs.xyz/posts/HTB-CA2023-Reversing-HW-Misc/)
 
-#Forensics
+# Forensics
 * [Excellent Forensics Examples - NitroLabs](https://nitrolabs.xyz/posts/HTB-CA2023-Forensics/)  
 * Wireshark Filter: http contains flag, tcp contains flag
   * Right-click packet and select "Follow stream"
