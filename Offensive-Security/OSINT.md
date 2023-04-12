@@ -1,3 +1,9 @@
+# Lookups
+Easy lookup data
+* Registrar Data = who.is
+* IP Lookup = iplocation.io
+* SSL Certs = crt.sh
+
 # Google Dorking
 Easy dorks
 * Exclude boring pages with -ves, eg. `site:<domain> -www -shop -otherboringshit`
