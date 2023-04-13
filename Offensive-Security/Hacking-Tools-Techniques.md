@@ -53,6 +53,13 @@ Hardware
 * [General Overview of USB Killers](https://www.darkreading.com/endpoint/rule-of-thumb-usb-killers-pose-real-threat)
 
 ## Other Devices
+* Raspberry Pi
+   * [Make a Hacking machine with Raspberry pi ](https://maker.pro/raspberry-pi/projects/hacking-machine-with-raspberry-pi)
+   * [Hacking Kit with Raspberry Pi - SSH Instructions](https://gbhackers.com/raspberry-pi-and-kali-linux/)
+   * [Beginner Hacking Kit with the Raspberry Pi 3 - Many Ideas](https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/)
+   * [SwissArmyPi Converts your Raspberry Pi into a Strong Hacking Tool](https://medevel.com/swissarmypi/)
+   * [Damn Vulnerable Raspberry Pi](https://whitedome.com.au/re4son/sticky-fingers-dv-pi/)
+
 * [Flipper Zero](https://flipperzero.one/) - Penetration multi-tool
     * Sub 1GHz for wireless access control (garage door, booms, remote keys)
     * 125kHz RFID Reader/Emulator
@@ -216,15 +223,6 @@ Avoid this by:
 [Hacking Tools [RESOURCE]](https://en.m.wikibooks.org/wiki/Hacking/Tools)
 
 [Wordlists & Rainbow Tables for WEP/WPA/WPA2](https://wifi0wn.wordpress.com/wepwpawpa2-cracking-dictionary/)
-
-
-
-<span style="text-decoration:underline;">Raspberry Pi</span>
-
-* [Make a Hacking machine with Raspberry pi ](https://maker.pro/raspberry-pi/projects/hacking-machine-with-raspberry-pi)
-* [Building a Hacking Kit with Raspberry Pi and Kali Linux](https://gbhackers.com/raspberry-pi-and-kali-linux/)
-* [Build a Beginner Hacking Kit with the Raspberry Pi 3 Model B+](https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/)
-* [SwissArmyPi Converts your Raspberry Pi into a Strong Hacking Tool](https://medevel.com/swissarmypi/)
 
 
 ### <span style="text-decoration:underline;">Tool List</span> {#tool-list}
