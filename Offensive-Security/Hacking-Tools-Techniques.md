@@ -1,5 +1,6 @@
-## Hacker Techniques {#hacker-techniques}
+# Hacker Techniques
 
+## Techniques
 [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
 
 [NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
@@ -16,13 +17,13 @@
     * [FakeLogonScreen](https://github.com/bitsadmin/fakelogonscreen)
 
 
-### BadUSB
+## BadUSB
 
 [Broad overview of malicious USB attacks](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/)
 * General [https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger](https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger)
 * USB Attack Vectors [https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/) 
 
-HID USBs
+### HID USBs
 
 * [Hak5 Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky) 
     * [Rubber Ducky Use](https://blog.teamascend.com/rubber-ducky)
@@ -32,24 +33,26 @@ HID USBs
     * [Verge Article on O.MG cable](https://www.theverge.com/23321517/omg-elite-cable-hacker-tool-review-defcon) 
 * [DIY Rubber Ducky on Teensy](https://medium.com/iqube-kct/bad-usb-using-teensy-1633ad7cd01)
 
-Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
-P4wnP1 - Pi Zero based (similar to BashBunny) 
+### Disguised Microprocessor USB's
+* Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
+* P4wnP1 - Pi Zero based (similar to BashBunny) 
+   * [P4wnP1 - Official Wiki [Huge resource]](https://p4wnp1.readthedocs.io/en/latest/)
+   * [P4wnP1 - Full build and setup ](https://gideonwolfe.com/posts/security/p4wnp1/)
+   * [P4wnP1-Bilby](https://wjmccann.github.io/blog/2017/11/09/Introducing-the-P4wnP1-Bilby) [Australian P4wnp1 variant]
+   * [Cron.dk - Poor Man’s Bash Bunny](https://www.cron.dk/poor-mans-bash-bunny/)
+* [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
+* [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
 
-* [Official Wiki [Huge resource]](https://p4wnp1.readthedocs.io/en/latest/)
-* [Blog - Full build and setup ](https://gideonwolfe.com/posts/security/p4wnp1/)
-* [Blog - Bash-Bilby build and setup](https://wjmccann.github.io/blog/2017/11/09/Introducing-the-P4wnP1-Bilby) [Australian]
-* [Poor Man’s Bash Bunny](https://www.cron.dk/poor-mans-bash-bunny/)
+Hardware
 * [Buy Raspberry Pi Zero ](https://core-electronics.com.au/raspberry-pi-pico.html)
+* [Banana Pi BPI M2 Zero - AliExpress](https://www.aliexpress.com/item/32839074880.html) (Pi Zero Alternative)
 
-USB Port Killers
+### USB Port Killers
 
 * [Buy USB Killer](https://usbkill.com/) 
 * [General Overview of USB Killers](https://www.darkreading.com/endpoint/rule-of-thumb-usb-killers-pose-real-threat)
 
-<span style="text-decoration:underline;">Other Devices</span>
-
-
-
+## Other Devices
 * [Flipper Zero](https://flipperzero.one/) - Penetration multi-tool
     * Sub 1GHz for wireless access control (garage door, booms, remote keys)
     * 125kHz RFID Reader/Emulator
@@ -58,6 +61,7 @@ USB Port Killers
     * BadUSB/RubberDucky
     * Infrared Transceiver & Learning
     * 1-wire Contact key
+
 * [WiPhone](https://www.wiphone.io/) - Open source WiFi phone
 
 ----------
