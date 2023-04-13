@@ -35,11 +35,12 @@
 
 ### Disguised Microprocessor USB's
 * Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
-* P4wnP1 - Pi Zero based (similar to BashBunny) 
-   * [P4wnP1 - Official Wiki [Huge resource]](https://p4wnp1.readthedocs.io/en/latest/)
-   * [P4wnP1 - Full build and setup ](https://gideonwolfe.com/posts/security/p4wnp1/)
-   * [P4wnP1-Bilby](https://wjmccann.github.io/blog/2017/11/09/Introducing-the-P4wnP1-Bilby) [Australian P4wnp1 variant]
    * [Cron.dk - Poor Man’s Bash Bunny](https://www.cron.dk/poor-mans-bash-bunny/)
+* P4wnP1 - Pi Zero based (similar to BashBunny) 
+   * [P4wnP1 - Official Wiki [Huge resource]](https://p4wnp1.readthedocs.io/en/latest/) & [P4wnP1 - Full build and setup ](https://gideonwolfe.com/posts/security/p4wnp1/)
+   * [P4wnP1-Bilby](https://wjmccann.github.io/blog/2017/11/09/Introducing-the-P4wnP1-Bilby) [Australian P4wnp1 variant]
+   * [P4wnP1_aloa](https://github.com/RoganDawes/P4wnP1_aloa) [Updated version of P4wnp1]
+
 * [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
 * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
 
@@ -77,7 +78,7 @@ Hardware
 ## Linux Privilege Escalation
 
 [Basic Linux Priviledge Escalation [Cheat sheet]](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-
+[How to conduct Linux priviledge escalations](https://www.techtarget.com/searchsecurity/feature/How-to-conduct-Linux-privilege-escalations)
 [Broad Guide to Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation/)<span style="text-decoration:underline;"> - Notes below</span>
 
 **<span style="text-decoration:underline;">Kernel Exploits </span>**
@@ -175,13 +176,11 @@ cron jobs usually run with root privilege to poorly configured cron files can al
 
 <span style="text-decoration:underline;">World-writable cron script Exploit</span>
 
-
-
 * Print world-writeable files find / -perm -2 -type f 2>/dev/null
 * Confirm cron file is writeable ls -la /usr/local/sbin/cron-logrotate.sh
 * Write C file in /tmp cd /tmp then vi rootme.c
 * Compile C file cat rootme.c
-* Change exec owner & group to root  \
+* Change exec owner & group to root
 echo “chown root:root /tmp/rootme; chmod u+s /tmp/rootme;” >/usr/local/sbin/cron-logrotate.sh
 * After 5 mins confirm C file root privilege ls -la rootme
 * Run file to spawn root shell ./rootme
@@ -198,10 +197,7 @@ Avoid this by:
 
 ‘.’ allows the user to execute binaries/script from their current directory. If ‘.’ is removed, it allows attackers to rename a file as a command (eg. ls) that will execute as soon as someone (ideally with root privileges) uses it in the file’s directory.
 
-<span style="text-decoration:underline;">ls “PATH Variable” Exploit</span>
-
-
-
+ls “PATH Variable” Exploit
 * Create a file in Home named “ls” with your malicious codename nano ls
 * Add ‘.’ to the PATH variable PATH=.:${PATH}
 * Root user executes ls and grants root privileges 
@@ -211,10 +207,9 @@ Avoid this by:
 
 ## Windows Exploits
 
-
-
 * [Teamviewer Flaw for cracking user passwords](https://threatpost.com/teamviewer-fhigh-severity-flaw-windows-app/158204/)
-
+* [Remotely dumping Windows credentials](https://meriemlarouim.medium.com/credentials-in-windows-and-how-to-dump-them-remotely-b5c315bb76f4)
+* [Active directory pentesting: cheatsheet and beginner guide](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide)
 
 ## Tools
 
@@ -224,8 +219,10 @@ Avoid this by:
 
 [Wordlists & Rainbow Tables for WEP/WPA/WPA2](https://wifi0wn.wordpress.com/wepwpawpa2-cracking-dictionary/)
 
+[Book of Secret Knowledge - Huge reference for various IT](https://github.com/trimstray/the-book-of-secret-knowledge#hackingpenetration-testing-toc)
 
-### <span style="text-decoration:underline;">Tool List</span> {#tool-list}
+
+### Tool List
 
 * [Kali Linux](https://www.kali.org/)
     * [Kali’s Default Credentials (and tools shipped with)](https://www.kali.org/docs/introduction/default-credentials/)
@@ -236,9 +233,11 @@ Avoid this by:
     * [Basic Metaspoilt Commands](https://www.tutorialspoint.com/metasploit/metasploit_basic_commands.htm)
     * [Rapid 7 Quick Start Guide](https://docs.rapid7.com/metasploit/)
     * [Metaspoilt Unleashed [Free Course]](https://www.offensive-security.com/metasploit-unleashed/)
+    * [Metasploit for Pentesters](https://www.hackingarticles.in/metasploit-for-pentester-sessions/)
     * Modules
         * [Kerberos Domain Username Enumeration](https://www.attackdebris.com/?p=311)
-            * [500 Most Common Usernames](https://www.attackdebris.com/?p=364)
+        * [500 Most Common Usernames](https://www.attackdebris.com/?p=364)
+        * [Meterpreter Tips & Tricks](https://medium.com/@rob.mccarthy31/meterpreter-tips-tricks-17877dda10fa)
 * [John the Ripper](https://www.openwall.com/john/)
     * [Usage Examples with John the Ripper](https://www.openwall.com/john/doc/EXAMPLES.shtml)
     * [John the Ripper Tips and Tutorials](https://www.varonis.com/blog/john-the-ripper)
@@ -248,15 +247,19 @@ Avoid this by:
     * [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
 * [Hydra](https://www.kali.org/tools/hydra/)
     * [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
+    * [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
+    * [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
 * [Burp Suite](https://portswigger.net/burp)
 * [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Expensive Vulnerability scanner
 * [OpenVAS](https://www.openvas.org/) - Open Source Vulnerability Scanner
    * [Installing OpenVAS on Kali](https://www.geeksforgeeks.org/installing-openvas-on-kali-linux/)
-* [Zed Attack Proxy](https://www.zaproxy.org/)
+* [OWASP ZAP - Zed Attack Proxy](https://www.zaproxy.org/)
 * [Cain and Abel](https://sectools.org/tool/cain/) - Windows-only password recovery tool
 * [sqlmap](https://sqlmap.org/) - Automated scanning & exploitation of SQL injection vulnerabilities
 * [nmap](https://nmap.org/) - Security audit and network discovery
+    * [How to use Nmap for vulnerability scanning - NSE](https://geekflare.com/nmap-vulnerability-scan/)
     * [ncat](https://nmap.org/ncat/) - Built into NMap for reading and writing data across networks 
+    * [Zenmap](https://nmap.org/book/zenmap.html) - GUI version of NMap
 * [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started)
     * [How To Use Aircrack-ng](https://techofide.com/blogs/how-to-use-aircrack-ng-aircrack-ng-tutorial-practical-demonstration/)
     * [wikiHow - Cracking WPA/WPA2](www.wikihow.com/Hack-WPA/WPA2-Wi-Fi-with-Kali-Linux)
