@@ -1,10 +1,16 @@
-# Lookups
+#OSINT
+
+[OSINT Framework](https://osintframework.com/) - Huge resource and site referrer
+
+## Lookups
 Easy lookup data
 * Registrar Data = who.is
 * IP Lookup = iplocation.io
 * SSL Certs = crt.sh
 
-# Google Dorking
+## Google Dorking
+[Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
+
 Easy dorks
 * Exclude boring pages with -ves, eg. `site:<domain> -www -shop -otherboringshit`
 * Combine dorks with | (include both ) or & (require both)
@@ -16,7 +22,7 @@ Easy dorks
 * Find php files with ext:php, eg. `site:targetsite.com ext:php inurl:?`
 * Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
 
-[OSINT Framework (Free Tools)](https://osintframework.com/)
+
 
 [Top 15 OSINT Tools](https://www.csoonline.com/article/3445357/what-is-osint-top-open-source-intelligence-tools.amp.html)
 
