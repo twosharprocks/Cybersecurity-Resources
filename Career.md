@@ -1,5 +1,7 @@
 # Career
 
+[Cybersecurity Guide](https://cybersecurityguide.org/) - Comprehensive resources and breakdown of every major security certification
+
 Entry-Level Jobs to Apply for:
 * Junior Security Operations Centre (SOC) ***Analyst***
 * Systems Administrator
