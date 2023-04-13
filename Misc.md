@@ -1,5 +1,8 @@
 # Misc
 
+[The Cybersecurity Handbook](https://guidesmiths.github.io/cybersecurity-handbook/) - Great resource for OWASP, Cheatsheets, Tools, Resources, ect
+[Cybersec Cheat Sheets](https://github.com/hellmaster559/Cybersec-Cheat-Sheets/blob/09f47b126f086b1c56a0c4ac8abb5dedee8e1de1/README.md) - Huge cheatsheet resource for CTFs, Pentesting, General IT Security, Forensics, Incident Response, Cloud Security and more.
+
 ## Encoding
 
 * [RapidTables Converter [Hexadecimal, Octal, Decimal, Binary, Text]](https://www.rapidtables.com/convert/number/hex-to-ascii.html)
