@@ -35,6 +35,12 @@ Entry-Level Jobs to Apply for:
       * [Security Engineer Learning Path](https://www.cloudskillsboost.google/paths/15)
 
 * Software
+   * Splunk
+      * [Splunk Single-Subject Courses - Free & Paid](https://education.splunk.com/single-subject-courses)
+      * [SOAR Automation Broker Walk-through - Free](https://education.splunk.com/course/soar-automation-broker-walk-through)
+      * [Splunk User Behavior Analytics - Free](https://education.splunk.com/course/splunk-user-behavior-analytics-elearning)
+      * [Phantom - Analyst Queue Walkthrough](https://education.splunk.com/elearning/phantom---analyst-queue-walkthrough)
+      * [UBA SOC Analyst Walkthrough](https://education.splunk.com/elearning/uba-soc-analyst-walkthrough)
    * Kali
       * [Stackskills(Owned) - Kali Linux hacker tools, tricks and techniques](https://stackskills.com/courses/enrolled/1221378)
    * NMAP
