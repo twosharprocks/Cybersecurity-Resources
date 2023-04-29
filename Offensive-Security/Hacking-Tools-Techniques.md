@@ -32,6 +32,7 @@
 * [Hak5 O.MG Plug](https://hak5.org/collections/omg-row2/products/omg-plug) - Standard cable with HID Injector, Wifi & Key Logger
     * [Verge Article on O.MG cable](https://www.theverge.com/23321517/omg-elite-cable-hacker-tool-review-defcon) 
 * [DIY Rubber Ducky on Teensy](https://medium.com/iqube-kct/bad-usb-using-teensy-1633ad7cd01)
+* [DIY Rubber Ducky on ATTiny85 - $7 Ducky](https://infosecwriteups.com/make-usb-rubber-ducky-with-less-than-3-fa72dac9e4de
 
 ### Disguised Microprocessor USB's
 * Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
@@ -41,12 +42,17 @@
    * [P4wnP1-Bilby](https://wjmccann.github.io/blog/2017/11/09/Introducing-the-P4wnP1-Bilby) [Australian P4wnp1 variant]
    * [P4wnP1_aloa](https://github.com/RoganDawes/P4wnP1_aloa) [Updated version of P4wnp1]
 
+* Pico-Ducky - [Raspberry Pi Pico based Ducky](https://github.com/dbisu/pico-ducky)
+   * [Pico-NetCat_Reverse-Shell](https://github.com/TeaPixl/Pico-NetCat-Reverse-Shell)
+
 * [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
 * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
 
 Hardware
 * [Buy Raspberry Pi Zero ](https://core-electronics.com.au/raspberry-pi-pico.html)
 * [Banana Pi BPI M2 Zero - AliExpress](https://www.aliexpress.com/item/32839074880.html) (Pi Zero Alternative)
+* [Buy Raspberry Pi Pico](https://raspberry.piaustralia.com.au/products/raspberry-pi-pico-w?src=raspberrypi)
+* [Buy Raspberry Pi Pico wireless](https://core-electronics.com.au/raspberry-pi-pico-w-wireless-wifi.html)
 
 ### USB Port Killers
 
