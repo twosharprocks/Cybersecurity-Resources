@@ -11,6 +11,11 @@ Entry-Level Jobs to Apply for:
 
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 ## 0-6 months after Bootcamp
+- Security+ -> PenTest+
+    -> HackTheBox -> BurpSuite
+    -> Azure -> AWS
+    -> Python -> Go -> SQL
+
 * UniOfAdel CompTIA Voucher for:
    *  ***[Security+](https://www.comptia.org/certifications/security)***
       * [Professor Messer’s Free Security+ Course](https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/)
