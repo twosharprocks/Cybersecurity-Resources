@@ -1,4 +1,4 @@
-# Hacker Techniques
+# Techniques
 
 ## Techniques
 [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
@@ -23,27 +23,40 @@
 * General [https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger](https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger)
 * USB Attack Vectors [https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/) 
 
+### Payloads
+* [Hak5 Payload Library](https://github.com/hak5/usbrubberducky-payloads)
+* [Rubber Ducky Use](https://blog.teamascend.com/rubber-ducky)
+* [Ducky Reverse-Shell](https://github.com/TeaPixl/Pico-NetCat-Reverse-Shell)
+* [3-Second Reverse Shell](https://shop.hak5.org/blogs/usb-rubber-ducky/the-3-second-reverse-shell-with-a-usb-rubber-ducky)
+
+### Converted USBs
+* [USB Firmware Resource](https://www.usbdev.ru/files/#gsc.tab=0)
+* [Phison 2251-03 microcontroller USBs](https://hackmag.com/security/rubber-ducky/)
+* [GitHub - Creating a ducky with Phison 2251-03](https://github.com/brandonlw/Psychson)
+* [Phison 2251-03 to Ducky walkthrough](https://null-byte.wonderhowto.com/how-to/make-your-own-bad-usb-0165419/) 
+* [Alternate microprocessor BadUSB](https://github.com/krakrukra/PocketAdmin)
+
 ### HID USBs
 
 * [Hak5 Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky) 
-    * [Rubber Ducky Use](https://blog.teamascend.com/rubber-ducky)
     * [Modify the USB Rubber Ducky with Custom Firmware](https://null-byte.wonderhowto.com/how-to/modify-usb-rubber-ducky-with-custom-firmware-0177335/)
 * [Pwnie Cactus](https://pwnieexpres.com/en-au/products/cactus-whid-wifi-hid-injector-an-usb-rubberducky) - HID Injector, Key Logger & WiFi
 * [Hak5 O.MG Plug](https://hak5.org/collections/omg-row2/products/omg-plug) - Standard cable with HID Injector, Wifi & Key Logger
     * [Verge Article on O.MG cable](https://www.theverge.com/23321517/omg-elite-cable-hacker-tool-review-defcon) 
 * [DIY Rubber Ducky on Teensy](https://medium.com/iqube-kct/bad-usb-using-teensy-1633ad7cd01)
-* [DIY Rubber Ducky on ATTiny85 - $7 Ducky](https://infosecwriteups.com/make-usb-rubber-ducky-with-less-than-3-fa72dac9e4de
 
 ### Disguised Microprocessor USB's
 * Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
    * [Cron.dk - Poor Man’s Bash Bunny](https://www.cron.dk/poor-mans-bash-bunny/)
-* P4wnP1 - Pi Zero based (similar to BashBunny) 
+* Pi Zero based (similar to BashBunny) 
    * [P4wnP1 - Official Wiki [Huge resource]](https://p4wnp1.readthedocs.io/en/latest/) & [P4wnP1 - Full build and setup ](https://gideonwolfe.com/posts/security/p4wnp1/)
    * [P4wnP1-Bilby](https://wjmccann.github.io/blog/2017/11/09/Introducing-the-P4wnP1-Bilby) [Australian P4wnp1 variant]
    * [P4wnP1_aloa](https://github.com/RoganDawes/P4wnP1_aloa) [Updated version of P4wnp1]
+   * [P4wnP1 to attack routers](https://github.com/tenable/router_badusb/blob/master/README.md)
+   * [BadPI - Pi Zero W](https://www-users.york.ac.uk/~mjf5/bad_pi/index.html)
 
 * Pico-Ducky - [Raspberry Pi Pico based Ducky](https://github.com/dbisu/pico-ducky)
-   * [Pico-NetCat_Reverse-Shell](https://github.com/TeaPixl/Pico-NetCat-Reverse-Shell)
+   * [Pico to Ducky](https://github.com/OCEANOFANYTHINGOFFICIAL/RPI-PICO-TO-BAD-USB-CONVERTER)
 
 * [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
 * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
@@ -65,6 +78,7 @@ Hardware
    * [Hacking Kit with Raspberry Pi - SSH Instructions](https://gbhackers.com/raspberry-pi-and-kali-linux/)
    * [Beginner Hacking Kit with the Raspberry Pi 3 - Many Ideas](https://null-byte.wonderhowto.com/how-to/build-beginner-hacking-kit-with-raspberry-pi-3-model-b-0184144/)
    * [SwissArmyPi Converts your Raspberry Pi into a Strong Hacking Tool](https://medevel.com/swissarmypi/)
+   * [Rogue AP with the Raspberry Pi Zero W](https://jerryryle.github.io/rogue_ap/)
    * [Damn Vulnerable Raspberry Pi](https://whitedome.com.au/re4son/sticky-fingers-dv-pi/)
 
 * [Flipper Zero](https://flipperzero.one/) - Penetration multi-tool
