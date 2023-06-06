@@ -17,16 +17,16 @@ Entry-Level Jobs to Apply for:
     -> Python -> Go -> SQL
 
 * UniOfAdel CompTIA Voucher for:
-   *  ***[Security+](https://www.comptia.org/certifications/security)***
+   *  [Security+](https://www.comptia.org/certifications/security)
       * [Professor Messer’s Free Security+ Course](https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/)
       * [ITU(Owned) - Security+](https://www.itulearning.com/course/index/6172)
    *  *[Network+](https://www.comptia.org/certifications/network)
       * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
       * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
    *  [Linux+](https://www.comptia.org/certifications/linux)
-      *  [ITU(Owned) - Linux+](https://www.itulearning.com/course/index/3645)
+      * [ITU(Owned) - Linux+](https://www.itulearning.com/course/index/3645)
    *  [Server+](https://www.comptia.org/certifications/server) 
-   *  [Cloud+](https://www.comptia.org/certifications/cloud)
+   *  *[Cloud+](https://www.comptia.org/certifications/cloud)
       * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
 * Other Certifications
