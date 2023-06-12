@@ -1,9 +1,9 @@
 # Techniques
 
 ## Techniques
-[Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
-
-[NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
+* [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
+* [NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
+* [HackTricks - HUGE resource](https://book.hacktricks.xyz/welcome/readme)
 
 * [MFA Fatigue](https://www.bleepingcomputer.com/news/security/mfa-fatigue-hackers-new-favorite-tactic-in-high-profile-breaches/amp/) - Spamming a login that requires MFA until a user approves to stop the notifications, or follow up with a call pretending to be IT requesting approval
 * [Domain Shadowing](https://www.bleepingcomputer.com/news/security/domain-shadowing-becoming-more-popular-among-cybercriminals/amp/) - Subcategory of DNS hijacking, where threat actors compromise the DNS of a legitimate domain to host their own subdomains for use in malicious activity but do not modify the legitimate DNS entries that already exist. These subdomains are then used to create malicious pages on the cybercriminals' servers while the domain owner's site's web pages and DNS records remain unchanged, and the owners don't realize they have been breached.
@@ -294,6 +294,7 @@ ls “PATH Variable” Exploit
 * [Sifter](https://github.com/whiterabb17/sifter) - OSINT, recon & vulnerability scanning/exploitation
     * Tutorial - [How Sifter stacks and automates useful pentesting tools](https://www.hackingloops.com/sifter/)
 * [Sn1per](https://github.com/1N3/Sn1per) - Discover attack surfaces & vulnerabilities, automate exploits
+    *  GBHaclers Sn1per Demo](https://gbhackers.com/sn1per/)
 * [Commix](https://commixproject.com/) - Automated scanning & exploitation of command injection vulnerabilities
     * [Commix on GitHub](https://github.com/commixproject/commix)
 * [BeEF](https://beefproject.com/) - Browser Exploitation Framework using client-side attack vectors
