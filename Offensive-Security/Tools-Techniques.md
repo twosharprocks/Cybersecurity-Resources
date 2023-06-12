@@ -43,7 +43,6 @@
 * [Pwnie Cactus](https://pwnieexpres.com/en-au/products/cactus-whid-wifi-hid-injector-an-usb-rubberducky) - HID Injector, Key Logger & WiFi
 * [Hak5 O.MG Plug](https://hak5.org/collections/omg-row2/products/omg-plug) - Standard cable with HID Injector, Wifi & Key Logger
     * [Verge Article on O.MG cable](https://www.theverge.com/23321517/omg-elite-cable-hacker-tool-review-defcon) 
-* [DIY Rubber Ducky on Teensy](https://medium.com/iqube-kct/bad-usb-using-teensy-1633ad7cd01)
 
 ### Disguised Microprocessor USB's
 * Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
@@ -54,12 +53,18 @@
    * [P4wnP1_aloa](https://github.com/RoganDawes/P4wnP1_aloa) [Updated version of P4wnp1]
    * [P4wnP1 to attack routers](https://github.com/tenable/router_badusb/blob/master/README.md)
    * [BadPI - Pi Zero W](https://www-users.york.ac.uk/~mjf5/bad_pi/index.html)
-
-* Pico-Ducky - [Raspberry Pi Pico based Ducky](https://github.com/dbisu/pico-ducky)
+   * [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
+   * [Pico-Ducky - Pico based Ducky](https://github.com/dbisu/pico-ducky)
    * [Pico to Ducky](https://github.com/OCEANOFANYTHINGOFFICIAL/RPI-PICO-TO-BAD-USB-CONVERTER)
+   * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
 
-* [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
-* [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
+Arduino
+* [DIY Rubber Ducky on Teensy](https://medium.com/iqube-kct/bad-usb-using-teensy-1633ad7cd01)
+* **USE THIS ONE - [ATMEGA32U4 BadUSB](https://github.com/asciiterminal/CJMCU_ATMEGA32U4_BADUSB)**
+   * [OverThruster - HID Attack Sketch Generator (Python) for ATMEGA32U4](https://github.com/RedLectroid/OverThruster)
+   * [Ducky Script to Arduino Compiler](https://d4n5h.github.io/Duckuino/)
+   * [Ducky Script to Arduino Compiler 2](https://elrock.gitlab.io/ducky2arduino/)
+
 
 Hardware
 * [Buy Raspberry Pi Zero ](https://core-electronics.com.au/raspberry-pi-pico.html)
