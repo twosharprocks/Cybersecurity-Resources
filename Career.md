@@ -11,15 +11,12 @@ Entry-Level Jobs to Apply for:
 
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 ## 0-6 months after Bootcamp
-- Security+ -> PenTest+
+~~- Security+ -> PenTest+~~
     -> HackTheBox -> BurpSuite
     -> Azure -> AWS
     -> Python -> Go -> SQL
 
 * UniOfAdel CompTIA Voucher for:
-   *  [Security+](https://www.comptia.org/certifications/security)
-      * [Professor Messer’s Free Security+ Course](https://www.professormesser.com/security-plus/sy0-601/sy0-601-video/sy0-601-comptia-security-plus-course/)
-      * [ITU(Owned) - Security+](https://www.itulearning.com/course/index/6172)
    *  *[Network+](https://www.comptia.org/certifications/network)
       * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
       * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
@@ -35,7 +32,9 @@ Entry-Level Jobs to Apply for:
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
       * [AZ-104 Exam Tips - LinkedIn Learning](https://www.linkedin.com/learning/exam-tips-azure-administrator-az-104)
    * AWS
-      * [AWS Skill Builder](https://explore.skillbuilder.aws/learn)
+      * [AWS Educate](https://www.awseducate.com/student/s/)
+          * [Cybersecurity Specialist Course (30-40hrs)](https://awseducate.instructure.com/courses/196)
+          * [My Guide to AWS Certifications](https://medium.com/dataman-in-ai/aws-certification-path-c9d43a1a155f) (TL;DR Start with AWS Certified Cloud Practitioner)
    * Google Cloud
       * [Security Engineer Learning Path](https://www.cloudskillsboost.google/paths/15)
 
