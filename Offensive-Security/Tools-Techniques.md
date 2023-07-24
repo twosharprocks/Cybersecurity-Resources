@@ -21,7 +21,8 @@
 
 [Broad overview of malicious USB attacks](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/)
 * General [https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger](https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger)
-* USB Attack Vectors [https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/) 
+* USB Attack Vectors [https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/)
+* [USBvalve - Raspberry Pico device checks USBs for malicious filesystem activity](https://github.com/cecio/USBvalve)
 
 ### Payloads
 * [Hak5 Payload Library](https://github.com/hak5/usbrubberducky-payloads)
@@ -64,6 +65,7 @@ Arduino
    * [OverThruster - HID Attack Sketch Generator (Python) for ATMEGA32U4](https://github.com/RedLectroid/OverThruster)
    * [Ducky Script to Arduino Compiler](https://d4n5h.github.io/Duckuino/)
    * [Ducky Script to Arduino Compiler 2](https://elrock.gitlab.io/ducky2arduino/)
+   * [Ducky Script to Arduino Compiler 2](https://github.com/zatarra/rubberduino)
 
 
 Hardware
