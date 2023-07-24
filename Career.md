@@ -105,14 +105,16 @@ Entry-Level Jobs to Apply for:
    * [Youtube - CompTIA PenTest+ Full Course - 11 hrs](https://www.youtube.com/watch?v=WczBlBjoQeI)
    * [Youtube - CompTIA PenTest+ Exam - 1hr](https://www.youtube.com/watch?v=P_D7BCpxkS4)
 
-## Intermediate (3+ years):
-* [Cybersecurity Analyst+ (CySA+)](
+## Intermediate (2-3 years):
+* [Cybersecurity Analyst+ (CySA+)](https://www.comptia.org/certifications/cybersecurity-analyst)
    * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
 * [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/)
-* [Offensive Security Certified Professional (OSCP)](https://www.offsec.com/courses/pen-200/)
+* [Offensive Security Certified Professional (PWK/PEN-200/OSCP)](https://www.offsec.com/courses/pen-200/)
+   * White Dome - [PWK/OSCP Experience] + [3-Step System Information Gathering](https://whitedome.com.au/re4son/1-information-gathering-in-three-stages/)
+       * White Dome Recommended OSCP Posts: [PEN-200 Overview](https://blog.g0tmi1k.com/2011/07/pentesting-with-backtrack-pwb/), [Mike Czumak Experience](https://www.securitysift.com/offsec-pwb-oscp/)
    * [How To Become an OSCP](https://geekflare.com/oscp-certification/)
    * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
-   * [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
+   * [IMPORTANT] [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
    * [OSCP Study Resources](https://stefan-p-bargan.medium.com/oscp-study-resources-7571c864899)
    * [OSCP - How to pass first time](https://www.garyruddell.com/articles/how-to-pass-the-oscp-first-time)
 
