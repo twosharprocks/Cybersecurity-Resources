@@ -20,9 +20,6 @@ Entry-Level Jobs to Apply for:
    *  *[Network+](https://www.comptia.org/certifications/network)
       * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
       * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
-   *  [Linux+](https://www.comptia.org/certifications/linux)
-      * [ITU(Owned) - Linux+](https://www.itulearning.com/course/index/3645)
-   *  [Server+](https://www.comptia.org/certifications/server) 
    *  *[Cloud+](https://www.comptia.org/certifications/cloud)
       * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
@@ -100,6 +97,7 @@ Entry-Level Jobs to Apply for:
    *  [ITPro - Many IT Courses](https://www.itpro.tv/courses/)
 
 ## Junior (1-2 years)
+* [HTB Certified Penetration Testing Specialist](https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist/)
 * [PenTest+](https://www.comptia.org/certifications/pentest)
    * [ITU(Owned)](https://www.itulearning.com/course/index/2761)
    * [Youtube - CompTIA PenTest+ Full Course - 11 hrs](https://www.youtube.com/watch?v=WczBlBjoQeI)
@@ -113,8 +111,12 @@ Entry-Level Jobs to Apply for:
    * White Dome - [PWK/OSCP Experience] + [3-Step System Information Gathering](https://whitedome.com.au/re4son/1-information-gathering-in-three-stages/)
        * White Dome Recommended OSCP Posts: [PEN-200 Overview](https://blog.g0tmi1k.com/2011/07/pentesting-with-backtrack-pwb/), [Mike Czumak Experience](https://www.securitysift.com/offsec-pwb-oscp/)
    * [How To Become an OSCP](https://geekflare.com/oscp-certification/)
-   * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
+   * [IMPORTANT] [How to pass the OSCP](https://markeldo.com/how-to-pass-the-oscp/)
+   * [Passing the OSCP in 8 hours (as a high school student](https://www.reddit.com/r/oscp/comments/14onm6g/passing_the_oscp_in_8_hoursas_a_high_school/)
+       * Buy & complete "Learn One" plan, lots of time on Proving Ground (full PG Practice TJNull list of boxes)
+       * Use the [whoisflynn exam report template](https://github.com/whoisflynn/OSCP-Exam-Report-Template/blob/master/OSCP-OS-XXXXX-Exam-Report_Template.docx)
    * [IMPORTANT] [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
+   * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
    * [OSCP Study Resources](https://stefan-p-bargan.medium.com/oscp-study-resources-7571c864899)
    * [OSCP - How to pass first time](https://www.garyruddell.com/articles/how-to-pass-the-oscp-first-time)
 
