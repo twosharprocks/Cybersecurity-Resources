@@ -42,6 +42,7 @@
 * [Hak5 Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky) 
     * [Modify the USB Rubber Ducky with Custom Firmware](https://null-byte.wonderhowto.com/how-to/modify-usb-rubber-ducky-with-custom-firmware-0177335/)
 * [Pwnie Cactus](https://pwnieexpres.com/en-au/products/cactus-whid-wifi-hid-injector-an-usb-rubberducky) - HID Injector, Key Logger & WiFi
+* [Cactus WHiD - Cheap from China](https://www.tindie.com/products/aprbrother/cactus-whid-wifi-hid-injector-usb-rubberducky/)
 * [Hak5 O.MG Plug](https://hak5.org/collections/omg-row2/products/omg-plug) - Standard cable with HID Injector, Wifi & Key Logger
     * [Verge Article on O.MG cable](https://www.theverge.com/23321517/omg-elite-cable-hacker-tool-review-defcon) 
 
