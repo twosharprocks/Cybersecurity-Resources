@@ -1,6 +1,8 @@
 # Homelab
 
 ## How To
+* [How To Build Your Own Pentest Lab](https://hackwarenews.com/how-to-build-your-own-pentest-lab-tips-for-beginners/)
+* [Setup Virtual Penetration Testing Lab [Step-by-Step]](https://www.golinuxcloud.com/setup-virtual-penetration-testing-lab/)
 * [Free Udemy Tutorial - Build Your Own Cyber Lab at Home](https://www.udemy.com/course/build-your-own-cyber-lab-at-home/)
 * [Building a Cybersecurity Homelab for Detection & Monitoring](https://cyberwoxacademy.com/building-a-cybersecurity-homelab-for-detection-monitoring/)
 * [Building a Centralized Ubuntu Desktop for a Cybersecurity Homelab](https://cybercademy.org/building-a-centralized-ubuntu-desktop-for-a-cybersecurity-homelab/)
