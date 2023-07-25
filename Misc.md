@@ -44,17 +44,29 @@
 * [Command Challenge](https://cmdchallenge.com/) [Resource for learning basic Linux commands - Free] 
 * [OverTheWire Wargames](https://overthewire.org/wargames/) [Resource for learning complex Linux commands - Free]
 * [VulnHub](https://www.vulnhub.com/) [Huge collection of vulnerable VMs setup as challenges - Free] 
+
 * [Hack This Site](https://www.hackthissite.org/info/about) [Older resource (updated 2016) for practicing hacking - Free]
 * [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) [Vulnerable online shop for testing - Free]
       *  [Pwning OWASP Juice Shop](https://pwning.owasp-juice.shop/) [Online book for pwning Juice Shop]
 
 * [Hack The Box](https://app.hackthebox.com/) [Penetration Testing Focus - Free & Paid]
+* [TryHackMe](https://tryhackme.com/) [Penetration Testing Focus - Free & Paid]
 * [PentesterLab](https://pentesterlab.com/) [Penetration Testing Focus - Free & Paid]
 * [Hacksplaining](https://www.hacksplaining.com/) [Free]
 * [Hacker 101](https://www.hacker101.com/) [Web security course with video & CTFs - Free]
 * [Safestack](https://safestack.io/) [Good for broad requirements & some software testing - Free & Paid]
 * [Ministry of Testing](https://www.ministryoftesting.com/) [Wide range of courses for software testing - Free & Paid]
 
+### Cybersecurity Portfolio Projects
+* [11 Cybersecurity Projects to Grow Your Skills & Portfolio](https://www.springboard.com/blog/cybersecurity/cyber-security-projects/)
+   * Packet Sniffer, Keylogger, Lost Data Retrieval, Tool Comparison Guide, Recent Cybersecurity Attack Guide
+   * SQL Injection, RFID Blocking, Security Assesssment of Existing Website
+   * Build encryption software, Cybersecurity Policy, Hack Android Device,
+   * Skills: Documentation, Coding, Cryptography, Network Oversight, Testing and Id Threats
+* [Top Cyber Security Projects to Develop Your Skills](https://www.simplilearn.com/top-cyber-security-projects-article)
+   * Bug Bounties, Encrypting Images, Web Application Firewall, Website Scraper, Log Analyser
+   * Antivirus, Malware Sandbox, Secure Erasure Cloud Storage
+   * Facial Authentication for Web, Device security scanner
 
 ### CTF
 * [CTF Time](https://ctftime.org/) [Global Rankings and list of Upcoming Events]
