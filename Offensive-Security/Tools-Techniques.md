@@ -61,13 +61,11 @@
    * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
 
 Arduino
-* [DIY Rubber Ducky on Teensy](https://medium.com/iqube-kct/bad-usb-using-teensy-1633ad7cd01)
-* **USE THIS ONE - [ATMEGA32U4 BadUSB](https://github.com/asciiterminal/CJMCU_ATMEGA32U4_BADUSB)**
-   * [OverThruster - HID Attack Sketch Generator (Python) for ATMEGA32U4](https://github.com/RedLectroid/OverThruster)
-   * [Ducky Script to Arduino Compiler](https://d4n5h.github.io/Duckuino/)
-   * [Ducky Script to Arduino Compiler 2](https://elrock.gitlab.io/ducky2arduino/)
-   * [Ducky Script to Arduino Compiler 2](https://github.com/zatarra/rubberduino)
-
+* [ATMEGA32U4 Leonardo BadUSB](https://github.com/asciiterminal/CJMCU_ATMEGA32U4_BADUSB)
+   * Upload [Duckduino-MicroSD.ino](https://www.arduino.cc/en/software) sketch to Leonardo via [Ardunio IDE](https://www.arduino.cc/en/software)
+      * Upload issues? Click reset button on Leonardo **after** starting sketch upload
+   * Use microSD card reader to copy Ducky payloads into "script.txt" on microSD card (not the Leonardo itself)
+   * [OverThruster - HID Attack Sketch Generator (Python) for ATMEGA32U4](https://github.com/RedLectroid/OverThruster)}
 
 Hardware
 * [Buy Raspberry Pi Zero ](https://core-electronics.com.au/raspberry-pi-pico.html)
