@@ -24,6 +24,9 @@ Entry-Level Jobs to Apply for:
       * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
 * Other Certifications
+   * Fortinet
+       * [Fortinet Training - NSE4](https://training.fortinet.com/course/index.php/Certification:NSE_4)
+       * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
    * ***Azure Administrator***
       * [AZ-104 Training Collection - Microsoft](https://learn.microsoft.com/en-us/users/joshrichards-4736/collections/bookmarks)
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
