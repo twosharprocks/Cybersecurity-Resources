@@ -274,6 +274,9 @@ ls “PATH Variable” Exploit
 * [Active directory pentesting: cheatsheet and beginner guide](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide)
 * [Using Impacket to Dump Windows Secrets](https://medium.com/@benichmt1/secretsdump-demystified-bfd0f933dd9b)
 
+# Cloud Techniques
+## AWS 
+[HTB - AWS Penetration Testing Guide](https://www.hackthebox.com/blog/aws-pentesting-guide)
 
 # Physical Attacks
 ## BadUSB
@@ -345,7 +348,6 @@ Hardware
    * [SwissArmyPi Converts your Raspberry Pi into a Strong Hacking Tool](https://medevel.com/swissarmypi/)
    * [Rogue AP with the Raspberry Pi Zero W](https://jerryryle.github.io/rogue_ap/)
    * [Damn Vulnerable Raspberry Pi](https://whitedome.com.au/re4son/sticky-fingers-dv-pi/)
-
 * [Flipper Zero](https://flipperzero.one/) - Penetration multi-tool
     * Sub 1GHz for wireless access control (garage door, booms, remote keys)
     * 125kHz RFID Reader/Emulator
@@ -354,8 +356,4 @@ Hardware
     * BadUSB/RubberDucky
     * Infrared Transceiver & Learning
     * 1-wire Contact key
-
 * [WiPhone](https://www.wiphone.io/) - Open source WiFi phone
-
-# Cloud Techniques
-[HTB - AWS Penetration Testing Guide](https://www.hackthebox.com/blog/aws-pentesting-guide)
