@@ -421,8 +421,21 @@ frame.number in {frame#, frame#...} Displays the frames listed
 
 **Network security monitoring** Uses a variety of data analysis tools to detect and stop threats after most front-end layers are compromised.
 
+## SIEM and SOAR
 
-### Snort
+### ELK Stack
+
+* Elasticsearch - Storage engine for storing and indexing data
+* Logstash - Log aggregator
+* Kibana - Visualisation
+
+### Splunk
+
+* [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
+* [Splunk Fundamentals 1,2,3](https://www.splunk.com/en_us/training/splunk-fundamentals.html?301=/en_us/training/free-courses/splunk-fundamentals-1.html)
+
+
+### Snort (NIDS)
 
 Snort uses rules to detect and prevent intrusions. Snort operates by:
 1. Reading a configuration file.
@@ -460,3 +473,8 @@ Example:
 * Rule Option
     * `{msg: "TCP Packet Detected";}` The message printed with the alert.
 * Snort provides many additional actions and protocols, which can be combined to design rules for almost any type of packet.
+
+
+### OSSEC (HIDS)
+
+### Security Onion (Linux OS)
