@@ -40,7 +40,10 @@ Entry-Level Jobs to Apply for:
 
 * Software
    * Splunk
+      * [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
+      * [Splunk Fundamentals 1,2,3](https://www.splunk.com/en_us/training/splunk-fundamentals.html?301=/en_us/training/free-courses/splunk-fundamentals-1.html))
       * [Splunk Single-Subject Courses - Free & Paid](https://education.splunk.com/single-subject-courses)
+
       * [SOAR Automation Broker Walk-through - Free](https://education.splunk.com/course/soar-automation-broker-walk-through)
       * [Splunk User Behavior Analytics - Free](https://education.splunk.com/course/splunk-user-behavior-analytics-elearning)
       * [Phantom - Analyst Queue Walkthrough](https://education.splunk.com/elearning/phantom---analyst-queue-walkthrough)
