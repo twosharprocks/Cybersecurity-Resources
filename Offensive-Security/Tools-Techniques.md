@@ -1,6 +1,55 @@
-# Networking Techniques
+# OSINT
 
-## General Techniques
+[OSINT Framework](https://osintframework.com/) - Huge resource and site referrer
+
+## Lookups
+Easy lookup data
+* Registrar Data who.is
+* [IP Lookup](https://iplocation.io/)
+* [DNS Lookup](https://www.nslookup.io/)
+* 
+* SSL Certs = crt.sh
+* Finding hidden subdomains
+    * [Subdomain Finder c99](https://subdomainfinder.c99.nl/)
+    * [sublist3r (Linux)](https://www.kali.org/tools/sublist3r/) [[Using sublist3r tutorial]](https://null-byte.wonderhowto.com/how-to/discover-hidden-subdomains-any-website-with-subfinder-0341687/)
+
+## Google Dorking
+[Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
+
+Easy dorks
+* Exclude boring pages with -ves, eg. `site:<domain> -www -shop -otherboringshit`
+* Combine dorks with | (include both ) or & (require both)
+* Leftover code
+   * `site:pastebin.com "targetsite.com"`
+   * `site:jsfiddle.net "targetsite.com"`
+   * `site:codebeautify.org "targetsite.com"`
+   * `site:codepen.io "targetsite.com"`
+* Find php files with ext:php, eg. `site:targetsite.com ext:php inurl:?`
+* Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
+
+
+
+[Top 15 OSINT Tools](https://www.csoonline.com/article/3445357/what-is-osint-top-open-source-intelligence-tools.amp.html)
+
+* [Maltego](https://www.maltego.com/) - specializes in uncovering relationships among people, companies, domains and publicly accessible information on the internet.
+* [Mitaka](https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg) - Chrome Extension that searches over six dozen search engines for IP addresses, domains, URLs, hashes, ASNs, Bitcoin wallet addresses, and various indicators of compromise (IOCs) from your web browser.
+    * Alternative [“Sputnik”](https://github.com/mitchmoser/sputnik)
+* [SpiderFoot](https://github.com/smicallef/spiderfoot) - GitHub, can be run from Commandline or Web-based GUI
+* [Spyse](https://spyse.com/) - “most complete internet assets registry” geared toward cybersecurity professionals. Relied on by projects like OWASP, IntelligenceX, and SpiderFoot
+* [BuiltWith](https://builtwith.com/) - Detect whether a website is using WordPress, Joomla, or Drupal as its CMS and provide further details.
+    * Combine with [WPScan](https://github.com/wpscanteam/wpscan) and [WordPress Vulnerability Database API](https://wpscan.com/api) to find common security vulnerabilities
+* [Intelligence X](https://intelx.io/) - Archival service and search engine that preserves not only historic versions of web pages but also entire leaked data sets that are otherwise removed from the web due to the objectionable nature of content or legal reasons. Like the Wayback Machine but for everything 
+* [DarkSearch.io](https://darksearch.io/) - Good platform for starting with Dark web research activities
+    * Alternative - [Ahmia](https://ahmia.fi/)
+* [Grep.app](https://grep.app/) - Searching for code snippets across all GitHub repositories
+* [Recon-ng](https://github.com/lanmaster53/recon-ng) - Python to automate OSINT activities (eg. copy/paste)
+* [theHarvester](https://github.com/laramies/theHarvester) - Gathers organistional emails, names, subdomains, IPs and URLs
+* [Shodan](https://www.shodan.io/) - Device intelligence (eg. IOT) including open ports & vulnerabilities
+* [Metagoofil](https://github.com/laramies/metagoofil) - Optimized to extract metadata from public documents, returns usernames, file paths, server names, shared resources and directory tree information
+* [Searchcode](https://searchcode.com/) - Source code search engine; returns usernames, security flaws like [eval $_GET calls](https://owasp.org/www-community/attacks/Direct_Dynamic_Code_Evaluation_Eval%20Injection), active functions like re.compile, special characters for code injection
+* [Babel X](https://babelstreet.com/) - Multilingual search tool for the public internet, including blogs, social media, message boards and news sites. Also searches dark web, including Onion sites, and some deep web content.
+
+## Network Exploitation Techniques
 * [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
 * [NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
 * [HackTricks - HUGE resource](https://book.hacktricks.xyz/welcome/readme)
@@ -11,8 +60,6 @@
 * [Man In The Middle (MITM)](https://www.techtarget.com/iotagenda/definition/man-in-the-middle-attack-MitM)
     * [Spoofing Hotel Wifi ](https://www.lookout.com/blog/spoofed-wifi-60-minutes)
 * [Bypass Software Registration](https://null-byte.wonderhowto.com/how-to/hacks-behind-cracking-part-1-bypass-software-registration-0132568/) - Run program in a debugger
-* Finding hidden subdomains
-    * [sublist3r (Linux)](https://www.kali.org/tools/sublist3r/) [[Using sublist3r tutorial]](https://null-byte.wonderhowto.com/how-to/discover-hidden-subdomains-any-website-with-subfinder-0341687/)
 * [Phishing Windows Credentials](https://pentestlab.blog/2020/03/02/phishing-windows-credentials/)
     * [FakeLogonScreen](https://github.com/bitsadmin/fakelogonscreen)
 
