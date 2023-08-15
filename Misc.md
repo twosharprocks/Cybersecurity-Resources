@@ -3,25 +3,15 @@
 * [The Cybersecurity Handbook](https://guidesmiths.github.io/cybersecurity-handbook/) - Great resource for OWASP, Cheatsheets, Tools, Resources, ect
 * [Cybersec Cheat Sheets](https://github.com/hellmaster559/Cybersec-Cheat-Sheets/blob/09f47b126f086b1c56a0c4ac8abb5dedee8e1de1/README.md) - Huge cheatsheet resource for CTFs, Pentesting, General IT Security, Forensics, Incident Response, Cloud Security and more.
 * [Hak5 Ebook Resources](https://shop.hak5.org/collections/e-books)
-* [Predictability of Android Unlock Patterns](https://arstechnica.com/information-technology/2015/08/new-data-uncovers-the-surprising-predictability-of-android-lock-patterns/amp/) & [Lock Patterns are not safe](https://www.androidauthority.com/lock-pattern-predictable-636267/)
-* [Just Delete Me](https://justdeleteme.xyz/) - Web Service Deletion Instructions
-* [Have I Been Pwned?](https://haveibeenpwned.com/)
-    * [Pwned Websites](https://haveibeenpwned.com/PwnedWebsites)
-    * [Domain Search](https://haveibeenpwned.com/DomainSearch)
-    * [Password Checker](https://haveibeenpwned.com/Passwords)
-
-* [“CyberSecure” rating label generator](https://cybersecure.eigenmagic.com/)
 * [nwipe](https://en.m.wikipedia.org/wiki/Nwipe) - Secure File Destruction
     * [RedKey USB](https://redkeyusb.com/collections/data-wipe-tool)
 * [Keepass Open Source Password Manager](https://keepass.info/)
 
 ### File & URL Checkers
-
 * [Virus Checker for Files](https://www.virustotal.com/gui/home/upload)
 * [Java Script Checker](https://www.typescriptlang.org/)
 * [Scanurl.net](https://scanurl.net/)
 * [Google URL Checker](https://transparencyreport.google.com/safe-browsing/search)
-
 
 ### Secure Cloud Activity
 * [Internxt](https://internxt.com/) - Secure cloud storage (up to 10GB free)
@@ -66,3 +56,10 @@
 
 ## Random Links
 * [Creating a WiFi antenna from a Pringles Can](https://www.makeuseof.com/tag/how-to-make-a-wifi-antenna-out-of-a-pringles-can-nb/) [IN-DEPTH RESOURCE]
+* * [Predictability of Android Unlock Patterns](https://arstechnica.com/information-technology/2015/08/new-data-uncovers-the-surprising-predictability-of-android-lock-patterns/amp/) & [Lock Patterns are not safe](https://www.androidauthority.com/lock-pattern-predictable-636267/)
+* [Just Delete Me](https://justdeleteme.xyz/) - Web Service Deletion Instructions
+* [Have I Been Pwned?](https://haveibeenpwned.com/)
+    * [Pwned Websites](https://haveibeenpwned.com/PwnedWebsites)
+    * [Domain Search](https://haveibeenpwned.com/DomainSearch)
+    * [Password Checker](https://haveibeenpwned.com/Passwords)
+* [“CyberSecure” rating label generator](https://cybersecure.eigenmagic.com/)
