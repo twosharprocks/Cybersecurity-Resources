@@ -99,7 +99,8 @@ Easy dorks
     * [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
     * [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
 * [Burp Suite](https://portswigger.net/burp)
-* [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Expensive Vulnerability scanner
+* [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Vulnerability scanner
+   * [Nessus Docker Image](https://hub.docker.com/r/tenableofficial/nessus)
 * [OpenVAS](https://www.openvas.org/) - Open Source Vulnerability Scanner
    * [Installing OpenVAS on Kali](https://www.geeksforgeeks.org/installing-openvas-on-kali-linux/)
 * [OWASP ZAP - Zed Attack Proxy](https://www.zaproxy.org/)
