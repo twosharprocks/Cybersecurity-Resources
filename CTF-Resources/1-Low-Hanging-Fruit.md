@@ -31,13 +31,17 @@ Other options for breaks: ' " :
 Inspect address bar and use variations of `?page=disclaimer_2.txt` to find files/directories (eg. `?page=old_disclaimers/disclaimer_1.txt`)
 
 ## Local File Inclusion
+
 Any option to upload a file: make sure it's php. 
-If whitelisting file types, add extension on to PHP file (eg. cats.php.jpg)
+* [PHP Sandbox](https://onlinephp.io/) - Testing PHP code
+* [PHP - Reverse Shell](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) - Edit and upload this, run nc listener, then access file from target server to establish a shell
+* If whitelisting is being used, add an extension to PHP file (eg. cats.php.jpg)
 
 ## Remote File Inclusion
 
 ## Linux - Host Enumeration
-`Nmap -A -v ipaddress` (-A for aggressive, -v for verbose, -sV not required with -A)
+* `Nmap -A -v ipaddress` (-A for aggressive, -v for verbose) [-sV not required with -A]
+* `Nmap -sC -sV ipaddress` (-sC for script scan, -sV for Version detection)
 
 Linux Post-exploitation: ls, cat, locate, cat /etc/users
 * `getuid` , `search -f flag`, `locate flag`
