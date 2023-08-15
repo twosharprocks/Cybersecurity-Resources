@@ -8,10 +8,11 @@ Easy lookup data
 * [IP Lookup](https://iplocation.io/)
 * [Registrar & DNS Lookup](https://www.nslookup.io/)
 * [SSL Certs](crt.sh)
-* Finding hidden subdomains
+* Finding Subdomains
     * [Subdomain Finder c99](https://subdomainfinder.c99.nl/)
     * [sublist3r (Linux)](https://www.kali.org/tools/sublist3r/) [[Using sublist3r tutorial]](https://null-byte.wonderhowto.com/how-to/discover-hidden-subdomains-any-website-with-subfinder-0341687/)
-    * 
+* [MAC Address Lookup](https://macaddress.io/)
+
 
 ## Google Dorking
 [Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
@@ -266,6 +267,7 @@ ls “PATH Variable” Exploit
 
 ## Windows Specific
 
+* [Windows Security Log Events](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
 * [Teamviewer Flaw for cracking user passwords](https://threatpost.com/teamviewer-fhigh-severity-flaw-windows-app/158204/)
 * [Remotely dumping Windows credentials](https://meriemlarouim.medium.com/credentials-in-windows-and-how-to-dump-them-remotely-b5c315bb76f4)
 * [Active directory pentesting: cheatsheet and beginner guide](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide)
