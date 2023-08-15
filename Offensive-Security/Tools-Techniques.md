@@ -4,14 +4,14 @@
 
 ## Lookups
 Easy lookup data
-* Registrar Data who.is
+* [Nmmapper - Multiple OSINT Tools](https://www.nmmapper.com/)
 * [IP Lookup](https://iplocation.io/)
-* [DNS Lookup](https://www.nslookup.io/)
-* 
-* SSL Certs = crt.sh
+* [Registrar & DNS Lookup](https://www.nslookup.io/)
+* [SSL Certs](crt.sh)
 * Finding hidden subdomains
     * [Subdomain Finder c99](https://subdomainfinder.c99.nl/)
     * [sublist3r (Linux)](https://www.kali.org/tools/sublist3r/) [[Using sublist3r tutorial]](https://null-byte.wonderhowto.com/how-to/discover-hidden-subdomains-any-website-with-subfinder-0341687/)
+    * 
 
 ## Google Dorking
 [Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
@@ -49,7 +49,7 @@ Easy dorks
 * [Searchcode](https://searchcode.com/) - Source code search engine; returns usernames, security flaws like [eval $_GET calls](https://owasp.org/www-community/attacks/Direct_Dynamic_Code_Evaluation_Eval%20Injection), active functions like re.compile, special characters for code injection
 * [Babel X](https://babelstreet.com/) - Multilingual search tool for the public internet, including blogs, social media, message boards and news sites. Also searches dark web, including Onion sites, and some deep web content.
 
-## Network Exploitation Techniques
+# Network Exploitation Techniques
 * [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
 * [NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
 * [HackTricks - HUGE resource](https://book.hacktricks.xyz/welcome/readme)
@@ -106,6 +106,7 @@ Easy dorks
 * [sqlmap](https://sqlmap.org/) - Automated scanning & exploitation of SQL injection vulnerabilities
 * [nmap](https://nmap.org/) - Security audit and network discovery
     * [How to use Nmap for vulnerability scanning - NSE](https://geekflare.com/nmap-vulnerability-scan/)
+    * [NMap Switches & Scan Types](https://www.digitalocean.com/community/tutorials/nmap-switches-scan-types)
     * [ncat](https://nmap.org/ncat/) - Built into NMap for reading and writing data across networks 
     * [Zenmap](https://nmap.org/book/zenmap.html) - GUI version of NMap
 * [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started)
