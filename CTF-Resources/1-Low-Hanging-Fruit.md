@@ -1,5 +1,5 @@
-[Steps to follow in a CTF](https://github.com/chreniuc/CTF)
----
+# CTF Techniques
+* [Steps to follow in a CTF](https://github.com/chreniuc/CTF)
 
 # Web
 Hidden pages
