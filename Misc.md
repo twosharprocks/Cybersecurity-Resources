@@ -63,3 +63,9 @@
     * [Domain Search](https://haveibeenpwned.com/DomainSearch)
     * [Password Checker](https://haveibeenpwned.com/Passwords)
 * [“CyberSecure” rating label generator](https://cybersecure.eigenmagic.com/)
+ 
+## Random Ideas
+* Use python & server to solve physics problems
+* Harden against cyber and CME
+* Hacking satellites
+* BadUSB
