@@ -66,6 +66,10 @@
  
 ## Random Ideas
 * Use python & server to solve physics problems
-* Harden against cyber and CME
-* Hacking satellites
-* BadUSB
+* Play with BadUSB
+* How to use AI to wipe existence from internet?
+   * How to check/delete sso accounts from Gmail?
+* How to cyber wargame at national level?
+   * Harden against cyber and CME
+   * Hacking satellites
+
