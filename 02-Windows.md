@@ -1,14 +1,20 @@
 Windows
 =====
+* [Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
 
-[Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
+Free Security Tools
+* [Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns) - Identifying startup processes
+* [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer) - Identifying malicious processes on running systems
+* [Winitor/PEStudio](https://www.winitor.com/) - Identifying malicious executables
+* [Hex Editor - VisualStudio](https://marketplace.visualstudio.com/items?itemName=ms-vscode.hexeditor) - Windows Hex Editor (requires install)
+* [Comodo Firewall](https://www.comodo.com/home/internet-security/firewall.php) - Free software firewall (with paid antivirus option)
+* [Bitdefender Antivirus](https://www.bitdefender.com.au/solutions/free.html) - Free antivirus
+* [Bitwarden](https://bitwarden.com/) - Open source password manager
 
-[Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
-
-[Helpful Command Line Commands](https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/)
-
-# **Basics**
+# **PowerShell Commands**
 ----------
+[Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+[Helpful Command Line Commands](https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/)
 
 * `cd` or `chdir` Change directory (Linux = cd)
 * `dir` List directory contents (Linux = ls)
