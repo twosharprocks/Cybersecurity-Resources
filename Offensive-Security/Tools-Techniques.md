@@ -231,8 +231,6 @@ Misconfigured SUDO rights can allow root access through programs that edit code 
 
 Avoid this by:
 
-
-
 * Never give SUDO to any program that allows escape to shell
 * Never give SUDO to vi, more, less, nmap, perl, ruby, python, gdb and others
 
@@ -257,7 +255,7 @@ Avoid this by:
 * cron file should not be writable except for root
 * cron.d directory should not be writable except for root
 
-**<span style="text-decoration:underline;">‘.’ User Path Exploits</span>**
+** ‘.’ User Path Exploits</span>**
 
 ‘.’ allows the user to execute binaries/script from their current directory. If ‘.’ is removed, it allows attackers to rename a file as a command (eg. ls) that will execute as soon as someone (ideally with root privileges) uses it in the file’s directory.
 
@@ -276,7 +274,10 @@ ls “PATH Variable” Exploit
 
 # Cloud Techniques
 ## AWS 
-[HTB - AWS Penetration Testing Guide](https://www.hackthebox.com/blog/aws-pentesting-guide)
+* [HTB - AWS Penetration Testing Guide](https://www.hackthebox.com/blog/aws-pentesting-guide)
+* [Infosec Writeups - Hacking AWS Cognito Misconfiguration](https://infosecwriteups.com/hacking-aws-cognito-misconfiguration-to-zero-click-account-takeover-36a209a0bd8a)
+* [Not so secure - Hacking AWS Cognito Misconfigurations](https://notsosecure.com/hacking-aws-cognito-misconfigurations)
+* [AdeliaRisk - 7 Ways I'd Hack You on AWS](https://adeliarisk.com/secure-cloud-computing-7-ways-id-hack-aws/)
 
 # Physical Attacks
 ## BadUSB
@@ -300,7 +301,6 @@ ls “PATH Variable” Exploit
 * [Alternate microprocessor BadUSB](https://github.com/krakrukra/PocketAdmin)
 
 ### HID USBs
-
 * [Hak5 Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky) 
     * [Modify the USB Rubber Ducky with Custom Firmware](https://null-byte.wonderhowto.com/how-to/modify-usb-rubber-ducky-with-custom-firmware-0177335/)
 * [Pwnie Cactus](https://pwnieexpres.com/en-au/products/cactus-whid-wifi-hid-injector-an-usb-rubberducky) - HID Injector, Key Logger & WiFi
@@ -336,7 +336,6 @@ Hardware
 * [Buy Raspberry Pi Pico wireless](https://core-electronics.com.au/raspberry-pi-pico-w-wireless-wifi.html)
 
 ### USB Port Killers
-
 * [Buy USB Killer](https://usbkill.com/) 
 * [General Overview of USB Killers](https://www.darkreading.com/endpoint/rule-of-thumb-usb-killers-pose-real-threat)
 
