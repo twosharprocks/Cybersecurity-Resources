@@ -149,14 +149,11 @@ Easy dorks
 ### Privilege Escalation
 * [Basic Linux Privilege Escalation [Cheat sheet]](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 * [How to conduct Linux privilege escalations](https://www.techtarget.com/searchsecurity/feature/How-to-conduct-Linux-privilege-escalations)
-* [Broad Guide to Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation/)<span style="text-decoration:underline;"> - Notes below</span>
+* [Broad Guide to Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation/)
 
 **<span style="text-decoration:underline;">Kernel Exploits </span>**
 
 For a kernel exploit attack to succeed, four conditions are required:
-
-
-
 * A vulnerable kernel
 * A matching exploit
 * The ability to transfer the exploit onto the target
@@ -220,7 +217,7 @@ Misconfigured SUDO rights can allow root access through programs that edit code 
 
 
 
-* Determine commands which run as SUDO: sudo -l
+* Determine commands that run as SUDO: sudo -l
 * Find command’s execute parameter: sudo find /home -exec sh -i \;
 
 <span style="text-decoration:underline;">Python “Shell Spawn” Exploit</span>
@@ -255,14 +252,20 @@ Avoid this by:
 * cron file should not be writable except for root
 * cron.d directory should not be writable except for root
 
-** ‘.’ User Path Exploits</span>**
+<span style="text-decoration:underline;">‘.’ User Path Exploits</span>
 
 ‘.’ allows the user to execute binaries/script from their current directory. If ‘.’ is removed, it allows attackers to rename a file as a command (eg. ls) that will execute as soon as someone (ideally with root privileges) uses it in the file’s directory.
 
 ls “PATH Variable” Exploit
 * Create a file in Home named “ls” with your malicious codename nano ls
 * Add ‘.’ to the PATH variable PATH=.:${PATH}
-* Root user executes ls and grants root privileges 
+* Root user executes ls and grants root privileges
+
+<span style="text-decoration:underline;">Escaping rbash to bash</span>
+[How-to escape rbash](https://gist.github.com/PSJoshi/04c0e239ac7b486efb3420db4086e290)
+* List available commands `compgen -c`
+* start bash without source'ing either ~/.bashrc or ~/.bash_profile 
+* since such a shell wouldn't be a full login shell / have no tty attached, force ssh to attach a tty:
 
 ## Windows Specific
 
