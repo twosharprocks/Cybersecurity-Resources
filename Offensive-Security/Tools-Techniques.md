@@ -29,7 +29,7 @@ Easy dorks
 * Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
 
 
-
+## OSINT Tools
 [Top 15 OSINT Tools](https://www.csoonline.com/article/3445357/what-is-osint-top-open-source-intelligence-tools.amp.html)
 
 * [Maltego](https://www.maltego.com/) - specializes in uncovering relationships among people, companies, domains and publicly accessible information on the internet.
@@ -52,6 +52,7 @@ Easy dorks
 
 # Network Exploitation Techniques
 * [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
+   * [Online Reverse SHell Generator](https://www.revshells.com/)   
 * [NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
 * [HackTricks - HUGE resource](https://book.hacktricks.xyz/welcome/readme)
 
