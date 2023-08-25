@@ -74,7 +74,7 @@
    * [OpenBugBounty](https://www.openbugbounty.org/bugbounty-list/)
 * How to use AI to wipe existence from internet?
    * How to check/delete sso accounts from Gmail?
-* How to cyber wargame at national level?
+* [How to cyber wargame at national level?](https://australiancybersecuritymagazine.com.au/how-to-war-game-for-a-nationwide-attack/)
    * Harden against cyber and CME
    * Hacking satellites
 
