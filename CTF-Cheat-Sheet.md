@@ -1,3 +1,7 @@
+# Writeups
+* [HTB Cyber Apocalypse 2023 writeups](https://github.com/sbencoding/htb_ca2023_writeups)
+* [Siunam321 writeups](https://siunam321.github.io/ctf/) - Long list of solutions from CTFs/TryHackMe/Wargames/HTB
+
 # CTF Techniques
 * [Steps to follow in a CTF](https://github.com/chreniuc/CTF)
 
