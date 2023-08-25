@@ -17,10 +17,10 @@ Entry-Level Jobs to Apply for:
     -> Python -> Go -> SQL
 
 * UniOfAdel CompTIA Voucher for:
-   *  *[Network+](https://www.comptia.org/certifications/network)
+  * [Network+](https://www.comptia.org/certifications/network)
       * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
       * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
-   *  *[Cloud+](https://www.comptia.org/certifications/cloud)
+   * [Cloud+](https://www.comptia.org/certifications/cloud)
       * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
 * Other Certifications
@@ -101,6 +101,7 @@ Entry-Level Jobs to Apply for:
    *  [Stackskills(Owned) - Certified Ethical Hacking](https://stackskills.com/courses/enrolled/410134)
    *  [Stackskills(Owned) - Super-Sized Ethical Hacking Bundle](https://stackskills.com/courses/enrolled/1306705)
    *  [ITPro - Many IT Courses](https://www.itpro.tv/courses/)
+   *  [TCM Security Academy](https://academy.tcm-sec.com/)
 
 ## Junior (1-2 years)
 * [HTB Certified Penetration Testing Specialist](https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist/)
@@ -114,6 +115,7 @@ Entry-Level Jobs to Apply for:
    * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
 * [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/)
 * [Offensive Security Certified Professional (PWK/PEN-200/OSCP)](https://www.offsec.com/courses/pen-200/)
+   * [OSCP Reborn 2023 Exam Prep](https://johnjhacking.com/blog/oscp-reborn-2023/)
    * White Dome - [PWK/OSCP Experience] + [3-Step System Information Gathering](https://whitedome.com.au/re4son/1-information-gathering-in-three-stages/)
        * White Dome Recommended OSCP Posts: [PEN-200 Overview](https://blog.g0tmi1k.com/2011/07/pentesting-with-backtrack-pwb/), [Mike Czumak Experience](https://www.securitysift.com/offsec-pwb-oscp/)
    * [How To Become an OSCP](https://geekflare.com/oscp-certification/)
