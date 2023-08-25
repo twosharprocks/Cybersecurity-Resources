@@ -31,12 +31,21 @@ Entry-Level Jobs to Apply for:
       * [AZ-104 Training Collection - Microsoft](https://learn.microsoft.com/en-us/users/joshrichards-4736/collections/bookmarks)
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
       * [AZ-104 Exam Tips - LinkedIn Learning](https://www.linkedin.com/learning/exam-tips-azure-administrator-az-104)
+   * AZ-500 Security
+      * [Reddit - Best Study Material for AZ-500](https://www.reddit.com/r/AzureCertification/comments/1037pnn/best_study_material_for_az500/)
+      * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
+      * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
+      * [Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)
+      * [7 pro tips to prepare for the AZ-500](https://www.whizlabs.com/blog/az-500-exam-tips/) 
    * AWS
       * [AWS Educate](https://www.awseducate.com/student/s/)
+          * [AWS SkillBuilder - Security Learning Path](https://explore.skillbuilder.aws/learn/public/learning_plan/view/91/security-learning-plan)
           * [Cybersecurity Specialist Course (30-40hrs)](https://awseducate.instructure.com/courses/196)
           * [My Guide to AWS Certifications](https://medium.com/dataman-in-ai/aws-certification-path-c9d43a1a155f) (TL;DR Start with AWS Certified Cloud Practitioner)
+          * [AWS Certified Solutions Architect - Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
    * Google Cloud
       * [Security Engineer Learning Path](https://www.cloudskillsboost.google/paths/15)
+      * [Google Cloud Skillboost](https://www.cloudskillsboost.google/)
 
 * Software
    * Splunk
