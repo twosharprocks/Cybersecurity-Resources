@@ -66,7 +66,11 @@
  
 ## Random Ideas
 * Use python & server to solve physics problems
+   * [Python - Solar System Simulator](https://pypi.org/project/solarsystem/)
 * Play with BadUSB
+   * [Hak5 Payloads](https://github.com/hak5/usbrubberducky-payloads/tree/master/payloads)
+* Chase Bug Bounties?
+   * [OpenBugBounty](https://www.openbugbounty.org/bugbounty-list/)
 * How to use AI to wipe existence from internet?
    * How to check/delete sso accounts from Gmail?
 * How to cyber wargame at national level?
