@@ -65,6 +65,7 @@
 * [“CyberSecure” rating label generator](https://cybersecure.eigenmagic.com/)
  
 ## Random Ideas
+* [Awesome-Hacking](https://github.com/rohankumardubey/awesome-hacking) - Huge list of hacking tools for hackers, pentesters & security researchers
 * Use python & server to solve physics problems
    * [Python - Solar System Simulator](https://pypi.org/project/solarsystem/)
 * Play with BadUSB
