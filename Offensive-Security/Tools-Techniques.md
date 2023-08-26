@@ -28,24 +28,27 @@ Easy dorks
 
 
 ## OSINT Tools
-[Top 15 OSINT Tools](https://www.csoonline.com/article/3445357/what-is-osint-top-open-source-intelligence-tools.amp.html)
-* [Maltego](https://www.maltego.com/) - specializes in uncovering relationships among people, companies, domains and publicly accessible information on the internet.
-* [Mitaka](https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg) - Chrome Extension that searches over six dozen search engines for IP addresses, domains, URLs, hashes, ASNs, Bitcoin wallet addresses, and various indicators of compromise (IOCs) from your web browser.
+* [Maltego](https://www.maltego.com/) - Relationships among people, companies, domains and publicly accessible information
+* [Mitaka](https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg) - Chrome Extension that searches IP addresses, domains, URLs, hashes, ASNs, Bitcoin wallet addresses, and various indicators of compromise (IOCs) from your web browser.
     * Alternative [“Sputnik”](https://github.com/mitchmoser/sputnik)
-* [SpiderFoot](https://github.com/smicallef/spiderfoot) - GitHub, can be run from Commandline or Web-based GUI
-* [Spyse](https://spyse.com/) - “most complete internet assets registry” geared toward cybersecurity professionals. Relied on by projects like OWASP, IntelligenceX, and SpiderFoot
+* [SpiderFoot](https://github.com/smicallef/spiderfoot) - Run from Commandline or Web-based GUI
+* [Spyse](https://spyse.com/) - internet assets registry for cybersecurity professionals. Relied on by OWASP, IntelligenceX, and SpiderFoot
 * [BuiltWith](https://builtwith.com/) - Detect whether a website is using WordPress, Joomla, or Drupal as its CMS and provide further details.
     * Combine with [WPScan](https://github.com/wpscanteam/wpscan) and [WordPress Vulnerability Database API](https://wpscan.com/api) to find common security vulnerabilities
-* [Intelligence X](https://intelx.io/) - Archival service and search engine that preserves not only historic versions of web pages but also entire leaked data sets that are otherwise removed from the web due to the objectionable nature of content or legal reasons. Like the Wayback Machine but for everything 
+* [Intelligence X](https://intelx.io/) - Wayback Machine but for everything 
 * [DarkSearch.io](https://darksearch.io/) - Good platform for starting with Dark web research activities
     * Alternative - [Ahmia](https://ahmia.fi/)
-* [Grep.app](https://grep.app/) - Searching for code snippets across all GitHub repositories
+* [Grep.app](https://grep.app/) - Search code snippets across all GitHub repositories
 * [Recon-ng](https://github.com/lanmaster53/recon-ng) - Python to automate OSINT activities (eg. copy/paste)
 * [theHarvester](https://github.com/laramies/theHarvester) - Gathers organistional emails, names, subdomains, IPs and URLs
 * [Shodan](https://www.shodan.io/) - Device intelligence (eg. IOT) including open ports & vulnerabilities
 * [Metagoofil](https://github.com/laramies/metagoofil) - Optimized to extract metadata from public documents, returns usernames, file paths, server names, shared resources and directory tree information
 * [Searchcode](https://searchcode.com/) - Source code search engine; returns usernames, security flaws like [eval $_GET calls](https://owasp.org/www-community/attacks/Direct_Dynamic_Code_Evaluation_Eval%20Injection), active functions like re.compile, special characters for code injection
 * [Babel X](https://babelstreet.com/) - Multilingual search tool for the public internet, including blogs, social media, message boards and news sites. Also searches dark web, including Onion sites, and some deep web content.
+* [Osmedeus](https://www.osmedeus.org/) - A Workflow Engine for recon in offensive security
+* [PhoneInfoga](https://github.com/sundowndev/phoneinfoga) - Scanning international phone numbers for information
+* [Sherlock](https://github.com/sherlock-project/sherlock) - Searching social networks
+* [Social Analyzer](https://github.com/qeeqbox/social-analyzer) - Searching social networks
 
 # Network Exploitation Techniques
 * [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
@@ -102,11 +105,13 @@ Easy dorks
 * [sqlmap](https://sqlmap.org/) - Automated scanning & exploitation of SQL injection vulnerabilities
 * [W3AF](https://w3af.org/) - Web Application Attack and Audit Framework
 * [Burp Suite](https://portswigger.net/burp)
+* [Amass](https://github.com/owasp-amass/amass) - In-depth attack surface mapping and asset discovery
 
 ### Web Fuzzing
 * [Dirsearch](https://github.com/maurosoria/dirsearch) - Brute force web path scanning
 * [ffuf](https://github.com/ffuf/ffuf) - "Fuzz Faster U Fool" Go-based fast web fuzzing tool
 * [GoBuster](https://github.com/OJ/gobuster) - Go-based fuzzing tool (Default with Kali)
+* [FuzzDB](https://github.com/fuzzdb-project/fuzzdb) - Database of attack patterns, wordlists, dictionaries, ect for fuzzing
 
 ### Network Vulnerability Scanning
 * [nmap](https://nmap.org/) - Network and vulnerability discovery
@@ -154,8 +159,10 @@ Easy dorks
     * [Blog - What is Mimikatz (Beginners Guide)](https://www.varonis.com/blog/what-is-mimikatz)
 * [Ettercap](https://www.ettercap-project.org/) - Man in the middle attack platform
 
+### C2 Platforms
+* [Merlin](https://github.com/Ne0nd0g/merlin) 
 
-## Linux Specific
+## Linux Specific Techniques
 
 ### Privilege Escalation
 * [Basic Linux Privilege Escalation [Cheat sheet]](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
@@ -283,8 +290,13 @@ ls “PATH Variable” Exploit
 * [Windows Security Log Events](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
 * [Teamviewer Flaw for cracking user passwords](https://threatpost.com/teamviewer-fhigh-severity-flaw-windows-app/158204/)
 * [Remotely dumping Windows credentials](https://meriemlarouim.medium.com/credentials-in-windows-and-how-to-dump-them-remotely-b5c315bb76f4)
-* [Active directory pentesting: cheatsheet and beginner guide](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide)
 * [Using Impacket to Dump Windows Secrets](https://medium.com/@benichmt1/secretsdump-demystified-bfd0f933dd9b)
+
+### M365 & Active Directory
+* [Using Bloodhound CE to attack Active Directory](https://www.8com.de/cyber-security-blog/bloodhound-ce-and-automating-parts-of-ad-pentests)
+* [Active directory pentesting](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide) - Cheatsheet and beginner guide
+* [ScubaGear](https://github.com/cisagov/ScubaGear) - M365 security assessment tool, CISA-developed, run in Powershell
+* [UntitledGooseTool](https://github.com/cisagov/untitledgoosetool) - AzureAD/M365 security assessment tool, Python-based, CISA-developed
 
 # Cloud Techniques
 ## AWS 
