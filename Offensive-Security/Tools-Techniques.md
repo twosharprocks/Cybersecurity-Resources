@@ -301,6 +301,7 @@ ls “PATH Variable” Exploit
 * [Using Impacket to Dump Windows Secrets](https://medium.com/@benichmt1/secretsdump-demystified-bfd0f933dd9b)
 
 ### M365 & Active Directory
+* [Understanding Active Directory Attack Paths](https://thehackernews.com/2023/08/understanding-active-directory-attack.html)
 * [Using Bloodhound CE to attack Active Directory](https://www.8com.de/cyber-security-blog/bloodhound-ce-and-automating-parts-of-ad-pentests)
 * [Active directory pentesting](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide) - Cheatsheet and beginner guide
 * [ScubaGear](https://github.com/cisagov/ScubaGear) - M365 security assessment tool, CISA-developed, run in Powershell
