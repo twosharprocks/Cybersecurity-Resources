@@ -107,6 +107,14 @@ Easy dorks
 * [Burp Suite](https://portswigger.net/burp)
 * [Amass](https://github.com/owasp-amass/amass) - In-depth attack surface mapping and asset discovery
 
+### API Hacking
+* [API Security Testing Checklist](https://danaepp.com/an-api-security-testing-checklist-with-a-twist) [START HERE]
+   * [Shieldfy API Security Checklist on Github](https://github.com/shieldfy/API-Security-Checklist)
+* [8 Common API Vulnerabilities](https://apimike.com/api-vulnerabilities)
+* [Using Common Attack Patterns against an API](https://danaepp.com/3-ways-to-use-common-attack-patterns-to-abuse-an-api)
+* [API Discovery with CeWL](https://danaepp.com/a-cewl-way-for-api-discovery) - Custom Word List generator for API discovery
+   * [CeWL on Github](https://github.com/digininja/CeWL)
+
 ### Web Fuzzing
 * [Dirsearch](https://github.com/maurosoria/dirsearch) - Brute force web path scanning
 * [ffuf](https://github.com/ffuf/ffuf) - "Fuzz Faster U Fool" Go-based fast web fuzzing tool
