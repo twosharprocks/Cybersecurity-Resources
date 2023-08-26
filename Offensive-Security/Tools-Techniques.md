@@ -1,9 +1,8 @@
 # OSINT
 
-[OSINT Framework](https://osintframework.com/) - Huge resource and site referrer
-
-## Lookups
 Easy lookup data
+* [OSINT Framework](https://osintframework.com/) - Comprehensive site referrer
+
 * [Nmmapper - Multiple OSINT Tools](https://www.nmmapper.com/)
 * [IP Lookup](https://iplocation.io/)
 * [Registrar & DNS Lookup](https://www.nslookup.io/)
@@ -13,8 +12,7 @@ Easy lookup data
     * [sublist3r (Linux)](https://www.kali.org/tools/sublist3r/) [[Using sublist3r tutorial]](https://null-byte.wonderhowto.com/how-to/discover-hidden-subdomains-any-website-with-subfinder-0341687/)
 * [MAC Address Lookup](https://macaddress.io/)
 
-
-## Google Dorking
+Google Dorking
 [Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
 
 Easy dorks
@@ -31,7 +29,6 @@ Easy dorks
 
 ## OSINT Tools
 [Top 15 OSINT Tools](https://www.csoonline.com/article/3445357/what-is-osint-top-open-source-intelligence-tools.amp.html)
-
 * [Maltego](https://www.maltego.com/) - specializes in uncovering relationships among people, companies, domains and publicly accessible information on the internet.
 * [Mitaka](https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg) - Chrome Extension that searches over six dozen search engines for IP addresses, domains, URLs, hashes, ASNs, Bitcoin wallet addresses, and various indicators of compromise (IOCs) from your web browser.
     * Alternative [“Sputnik”](https://github.com/mitchmoser/sputnik)
@@ -67,15 +64,79 @@ Easy dorks
 
 ## Tools
 
-* [Pentesttools.net ](https://pentesttools.net/)
-* [Hacking Tools [RESOURCE]](https://en.m.wikibooks.org/wiki/Hacking/Tools)
+* [Pentesttools.net](https://pentesttools.net/)
+* [Hacking Tools RESOURCE](https://en.m.wikibooks.org/wiki/Hacking/Tools) - Comprehensive Resource
+* [SecLists](https://github.com/danielmiessler/SecLists) - Comprehensive security lists for fuzzing, username/password, payloads, ect 
 * [Wordlists & Rainbow Tables for WEP/WPA/WPA2](https://wifi0wn.wordpress.com/wepwpawpa2-cracking-dictionary/)
-* [Book of Secret Knowledge - Huge reference for various IT](https://github.com/trimstray/the-book-of-secret-knowledge#hackingpenetration-testing-toc)
+* [Book of Secret Knowledge](https://github.com/trimstray/the-book-of-secret-knowledge#hackingpenetration-testing-toc) - Huge reference for various IT
 
 
-### Tool List
+### OS
 * [Kali Linux](https://www.kali.org/)
     * [Kali’s Default Credentials (and tools shipped with)](https://www.kali.org/docs/introduction/default-credentials/)
+* [ParrotOS]
+* [BlackArch] 
+
+### Brute Force Tools
+* [John the Ripper](https://www.openwall.com/john/) Brute-force password tester
+    * [Usage Examples with John the Ripper](https://www.openwall.com/john/doc/EXAMPLES.shtml)
+    * [John the Ripper Tips and Tutorials](https://www.varonis.com/blog/john-the-ripper)
+* [Hashcat](https://hashcat.net/hashcat/) - Hash cracker
+    * [How to crack passwords with Hashcat](https://geekflare.com/password-cracking-with-hashcat/) 
+    * [CrackQ on GitHub](https://github.com/f0cker/crackq)
+    * [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
+* [Hydra](https://www.kali.org/tools/hydra/) - Login attack tool
+    * [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
+    * [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
+    * [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
+* [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started) - WiFi DeAuth attack
+    * [How To Use Aircrack-ng](https://techofide.com/blogs/how-to-use-aircrack-ng-aircrack-ng-tutorial-practical-demonstration/)
+    * [wikiHow - Cracking WPA/WPA2](www.wikihow.com/Hack-WPA/WPA2-Wi-Fi-with-Kali-Linux)
+
+###  Web Vulnerability Scanning
+* [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Vulnerability scanner
+   * [Nessus Docker Image](https://hub.docker.com/r/tenableofficial/nessus)
+* [OpenVAS](https://www.openvas.org/) - Open Source Vulnerability Scanner
+   * [Installing OpenVAS on Kali](https://www.geeksforgeeks.org/installing-openvas-on-kali-linux/)
+* [OWASP ZAP - Zed Attack Proxy](https://www.zaproxy.org/)
+* [sqlmap](https://sqlmap.org/) - Automated scanning & exploitation of SQL injection vulnerabilities
+* [W3AF](https://w3af.org/) - Web Application Attack and Audit Framework
+* [Burp Suite](https://portswigger.net/burp)
+
+### Web Fuzzing
+* [Dirsearch](https://github.com/maurosoria/dirsearch) - Brute force web path scanning
+* [ffuf](https://github.com/ffuf/ffuf) - "Fuzz Faster U Fool" Go-based fast web fuzzing tool
+* [GoBuster](https://github.com/OJ/gobuster) - Go-based fuzzing tool (Default with Kali)
+
+### Network Vulnerability Scanning
+* [nmap](https://nmap.org/) - Network and vulnerability discovery
+    * [How to use Nmap for vulnerability scanning - NSE](https://geekflare.com/nmap-vulnerability-scan/)
+    * [NMap Switches & Scan Types](https://www.digitalocean.com/community/tutorials/nmap-switches-scan-types)
+    * [ncat](https://nmap.org/ncat/) - Built into NMap for reading and writing data across networks 
+    * [Zenmap](https://nmap.org/book/zenmap.html) - GUI version of NMap
+* [Sn1per](https://github.com/1N3/Sn1per) - Discover attack surfaces & vulnerabilities, automate exploits
+    *  GBHaclers Sn1per Demo](https://gbhackers.com/sn1per/)
+* [Commix](https://commixproject.com/) - Automated scanning & exploitation of command injection vulnerabilities
+    * [Commix on GitHub](https://github.com/commixproject/commix)
+* [Karkinos](https://github.com/helich0pper/Karkinos) - Pentesting multitool
+    * Encode/Decode, encrypt/decrypt, generate/crack hashes, 
+    * Port scanning, reverse shell handling, file busting
+* [Sifter](https://github.com/whiterabb17/sifter) - OSINT, recon & vulnerability scanning/exploitation
+    * Tutorial - [How Sifter stacks and automates useful pentesting tools](https://www.hackingloops.com/sifter/)
+* [HackTools](https://github.com/LasCC/Hack-Tools) - Web extension with tools & cheat sheets (works with Metaspoilt)
+    * SQLi, XSS, Local File Inclusion
+    * Dynamic Reverse Shell Generator
+    * Data Exfil & download to remote machines
+    * Hash Generator for SHA1, SHA256, SHA512, MD5, SM3, etc.
+    * MSFVenom for payload creation
+* [Modlishka](https://github.com/drk1wi/Modlishka) - Automated HTTP reverse proxy
+    * Poison HTTP 301 browser cache
+    * Hijack non-TLS URLs
+    * Identify/Highlight 2FA vulnerabilities
+
+### Exploitation
+* [BeEF](https://beefproject.com/) - Browser Exploitation Framework using client-side attack vectors
+    * [BeEF on GitHub](https://github.com/beefproject/beef)
 * [Metasploit](https://www.metasploit.com/) - TCP port scanning & vulnerability identifcation/exploitation
     * Default credentials: Username - postgres, Password - postgres
     * [What is Metasploit?](https://www.csoonline.com/article/3379117/what-is-metasploit-and-how-to-use-this-popular-hacking-tool.html)
@@ -88,62 +149,11 @@ Easy dorks
         * [Kerberos Domain Username Enumeration](https://www.attackdebris.com/?p=311)
         * [500 Most Common Usernames](https://www.attackdebris.com/?p=364)
         * [Meterpreter Tips & Tricks](https://medium.com/@rob.mccarthy31/meterpreter-tips-tricks-17877dda10fa)
-* [John the Ripper](https://www.openwall.com/john/)
-    * [Usage Examples with John the Ripper](https://www.openwall.com/john/doc/EXAMPLES.shtml)
-    * [John the Ripper Tips and Tutorials](https://www.varonis.com/blog/john-the-ripper)
-* [Hashcat](https://hashcat.net/hashcat/)
-    * [How to crack passwords with Hashcat](https://geekflare.com/password-cracking-with-hashcat/) 
-    * [CrackQ on GitHub](https://github.com/f0cker/crackq)
-    * [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
-* [Hydra](https://www.kali.org/tools/hydra/)
-    * [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
-    * [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
-    * [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
-* [Burp Suite](https://portswigger.net/burp)
-* [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Vulnerability scanner
-   * [Nessus Docker Image](https://hub.docker.com/r/tenableofficial/nessus)
-* [OpenVAS](https://www.openvas.org/) - Open Source Vulnerability Scanner
-   * [Installing OpenVAS on Kali](https://www.geeksforgeeks.org/installing-openvas-on-kali-linux/)
-* [OWASP ZAP - Zed Attack Proxy](https://www.zaproxy.org/)
-* [Cain and Abel](https://sectools.org/tool/cain/) - Windows-only password recovery tool
-* [sqlmap](https://sqlmap.org/) - Automated scanning & exploitation of SQL injection vulnerabilities
-* [nmap](https://nmap.org/) - Security audit and network discovery
-    * [How to use Nmap for vulnerability scanning - NSE](https://geekflare.com/nmap-vulnerability-scan/)
-    * [NMap Switches & Scan Types](https://www.digitalocean.com/community/tutorials/nmap-switches-scan-types)
-    * [ncat](https://nmap.org/ncat/) - Built into NMap for reading and writing data across networks 
-    * [Zenmap](https://nmap.org/book/zenmap.html) - GUI version of NMap
-* [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started)
-    * [How To Use Aircrack-ng](https://techofide.com/blogs/how-to-use-aircrack-ng-aircrack-ng-tutorial-practical-demonstration/)
-    * [wikiHow - Cracking WPA/WPA2](www.wikihow.com/Hack-WPA/WPA2-Wi-Fi-with-Kali-Linux)
-* [W3af](https://w3af.org/)
 * [Mimikatz (on GitHub)](https://github.com/gentilkiwi/mimikatz/wiki)
     * [Unofficial Guide & Command Reference](https://adsecurity.org/?page_id=1821)
     * [Blog - What is Mimikatz (Beginners Guide)](https://www.varonis.com/blog/what-is-mimikatz)
-* [Karkinos](https://github.com/helich0pper/Karkinos) - Pentesting multitool
-    * Encode/Decode, encrypt/decrypt, generate/crack hashes, 
-    * Port scanning, reverse shell handling, file busting
-* [Sifter](https://github.com/whiterabb17/sifter) - OSINT, recon & vulnerability scanning/exploitation
-    * Tutorial - [How Sifter stacks and automates useful pentesting tools](https://www.hackingloops.com/sifter/)
-* [Sn1per](https://github.com/1N3/Sn1per) - Discover attack surfaces & vulnerabilities, automate exploits
-    *  GBHaclers Sn1per Demo](https://gbhackers.com/sn1per/)
-* [Commix](https://commixproject.com/) - Automated scanning & exploitation of command injection vulnerabilities
-    * [Commix on GitHub](https://github.com/commixproject/commix)
-* [BeEF](https://beefproject.com/) - Browser Exploitation Framework using client-side attack vectors
-    * [BeEF on GitHub](https://github.com/beefproject/beef)
-* [HackTools](https://github.com/LasCC/Hack-Tools) - Web extension with tools & cheat sheets (works with Metaspoilt)
-    * SQLi, XSS, Local File Inclusion
-    * Dynamic Reverse Shell Generator
-    * Data Exfil & download to remote machines
-    * Hash Generator for SHA1, SHA256, SHA512, MD5, SM3, etc.
-    * MSFVenom for payload creation
-* [Modlishka](https://github.com/drk1wi/Modlishka) - Automated HTTP reverse proxy
-    * Poison HTTP 301 browser cache
-    * Hijack non-TLS URLs
-    * Identify/Highlight 2FA vulnerabilities
-* [Dirsearch](https://github.com/maurosoria/dirsearch) - Brute force web path scanning
-    * Find hidden/unhidden web directories & invalid pages
-* [Greenbone OpenVAS](https://www.openvas.org/) - Vulnerability scanner built into Kali Linux
 * [Ettercap](https://www.ettercap-project.org/) - Man in the middle attack platform
+
 
 ## Linux Specific
 
