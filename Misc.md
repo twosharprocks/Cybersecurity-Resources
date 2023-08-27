@@ -68,6 +68,8 @@
 * [Awesome-Hacking](https://github.com/rohankumardubey/awesome-hacking) - Huge list of hacking tools for hackers, pentesters & security researchers
 * Use python & server to solve physics problems
    * [Python - Solar System Simulator](https://pypi.org/project/solarsystem/)
+      * Built-in Earth-Mars launch calculator
+   * Galaxy Simulator with Time-Dilation Calculator
 * Play with BadUSB
    * [Hak5 Payloads](https://github.com/hak5/usbrubberducky-payloads/tree/master/payloads)
 * Chase Bug Bounties?
