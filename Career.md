@@ -120,6 +120,8 @@ Entry-Level Jobs to Apply for:
    * [Youtube - CompTIA PenTest+ Exam - 1hr](https://www.youtube.com/watch?v=P_D7BCpxkS4)
 
 ## Intermediate (2-3 years):
+Aim for fully remote work
+
 * [Cybersecurity Analyst+ (CySA+)](https://www.comptia.org/certifications/cybersecurity-analyst)
    * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
 * [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/)
