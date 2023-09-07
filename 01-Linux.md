@@ -22,33 +22,31 @@ Linux - Bash Commands
 
 `CtrlC` - Cancels/stops your current line/command (displays as _^C_)
 
-`clear` Clear console, reset Reset console, exit Close console
+`clear` Clear console, `reset` Reset console, `exit` Close console
 
-`start` Start argument (eg. _start foldername_ will open foldername)
+`start` Start argument (eg. `start folder_name` will open folder_name)
 
 `man` Manual & options for whatever command follows it
 
-`--help` Help for whatever command you put in front (eg. _ls --help_ shows help for “ls”)
+`whatis` Provides a shorter version of `man`
 
-`whatis` Provides a shorter version of “man”
+`--help` Help for whatever command you put in front (eg. `ls --help` shows help for “ls”)
 
 `ls` List directory contents 
-* `-la` Show size & permissions (& hidden files), `-s` file sizes, `-S` largest first ln link a file
-
-`pwd` Print Working Directory
-
-`cd` Change Directory (eg. cd /tmp/var),
-
-`mkdir` Make Directory 
-*   `mkdir -p parent/{F1,F2,F3}/{temp1,temp2}` creates folder “Parent” with sub-directories F1, F2 & F3 each, with temp1 & temp2 directores inside each sub-directory.
+* `-la` Show size & permissions (& hidden files), `-s` file sizes, `-S` show the largest file first
+* `ln` link a file
+* `pwd` Print Working Directory
+* `cd` Change Directory (eg. cd /tmp/var)
+* `mkdir` Make Directory 
+   `mkdir -p parent/{F1,F2,F3}/{temp1,temp2}` creates folder “Parent” with sub-directories F1, F2 & F3 each, with temp1 & temp2 directores inside each sub-directory.
 
 `rm` or `rmdir` Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
 * Options: `-r` or `-R` "Recursive", applies command throughout 
 * eg. `rm -r foldername` removes folder & it's contents
 
-`..` Parent Directory (One level above), // Root directory
+`..` Parent Directory (One level above), `//` Root directory
 
-`touch` Create new file (eg. `touch dir/sample.txt)`
+`touch` Create new file (eg. `touch dir/sample.txt`)
 
 `cp` Copy (eg. `cp test.txt dir/test2.txt` copies test.txt to directory dir and renames it test2.txt)
 
@@ -58,9 +56,9 @@ Linux - Bash Commands
 
 `*` Wildcard
 
-* eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
+ eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
 
-* eg. `rm *` will remove all files in the current directory
+ eg. `rm *` will remove all files in the current directory
 
 `&&` Execute another command in the same line ONLY if the previous command worked
 
