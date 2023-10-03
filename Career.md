@@ -27,9 +27,6 @@ Entry-Level Jobs to Apply for:
    * Fortinet
        * [Fortinet Training - NSE4](https://training.fortinet.com/course/index.php/Certification:NSE_4)
        * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
-   * ***Azure Administrator***
-      * [AZ-104 Training Collection - Microsoft](https://learn.microsoft.com/en-us/users/joshrichards-4736/collections/bookmarks)
-      * [AZ-104 Exam Tips - LinkedIn Learning](https://www.linkedin.com/learning/exam-tips-azure-administrator-az-104)
    * AZ-500 Security
       * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
       * [Reddit - Best Study Material for AZ-500](https://www.reddit.com/r/AzureCertification/comments/1037pnn/best_study_material_for_az500/)
