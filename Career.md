@@ -101,7 +101,6 @@ Entry-Level Jobs to Apply for:
       * [Learn Ruby.org](https://www.learnrubyonline.org/)
 
 * Other Courses
-   *  ***[CodeRed(Owned) - Complete Cybersecurity Skill Builder](https://codered.eccouncil.org/learning-path/the-complete-cybersecurity-skill-builder)***
    *  [Stackskills(Owned) - Ethical Hacker Certification](https://stackskills.com/courses/enrolled/614031)
    *  [Stackskills(Owned) - Ethical Hacking and Penetration Testing](https://stackskills.com/courses/enrolled/1050508)
    *  [Stackskills(Owned) - Certified Ethical Hacking](https://stackskills.com/courses/enrolled/410134)
