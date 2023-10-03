@@ -12,23 +12,14 @@ Entry-Level Jobs to Apply for:
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 ## 0-6 months after Bootcamp
 ~~- Security+ -> PenTest+~~
-    -> HackTheBox -> BurpSuite
-    -> Azure -> AWS
-    -> Python -> Go -> SQL
-
-* UniOfAdel CompTIA Voucher for:
-  * [Network+](https://www.comptia.org/certifications/network)
-      * [ITU(Owned) - Network+](https://www.itulearning.com/course/index/6008)
-      * [Professor Messer’s Free Network+ Study Materials](https://www.professormesser.com/get-network-plus-certified/)
-   * [Cloud+](https://www.comptia.org/certifications/cloud)
+    -> HackTheBox & BurpSuite
+    -> AZ-500 [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
+    -> Python [Automate with Python - Kindle]
+    -> Cloud+ (UniOfAdel CompTIA Voucher)
       * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
 * Other Certifications
-   * Fortinet
-       * [Fortinet Training - NSE4](https://training.fortinet.com/course/index.php/Certification:NSE_4)
-       * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
-   * AZ-500 Security
-      * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
+      * AZ-500 Security
       * [Reddit - Best Study Material for AZ-500](https://www.reddit.com/r/AzureCertification/comments/1037pnn/best_study_material_for_az500/)
       * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
       * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
@@ -69,6 +60,10 @@ Entry-Level Jobs to Apply for:
       * [Stackskills(Owned) - Metasploit](https://stackskills.com/courses/enrolled/369771)
    * [OWASP ZAP](https://www.zaproxy.org/)
       *  [Stackskills(Owned) - OWASP ZAP](https://stackskills.com/courses/enrolled/709664)
+    
+  * Fortinet
+       * [Fortinet Training - NSE4](https://training.fortinet.com/course/index.php/Certification:NSE_4)
+       * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
 
 * Programming
    * ***Python***
