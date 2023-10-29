@@ -1,7 +1,23 @@
 # Career
 
 [Cybersecurity Guide](https://cybersecurityguide.org/) - Comprehensive resources and breakdown of every major security certification
+[Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 
+# Job Domains
+* Security Architecture - Security design that addresses the requirements and potential risks of a given scenario or environment. 
+* Physical Security - Protection of personnel, hardware, software, networks, and data from physical actions and events that could cause serious loss or damage.
+* Risk Assessment - Analyzing what can go wrong, how likely it is to happen, what the potential consequences are, and how tolerable the identified risk is.
+* Security Operation - Process of identifying, containing, and remediating threats on behalf of a company or organization.
+* Threat Intelligence - Research and analysis of evidence-based knowledge regarding an existing or emerging menace.
+* User Education - Teaching users how to protect themselves from cyberattacks by informing them of risks, exploits, and external threats, and the skills needed to combat common attacks.
+* Career Development - Training of future cyber security professionals
+* Governance - Framework for managing performance and risk, oversight of compliance and control responsibilities, and defining the cyber mission by mapping the structure, authority, and processes to create an effective program.
+* Framework and Standard - Creation of new security frameworks and practices for professionals to follow.
+
+# Apply for 3 months into Bootcamp 
+* Help/Service Desk Level 1
+
+# 0-12 months after Bootcamp (with 3-6 months help/service desk experience)
 Entry-Level Jobs to Apply for:
 * Junior Security Operations Centre (SOC) ***Analyst***
 * Systems Administrator
@@ -9,8 +25,7 @@ Entry-Level Jobs to Apply for:
 * Risk ***Analyst***
 * Information assurance ***technician***
 
-[Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
-## 0-6 months after Bootcamp
+## Entry Level Certifications
 ~~- Security+ -> PenTest+~~
     -> HackTheBox & BurpSuite
     -> AZ-500 [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
@@ -18,22 +33,12 @@ Entry-Level Jobs to Apply for:
     -> Cloud+ (UniOfAdel CompTIA Voucher)
       * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 
-* Other Certifications
-      * AZ-500 Security
-      * [Reddit - Best Study Material for AZ-500](https://www.reddit.com/r/AzureCertification/comments/1037pnn/best_study_material_for_az500/)
-      * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
-      * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
-      * [Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)
-      * [7 pro tips to prepare for the AZ-500](https://www.whizlabs.com/blog/az-500-exam-tips/) 
-   * AWS
-      * [AWS Educate](https://www.awseducate.com/student/s/)
-          * [AWS SkillBuilder - Security Learning Path](https://explore.skillbuilder.aws/learn/public/learning_plan/view/91/security-learning-plan)
-          * [Cybersecurity Specialist Course (30-40hrs)](https://awseducate.instructure.com/courses/196)
-          * [My Guide to AWS Certifications](https://medium.com/dataman-in-ai/aws-certification-path-c9d43a1a155f) (TL;DR Start with AWS Certified Cloud Practitioner)
-          * [AWS Certified Solutions Architect - Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
-   * Google Cloud
-      * [Security Engineer Learning Path](https://www.cloudskillsboost.google/paths/15)
-      * [Google Cloud Skillboost](https://www.cloudskillsboost.google/)
+* AZ-500 Security
+  * [Reddit - Best Study Material for AZ-500](https://www.reddit.com/r/AzureCertification/comments/1037pnn/best_study_material_for_az500/)
+    * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
+    * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
+    * [Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)
+    * [7 pro tips to prepare for the AZ-500](https://www.whizlabs.com/blog/az-500-exam-tips/) 
 
 * Software
    * Splunk
@@ -60,13 +65,8 @@ Entry-Level Jobs to Apply for:
       * [Stackskills(Owned) - Metasploit](https://stackskills.com/courses/enrolled/369771)
    * [OWASP ZAP](https://www.zaproxy.org/)
       *  [Stackskills(Owned) - OWASP ZAP](https://stackskills.com/courses/enrolled/709664)
-    
-  * Fortinet
-       * [Fortinet Training - NSE4](https://training.fortinet.com/course/index.php/Certification:NSE_4)
-       * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
 
-* Programming
-   * ***Python***
+* Python
       * [Youtube - Python Cybersecurity For Beginners - Build a Port Scanner](https://www.youtube.com/watch?v=bH-3PuQC_n0&list=PLR0bgGon_WTIjs0lyCAUp3v1qAraXCJcH)
       * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
       * ***[Datacamp(Owned) - Python Programmer Track](https://app.datacamp.com/learn/career-tracks/python-programmer)
@@ -77,23 +77,6 @@ Entry-Level Jobs to Apply for:
       * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
       * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
       * [Learn Python.org](https://www.learnpython.org/)
-   * Go 
-      * [Learning Go - go.dev](https://go.dev/learn/)
-      * [Learn GoLang.org](https://www.learn-golang.org/)
-   * Java
-      * [Learn Java.org](https://www.learnjavaonline.org/)
-   * Javascript
-      * [Learn JavaScript.org](https://www.learn-js.org/)
-   * C/C++/C#
-      * [Learn C.org](https://www.learn-c.org/)
-      * [Learn C++ .org](https://www.learn-cpp.org/)
-      * [Learn C# .org](https://www.learncs.org/)
-   * SQL
-      * [Learn SQL.org](https://www.learnsqlonline.org/)
-   * PHP
-      * [Learn PHP.org](https://www.learn-php.org/)
-    * Ruby
-      * [Learn Ruby.org](https://www.learnrubyonline.org/)
 
 * Other Courses
    *  [Stackskills(Owned) - Ethical Hacker Certification](https://stackskills.com/courses/enrolled/614031)
@@ -103,16 +86,15 @@ Entry-Level Jobs to Apply for:
    *  [ITPro - Many IT Courses](https://www.itpro.tv/courses/)
    *  [TCM Security Academy](https://academy.tcm-sec.com/)
 
-## Junior (1-2 years)
+# Junior (1-2 years)
 * [HTB Certified Penetration Testing Specialist](https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist/)
 * [PenTest+](https://www.comptia.org/certifications/pentest)
    * [ITU(Owned)](https://www.itulearning.com/course/index/2761)
    * [Youtube - CompTIA PenTest+ Full Course - 11 hrs](https://www.youtube.com/watch?v=WczBlBjoQeI)
    * [Youtube - CompTIA PenTest+ Exam - 1hr](https://www.youtube.com/watch?v=P_D7BCpxkS4)
 
-## Intermediate (2-3 years):
+# Intermediate (2-3 years):
 Aim for fully remote work
-
 * [Cybersecurity Analyst+ (CySA+)](https://www.comptia.org/certifications/cybersecurity-analyst)
    * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
 * [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/)
@@ -130,8 +112,8 @@ Aim for fully remote work
    * [OSCP Study Resources](https://stefan-p-bargan.medium.com/oscp-study-resources-7571c864899)
    * [OSCP - How to pass first time](https://www.garyruddell.com/articles/how-to-pass-the-oscp-first-time)
 
-## Senior (5+ years):
-* [CISSP](https://www.isc2.org/Certifications/CISSP) 
+# Senior (5+ years):
+* **[CISSP](https://www.isc2.org/Certifications/CISSP)** [AIM FOR THIS]
    * [ISC2 Learning Resources - CISSP](https://www.isc2.org/Training/Self-Study-Resources/CISSP)
 * [CASP](https://www.comptia.org/certifications/comptia-advanced-security-practitioner)
    * [ITU(Owned)](https://www.itulearning.com/course/index/2740) 
@@ -139,14 +121,35 @@ Aim for fully remote work
 * [CISM](https://www.isaca.org/credentialing/cism)
 * [CRISC](https://www.isaca.org/credentialing/crisc)
 
+## Other Certifications (Useful at any time)
+   * AWS
+      * [AWS Educate](https://www.awseducate.com/student/s/)
+          * [AWS SkillBuilder - Security Learning Path](https://explore.skillbuilder.aws/learn/public/learning_plan/view/91/security-learning-plan)
+          * [Cybersecurity Specialist Course (30-40hrs)](https://awseducate.instructure.com/courses/196)
+          * [My Guide to AWS Certifications](https://medium.com/dataman-in-ai/aws-certification-path-c9d43a1a155f) (TL;DR Start with AWS Certified Cloud Practitioner)
+          * [AWS Certified Solutions Architect - Associate](https://aws.amazon.com/certification/certified-solutions-architect-associate/)
+   * Google Cloud
+      * [Security Engineer Learning Path](https://www.cloudskillsboost.google/paths/15)
+      * [Google Cloud Skillboost](https://www.cloudskillsboost.google/)    
+  * Fortinet
+       * [Fortinet Training - NSE4](https://training.fortinet.com/course/index.php/Certification:NSE_4)
+       * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
 
-# Job Domains
-* Security Architecture - Security design that addresses the requirements and potential risks of a given scenario or environment. 
-* Physical Security - Protection of personnel, hardware, software, networks, and data from physical actions and events that could cause serious loss or damage.
-* Risk Assessment - Analyzing what can go wrong, how likely it is to happen, what the potential consequences are, and how tolerable the identified risk is.
-* Security Operation - Process of identifying, containing, and remediating threats on behalf of a company or organization.
-* Threat Intelligence - Research and analysis of evidence-based knowledge regarding an existing or emerging menace.
-* User Education - Teaching users how to protect themselves from cyberattacks by informing them of risks, exploits, and external threats, and the skills needed to combat common attacks.
-* Career Development - Training of future cyber security professionals
-* Governance - Framework for managing performance and risk, oversight of compliance and control responsibilities, and defining the cyber mission by mapping the structure, authority, and processes to create an effective program.
-* Framework and Standard - Creation of new security frameworks and practices for professionals to follow.
+## Other Programming (Useful at any time)
+   * Go 
+      * [Learning Go - go.dev](https://go.dev/learn/)
+      * [Learn GoLang.org](https://www.learn-golang.org/)
+   * Java
+      * [Learn Java.org](https://www.learnjavaonline.org/)
+   * Javascript
+      * [Learn JavaScript.org](https://www.learn-js.org/)
+   * C/C++/C#
+      * [Learn C.org](https://www.learn-c.org/)
+      * [Learn C++ .org](https://www.learn-cpp.org/)
+      * [Learn C# .org](https://www.learncs.org/)
+   * SQL
+      * [Learn SQL.org](https://www.learnsqlonline.org/)
+   * PHP
+      * [Learn PHP.org](https://www.learn-php.org/)
+    * Ruby
+      * [Learn Ruby.org](https://www.learnrubyonline.org/)
