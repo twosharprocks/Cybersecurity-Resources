@@ -1,6 +1,7 @@
 # Career
 
 [Cybersecurity Guide](https://cybersecurityguide.org/) - Comprehensive resources and breakdown of every major security certification
+
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 
 # Job Domains
@@ -25,16 +26,28 @@ Entry-Level Jobs to Apply for:
 * Risk ***Analyst***
 * Information assurance ***technician***
 
-## Entry Level Certifications
-~~- Security+ -> PenTest+~~
-    -> HackTheBox & BurpSuite
-    -> AZ-500 [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
-    -> Python [Automate with Python - Kindle]
-    -> Cloud+ (UniOfAdel CompTIA Voucher)
-      * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
+## Entry Level Training & Certifications
+* CompTIA Voucher - Choose between Security+, Network+, Linux+, Server+, or Cloud+
+    * Use CertMaster
+    * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
+* Security+
+* [HackTheBox](https://app.hackthebox.com/starting-point)
+* [BurpSuite - PortSwigger Academy](https://portswigger.net/web-security)
+* PowerShell [PowerShell for Sysadmins](https://www.amazon.com.au/gp/product/B07D23FRC8/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1)
+* Python [Automate with Python - Kindle](https://www.amazon.com.au/Automate-Boring-Stuff-Python-Sweigart/dp/1593275994)
+    * [Youtube - Python Cybersecurity For Beginners - Build a Port Scanner](https://www.youtube.com/watch?v=bH-3PuQC_n0&list=PLR0bgGon_WTIjs0lyCAUp3v1qAraXCJcH)
+    * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
+    * ***[Datacamp(Owned) - Python Programmer Track](https://app.datacamp.com/learn/career-tracks/python-programmer)
+    * [Stackskills(Owned) - Python3 Ethical Hacking](https://stackskills.com/courses/enrolled/1025194)
+    * [Stackskills(Owned) - Hacking with Python](https://stackskills.com/courses/enrolled/376387)
+    * [Stackskills(Owned) - Artificial Intelligence with Python (Book)](https://stackskills.com/courses/303786/lectures/4674836)
+    * [Kaggle(Owned) - Intro to Machine Learning (with Python)](https://www.kaggle.com/learn/intro-to-machine-learning)
+    * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
+    * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
+    * [Learn Python.org](https://www.learnpython.org/)
 
 * AZ-500 Security
-  * [Reddit - Best Study Material for AZ-500](https://www.reddit.com/r/AzureCertification/comments/1037pnn/best_study_material_for_az500/)
+  * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
     * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
     * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
     * [Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)
@@ -45,7 +58,6 @@ Entry-Level Jobs to Apply for:
       * [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
       * [Splunk Fundamentals 1,2,3](https://www.splunk.com/en_us/training/splunk-fundamentals.html?301=/en_us/training/free-courses/splunk-fundamentals-1.html))
       * [Splunk Single-Subject Courses - Free & Paid](https://education.splunk.com/single-subject-courses)
-
       * [SOAR Automation Broker Walk-through - Free](https://education.splunk.com/course/soar-automation-broker-walk-through)
       * [Splunk User Behavior Analytics - Free](https://education.splunk.com/course/splunk-user-behavior-analytics-elearning)
       * [Phantom - Analyst Queue Walkthrough](https://education.splunk.com/elearning/phantom---analyst-queue-walkthrough)
@@ -65,18 +77,6 @@ Entry-Level Jobs to Apply for:
       * [Stackskills(Owned) - Metasploit](https://stackskills.com/courses/enrolled/369771)
    * [OWASP ZAP](https://www.zaproxy.org/)
       *  [Stackskills(Owned) - OWASP ZAP](https://stackskills.com/courses/enrolled/709664)
-
-* Python
-      * [Youtube - Python Cybersecurity For Beginners - Build a Port Scanner](https://www.youtube.com/watch?v=bH-3PuQC_n0&list=PLR0bgGon_WTIjs0lyCAUp3v1qAraXCJcH)
-      * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
-      * ***[Datacamp(Owned) - Python Programmer Track](https://app.datacamp.com/learn/career-tracks/python-programmer)
-      * [Stackskills(Owned) - Python3 Ethical Hacking](https://stackskills.com/courses/enrolled/1025194)
-      * [Stackskills(Owned) - Hacking with Python](https://stackskills.com/courses/enrolled/376387)
-      * [Stackskills(Owned) - Artificial Intelligence with Python (Book)](https://stackskills.com/courses/303786/lectures/4674836)
-      * [Kaggle(Owned) - Intro to Machine Learning (with Python)](https://www.kaggle.com/learn/intro-to-machine-learning)
-      * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
-      * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
-      * [Learn Python.org](https://www.learnpython.org/)
 
 * Other Courses
    *  [Stackskills(Owned) - Ethical Hacker Certification](https://stackskills.com/courses/enrolled/614031)
