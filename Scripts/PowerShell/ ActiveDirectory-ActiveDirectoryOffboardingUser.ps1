@@ -1,6 +1,6 @@
 #Removing a user from their group memberships and updating their description
 $user = 'username'
-$updatedDescription = 'new description'
+$updatedDescription = 'new user description eg. Terminated'
 # Get the user object & update their description
 Get-ADUser -Identity $user | Set-ADUser -description $updatedDescription
 if ($user -eq $null) {
