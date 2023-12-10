@@ -34,6 +34,19 @@
 * [Ministry of Testing](https://www.ministryoftesting.com/) [Wide range of courses for software testing - Free & Paid]
 
 ### Cybersecurity Portfolio Projects
+* [Top 5 Cyber Security Projects to go on Your Resume](https://www.youtube.com/watch?v=P9wz0Sted_I&list=WL&index=12)
+   * Setup a SIEM in Azure (Sentinel)
+   * Setup an Active Directory Environment
+      * [How to Setup a Basic Home Lab Running Active Directory](https://www.youtube.com/watch?v=MHsI8hJmggI)
+      * [GOAD - Game of Active Directory](https://github.com/Orange-Cyberdefense/GOAD/tree/main) - Pentest active directory LAB project
+   * Create a file integrity monitor (FIM)
+      * [YouTube - Coding Demo](https://www.youtube.com/watch?v=WJODYmk4ys8)
+   * Setup a Vulnerability Management Lab
+      * [Nessus Tutorial for Beginners](https://www.youtube.com/watch?v=lT6Px9zJM3s)
+   * Build a Simple REST API
+      * [REST API Explanation for Beginners](https://www.youtube.com/watch?v=IXzgjovXU94)
+      * [REST API Tutorial For Beginners](https://www.youtube.com/watch?v=M2HGgTO3sBI)
+      * [Code with Mosh - Build a REST API with Node JS & Express](https://www.youtube.com/watch?v=pKd0Rpw7O48)
 * [11 Cybersecurity Projects to Grow Your Skills & Portfolio](https://www.springboard.com/blog/cybersecurity/cyber-security-projects/)
    * Packet Sniffer, Keylogger, Lost Data Retrieval, Tool Comparison Guide, Recent Cybersecurity Attack Guide
    * SQL Injection, RFID Blocking, Security Assessment of Existing Website
