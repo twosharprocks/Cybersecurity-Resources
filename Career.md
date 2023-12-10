@@ -27,7 +27,7 @@ Entry-Level Jobs to Apply for:
 * Information assurance ***technician***
 
 ## Entry Level Training & Certifications
-* CompTIA Voucher - Choose between Security+, Network+, Linux+, Server+, or Cloud+
+* CompTIA Voucher - Choose between Security+, Network+, Linux+, **Server+**, or Cloud+
     * Use CertMaster
     * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
 * Security+
@@ -48,6 +48,8 @@ Entry-Level Jobs to Apply for:
 
 * AZ-500 Security
   * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
+    * [Youtube Full Course - 5hrs](https://www.youtube.com/watch?v=m1VWSWlrJa8&list=WL&index=12)
+    * [Youtube Overview - 1hr](https://www.youtube.com/watch?v=lCk6aBDtLnI&list=WL&index=10)
     * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
     * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
     * [Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)
@@ -113,12 +115,14 @@ Aim for fully remote work
    * [OSCP - How to pass first time](https://www.garyruddell.com/articles/how-to-pass-the-oscp-first-time)
 
 # Senior (5+ years):
-* **[CISSP](https://www.isc2.org/Certifications/CISSP)** [AIM FOR THIS]
+* **[CISSP](https://www.isc2.org/Certifications/CISSP)** [AIM FOR THIS - TECHINCAL FOCUS]
    * [ISC2 Learning Resources - CISSP](https://www.isc2.org/Training/Self-Study-Resources/CISSP)
+* **[CISM](https://www.isaca.org/credentialing/cism)** [OR THIS - IT/BUSINESS FOCUS]
+   * [Guide to CISM Certification (ISACA)](https://www.coursera.org/articles/cism-certification)
 * [CASP](https://www.comptia.org/certifications/comptia-advanced-security-practitioner)
    * [ITU(Owned)](https://www.itulearning.com/course/index/2740) 
 * [CISA](https://www.isaca.org/credentialing/cisa)
-* [CISM](https://www.isaca.org/credentialing/cism)
+
 * [CRISC](https://www.isaca.org/credentialing/crisc)
 
 ## Other Certifications (Useful at any time)
