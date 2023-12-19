@@ -27,10 +27,6 @@ Entry-Level Jobs to Apply for:
 * Information assurance ***technician***
 
 ## Entry Level Training & Certifications
-* CompTIA Voucher - Choose between Security+, Network+, Linux+, **Server+**, or Cloud+
-    * Use CertMaster
-    * [ITU(Owned) - Cloud+](https://www.itulearning.com/course/index/3347) 
-* Security+
 * [HackTheBox](https://app.hackthebox.com/starting-point)
 * [BurpSuite - PortSwigger Academy](https://portswigger.net/web-security)
 * PowerShell [PowerShell for Sysadmins](https://www.amazon.com.au/gp/product/B07D23FRC8/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1)
