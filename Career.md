@@ -4,7 +4,7 @@
 
 # Entry-Level 
 3 months into Bootcamp: Apply Help/Service Desk Level 1
-0-12 months after Bootcamp (with 3-6 months help/service desk experience)
+0-12 months after Bootcamp (3-6 months help/service desk experience)
 Apply for:
    * Junior Security Operations Centre (SOC) ***Analyst***
    * Junior Systems Administrator
@@ -27,7 +27,7 @@ Apply for:
     * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
     * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
     * [Learn Python.org](https://www.learnpython.org/)
-* AZ-500 Security
+***AZ-500 Security [PASSED - 31-JAN-2024]***
   * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
     * [Youtube Full Course - 5hrs](https://www.youtube.com/watch?v=m1VWSWlrJa8&list=WL&index=12)
     * [Youtube Overview - 1hr](https://www.youtube.com/watch?v=lCk6aBDtLnI&list=WL&index=10)
