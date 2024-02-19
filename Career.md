@@ -3,14 +3,14 @@
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
 
 # Entry-Level 
-3 months into Bootcamp: Apply Help/Service Desk Level 1
+3-months into Bootcamp: Apply Help/Service Desk Level 1
 0-12 months after Bootcamp (3-6 months help/service desk experience)
 Apply for:
    * Junior Security Operations Centre (SOC) ***Analyst***
    * Junior Systems Administrator
    * IT/Security ***Specialist***
    * Risk ***Analyst***
-   * Information assurance ***technician***
+   * Information Assurance ***Technician***
 
 ## Entry Level Training & Certifications
 * [HackTheBox](https://app.hackthebox.com/starting-point)
@@ -27,8 +27,8 @@ Apply for:
     * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
     * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
     * [Learn Python.org](https://www.learnpython.org/)
-***AZ-500 Security [PASSED - 31-JAN-2024]***
-  * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
+  * ***AZ-500 Security [PASSED - 31-JAN-2024]***
+    * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
     * [Youtube Full Course - 5hrs](https://www.youtube.com/watch?v=m1VWSWlrJa8&list=WL&index=12)
     * [Youtube Overview - 1hr](https://www.youtube.com/watch?v=lCk6aBDtLnI&list=WL&index=10)
     * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
@@ -37,14 +37,6 @@ Apply for:
     * [7 pro tips to prepare for the AZ-500](https://www.whizlabs.com/blog/az-500-exam-tips/) 
 
 * Other Software
-   * Splunk
-      * [Splunk Quick Reference Guide](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
-      * [Splunk Fundamentals 1,2,3](https://www.splunk.com/en_us/training/splunk-fundamentals.html?301=/en_us/training/free-courses/splunk-fundamentals-1.html))
-      * [Splunk Single-Subject Courses - Free & Paid](https://education.splunk.com/single-subject-courses)
-      * [SOAR Automation Broker Walk-through - Free](https://education.splunk.com/course/soar-automation-broker-walk-through)
-      * [Splunk User Behavior Analytics - Free](https://education.splunk.com/course/splunk-user-behavior-analytics-elearning)
-      * [Phantom - Analyst Queue Walkthrough](https://education.splunk.com/elearning/phantom---analyst-queue-walkthrough)
-      * [UBA SOC Analyst Walkthrough](https://education.splunk.com/elearning/uba-soc-analyst-walkthrough)
    * Kali
       * [Stackskills(Owned) - Kali Linux hacker tools, tricks and techniques](https://stackskills.com/courses/enrolled/1221378)
    * NMAP
@@ -60,6 +52,7 @@ Apply for:
       * [Stackskills(Owned) - Metasploit](https://stackskills.com/courses/enrolled/369771)
    * [OWASP ZAP](https://www.zaproxy.org/)
       *  [Stackskills(Owned) - OWASP ZAP](https://stackskills.com/courses/enrolled/709664)
+
 * Other Courses
    *  [Stackskills(Owned) - Ethical Hacker Certification](https://stackskills.com/courses/enrolled/614031)
    *  [Stackskills(Owned) - Ethical Hacking and Penetration Testing](https://stackskills.com/courses/enrolled/1050508)
@@ -79,7 +72,7 @@ Apply for:
 Aim for fully remote work
 * [Cybersecurity Analyst+ (CySA+)](https://www.comptia.org/certifications/cybersecurity-analyst)
    * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
-* [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/)
+* [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/) [Equivalent to OSCP]
 * [Offensive Security Certified Professional (PWK/PEN-200/OSCP)](https://www.offsec.com/courses/pen-200/)
    * [OSCP Reborn 2023 Exam Prep](https://johnjhacking.com/blog/oscp-reborn-2023/)
    * White Dome - [PWK/OSCP Experience] + [3-Step System Information Gathering](https://whitedome.com.au/re4son/1-information-gathering-in-three-stages/)
@@ -102,7 +95,6 @@ Aim for fully remote work
 * [CASP](https://www.comptia.org/certifications/comptia-advanced-security-practitioner)
    * [ITU(Owned)](https://www.itulearning.com/course/index/2740) 
 * [CISA](https://www.isaca.org/credentialing/cisa)
-
 * [CRISC](https://www.isaca.org/credentialing/crisc)
 
 ## Other Certifications (Useful at any time)
