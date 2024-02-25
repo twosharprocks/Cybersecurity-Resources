@@ -75,6 +75,7 @@
    * [P4wnP1 to attack routers](https://github.com/tenable/router_badusb/blob/master/README.md)
    * [BadPI - Pi Zero W](https://www-users.york.ac.uk/~mjf5/bad_pi/index.html)
    * [Raspberry Pi Zero Wifi Hacking Tool](https://thesmashy.medium.com/raspberry-pi-zero-w-wifi-hacking-gadget-63e3fa1c3c8d)
+   * [Raspberry Pi Zero W Portable hacking Suite](https://assume-breach.medium.com/building-the-ultimate-portable-hacking-suite-with-a-raspberry-pi-zero-w-dbc60704d872)
    * [Pico-Ducky - Pico based Ducky](https://github.com/dbisu/pico-ducky)
    * [Pico to Ducky](https://github.com/OCEANOFANYTHINGOFFICIAL/RPI-PICO-TO-BAD-USB-CONVERTER)
    * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
