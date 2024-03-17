@@ -1,4 +1,8 @@
 # Homelab
+Possible to Run
+* Base OS: Ubuntu User
+* OWASP juice Shop: docker run --rm -p 3000:3000 bkimminich/juice-shop (localhost:3000)
+* Docker or Image: Apache2 Server, Rekall CTF, GOAD, VulnHub
 
 ## How To
 * [How To Build Your Own Pentest Lab](https://hackwarenews.com/how-to-build-your-own-pentest-lab-tips-for-beginners/)
@@ -15,7 +19,7 @@
 * [Raspwn.org - Intentionally vulnerable Raspberry Pi OS](http://raspwn.org/)
 * [DV-Pi "Damn Vulnerable Raspberry Pi"](https://whitedome.com.au/re4son/sticky-fingers-dv-pi/)
 
-## Other 
+## Misc 
 * [VulnHub - Vulnerable OVA Images](https://www.vulnhub.com/)
 * [VulnHub - Vulnerable Docker Environments](https://github.com/vulhub/vulhub)
 * [Awesome Honeypots](https://github.com/paralax/awesome-honeypots)
