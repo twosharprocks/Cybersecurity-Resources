@@ -27,14 +27,14 @@ Apply for:
     * [Stackskills(Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
     * [Stackskills(Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
     * [Learn Python.org](https://www.learnpython.org/)
-  * ***AZ-500 Security [PASSED - 31-JAN-2024]***
-    * [Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)
-    * [Youtube Full Course - 5hrs](https://www.youtube.com/watch?v=m1VWSWlrJa8&list=WL&index=12)
-    * [Youtube Overview - 1hr](https://www.youtube.com/watch?v=lCk6aBDtLnI&list=WL&index=10)
-    * [TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)
-    * [Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)
-    * [Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)
-    * [7 pro tips to prepare for the AZ-500](https://www.whizlabs.com/blog/az-500-exam-tips/) 
+  * ~~***AZ-500 Security [PASSED - 31-JAN-2024]***~~
+    * ~~[Security Engineer Career Path - Microsoft](https://learn.microsoft.com/en-us/users/collinschedler-0717/collections/50nrt2ek0ewqy8)~~
+    * ~~[Youtube Full Course - 5hrs](https://www.youtube.com/watch?v=m1VWSWlrJa8&list=WL&index=12)~~
+    * ~~[Youtube Overview - 1hr](https://www.youtube.com/watch?v=lCk6aBDtLnI&list=WL&index=10)~~
+    * ~~[TestPrepTraining](https://www.testpreptraining.com/blog/microsoft-azure-security-technologies-az-500-study-guide/)~~
+    * ~~[Charbel Nemnom - Regularly Updated Post](https://charbelnemnom.com/az-500-exam-study-guide-azure-security/?expand_article=1)~~
+    * ~~[Parveen Singh - Comprehensive Guide](https://parveensingh.com/az-500-study-guide/)~~
+    * ~~[7 pro tips to prepare for the AZ-500](https://www.whizlabs.com/blog/az-500-exam-tips/)~~
 
 * Other Software
    * Kali
@@ -73,7 +73,7 @@ Aim for fully remote work
 * [Cybersecurity Analyst+ (CySA+)](https://www.comptia.org/certifications/cybersecurity-analyst)
    * [ITU(Owned) - CySA+](https://www.itulearning.com/course/index/3637)
 * [CREST - Practitioner Security Analyst](https://www.crest-approved.org/certification-careers/crest-certifications/crest-practitioner-security-analyst/) [Equivalent to OSCP]
-* [Offensive Security Certified Professional (PWK/PEN-200/OSCP)](https://www.offsec.com/courses/pen-200/)
+* ***[Offensive Security Certified Professional (PWK/PEN-200/OSCP)](https://www.offsec.com/courses/pen-200/)***
    * [OSCP Reborn 2023 Exam Prep](https://johnjhacking.com/blog/oscp-reborn-2023/)
    * White Dome - [PWK/OSCP Experience] + [3-Step System Information Gathering](https://whitedome.com.au/re4son/1-information-gathering-in-three-stages/)
        * White Dome Recommended OSCP Posts: [PEN-200 Overview](https://blog.g0tmi1k.com/2011/07/pentesting-with-backtrack-pwb/), [Mike Czumak Experience](https://www.securitysift.com/offsec-pwb-oscp/)
@@ -82,7 +82,7 @@ Aim for fully remote work
    * [Passing the OSCP in 8 hours (as a high school student](https://www.reddit.com/r/oscp/comments/14onm6g/passing_the_oscp_in_8_hoursas_a_high_school/)
        * Buy & complete "Learn One" plan, lots of time on Proving Ground (full PG Practice TJNull list of boxes)
        * Use the [whoisflynn exam report template](https://github.com/whoisflynn/OSCP-Exam-Report-Template/blob/master/OSCP-OS-XXXXX-Exam-Report_Template.docx)
-   * [IMPORTANT] [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)
+   * ***[IMPORTANT] [OffSec Proving Grounds - OSCP Preparation](https://www.offsec.com/labs/individual/)***
    * [OSCP certification: A complete guide](https://cybersecurityguide.org/programs/cybersecurity-certifications/oscp/)
    * [OSCP Study Resources](https://stefan-p-bargan.medium.com/oscp-study-resources-7571c864899)
    * [OSCP - How to pass first time](https://www.garyruddell.com/articles/how-to-pass-the-oscp-first-time)
