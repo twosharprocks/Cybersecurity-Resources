@@ -2,6 +2,7 @@
 A repository of useful resources for cybersecurity professionals
 
 ## Quick References
+* [Awesome Pentest Cheat Sheets](https://github.com/ByteSnipers/awesome-pentest-cheat-sheets) - Massive collection of cheat sheets useful for pentesting
 * [HackTricks](https://book.hacktricks.xyz/) - Comprehensive resource for pentesting, system hardening, crypto/stego, C2, ect
 * [Hacktricks Cloud](https://cloud.hacktricks.xyz/) - Comprehensive resource for pentesting cloud systems
 * [GTFOBins](https://gtfobins.github.io/#) - Unix binaries that can be abused to escape shells, escalate privilege, ect
