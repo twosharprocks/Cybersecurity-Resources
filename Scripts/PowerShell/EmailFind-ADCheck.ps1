@@ -21,9 +21,9 @@ Write-Host $emailAddresses
 ---
 ## (2.1) Creating an "emailAddresses" variable if you already have the list formatted correctly
 $emailAddresses = @(
-"email1@unitingcommunities.org",
-"email2@unitingcommunities.org",
-"email3@unitingcommunities.org"
+"email1@company.co",
+"email2@gmail.com",
+"email3@notforprofit.org"
 )
 ---
 ## (3.1) Enabled AD Users with email addresses listed in the emailAddresses variable
