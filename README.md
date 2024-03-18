@@ -89,6 +89,7 @@ A repository of useful resources for cybersecurity professionals
 * * [Predictability of Android Unlock Patterns](https://arstechnica.com/information-technology/2015/08/new-data-uncovers-the-surprising-predictability-of-android-lock-patterns/amp/) & [Lock Patterns are not safe](https://www.androidauthority.com/lock-pattern-predictable-636267/)
 * [nwipe](https://en.m.wikipedia.org/wiki/Nwipe) - Secure File Destruction
 * [RedKey USB](https://redkeyusb.com/collections/data-wipe-tool)
+
 * [Just Delete Me](https://justdeleteme.xyz/) - Web Service Deletion Instructions
 * [Have I Been Pwned?](https://haveibeenpwned.com/)
     * [Pwned Websites](https://haveibeenpwned.com/PwnedWebsites)
@@ -108,6 +109,6 @@ A repository of useful resources for cybersecurity professionals
    * [OpenBugBounty](https://www.openbugbounty.org/bugbounty-list/)
 * How to use AI to wipe existence from internet?
    * How to check/delete sso accounts from Gmail?
-* [How to cyber wargame at national level?](https://australiancybersecuritymagazine.com.au/how-to-war-game-for-a-nationwide-attack/)
+* [How to cyber wargame at a national level?](https://australiancybersecuritymagazine.com.au/how-to-war-game-for-a-nationwide-attack/)
    * Harden against cyber and CME
    * Hacking satellites
