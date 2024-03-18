@@ -1,7 +1,8 @@
 # The following is a series of scripts that can be used to:
 # (1) Find email addresses in a large amount of text, 
 # (2) Format those email addresses so PowerShell can search for them in Active Directory
-# (3) Search AD for users with those email addresses inside different OUs & if they're enabled/disabled
+# (3) Search AD for accounts matching those email addresses and display the SAM Account Name
+# (4) Search AD for users with those email addresses inside different OUs & if they're enabled/disabled
 ---
 ## (1) Find emails in text
 #Text you want to search for email addresses
@@ -18,6 +19,7 @@ $matches = $text | Select-String -Pattern $emailPattern -AllMatches | ForEach-Ob
 $emailAddresses = $matches -replace '(.+)', '"$1",'
 # Display the emailAddresses variable
 Write-Host $emailAddresses
+# Copy the output but exclude the comma on the final line, and redefine $emailAddresses using 2.1 below
 ---
 ## (2.1) Creating an "emailAddresses" variable if you already have the list formatted correctly
 $emailAddresses = @(
@@ -26,7 +28,18 @@ $emailAddresses = @(
 "email3@notforprofit.org"
 )
 ---
-## (3.1) Enabled AD Users with email addresses listed in the emailAddresses variable
+## (3) Searching AD for users with email addresses found in $emailAddresses
+foreach ($email in $emailAddresses) {
+	$user = Get-ADUser -Filter
+	if ($user -ne $null) {
+	Write-Output "$email belongs to $($user.SamAccountName)"
+	}
+	else {
+	Write-Output "$email does not match any user"
+	}
+}
+---
+## (4.1) Enabled AD Users with email addresses listed in the emailAddresses variable
 write-host "--- Enabled Users with emails matches ---"
 write-host ""
 foreach ($email in $emailAddresses) {
@@ -40,7 +53,7 @@ foreach ($email in $emailAddresses) {
     }
 }
 ---
-## (3.2) Enabled AD Users from a specific Domain group (eg. Administrators) with email address matches 
+## (4.2) Enabled AD Users from a specific Domain group (eg. Administrators) with email address matches 
 #Define $ouPath for which Group to search (eg. Administrators, Office, Inactive, Resources, ect)
 $ouPath = "OU=Administrators,OU=Users,OU=_Users & Groups,DC=acm,DC=int"
 #Disabled users with matching emails
