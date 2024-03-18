@@ -1,3 +1,9 @@
+#Check a laptop's battery health
+powercfg /batteryreport /output "filepath eg. C:\Documents\Battery-Report.html"
+
+#Check a system's boot time
+SystemInfo /s ComputerIDHere | find "Boot Time:"
+
 #Checking for E3 and E5 licences
 foreach ($username in $usernames) {
     # Get licenses for the user
