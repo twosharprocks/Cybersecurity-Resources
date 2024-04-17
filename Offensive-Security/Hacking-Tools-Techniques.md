@@ -81,20 +81,24 @@ Easy dorks
 * [BlackArch] 
 
 ### Brute Force Tools
-* [John the Ripper](https://www.openwall.com/john/) Brute-force password tester
-    * [Usage Examples with John the Ripper](https://www.openwall.com/john/doc/EXAMPLES.shtml)
-    * [John the Ripper Tips and Tutorials](https://www.varonis.com/blog/john-the-ripper)
-* [Hashcat](https://hashcat.net/hashcat/) - Hash cracker
-    * [How to crack passwords with Hashcat](https://geekflare.com/password-cracking-with-hashcat/) 
-    * [CrackQ on GitHub](https://github.com/f0cker/crackq)
-    * [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
-* [Hydra](https://www.kali.org/tools/hydra/) - Login attack tool
-    * [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
-    * [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
-    * [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)
-* [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started) - WiFi DeAuth attack
-    * [How To Use Aircrack-ng](https://techofide.com/blogs/how-to-use-aircrack-ng-aircrack-ng-tutorial-practical-demonstration/)
-    * [wikiHow - Cracking WPA/WPA2](www.wikihow.com/Hack-WPA/WPA2-Wi-Fi-with-Kali-Linux)
+* Cracking
+   * [John the Ripper](https://www.openwall.com/john/) Brute-force password tester
+       - [Usage Examples with John the Ripper](https://www.openwall.com/john/doc/EXAMPLES.shtml)
+       - [John the Ripper Tips and Tutorials](https://www.varonis.com/blog/john-the-ripper)
+   * [Hashcat](https://hashcat.net/hashcat/) - Hash cracker
+       - [How to crack passwords with Hashcat](https://geekflare.com/password-cracking-with-hashcat/) 
+       - [CrackQ on GitHub](https://github.com/f0cker/crackq)
+       - [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
+    
+   * [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started) - WiFi DeAuth attack
+       - [How To Use Aircrack-ng](https://techofide.com/blogs/how-to-use-aircrack-ng-aircrack-ng-tutorial-practical-demonstration/)
+       - [wikiHow - Cracking WPA/WPA2](www.wikihow.com/Hack-WPA/WPA2-Wi-Fi-with-Kali-Linux)
+* Logins
+   * [Hydra](https://www.kali.org/tools/hydra/) - Login attack tool
+       - [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
+       - [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
+       - [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)   
+   * [Medusa](https://github.com/jmk-foofus/medusa) - Speedy, parallel, and modular, login brute-forcer
 
 ###  Web Vulnerability Scanning
 * [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Vulnerability scanner
