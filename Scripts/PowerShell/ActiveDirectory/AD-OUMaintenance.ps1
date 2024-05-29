@@ -1,5 +1,5 @@
 #List Any Disabled users in the "Office Users" OU
-function List-Disabled-Office {
+function Find-Disabled-Office {
 $ouPath = "OU=Office Users,DC=int" 
 $OfficeUsers = Get-ADUser -Filter {
     Enabled -eq $false
@@ -10,7 +10,7 @@ write-host "#####"
 }
 ###
 #List Enabled users in the "Inactive Users" OU
-function List-Enabled-Inactive { 
+function Find-Enabled-Inactive { 
 $ouPath = "OU=Inactive Users,DC=int" 
 $EnabledInactive = Get-ADUser -Filter {
     Enabled -eq $true
@@ -21,7 +21,7 @@ write-host "#####"
 }
 ###
 #List Enabled users in the "Offboarding" OU
-function List-Enabled-Offboarding { 
+function Find-Enabled-Offboarding { 
 $ouPath = "OU=Off Boarding,DC=int" 
 $EnabledOffboarding = Get-ADUser -Filter {
     Enabled -eq $true
@@ -32,7 +32,7 @@ write-host "#####"
 }
 ###
 #Office Users who have not been logged in for 6 months or more
-function List-NoLogin6mo {
+function Find-NoLogin6mo {
 $ouPath = "OU=Office Users,DC=int" 
 $sixMonthsAgo = (Get-Date).AddMonths(-6)
 # Get users from the specified OU who have not logged in for 6 months or more
@@ -42,18 +42,21 @@ $users = Get-ADUser -Filter {
 } -SearchBase $ouPath -Properties LastLogonDate,Enabled | Select-Object SamAccountName,LastLogonDate,Enabled
 # Display the results
 $users | Format-Table -AutoSize
+}
 ###
 #Students who have not been logged in for 1 month or more
+function Find-StudentNoLogin {
 $ouPath = "OU=Students,DC=int" 
 $OneMonthAgo = (Get-Date).AddMonths(-1)
 $users = Get-ADUser -Filter {
     LastLogonDate -lt $OneMonthAgo -and
     Enabled -eq $true
 } -SearchBase $ouPath -Properties LastLogonDate,Enabled | Select-Object SamAccountName,LastLogonDate,Enabled
-$users | Format-Table -AutoSize
+$users | Format-Table -AutoSize 
+}
 ###
 #Disable every account in a specific OU (eg. “Inactive”)
-function disable-inactive
+function disable-inactive {
 $ouPath = "OU=Inactive Users,DC=int"
 # Get a list of user accounts in the specified OU
 $inactiveUsers = Get-ADUser -Filter * -SearchBase $ouPath
@@ -90,7 +93,7 @@ foreach ($user in $users) {
 }
 ###
 #List users in "OU=Offboarding" who have not been modified for >3months
-function List-Offboarded-unmodified {
+function Find-Offboarded-unmodified {
 Write-host "Users in OU=Off Boarding not modified for >3months (Delete from AD)"
 $ouPath = "OU=Off Boarding,DC=int"
 $thresholdDate = (Get-Date).AddMonths(-3)
@@ -105,7 +108,7 @@ if ($users) {
         }}
 } else {
     Write-Host "No users last modified >3 months ago."
-}
+} }
 write-host "#####"
 ###
 #Show if accounts in $employeeIDList are enabled or disabled
@@ -120,7 +123,7 @@ foreach ($employeeID in $employeeIDList) {
 }
 ###
 #List all Office Users missing an EmployeeID
-function List-NoEmployeeID {
+function Find-NoEmployeeID {
 $ouPath = "OU=Office Users,DC=int"
 Write-Host "Office Users without EmployeeID"
 $usersWithoutEmployeeID = Get-ADUser -Filter {EmployeeID -notlike "*"} -SearchBase $ouPath -Properties EmployeeID
@@ -129,7 +132,7 @@ foreach ($user in $usersWithoutEmployeeID) {
 } }
 ###
 #New Employee List from Payroll - Finding Missing employeeIDs
-function new-users {
+function find-missing-employeeIDs {
 $excelFilePath = Read-Host "Provide full filepath to New Employee Report" 
 $worksheetName = "New Employees Report"
 $columnName = "Emp No"
@@ -150,7 +153,7 @@ foreach ($employeeID in $employeeIDList) {
 }
 ###
 #Terminated Employee List from Payroll - Finding Active Users who no longer work for UC
-function terminated-users {
+function find-terminated-users {
 $excelFilePath = Read-Host "Provide full filepath to Terminated Employee Report" 
 $worksheetName = "Terminated Employees Report"
 $columnName = "Emp No"
