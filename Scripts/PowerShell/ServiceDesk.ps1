@@ -26,6 +26,7 @@ foreach ($username in $usernames) {
     # Output results
     Write-Host "$username - E3: $hasE3, E5: $hasE5"
 }
+###
 #clear-profiles
 function clear-profiles {
     $computer = Read-Host "Please enter a computer name"    
