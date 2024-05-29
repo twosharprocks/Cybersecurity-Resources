@@ -31,4 +31,3 @@ function move-user-offboarding {
     }
     Write-Host "$user moved to Off Boarding and Group memberships (excluding 'Domain Users') removed"
     }
-    

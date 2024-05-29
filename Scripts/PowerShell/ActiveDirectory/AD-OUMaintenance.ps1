@@ -176,4 +176,3 @@ foreach ($employeeID in $employeeIDList) {
 		}
     } else { Write-Host "User with employeeID $employeeID not found in Active Directory." }
 }
-###

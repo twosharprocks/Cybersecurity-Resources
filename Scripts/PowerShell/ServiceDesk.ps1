@@ -3,19 +3,19 @@ powercfg /batteryreport /output "filepath eg. C:\Documents\Battery-Report.html"
 ###
 #boot-time
 # Remotely check another system's boot time
-function boot-time { 
+function find-boottime { 
 $servicetag = Read-Host "Enter service tag"
 SystemInfo /s $servicetag | find "Boot Time:" 
 }
 boot-time
 ###
 #free-space
-function free-space { 
+function find-freespace { 
 $servicetag = Read-Host "Enter service tag"
 Invoke-Command -ComputerName $servicetag {Get-PSDrive C} | Select-Object PSComputerName,Used,Free
 }
 ###
-#Check E3 and E5 licences for a list of usernames
+#Check E3 and E5 licences for a list of usernames in $usernames
 foreach ($username in $usernames) {
     # Get licenses for the user
     $userLicenses = Get-MsolUser -UserPrincipalName $username | Select-Object -ExpandProperty Licenses
@@ -26,7 +26,7 @@ foreach ($username in $usernames) {
     # Output results
     Write-Host "$username - E3: $hasE3, E5: $hasE5"
 }
-###
+### Remotely clear user profiles
 #clear-profiles
 function clear-profiles {
     $computer = Read-Host "Please enter a computer name"    
