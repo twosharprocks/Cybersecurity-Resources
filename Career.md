@@ -112,7 +112,10 @@ Aim for fully remote work
        * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
 
 ## Other Programming (Useful at any time)
-   * Go 
+   * Developer AI
+     * [GitHub Copilot](https://github.com/features/copilot)
+     * [Snyk](https://snyk.io/)
+   *  Go 
       * [Learning Go - go.dev](https://go.dev/learn/)
       * [Learn GoLang.org](https://www.learn-golang.org/)
    * Java
