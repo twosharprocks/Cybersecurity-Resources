@@ -15,7 +15,7 @@ Apply for:
 ## Entry Level Training & Certifications
 * [HackTheBox](https://app.hackthebox.com/starting-point)
 * [BurpSuite - PortSwigger Academy](https://portswigger.net/web-security)
-* PowerShell [PowerShell for Sysadmins](https://www.amazon.com.au/gp/product/B07D23FRC8/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1)
+* ~~PowerShell [PowerShell for Sysadmins]~~(https://www.amazon.com.au/gp/product/B07D23FRC8/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1)
 * Python [Automate with Python - Kindle](https://www.amazon.com.au/Automate-Boring-Stuff-Python-Sweigart/dp/1593275994)
     * [Youtube - Python Cybersecurity For Beginners - Build a Port Scanner](https://www.youtube.com/watch?v=bH-3PuQC_n0&list=PLR0bgGon_WTIjs0lyCAUp3v1qAraXCJcH)
     * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
@@ -112,7 +112,10 @@ Aim for fully remote work
        * [Fortinet On-Demand Labs](https://www.fortinet.com/training/cybersecurity-professionals)
 
 ## Other Programming (Useful at any time)
-   * Go 
+   * Developer AI
+     * [GitHub Copilot](https://github.com/features/copilot)
+     * [Snyk](https://snyk.io/)
+   *  Go 
       * [Learning Go - go.dev](https://go.dev/learn/)
       * [Learn GoLang.org](https://www.learn-golang.org/)
    * Java
