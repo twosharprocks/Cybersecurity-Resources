@@ -11,8 +11,24 @@
             "id": "9a100c0c28e07061",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Offensive-Security/OSCP Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4970269c3d0aee40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01-Linux.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Offensive-Security/OSCP Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Offensive-Security/OSCP Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +136,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Offensive-Security/OSCP Notes.md"
+              }
             }
           }
         ]
@@ -140,6 +160,11 @@
   },
   "active": "9a100c0c28e07061",
   "lastOpenFiles": [
-    "CTF-Cheat-Sheet.md"
+    "Training & Certifications.md",
+    "01-Linux.md",
+    "CTF-Cheat-Sheet.md",
+    "05-GRC.md",
+    "Interviews & Job Domains.md",
+    "Offensive-Security/OSCP Notes.md"
   ]
 }

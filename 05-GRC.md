@@ -57,11 +57,7 @@ Layering security controls is a fundamental aspect of the security design framew
 
 <span style="text-decoration:underline;">Regulations</span> - Detailed instructions on how laws should be enforced (eg. GPDR)
 
-<span style="text-decoration:underline;">Policy:</span> Set of rules that inform standards for behaviour and operations.
-
-
-
-* example: Bring Your Own Device (BYOD) vs. Mobile Device Management (MDM)
+<span style="text-decoration:underline;">Policy:</span> Set of rules that inform standards for behaviour and operations (eg. Bring Your Own Device (BYOD) vs. Mobile Device Management (MDM))
 
 <span style="text-decoration:underline;">Guidelines:</span> Similar to policies, as they are issued by organizations to make the actions of its employees or departments more predictable, and presumably of higher quality.
 
