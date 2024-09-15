@@ -1,3 +1,7 @@
 
 /.obsidian
 .obsidian/workspace.json
+/.obsidian
+.obsidian/core-plugins-migration.json
+.obsidian/core-plugins.json
+.obsidian/workspace.json
