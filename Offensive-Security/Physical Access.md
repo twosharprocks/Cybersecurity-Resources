@@ -2,12 +2,18 @@
 * [Youtube - I'll Let Myself In: Tactics of Physical Pen Testers](https://www.youtube.com/watch?v=rnmcRTnTNC8) - Deviant Ollam presenting at Wild West Hackin' Fest 2017
 * [UDemy - Physical Red Teaming](https://www.udemy.com/course/learn-physical-red-team-operations/?couponCode=OPPPOT42722) 
 * [Kindle - Unauthorised Access: Physical Penetration Testing For IT Security Teams](https://www.amazon.com.au/Unauthorised-Access-Physical-Penetration-Security-ebook/dp/B005DIAPKE)
-
+## Essentials
+- [Red Team Tools - Magnetic Search Pole - $7](https://www.redteamtools.com/magneticsearchpole)
+- [Red Team Tools - Hammerless Hinge Pine Tool - $17.50](https://www.redteamtools.com/hammerless-hinge-tool)
+- [Red Team Tools - Traveller Hook - $6](https://www.redteamtools.com/traveler-hook-steel)
+- [Red Team Tools - Film Canister - $14](https://www.redteamtools.com/film-canister)
+- [Red Team Tools - Comb Pick (Pair) - $8](https://www.redteamtools.com/covert-comb-pick-set-of-2)
+- [Red Team Tools - Tamper Bit Set - $9.45](https://www.redteamtools.com/best-tamper-bit-set/)
 ## Door Tools
 * [Amazon - J Tool Thumb Turn Bypass](https://www.amazon.com.au/Tool-Thumb-Turn-Bypass/dp/B09MT54HCD) 
 * [Pickpals - Double Door Tool](https://www.pickpals.com.au/buy-lockpicks/bypass-tools/sparrows-double-door-tool/) - DDT Bypass Demo [Video](https://www.youtube.com/watch?v=GLMyIvgG3zs)
 * [Car Tool Kit](https://www.amazon.com.au/Duolamila-Professional-Emergency-Multi-Function-Household/dp/B0B51CP743) - 173cm Long Reach, Air Wedges, and Plastic Wedges
-
+* [Super Mica Slipping Cards (Pack of 5) - $22](https://www.amazon.com.au/Super-Latch-Release-Slipping-Cards/dp/B0CB4CTRL4/ref=sr_1_1)
 ### Under Door Tools
 * [Amazon - "Level Opening Tool"](https://www.amazon.com.au/dp/B0CHLVR76R) - Attach a borescope?
 * [Youtube - Collapsible Under Door Tool](https://www.youtube.com/watch?v=gdkCsC90RMc) - Uses threaded steel rod with joiners
@@ -15,27 +21,29 @@
 ## Lock Picking & Combs
 [Locklab](https://locklab.com/)
 * [Amazon - LiShi combo LW4 & LW5 (Australian)](https://www.amazon.com.au/AGOUH-Australian-Lockwood-Professional-Locksmith/dp/B0BCFLC1ZJ)
+* [Ebay - LiShi LW4 & LW5 (Australian)](https://www.ebay.com.au/itm/145854654022)
 * [Pickpals - Comb .45](https://www.pickpals.com.au/buy-lockpicks/bypass-tools/comb-45/) - Defeats most 40mm or 50mm padlocks by pushing entire stack above the shear line.
 * [Pickpals - Comb Bar Set](https://www.pickpals.com.au/buy-lockpicks/bypass-tools/comb-bar/) - Combination comb/flat bar
 * [Pickpals - Core Shims](https://www.pickpals.com.au/buy-lockpicks/bypass-tools/sparrows-core-shims/) - Shim between core and body, pick pin then push shim to hold the shear line
-
 ## Hooligan Keys
+* [Australian "Dark Access" Set](https://dalp.com.au/product/dark-access-set/)
+	* [CH751](https://www.etsy.com/au/listing/1170364429/jayco-dual-water-filler-key-ch751-for), [C415A](https://www.etsy.com/au/listing/1766577873/c415a-replacement-key-compx-ncl), [CL001](https://www.etsy.com/au/listing/1728854738/cl001-electricians-master-key-for), LF8, [003](https://www.etsy.com/au/listing/1208809800/fire-brigade-003-key-essential-services), [A126](https://www.etsy.com/au/listing/1596355290/a126-allen-bradley-apem-a126-fire-panel) and a [T5 Elevator/Fire Service Key](https://www.etsy.com/au/listing/1552001306/t5-fire-service-lift-elevator-key-for) (Schindeler, Otis, KONE, Thyssenkrupp - TOK)
 * [Amazon - US Pentesting Master Key Set](https://www.amazon.com.au/Pentesting-Master-Cabinet-Elevator-Security/dp/B0CGX56BJR)
-   * FEO-K1 = Elevator / Fire Service Key
-   * 1284x = Ford Fleet Key
-   * 2642 = NYC Fire Service Key NORTEK CONTROLS
-   * E114 = Paper Towel and Toilet Paper Dispenser Key
-   * A126 & 222343 = Linear Key for Selector switches, Electrical panel locks and operator interfaces
-   * 84-16120 = DoorKing Key for After 1997 to Present
-   * C390A, C413A, C415A, C420A, C642A, C346A = CompX National Cabinet Key
-   * CH501 = Truck Tool Box
-   * RV Compartment Cargo Key
-   * CH751 & CH545 = Truck Tool Box RV Compartment Cargo Key
-   * CAT-74 = For Bobrick Dispenser Key
-   * MK9901 = FIC Code 9901- M / 6601 Rv Motorhome Master Key*
-* [U-Buy - US OEM Pentesting Keys](https://www.u-buy.com.au/product/13EP0SU6-16-oem-pentesting-keys-1284x-feo-k1-16120-222343-ch751-ch501-c346a-c390a-e114) - Similar to above
-   * FEO-K1, 1284x, 2642, E114, 222343, 84-16120, C390A, C413A, C415A, C420A, C642A, C346A, CH501, RV Compartment Cargo Key, CH751, CAT74, A126
-* [Amazon - 5x A126](https://www.amazon.com.au/Ignition-Replacement-Compatible-ELEDIS-Switch/dp/B0C27ZC8J6) - For Linear Access Control Keypads
+	* FEO-K1 = Elevator / Fire Service Key
+	* [Fire Brigade 003](https://www.etsy.com/au/listing/1208809800/fire-brigade-003-key-essential-services)
+	* 1284x = Ford Fleet Key
+	* 2642 = NYC Fire Service Key NORTEK CONTROLS
+	* E114 = Paper Towel and Toilet Paper Dispenser Key
+	* [A126](https://www.etsy.com/au/listing/1596355290/a126-allen-bradley-apem-a126-fire-panel) & 222343 = Linear Key for Selector switches, Electrical panel locks and operator interfaces   
+	* 84-16120 = DoorKing Key for After 1997 to Present   
+	* C390A, C413A, C415A, C420A, C642A, C346A = CompX National Cabinet Key
+	* CH501 = Truck Tool Box
+	* RV Compartment Cargo Key
+	* [CH751](https://www.etsy.com/au/listing/1170364429/jayco-dual-water-filler-key-ch751-for?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=ch751+key&ref=sr_gallery-1-2&frs=1&content_source=7a5f0c9eb7b21dc4d34cb2f696b0ba1d016bb2fc%253A1170364429&organic_search_click=1) & CH545 = Truck Tool Box RV Compartment Cargo Key
+	* CAT-74 = For Bobrick Dispenser Key
+	* MK9901 = FIC Code 9901- M / 6601 Rv Motorhome Master Key*
+* [U-Buy - US OEM Pentesting Keys](https://www.u-buy.com.au/product/13EP0SU6-16-oem-pentesting-keys-1284x-feo-k1-16120-222343-ch751-ch501-c346a-c390a-e114) - Similar to above   
+	* FEO-K1, 1284x, 2642, E114, 222343, 84-16120, C390A, C413A, [C415A](https://www.etsy.com/au/listing/1766577873/c415a-replacement-key-compx-ncl), C420A, C642A, C346A, CH501, RV Compartment Cargo Key, CH751, CAT74, [A126](https://www.etsy.com/au/listing/1596355290/a126-allen-bradley-apem-a126-fire-panel)
 
 # Electronic Attacks
 ## BadUSB
