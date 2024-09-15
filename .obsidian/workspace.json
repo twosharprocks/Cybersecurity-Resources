@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "cce8aab5b99076fe",
+        "id": "1c84a78fab8c61ff",
         "type": "tabs",
         "children": [
           {
-            "id": "9a100c0c28e07061",
+            "id": "d6130620acea44a7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Offensive-Security/Physical Access.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Offensive-Security/Physical Access.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Offensive-Security/Physical Access.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Offensive-Security/Physical Access.md"
+              }
             }
           }
         ]
@@ -138,8 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9a100c0c28e07061",
+  "active": "d6130620acea44a7",
   "lastOpenFiles": [
+    "Offensive-Security/Pentesting.md",
+    "Offensive-Security/Physical Access.md",
+    "Offensive-Security/Hacking-Tools-Techniques.md",
+    "Offensive-Security/OSCP Notes.md",
+    "Offensive-Security/Web-App-Vulnerability.md",
     "CTF-Cheat-Sheet.md"
   ]
 }
