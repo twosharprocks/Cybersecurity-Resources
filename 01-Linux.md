@@ -1,18 +1,11 @@
 Linux - Bash Commands
 =====
 [explainshell.com](https://explainshell.com/) - Lists out meaning of a line of script
-
 [Linux Command Resources](https://linuxcommand.org/lc3_resources.php) \[HUGE Resource with links to more\]
-
 [Linux man-pages project](https://www.kernel.org/doc/man-pages/)
-
 [Linux MAN Pages](https://man7.org/linux/man-pages/index.html)
-
-
 [Full “Intro to BASH” Reference](https://programminghistorian.org/en/lessons/intro-to-bash)
-
 [BASH Beginners Guide \[HUGE reference\]](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
-
 [BASH Cheat Sheet \[Top 25\]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 
 # **Basics**
@@ -55,10 +48,8 @@ Linux - Bash Commands
 `shred` to permanently delete file
 
 `*` Wildcard
-
- eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
-
- eg. `rm *` will remove all files in the current directory
+ * eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
+ * eg. `rm *` will remove all files in the current directory
 
 `&&` Execute another command in the same line ONLY if the previous command worked
 
@@ -95,62 +86,45 @@ Linux - Bash Commands
 `diff` Show differences between files
 
 `sed` Edits a stream sed s/(old value)/(replacement value)/ \[CAUTION: `sed` overwrites\]
-
 * eg. “The Dog chased a Ball”, `sed s/Ball/Cat/` changes it to “The Dog chased a Cat”
 
 `awk` Data processing and extracting/reporting from streams \[[Using awk](https://opensource.com/article/20/9/awk-ebook)\]
-
 * eg. `awk -F, '{print $(field#)}'` then awk isolates column (field#) with ‘,’ separating data
-
 * eg. `awk -F ‘{print $4, $7}’` reads a new column for each space, prints columns 4 & 7
 
 `find` Searches for file/directory names \[[Using find function](https://www.diskinternals.com/linux-reader/bash-find-command/)]
 * [Options](https://man7.org/linux/man-pages/man1/find.1.html): `iname` ignores case, `-type` file (`f`) or directory (`d`),
-
-eg. `find -type f -iname *.txt’` finds all .txt files
-
-eg. `find -type d -iname rogers/*` finds directories starting with “rogers” ignoring case
-
-eg. `find /directory/folder -type f -iname /log.txt` searches different directory
+* eg. `find -type f -iname *.txt’` finds all .txt files
+* eg. `find -type d -iname rogers/*` finds directories starting with “rogers” ignoring case
+* eg. `find /directory/folder -type f -iname /log.txt` searches different directory
 
 `whereis` all locations of a file
 
 `grep` Searches inside files for a string \[[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)\]
-
 * [Options:](https://man7.org/linux/man-pages/man1/grep.1.html) `-c` count, `-r` recursive, `-i` case insensitive, `-l` list filename
-
-eg. `grep bob log1.txt` finds ‘bob’ in log1.txt
-
-eg. `grep -i bob log1.txt` find ‘bob’ regardless of casing
-
-eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns filenames
+* eg. `grep bob log1.txt` finds ‘bob’ in log1.txt
+* eg. `grep -i bob log1.txt` find ‘bob’ regardless of casing
+* eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns filenames
 
 `xxd` Provides a [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) for a file
-
 # **Networking**
 
 `wget` Download a file from a URL
 * Options: `‐‐output-document=filename.html example.com` (Rename file being downloaded), 
-* `‐‐directory-prefix=folder/subfolder example.com` (Download to specific folder), `‐‐continue example.com/big.file.iso` (Resume interrupted download), `‐‐continue ‐‐timestamping wordpress.org/latest.zip` (Download IF server has a newer version), `‐‐input list-of-file-urls.txt` (Download from multiple URLs listed in txt file), `http://example/{1..20}.jpg` (Download sequentially numbered files), `wget ‐‐page-requisites ‐‐span-hosts ‐‐convert-links ‐‐adjust-extension http://example.com/dir/file` (Download an entire webpage) 
-
-wget Download a file from a URL
-
-* Options: `‐‐output-document=filename.html example.com` Name file downloaded
-* `‐‐directory-prefix=folder/subfolder example.com` Download to specific folder
-* `‐‐continue example.com/big.file.iso` Resume interrupted download 
-* `‐‐continue ‐‐timestamping wordpress.org/latest.zip` Download IF newer version
-* `‐‐input list-of-file-urls.txt` Download from multiple URLs listed in txt file
-* `http://example/{1..20}.jpg` Download sequentially numbered files 
- 
+* Download to specific folder: `‐‐directory-prefix=folder/subfolder example.com`
+* Resume interrupted download: `‐‐continue example.com/big.file.iso` 
+* Download IF server has a newer version:`‐‐continue ‐‐timestamping wordpress.org/latest.zip` 
+* Download from multiple URLs listed in txt file: `‐‐input list-of-file-urls.txt`
+* Download sequentially numbered files: `http://example/{1..20}.jpg`
+* Download an entire webpage `wget ‐‐page-requisites ‐‐span-hosts ‐‐convert-links ‐‐adjust-extension http://example.com/dir/file`
 
 `curl` Call a URL
-
 * [Options:](https://gist.github.com/eneko/dc2d8edd9a4b25c5b0725dd123f98b10)  `--abstract-unix-socket <path>` Connect via abstract Unix domain socket
 * `-a, --append`  Append to target file when uploading
 * `-E, --cert &lt;certificate[:password]>` Client certificate file and password
 * `-K, --config <file>` Read config from a file
 * `-b, --cookie <data|filename>` Send cookies from string/file
-* `-c, --cookie-jar <filename>` Write cookies to <filename> after operation 
+* `-c, --cookie-jar <filename>` Write cookies to filename after operation 
 * `-d, --data <data>` HTTP POST data
 * `-G, --get` Put the post data in the URL and use GET
 * `-x, --proxy [protocol://]host[:port]` Use this proxy
@@ -159,8 +133,7 @@ wget Download a file from a URL
 * `-u, --user <user:password>` Server user and password 
 
 `ping` Sends Ping
-
-	* Options: `ping -c 5` Sends 5 pings
+* Options: `ping -c 5` Sends 5 pings
 
 `netstat` Shows open ports
 
@@ -176,76 +149,63 @@ wget Download a file from a URL
 * `-o (--operating-system)` Operating system
 
 `nslookup` Lookup DNS Records
-
-	Options: `-type=(any, soa, ns, a, mx, txt)` Displays DNS record type
-
-
+* Options: `-type=(any, soa, ns, a, mx, txt)` Displays DNS record type
 # Archive & Compress
 
 Tar format is: `tar [option(s)] [archive_name.tar] [objects_to_archive]`
-Full tar options list [tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo]](https://linuxcommand.org/lc3_man_pages/tar1.html)
-
-Tar short Options
-
-* `c` create archive (also `--create`)
-    * `-z` Creates compressed gzip archive (title ends in “.tar.gz” or “.tgz”)
-    * `-j` Creates compressed bzip archive (title ends in “.tar.bz2” or “.tbz”
-    * `--exclude` Excludes files and folders in archived directory
-* `f` file, **must be last option** & followed by archive title. (also `--file`)
-* `x` extract archive (also `--extract`, `--get`) [must use `-z` or `-j` if archive is compressed]
-    * `-C` Extracts archive to different directory (directory path must follow)
-    * `-k` keeps existing files when extracting. (also --keep-old-files)
-    * `--wildcards` "*.jpg": Extracts files ending in .jpg (works for any)
-    * `--keep-newer-files` Don’t replace existing files newer than archive
-    * `--keep-directory-symlink` Don’t replace symlinks
-    * `--no-overwrite-dir` Preserve metadata
-    * `--overwrite` Overwrite existing files
-    * `--overwrite-dir` Overwrite metadata
-    * `--recursive-unlink` Remove all files in directory before extraction
-    * `--remove-files` Remove files from disk after adding to archive
-    * `--skip-old-files` Don’t replace existing files when extracting, skip over
-    * `-U` Remove each file prior to extracting over (also `--unlink-first`)
-    * `-W` Verify archive (also `--verify`)
-* `-v` verbose, displays archive results
-* `-vv` very verbose, displays detailed results including file paths & permissions
-* `-r` append (also `--append`)
-    * `tar rf archive.tar archive/ folder/ file.txt` adds folder & file.txt to archive.tar
-* `-u` update, just archiving files  (also --update)
-* `-t` list archive contents (also `--list`)
-    * `tar tvf archive.tar` List contents of “archive.tar” with verbose output
-* `-d` difference, comparing archive & file system. (also `-diff`, `--compare`)
-* `--delete` delete from archive, does not operate on compressed archives.
-* `-A` Apprend archive to another, must be same format. (also `catenate`, `--concatenate`)
-* `--test-label` Test archive volume label, codes as `0` if match found, codes `1` if not.
+* Full tar options list [tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo]](https://linuxcommand.org/lc3_man_pages/tar1.html)
+* Options
+	* `c` create archive (also `--create`)
+	    * `-z` Creates compressed gzip archive (title ends in “.tar.gz” or “.tgz”)
+	    * `-j` Creates compressed bzip archive (title ends in “.tar.bz2” or “.tbz”
+	    * `--exclude` Excludes files and folders in archived directory
+	* `f` file, **must be last option** & followed by archive title. (also `--file`)
+	* `x` extract archive (also `--extract`, `--get`) [must use `-z` or `-j` if archive is compressed]
+	    * `-C` Extracts archive to different directory (directory path must follow)
+	    * `-k` keeps existing files when extracting. (also --keep-old-files)
+	    * `--wildcards` "*.jpg": Extracts files ending in .jpg (works for any)
+	    * `--keep-newer-files` Don’t replace existing files newer than archive
+	    * `--keep-directory-symlink` Don’t replace symlinks
+	    * `--no-overwrite-dir` Preserve metadata
+	    * `--overwrite` Overwrite existing files
+	    * `--overwrite-dir` Overwrite metadata
+	    * `--recursive-unlink` Remove all files in directory before extraction
+	    * `--remove-files` Remove files from disk after adding to archive
+	    * `--skip-old-files` Don’t replace existing files when extracting, skip over
+	    * `-U` Remove each file prior to extracting over (also `--unlink-first`)
+	    * `-W` Verify archive (also `--verify`)
+	* `-v` verbose, displays archive results
+	* `-vv` very verbose, displays detailed results including file paths & permissions
+	* `-r` append (also `--append`)
+	    * `tar rf archive.tar archive/ folder/ file.txt` adds folder & file.txt to archive.tar
+	* `-u` update, just archiving files  (also --update)
+	* `-t` list archive contents (also `--list`)
+	    * `tar tvf archive.tar` List contents of “archive.tar” with verbose output
+	* `-d` difference, comparing archive & file system. (also `-diff`, `--compare`)
+	* `--delete` delete from archive, does not operate on compressed archives.
+	* `-A` Apprend archive to another, must be same format. (also `catenate`, `--concatenate`)
+	* `--test-label` Test archive volume label, codes as `0` if match found, codes `1` if not.
 
 **<span style="text-decoration:underline;">Zip/Unzip</span>**
-
 Leaves behind original and creates new zip files
-
 zip command format is: zip [option(s)] [archive_name.zip] [objects_to_archive]
-
-
-* `-[0-9]`: Level of compression, `-0` is none & `-9` is maximum
-* `-e` Adds password protection (use this and **<span style="text-decoration:underline;">not</span>** `-P`)
+* Options:
+	* `-[0-9]`: Level of compression, `-0` is none & `-9` is maximum
+	* `-e` Adds password protection (use this and **<span style="text-decoration:underline;">not</span>** `-P`)
 
 unzip command format is: `unzip [option(s)] [archive_name.zip]`
-
 * `-v` verbose
 * `-l` list files
 * `-t` test files to be unzipped
 
 **<span style="text-decoration:underline;">gzip/gunzip</span>**
-
 `gzip` creates new gzip file and removes original (default)
-
 Command format is: `gzip [option(s)] [archive_name.zip]`
-
-gzip short options
-
-* `-c`: Leaves original file [output needs to be redirected] (also `--stdout`, `--to-stdout`)
-    * `>` to output to filename.type.gz
-* `-r` Recursive compression down sub-directories
-* -`[0-9]` Level of compression, `-0` is none & `-9` is maximum
+* Options
+	* `-c`: Leaves original file [output needs to be redirected] (also `--stdout`, `--to-stdout`)
+	    * `>` to output to filename.type.gz
+	* `-r` Recursive compression down sub-directories
+	* -`[0-9]` Level of compression, `-0` is none & `-9` is maximum
 
 gunzip short options (also “gzip -d” to “decompress”)
 
