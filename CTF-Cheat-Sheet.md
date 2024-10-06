@@ -5,7 +5,6 @@
 
 # CTF Techniques
 * [Steps to follow in a CTF](https://github.com/chreniuc/CTF)
-
 # Web
 Hidden pages
 * Run `Dirbuster`, `dirb`, or `gobuster` to get a directory tree and insecure files
