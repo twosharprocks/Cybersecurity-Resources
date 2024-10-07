@@ -3,7 +3,7 @@ Date: 2024-10-06
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
-Status: Completed
+Status: Complete
 IP: 192.168.228.98
 Writeup: https://medium.com/@vivek-kumar/offensive-security-proving-grounds-walk-through-pelican-614538719710
 ---

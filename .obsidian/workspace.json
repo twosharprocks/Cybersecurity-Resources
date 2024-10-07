@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds/Intermediate/8 - Pelican - Linux.md",
+                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Intermediate/9 - Boolean - Linux.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 370.5
   },
   "right": {
     "id": "f2a9a9f0026f5c61",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds/Intermediate/8 - Pelican - Linux.md",
+                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Intermediate/9 - Boolean - Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds/Intermediate/8 - Pelican - Linux.md",
+                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Intermediate/9 - Boolean - Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds/Intermediate/8 - Pelican - Linux.md"
+                "file": "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Intermediate/9 - Boolean - Linux.md"
               }
             }
           }
@@ -148,37 +148,50 @@
   },
   "active": "d6130620acea44a7",
   "lastOpenFiles": [
-    "CTF-Cheat-Sheet.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Intermediate/8 - Pelican - Linux.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/6 - Hub - Linux.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/7 - RubyDome - Linux.md",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006174612.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006174804.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006174442.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006174145.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006173841.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006172859.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006172753.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006172608.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006172211.png",
-    "Offensive-Security/OSCP/Boxes/zImages/Pasted image 20241006172119.png",
-    "Offensive-Security/OSCP/Boxes/zImages",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/1 - Twiggy - Linux.md",
-    "Offensive-Security/Hacking-Tools-Techniques.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/5 - Levram - Linux.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/4 - Codo - Linux.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/3 - Astronaut - Linux.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy/2 - Exfiltrated - Linux.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Intermediate",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Untitled.md",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds/Easy",
-    "Offensive-Security/OSCP/Boxes/Proving Grounds",
-    "Offensive-Security/OSCP/Boxes/HTB",
-    "Offensive-Security/OSCP/Boxes",
-    "Offensive-Security/OSCP",
-    "Offensive-Security/Physical Access.md",
+    "Offensive-Security/OSCP/OSCP Exam Prep.md",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/To Do - Linux - 28.md",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Intermediate/9 - Boolean - Linux.md",
+    "Pasted image 20241007141603.png",
+    "Pasted image 20241007141449.png",
+    "Pasted image 20241007141337.png",
+    "Pasted image 20241007135127.png",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Box Name - Platform (Template) 1.md",
+    "Pasted image 20241007134925.png",
+    "Pasted image 20241007134727.png",
+    "Pasted image 20241007134705.png",
+    "Pasted image 20241007130949.png",
+    "Pasted image 20241007130726.png",
+    "Pasted image 20241007130100.png",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Intermediate/8 - Pelican - Linux.md",
+    "README.md",
+    "Fabric/Cheat Sheet - Fabric.md",
+    "Offensive-Security/OSCP/OSCP Exam FAQ.md",
+    "Offensive-Security/OSCP/Boxes - 92/Box Name - Platform (Template).md",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Easy/1 - Twiggy - Linux.md",
+    "Offensive-Security/OSCP/Boxes/HTB - 36/Windows/1 - To Do - Windows - 11.md",
+    "Offensive-Security/OSCP/Boxes/HTB - 36/Linux/1 - To Do - Linux - 17.md",
+    "Offensive-Security/OSCP/Boxes/HTB - 36/Active Directory/1 - To Do - Active Directory - 8.md",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Windows - 15/To Do - Windows - 15.md",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds/Linux - 30/PG Practice",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Active Directory - 5/To Do - AD - 5.md",
+    "Offensive-Security/OSCP/Boxes/HTB - 36/Windows",
+    "Offensive-Security/OSCP/Boxes/HTB - 36/Linux",
+    "Offensive-Security/OSCP/Boxes/HTB - 36/Active Directory",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Windows - 15",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Active Directory - 5",
+    "Offensive-Security/OSCP/Boxes - 92/HTB - 36",
+    "Offensive-Security/OSCP/Boxes - 92/Proving Grounds - 50",
+    "Offensive-Security/OSCP/Boxes/Challenge Labs - 6",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Easy/7 - RubyDome - Linux.md",
+    "Offensive-Security/OSCP/Boxes/Proving Grounds - 48/Linux - 28/Easy/6 - Hub - Linux.md",
+    "Scripts/Python/unredact.py.md",
+    "Scripts/PowerShell/readme.md",
+    "Scripts/Python/redact.py.md",
+    "Scripts/Python/pdftoterminal.py.md",
+    "Offensive-Security/Web-App-Vulnerability.md",
     "Offensive-Security/Pentesting.md",
-    "Offensive-Security/OSCP Notes.md",
-    "Offensive-Security/Web-App-Vulnerability.md"
+    "Offensive-Security/Hacking-Tools-Techniques.md",
+    "Offensive-Security/Physical Access.md"
   ]
 }

