@@ -7,11 +7,11 @@ Easy - 0/7
 - [x] Levram
 - [x] Hub
 - [x] RubyDome
-Intermediate - 12/15
+Intermediate - 11/15
 - [x] Pelican
 - [x] Boolean
 - [x] Crane
-- [ ] Extplorer
+- [x] Extplorer
 - [ ] Image
 - [ ] Iaw
 - [ ] Lavita
