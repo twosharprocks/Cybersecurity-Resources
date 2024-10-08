@@ -34,8 +34,10 @@ All that frustration aside, the Priv Esc phase was a lot more straightforward an
 - Retrieved password hash for `root` & cracked hash for password
 - Switched to user `root` with cracked password, printed `proof.txt`
 ## Improved skills
-- Creating reverse shells with revshells.com
+- Creating reverse shells with revshells.com instead of `msfvenom`
 - Upgrading from basic to full shell
+- Using `john` to crack password hashes
+- Using `disk` privileges to protected files 
 ## Used tools
 - nmap
 - gobuster
