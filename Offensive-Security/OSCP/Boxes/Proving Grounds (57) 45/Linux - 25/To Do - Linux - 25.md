@@ -1,4 +1,4 @@
-# TJ Null - PG Practice - 16
+# TJ Null - PG Practice - 14
 Easy - 0/7
 - [x] Twiggy
 - [x] Exfiltrated
@@ -7,12 +7,12 @@ Easy - 0/7
 - [x] Levram
 - [x] Hub
 - [x] RubyDome
-Intermediate - 11/15
+Intermediate - 10/15
 - [x] Pelican
 - [x] Boolean
 - [x] Crane
 - [x] Extplorer
-- [ ] Image
+- [x] Image
 - [ ] Iaw
 - [ ] Lavita
 - [ ] PC
