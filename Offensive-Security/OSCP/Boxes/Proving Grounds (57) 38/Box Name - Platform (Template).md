@@ -31,12 +31,6 @@ Enumerated open TCP ports:
 ```bash
 
 ```
-
-Enumerated top 200 UDP ports:
-```bash
-
-```
-
 ---
 # Enumeration
 ## Port 22 - SSH (OpenSSH 7.9p1)
