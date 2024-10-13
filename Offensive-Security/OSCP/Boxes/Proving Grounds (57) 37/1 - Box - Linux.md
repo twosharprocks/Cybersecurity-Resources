@@ -1,5 +1,5 @@
 ---
-Date: 2024-10-12
+Date: 2024-10-14
 Platform: 
 Category: 
 Difficulty: 
@@ -18,7 +18,7 @@ Writeup:
 - skill 2
 ## Used tools
 - nmap
-- gobuster
+- python
 
 ---
 # Information Gathering
