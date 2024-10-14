@@ -1,4 +1,4 @@
-# TJ Null - PG Practice - 6
+# TJ Null - PG Practice - 5
 Easy - 0/7
 - [x] Twiggy
 - [x] Exfiltrated
@@ -7,7 +7,7 @@ Easy - 0/7
 - [x] Levram
 - [x] Hub
 - [x] RubyDome
-Intermediate - 2/15
+Intermediate - 1/15
 - [x] Pelican
 - [x] Boolean
 - [x] Crane
@@ -21,7 +21,7 @@ Intermediate - 2/15
 - [x] Scrutiny
 - [x] Flu
 - [x] Ochima
-- [ ] PyLoader
+- [x] PyLoader
 - [ ] Plum
 Hard - 4/4
 - [ ] Blackgate

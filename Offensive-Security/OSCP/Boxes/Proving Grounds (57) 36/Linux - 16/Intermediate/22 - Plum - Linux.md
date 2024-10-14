@@ -1,13 +1,13 @@
 ---
 Date: 2024-10-14
-Platform: PG-Practice
-Category: Linux
-Difficulty: Intermediate
-Status: In progress
+Platform: 
+Category: 
+Difficulty: 
+Status: 
 IP: 
 Writeup:
 ---
-# PyLoader
+# Plum
 
 
 # Resolution summary
