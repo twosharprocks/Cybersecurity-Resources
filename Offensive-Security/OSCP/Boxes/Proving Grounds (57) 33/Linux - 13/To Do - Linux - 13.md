@@ -7,6 +7,7 @@ Easy - 0/7
 - [x] Levram
 - [x] Hub
 - [x] RubyDome
+
 Intermediate - 0/15
 - [x] Pelican
 - [x] Boolean
@@ -23,8 +24,9 @@ Intermediate - 0/15
 - [x] Ochima
 - [x] PyLoader
 - [x] Plum
-Hard - 4/4
-- [ ] Blackgate
+
+Hard - 3/4
+- [x] Blackgate
 - [ ] Clue
 - [ ] Cockpit
 - [ ] Zipper
