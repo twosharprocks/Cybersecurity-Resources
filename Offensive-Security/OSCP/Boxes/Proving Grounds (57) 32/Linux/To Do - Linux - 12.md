@@ -1,4 +1,4 @@
-# TJ Null - PG Practice - 4
+# TJ Null - PG Practice - 1
 Easy - 0/7
 - [x] Twiggy
 - [x] Exfiltrated
@@ -24,11 +24,11 @@ Intermediate - 0/15
 - [x] Ochima
 - [x] PyLoader
 - [x] Plum
+- [x] Cockpit
 
-Hard - 3/4
+Hard - 1/3
 - [x] Blackgate
-- [ ] Clue
-- [ ] Cockpit
+- [x] Clue
 - [ ] Zipper
 # TJ Null - PG Play - 11
 - [ ] eLection
