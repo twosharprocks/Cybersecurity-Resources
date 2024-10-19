@@ -1,4 +1,16 @@
-# TJ Null - PG Practice - 1
+# TJ Null - PG Play - 11
+- [ ] eLection1
+- [ ] Stapler
+- [ ] Monitoring
+- [ ] InsanityHosting
+- [ ] DriftingBlue6
+- [ ] Loly
+- [ ] Blogger
+- [ ] Amaterasu
+- [ ] Blogger
+- [ ] Potato
+- [ ] DC-9
+# TJ Null - PG Practice - 0
 Easy - 0/7
 - [x] Twiggy
 - [x] Exfiltrated
@@ -26,19 +38,8 @@ Intermediate - 0/15
 - [x] Plum
 - [x] Cockpit
 
-Hard - 1/3
+Hard - 0/3
 - [x] Blackgate
 - [x] Clue
-- [ ] Zipper
-# TJ Null - PG Play - 11
-- [ ] eLection
-- [ ] Stapler
-- [ ] Monitoring
-- [ ] InsanityHosting
-- [ ] DriftingBlue6
-- [ ] Loly
-- [ ] Blogger
-- [ ] Amaterasu
-- [ ] Blogger
-- [ ] Potato
-- [ ] DC-9
+- [x] Zipper
+

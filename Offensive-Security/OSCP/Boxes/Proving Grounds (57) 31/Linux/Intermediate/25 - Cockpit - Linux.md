@@ -8,17 +8,34 @@ IP: 192.168.244.10
 Writeup: https://medium.com/@Dpsypher/proving-grounds-practice-cockpit-7e777892e485
 ---
 # Cockpit
+This one was originally listed as "Hard" in my list, but when I checked during startup it showed as "Intermediate". Definitely don't think it should be listed as "Intermediate" though - this was definitely the trickest boxes I've done, and I absolutely leaned heavily on the walkthrough to make progress here.
 
+The biggest challenge ofcourse was the box breaking everytime I tried to run `gobuster` against it to find directories or files. Turned out there was a hidden `login.php` file on the port `80` server, but I couldn't find the damn thing with the first few gobuster scans because the whole box would break and require revert. Worse was finding the `blocked.html` page which would break the box every time I visited it OR scanned it with `gobuster`.
 
+The biggest lesson out of this was quite unexpected though, and it was how to use `Seclists`! I'd known about `SecLists` for a fair while and assumed them were just an alternative set of user & password lists, but it turns out there's all sorts of tips on bypassing logins with SQLi, php plugins for reverse shells, and a mountain of other things I usually need to look up online. Not sure how much I'll use it going forward, but it's certainly an option when Google isn't providing the answers I need.
+
+The privilege escalation was a tricky one too, although it was more about following the walkthrough and matching up what was in the GTFObin with what the walkthrough was showing. I understand it all in principle, but actually figuring out each every step on my own would have been a massive stretch - the walkthrough was vital here, and having now followed the process to get the privesc I'm optimistic I'll be able to adapt to a similar process if I find a similar GTFObin in the future.
 # Resolution summary
-- Text
-- Text
+- Ran Nmap to identify ports `22`, `80`& `9090`
+- Ran `gobuster` against port `80` and identified `login.php`
+- Identified `blaze` and used MySQLi bypass to access admin
+- Identified base64 encoded credentials and decoded them with cyberchef
+- Used decoded credentials to login to port `9090`
+- Accessed terminal emulator inside admin panel and created reverse shell for initial access
+- Checked sudo privileges and identified relevant GTFObin for `tar`
+- Created `paylaod.sh` to abuse `sudo` privileges echo into `/etc/sudoers` with tar backup
+- Created checkpoint and ran `sudo tar` command 
+- Checked `sudo -l` to confirm new privileges, 
+- Switched user to `root` and printed `proof.txt`
 ## Improved skills
-- skill 1
-- skill 2
+- Using Seclists to find MySQL injections
+- Using Cyberchef to ID hashes/encoding
 ## Used tools
 - nmap
 - gobuster
+- Hashcat
+- Cyberchef
+- Seclists
 
 ---
 # Information Gathering
