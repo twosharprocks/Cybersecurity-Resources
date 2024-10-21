@@ -14,7 +14,7 @@ There's no doubt I'd have gotten there in the end, but there was a LOT of enumer
 
 # Resolution summary
 - Ran Nmap to identify ports `22`, `80`, `139`, `445`, `3000` & `8021`
--  Identified port `3000` as running `Cassandra`
+- Identified port `3000` as running `Cassandra`
 - Identified port `8021` as running `freeswitch`
 - Found exploit for `cassandra` that allowed reading `/proc/self/cmdline` which included credentials for `cassie`
 - Reused same exploit to read `freeswitch` config file `/etc/freeswitch/autoload_configs/event_socket.conf.xml` which included password for `freeswitch`.

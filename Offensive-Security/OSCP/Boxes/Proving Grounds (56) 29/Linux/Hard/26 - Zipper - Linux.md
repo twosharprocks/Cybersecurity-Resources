@@ -110,4 +110,4 @@ password=`cat /root/secret`
 ---
 # Trophy & Loot
 `local.txt` = `7638c3497498d0b4f3f12eabd89f3269`
-`root.txt` = `a1c4888b41fc7697e214d03584c54dd5`
+`proof.txt` = `a1c4888b41fc7697e214d03584c54dd5`

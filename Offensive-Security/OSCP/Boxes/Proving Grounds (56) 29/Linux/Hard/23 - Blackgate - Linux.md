@@ -110,4 +110,4 @@ No enumeration conducted
 ---
 # Trophy & Loot
 `local.txt` = `704c046724f3d52f31c9567446105364`
-`root.txt` = `deefd9189289f94bf366e55ae58fdfd3`
+`proof.txt` = `deefd9189289f94bf366e55ae58fdfd3`
