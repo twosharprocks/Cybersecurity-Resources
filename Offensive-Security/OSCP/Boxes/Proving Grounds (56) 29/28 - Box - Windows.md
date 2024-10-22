@@ -62,4 +62,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor
 ---
 # Trophy & Loot
 `local.txt` = ``
-`root.txt` = ``
+`proof.txt` = ``
