@@ -1,9 +1,9 @@
 # TJ Null - PG Practice
 ~~Helpdesk~~ (Not available)
 
-Easy - 3/4
+Easy - 2/4
 - [x] Algernon - Easy
-- [ ] Squid - Easy
+- [x] Squid - Easy
 - [ ] Internal - Easy
 - [ ] Kevin - Easy
 

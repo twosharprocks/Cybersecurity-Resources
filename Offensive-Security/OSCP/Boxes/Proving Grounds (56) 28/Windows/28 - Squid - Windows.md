@@ -8,11 +8,11 @@ IP: 192.168.146.189
 Writeup: https://medium.com/@ardian.danny/oscp-practice-series-26-proving-grounds-squid-d8043f1f77e2
 ---
 # Squid
-Everything about this box was a refresher, and there's no doubt I leaned heavily on the walkthrough as I was doing it. Learning about Squid and `spose.py` were interesting, but there's a concern that `spose.py` is pretty niche and I may never have found it (or realised I needed it) without thew walkthrough. 
+Everything about this box was a refresher, and there's no doubt I leaned heavily on the walkthrough as I was doing it. Learning about Squid and `spose.py` was interesting, but there's a concern that `spose.py` is pretty niche and I may never have found it (or realised I needed it) without the walkthrough. 
 
-Maybe it's just more familiarity though, and with more practice I'll get better at knowing how to tackle this different Windows services. There's no question I learned more about how proxies work from this box, and setting up FoxyProxy to reach the target's open ports was particularly interesting.
+Maybe it's just more familiarity though, and with more practice I'll get better at knowing how to tackle different Windows services. There's no question I learned more about how proxies work from this box, and setting up FoxyProxy to reach the target's open ports was particularly interesting.
 
-Figuring out the MySQL query was challenging too, and I'm not sure I would have figured it out without the walkthrough. Now that I've done it though I can absolutely see how it works, so there's no question I'd try something similar if I came across the option to enter sql queries into an admin panel again. Understanding how those queries relate to the document root is also awesome to know, and not something I ever remember being covered in the course content.
+Figuring out the MySQL query was challenging too, and I'm not sure I would have figured it out without the walkthrough. Now that I've done it though, I can absolutely see how it works, so there's no question I'd try something similar if I came across the option to enter sql queries into an admin panel again. Understanding how those queries relate to the document root is also awesome to know, and not something I remember being covered in the course content.
 
 Finally, this box helped put the pieces together on some of the netcat commands I've been running but not fully understanding - I needed the walkthrough to spell it out, and now that I've seen it in action I actually get what I've been doing previously when I've copy/pasted stuff in to make it work.
 
