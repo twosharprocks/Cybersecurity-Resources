@@ -69,7 +69,7 @@ Host script results:
 # Enumeration
 ## Port 135 - MSRPC (Windows RPC)
 No enumeration conducted
-## Port 139 & 445 - SMB (Microsoft Windows Netbios-SSN)
+## Port 139 & 445 - SMB (Windows Netbios-SSN)
 No enumeration conducted
 ## Port 3128 - HTTP (Squid http proxy 4.14)
 - Navigated to `http://192.168.146.189:3128` and identified `Squid/4.14`

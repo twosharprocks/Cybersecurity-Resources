@@ -1,14 +1,14 @@
 # TJ Null - PG Practice
 ~~Helpdesk~~ (Not available)
 
-Easy - 2/4
+Easy - 1/4
 - [x] Algernon - Easy
 - [x] Squid - Easy
-- [ ] Internal - Easy
-- [ ] Kevin - Easy
+- [x] Internal - Easy
+- [ ] ~~Kevin - Easy~~ (Aborted)
 
-Intermediate - 9/9
-- [ ] Authby - Intermediate
+Intermediate - 8/9
+- [x] Authby - Intermediate
 - [ ] Hutch - Intermediate
 - [ ] Jacko - Intermediate
 - [ ] Resourced - Intermediate

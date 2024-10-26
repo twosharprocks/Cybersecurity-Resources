@@ -1,13 +1,13 @@
 ---
-Date: 2024-10-23
-Platform: 
-Category: 
-Difficulty: 
-Status: 
-IP: 
+Date: 2024-10-25
+Platform: PG-Practice
+Category: Windows
+Difficulty: Intermediate
+Status: In progress
+IP: 192.168.
 Writeup:
 ---
-# {{title}}
+# Box
 
 
 # Resolution summary
@@ -36,7 +36,14 @@ Enumerated open TCP ports:
 ## Port 22 - SSH (OpenSSH 7.9p1)
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tortor scelerisque, fringilla sapien sit amet, rhoncus lorem. Nullam imperdiet nisi ut tortor eleifend tincidunt. Mauris in aliquam orci. Nam congue sollicitudin ex, sit amet placerat ipsum congue quis. Maecenas et ligula et libero congue sollicitudin non eget neque. Phasellus bibendum ornare magna. Donec a gravida lacus.
+
+## Port 135 - MSRPC (Windows RPC)
+
+## Port 139 & 445 - SMB (Apache)
+
+## Port 3389 - RDP (Apache)
+
+## Port 49152-60 - MSRPC (Windows RPC)
 
 ---
 # Exploitation
