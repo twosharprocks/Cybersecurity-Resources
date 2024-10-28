@@ -1,5 +1,5 @@
 ---
-Date: 2024-10-25
+Date: 2024-10-28
 Platform: PG-Practice
 Category: Windows
 Difficulty: Intermediate
@@ -11,8 +11,7 @@ Writeup:
 
 
 # Resolution summary
-- Text
-- Text
+
 ## Improved skills
 - skill 1
 - skill 2

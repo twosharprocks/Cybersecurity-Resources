@@ -6,20 +6,34 @@ Difficulty: Intermediate
 Status: Complete
 IP: 192.168.171.46
 Writeup: https://medium.com/@vivek-kumar/offensive-security-proving-grounds-walk-through-authby-7d0391b0897c
-Writeup2: "& https://medium.com/@ardian.danny/oscp-practice-series-28-proving-grounds-authby-e2ed7f710322"
+Writeup2: https://medium.com/@ardian.danny/oscp-practice-series-28-proving-grounds-authby-e2ed7f710322
 ---
 # Authby
+These Windows are doing my absolute head in. I spent hours on this box the day before following a multiple walkthroughs to the letter and got nowhere. I and wound up feeling so frustrated at not receiving even an initial shell that I marked this box as "Aborted" and shut down for the night - I figured there was no point pushing on and to just move on to the next Windows box.
 
+Came back the next day, booted up, and figured I'd give this one more go with the same exploits that had failed the day before... and it FUCKING WORKED?!?!?! No explanation or reason for why it didn't work 24hours earlier - it simply refused to work one day, then worked easily the next.
 
+Besides being insanely frustrating, I will admit learning about the Windows kernel exploits was cool. Understanding the link between the website and the FTP connection was interesting too, and it was great to see Hydra work perfectly - I was genuinely surprised when I checked on it and found it had not only finished, but had returned THREE sets of credentials (although two were duplicates).
+
+Biggest lesson out of this is to simply walk away when it's clear the box is fighting me. I never experienced this kind of unreliable bullshit with the Linux boxes, but I guess this is Windows. Going forward I'm setting a hard limit of 2 hours on a box - if I've tried my own enumeration, then followed walkthroughs, and still can't get initial access after 2 hours then this will not be the day to succeed on that box. Better to shut it down and potentially work on a different one, then come back to it later (probably the next day) and try again, than it is to keep fighting and only becoming more frustrated (and then absolutely enraged when the exploits work perfectly the next day).
 # Resolution summary
-- Text
-- Text
+- Ran Nmap to identify ports `21`,`242` & `3389` 
+- Ran `hydra` against FTP service on port 22 and identified `admin:admin` credentials
+- Logged into FTP service as `admin` and found credentials `offsec:elite`
+- Accessed webpage hosted on port `242` using `offsec:elite` 
+- Identified webpage matched `index.php` in FTP root directory
+- Created `shell.php`, uploaded via FTP,
+- Accessed `shell.php` via browser and received reverse shell
+- Identified windows kernel vulnerability CVE-2018-8120, and uploaded appropriate exploit executable `x86.exe` via FTP
+- Created and uploaded reverse shell executable `reverse.exe` via FTP
+- Executed `x86.exe reverse.exe` to receive 2nd reverse shell as `NT System`
 ## Improved skills
-- skill 1
-- skill 2
+- Using Windows kernel exploits
+- Running hydra
 ## Used tools
 - nmap
-- python
+- hydra
+- msfvenom
 
 ---
 # Information Gathering
@@ -163,7 +177,6 @@ PORT     STATE SERVICE            VERSION
 ![[Pasted image 20241025204306.png]]
 - Started netcat listener on port `1234` with `nc -nvlp 1234` then used web browser to navigate to `http://192.168.171.46:242/shell.php`, and received reverse shell
 ![[Pasted image 20241025204007.png]]
-
 ---
 # Lateral Movement to user
 ## Local Enumeration
