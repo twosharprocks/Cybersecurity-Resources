@@ -96,8 +96,7 @@ Host script results:
 # Enumeration
 
 ## Port 80 - HTTP (H2 Database)
-- Navigated to `http://192.168.182.66:80` and identified default page for `H2 Database Engine`
-![[Pasted image 20241028212111.png]]
+- 
 
 ## Port 135 - MSRPC (Windows RPC)
 
