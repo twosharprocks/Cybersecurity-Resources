@@ -7,10 +7,10 @@ Easy - 1/4
 - [x] Internal - Easy
 - [ ] ~~Kevin - Easy~~ (Aborted)
 
-Intermediate - 7/9
+Intermediate - 6/9
 - [x] Authby - Intermediate
 - [x] Hutch - Intermediate
-- [ ] Jacko - Intermediate
+- [x] Jacko - Intermediate
 - [ ] Resourced - Intermediate
 - [ ] DVR4 - Intermediate
 - [ ] Hepet - Intermediate

