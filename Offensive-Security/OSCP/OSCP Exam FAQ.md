@@ -15,6 +15,8 @@ ___
 
 Below are the example exam templates we have created to demonstrate how to report on the exam machines.  
 
+- Noraj Report Script: https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
+
 -   [Microsoft Word](https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.docx)
 -   [OpenOffice/LibreOffice](https://www.offensive-security.com/pwk-online/OSCP-Exam-Report.odt)
 

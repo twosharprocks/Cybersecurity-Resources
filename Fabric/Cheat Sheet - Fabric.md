@@ -29,7 +29,7 @@ Custom Patterns
 - Create folder in ~/.config/fabric/custom-fabric-patterns/ with pattern name
 - Create system.md and copy prompt into it
 - Copy custom files to Fabric: cp -a ~/.config/custom-fabric-patterns/* ~/.config/fabric/patterns/
-	Also |[improve_prompt](https://github.com/danielmiessler/fabric/tree/main/patterns/improve_prompt "improve_prompt"), |[create_pattern](https://github.com/danielmiessler/fabric/tree/main/patterns/create_pattern "create_pattern")| & |[official_pattern_template](https://github.com/danielmiessler/fabric/tree/main/patterns/official_pattern_template "official_pattern_template")|
+	Also |[improve_prompt](https://github.com/danielmiessler/fabric/tree/main/patterns/improve_prompt "improve_prompt"), |[create_pattern](https://github.com/danielmiessler/fabric/tree/main/patterns/create_pattern "create_pattern")| & |[official_pattern_template](https://github.com/danielmiessler/fabric/tree/main/patterns/official_pattern_template "official_pattern_template")
 
 ---
 ## Cybersecurity
