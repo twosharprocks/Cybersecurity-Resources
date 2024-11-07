@@ -8,12 +8,6 @@ IP: 192.168.230.187
 Writeup: https://medium.com/@Dpsypher/proving-grounds-practice-access-b95d3146cfe9
 Writeup2: https://systemweakness.com/proving-grounds-practise-active-directory-box-access-79b1fe662f4d
 ---
-# Access
-
-
-# Resolution summary
-- Text
-- Text
 ## Improved skills
 - PHP bypasses
 - Windows PrivEsc
