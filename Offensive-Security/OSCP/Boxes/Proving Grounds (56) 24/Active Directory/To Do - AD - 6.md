@@ -1,5 +1,5 @@
 # TJ Null - 6 
-- [ ] Access - Intermediate
+- [x] Access - Intermediate
 - [ ] Hokkaido - Intermediate
 - [ ] Resourced - Intermediate
 - [ ] Heist - Hard
