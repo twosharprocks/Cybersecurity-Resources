@@ -1,6 +1,4 @@
-Windows
-=====
-* [Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
+[Task Manager Complete Guide](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)
 
 Free Security Tools
 * [Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns) - Identifying startup processes
@@ -10,12 +8,10 @@ Free Security Tools
 * [Comodo Firewall](https://www.comodo.com/home/internet-security/firewall.php) - Free software firewall (with paid antivirus option)
 * [Bitdefender Antivirus](https://www.bitdefender.com.au/solutions/free.html) - Free antivirus
 * [Bitwarden](https://bitwarden.com/) - Open source password manager
-
-# **PowerShell Commands**
-----------
-[Commands for Cmd Shell & PowerShell [COMPREHENSIVE]](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+# CMD
+[Commands for Cmd Shell & PowerShell - COMPREHENSIVE](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
 [Helpful Command Line Commands](https://www.freecodecamp.org/news/command-line-commands-cli-tutorial/)
-
+## Core
 * `cd` or `chdir` Change directory (Linux = cd)
 * `dir` List directory contents (Linux = ls)
 * `md` or `mkdir` Create directory (Linux = mkdir)
@@ -30,9 +26,7 @@ Free Security Tools
 * `cls` Clear screen
 * `findstr` Find string
 * `clip` - Add to clipboard
-
-Environment Variables
-
+## Environment Variables
 * `set` Shows all PC Environment Variables
 * `%CD%`	 Current Directory
 * `%DATE%` Current Date
@@ -43,9 +37,7 @@ Environment Variables
 * `%USERPROFILE%` C:\Users\{username}
 * `%SYSTEMDRIVE%` C:\
 * `%SYSTEMROOT%` C:\Windows
-
-Network
-
+## Network
 * `ipconfig` IP Config (Options: /all /release /renew /displaydns /flushdns)
 * `getmac` MAC Info (Options: /v)
 * `netsh` 
@@ -64,11 +56,7 @@ Network
 * `netsh wlan show profile wifiname key=clear` Show saved wifi password
 * `nslookup` 
     * nslookup `-type=ptr` networkname.com
-
-System Management
-
-
-
+## System Management
 * `systeminfo` Provides system information
 * `driverquery` List all drivers (even drivers not in device manager)
 * `powercfg` (Option <span style="text-decoration:underline;">required</span>: /energy /batteryreport)
@@ -101,13 +89,9 @@ System Management
     * `properties`
         * caption, /value, buildnumber, filesystem, freespace, size, volumeserialnumber
 * `net` Manage user accounts, groups, and password policies
-
-
-### Common PowerShell Commands {#common-powershell-commands}
-
+# PowerShell
 [Powershell 101 Reference](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/00-introduction?view=powershell-7.3)
-
-
+## Core
 * `Set-Location` Changes to specified directory (Linux = cd)
 * `Get-ChildItem` Return current directory contents (Linux = ls, dir)
 * `New-Item` Makes a new file or directory (Linux = touch, mkdir)
@@ -124,20 +108,13 @@ System Management
 * `Stop-Process` Stops one or more defined processes (Linux = kill)
 * `Get-Service` Gets a list of services service --status-all
 
-
-### Useful Cmdlets for Monitoring Suspicious Activity {#useful-cmdlets-for-monitoring-suspicious-activity}
-
-
-
+## Useful Cmdlets for Monitoring Suspicious Activity
 * `Get-WmiObject`
 * `Invoke-WmiMethod`
 * `Register-WmiEvent`
 * `Remove-WmiObject`
 * `Set-WmiInstance`
-
-
-### Cmdlets to monitor as replacements for WMIC {#cmdlets-to-monitor-as-replacements-for-wmic}
-
+## Cmdlets to use instead of WMIC
 * `Export-BinaryMiLog`
 * `Get-CimAssociatedInstance`
 * `Get-CimClass`
@@ -152,21 +129,11 @@ System Management
 * `Remove-CimInstance`
 * `Remove-CimSession`
 * `Set-CimInstance`
-
-
-### Chocolatey {#chocolatey}
-
-
-
+# Chocolatey
 * `choco install <package>` to install package
     * `-y` parameter to auto-confirm
 * `choco uninstall <package>` to uninstall a package
-
-
 ### Active Directory {#active-directory}
-
 [Understanding Active Directory](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10)) [General Reference]
-
 [Active Directory Best Practices](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc778219(v=ws.10))
-
 [Securing Active Directory](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc728372(v=ws.10))

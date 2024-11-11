@@ -1,11 +1,9 @@
 # Networking
+**Network security** is the practices and policies used to protect and monitor a computer network’s resources against threats and risks.
 
-**<span style="text-decoration:underline;">Network security</span>** is the practices and policies used to protect and monitor a computer network’s resources against threats and risks.
+**Client-server model** is a network computing model that defines how resources and services are shared across a network. Uses a **<span style="text-decoration:underline;">“request and response”</span>** method of device communication.
 
-**<span style="text-decoration:underline;"> \
-Client-server model</span>** is a network computing model that defines how resources and services are shared across a network. Uses a **<span style="text-decoration:underline;">“request and response”</span>** method of device communication.
-
-**<span style="text-decoration:underline;">Network threats and risks</span>** can include: 
+**Network threats and risks**
 * Unauthorized access into networks
 * Denial of service (DoS) attacks
 * Eavesdropping
@@ -19,8 +17,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * Disadvantages: Security Issues, Troubleshooting is challenging
 ## Open Systems Interconnection (OSI) Model
 
-<span style="text-decoration:underline;">Mnemonic: “Please do not throw sausage pizza away” </span>
-
+**Mnemonic: “Please do not throw sausage pizza away”
 **Layer 1 - Physical**: Cables & Hubs. Pinouts, Cable Specs, Network Interface Cards
 **Layer 2 - Data Link**: Ethernet. Uses frames, MAC address
 **Layer 3 - Network**: IP Address. Uses packets, Transfer address to physical, network routing
@@ -34,8 +31,7 @@ Client-server model</span>** is a network computing model that defines how resou
 * Typically in large businesses with many computers
 * Typically feed into routers and can be programmed for resource management
 **Bridge** Same as switch but only two connections, often used to tie two LANs together
-**Hub** [_<span style="text-decoration:underline;">OUTDATED</span>_] Same as a switch but **cannot** be programmed
-
+**Hub** (OUTDATED) Same as a switch but **cannot** be programmed
 **Network Interface Controller (NIC)** Connects Computer to a network
 * Usually a circuit board or a chip
 * Each computer must have a NIC to receive/send resources
@@ -46,7 +42,6 @@ Client-server model</span>** is a network computing model that defines how resou
 * Advantages: Easy to use, less equipment to setup/maintain
 * Disadvantages: Single point of failure, difficult to troubleshoot.
 ## Network Security Devices
-
 **Firewall** Monitors & manage incoming/outgoing traffic
 * Typically placed right at LAN entry point to protect confidentiality & integrity
 **Load Balancers** Distributes incoming traffic across multiple servers
@@ -55,26 +50,25 @@ Client-server model</span>** is a network computing model that defines how resou
 **Demilitarised Zone (DMZ)** Smaller subnetwork within a LAN to protect internal data
 * Typically has it’s own network security devices to detect/block before reaching internal networks
 ## Network Topology
-
 **Linear** Each device is connected to the next via two-way link
 * Advantages: Adding devices to the network is easy.
-* Disadvantages: Single device failure can interrupt entire network. Variable latency between devices \
+* Disadvantages: Single device failure can interrupt entire network. Variable latency between devices
 **Ring** Each device is connected to the next in the loop (uni or bi-directional)
 * Advantages: Simple, no central node, adding is easy
-* Disadvantages: Every device is a failure point, variable latency \
+* Disadvantages: Every device is a failure point, variable latency
 **Star** Each device is attached to a central node (eg. a server)
 * Advantages: Consistent latency, easy to extend, node failure has no effect on network
 * Disadvantages: Network size limited by central node connections, difficult if central node is far from end devices \
 **Bus** Each device is attached to a central data link
 * Advantages: Fast transmission, easy to expand
-* Disadvantages: Bandwidth waste, devices cannot transmit simultaneously \
+* Disadvantages: Bandwidth waste, devices cannot transmit simultaneously
 **Tree** Each device has only one connection between any only connected 
 * Advantages: Easy to expand
-* Disadvantages: If a node fails all devices below are effected \
+* Disadvantages: If a node fails all devices below are effected
 **Fully Connected** Every device is connected to every other device
 * Advantages: High redundancy, fast transmission
 * Disadvantages: Complicated setup/management, expensive to establish
-* [Calculating the number of wires for a fully meshed network](https://x-engineer.org/wires-fully-meshed-network/) \
+* [Calculating the number of wires for a fully meshed network](https://x-engineer.org/wires-fully-meshed-network/)
 **Mesh** 	Many (but not <span style="text-decoration:underline;">all)</span> devices are connected to find shortest path to forward data
 * Advantages/Disadvantages: Same as fully connected
 **Hybrid** Mixture of different network topologies
@@ -85,12 +79,11 @@ Client-server model</span>** is a network computing model that defines how resou
 * [iplocation.io](https://iplocation.io/) [Significant info from multiple sources, inc geolocation & ASN]
 * [Binary to IP Converter (for IPv4](https://www.browserling.com/tools/bin-to-ip))
 
-<span style="text-decoration:underline;">IP Types</span>
+### IP Types
 **IPv4** Four Octets (8 binary bits = one byte) ranging 0-255, separated by decimals (eg. 10.4.79.254)
 **IPv6** Eight groups of 2 bytes encoded in hexidecimal (hex) separated by colon (eg. 2001:0db8:85a3:0000:0000:8a2e:0370:7334)
 * IPv6 has <span style="text-decoration:underline;">not</span> been widely adopted and many devices need to be updated before accepting IPv6 addresses
-
-<span style="text-decoration:underline;">IP Catagories</span>
+### IP Categories
 **Private IP addresses** are NOT exposed to the internet (typically within a LAN)
 * Assigned by LAN’s network administrator
 * Can be reused, won’t conflict across different networks, more secure
@@ -102,8 +95,8 @@ Client-server model</span>** is a network computing model that defines how resou
     * Class C Private = _192.168.0.0 - 192.168.255.255_	(65,536 available)
 **Public IP addresses** can be accessed over the internet
 * Assigned in IP ranges by an Internet Service Provider (ISP)
-* Any address **<span style="text-decoration:underline;">not</span>** within the Private IP4 ranges is **<span style="text-decoration:underline;">public</span>**
-* <span style="text-decoration:underline;">Public IPv4 can also be classed</span>:
+* Any address **<span style="text-decoration:underline;">not</span>** within the Private IP4 ranges is **public**
+* Public IPv4 can also be classed:
     * Class A (Large Org) 	    = 1.0.0.0 - 127.0.0.0 (1oct = 1-127)
     * Class B (Medium Org)      = 128.0.0.0 - 191.0.0.0 (1oct = 128-191)
     * Class C (Small LAN) 	    = 192.0.0.0 - 223.255.255.0 (1oct = 192-223)
@@ -141,7 +134,6 @@ Client-server model</span>** is a network computing model that defines how resou
 4. Top-Level Domain (TLD) cache
 
 **Reverse DNS Lookup** provides the domain name for a given IP address, and is stored as a **PTR (Pointer) record** on the special **_.arpa_** domain name.
-
 * [Reverse DNS Lookup](https://www.whatsmydns.net/reverse-dns-lookup)
 * IPv4 “A” records are stored under the subdomain_ <code>.in-addr.arpa</code></em>
 * IPv6 “AAAA” records are stored under the subdomain <code><em>.ip6.arpa</em></code>
@@ -193,7 +185,6 @@ Routing can also be either static or dynamic
     * <span style="text-decoration:underline;">Advantages</span>: Lower router CPU, admin has full control of routing behavior.
     * <span style="text-decoration:underline;">Disadvantages</span>: Fault tolerance, meaning if a device on a manually created path fails, the route can’t be adjusted.
 * **Dynamic Routing**
-
 [Types of Routing Protocols](https://www.comparitech.com/net-admin/routing-protocol-types-guide/) [Comprehensive]
 ## Ports
 **Ports** are access points for transmitting and receiving data
@@ -231,9 +222,7 @@ Routing can also be either static or dynamic
 ## Network Tools {#network-tools}
 <span style="text-decoration:underline;">NMap</span> - IP address & Port scanner
 * [NMap Cheat Sheet](https://www.stationx.net/nmap-cheat-sheet/)
-
 ### Wireshark
-
 * [Wireshark User Manual](https://www.wireshark.org/docs/wsug_html_chunked/)
 * [Wireshark Learning Resources](https://www.wireshark.org/#learnWS)
 * [General Wireshark Filters](https://www.wifi-professionals.com/2019/03/wireshark-display-filters)
@@ -242,9 +231,7 @@ Routing can also be either static or dynamic
 * [Wireshark Cheat Sheet](https://cdn.comparitech.com/wp-content/uploads/2019/06/Wireshark-Cheat-Sheet-1.jpg) [Important Cheat Sheet]
 
 frame contains “string” Searches all frames for a specific string
-
 frame.number in {frame#, frame#...} Displays the frames listed 
-
 ### UFW
 
 * `ufw version` Determine what version of UFW is installed.
@@ -259,7 +246,6 @@ frame.number in {frame#, frame#...} Displays the frames listed
 * `sudo ufw disable` Shut down the firewall.
 * `sudo ufw reload` Reload the UFW firewall.
 * `sudo apt remove ufw` Uninstall ufw
-
 ### Firewalld
 
 * `sudo /etc/init.d/firewalld start` start firewalld.
@@ -272,7 +258,6 @@ frame.number in {frame#, frame#...} Displays the frames listed
 * `sudo firewall-cmd --zone=home --add-rich-rule=` add specific rules to specific zones
 
 **Network security monitoring** Uses a variety of data analysis tools to detect and stop threats after most front-end layers are compromised.
-
 ## SIEM and SOAR
 
 ### ELK Stack

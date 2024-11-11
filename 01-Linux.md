@@ -1,5 +1,4 @@
-Linux - Bash Commands
-=====
+# Bash
 [explainshell.com](https://explainshell.com/) - Lists out meaning of a line of script
 [Linux Command Resources](https://linuxcommand.org/lc3_resources.php) \[HUGE Resource with links to more\]
 [Linux man-pages project](https://www.kernel.org/doc/man-pages/)
@@ -7,9 +6,7 @@ Linux - Bash Commands
 [Full “Intro to BASH” Reference](https://programminghistorian.org/en/lessons/intro-to-bash)
 [BASH Beginners Guide \[HUGE reference\]](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 [BASH Cheat Sheet \[Top 25\]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
-# **Basics**
-----------
-
+## Core
 `↑ ↓` - Scrolls through previous commands, `→` Completes partial path with available file/dir
 `CtrlC` - Cancels/stops your current line/command (displays as _^C_)
 `clear` Clear console, `reset` Reset console, `exit` Close console
@@ -43,57 +40,39 @@ Linux - Bash Commands
 `||` Double Pipe, operates as command 1 OR command 2
 
 `;` Semicolon, starts an entirely new command regardless of what was before
-
-# **Writing & Finding Data**
-
+## Writing/Finding Data
 `>` Create/write to file (eg. `echo “Hello world” > Hi.txt` creates Hi.txt with “Hello world” inside)
-
 `>>` Append to file (Creates file if it doesn’t exist, adds to existing file if it does)
-
 `cat` Concatenate (combine & display)
 * Options: `-s` suppress repeated empty output lines, `-n` display line numbers, `-e` $ at end of line, `-b` # of non-empty lines
 * eg. `cat 1.txt 2.txt` combines files & displays on console
 * eg. `cat 1.txt 2.txt **\>** 1\_2.txt` combines & writes data to 1\_2.txt (overwrites if 1\_2.txt already exists)
 * eg. `cat 1.txt 2.txt **\>>** 1\_2.txt` combines & writes data to 1\_2.txt (appends if 1\_2.txt already exists)
-
 `more` Display file one page at a time, spacebar for next page.
-
 `less` Greater flexibility. Scroll horizontally/forward/backward one line at a time
-
 `q` to exit file line display
-
 `head` Display top 10 lines (eg. `head -n 4 logfile1.txt` displays first 4 lines with line #’s)
-
 `tail` Display bottom 10 lines (eg. `tail -26 test.rtf` shows last 26 lines of test.rtf)
-
 `cmp` Compare files
-
 `diff` Show differences between files
-
 `sed` Edits a stream sed s/(old value)/(replacement value)/ \[CAUTION: `sed` overwrites\]
 * eg. “The Dog chased a Ball”, `sed s/Ball/Cat/` changes it to “The Dog chased a Cat”
-
 `awk` Data processing and extracting/reporting from streams \[[Using awk](https://opensource.com/article/20/9/awk-ebook)\]
 * eg. `awk -F, '{print $(field#)}'` then awk isolates column (field#) with ‘,’ separating data
 * eg. `awk -F ‘{print $4, $7}’` reads a new column for each space, prints columns 4 & 7
-
 `find` Searches for file/directory names \[[Using find function](https://www.diskinternals.com/linux-reader/bash-find-command/)]
 * [Options](https://man7.org/linux/man-pages/man1/find.1.html): `iname` ignores case, `-type` file (`f`) or directory (`d`),
 * eg. `find -type f -iname *.txt’` finds all .txt files
 * eg. `find -type d -iname rogers/*` finds directories starting with “rogers” ignoring case
 * eg. `find /directory/folder -type f -iname /log.txt` searches different directory
-
 `whereis` all locations of a file
-
 `grep` Searches inside files for a string \[[Using Grep](https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/)\]
 * [Options:](https://man7.org/linux/man-pages/man1/grep.1.html) `-c` count, `-r` recursive, `-i` case insensitive, `-l` list filename
 * eg. `grep bob log1.txt` finds ‘bob’ in log1.txt
 * eg. `grep -i bob log1.txt` find ‘bob’ regardless of casing
 * eg. `grep -il bob \*.txt` finds ‘bob’ in all text files, but only returns filenames
-
 `xxd` Provides a [Hex dump](https://linuxhint.com/xxd-hex-dumper-guide/) for a file
-# **Networking**
-
+## Networking
 `wget` Download a file from a URL
 * Options: `‐‐output-document=filename.html example.com` (Rename file being downloaded), 
 * Download to specific folder: `‐‐directory-prefix=folder/subfolder example.com`
@@ -102,7 +81,6 @@ Linux - Bash Commands
 * Download from multiple URLs listed in txt file: `‐‐input list-of-file-urls.txt`
 * Download sequentially numbered files: `http://example/{1..20}.jpg`
 * Download an entire webpage `wget ‐‐page-requisites ‐‐span-hosts ‐‐convert-links ‐‐adjust-extension http://example.com/dir/file`
-
 `curl` Call a URL
 * [Options:](https://gist.github.com/eneko/dc2d8edd9a4b25c5b0725dd123f98b10)  `--abstract-unix-socket <path>` Connect via abstract Unix domain socket
 * `-a, --append`  Append to target file when uploading
@@ -116,12 +94,9 @@ Linux - Bash Commands
 * `-U, --proxy-user <user:password>` Proxy user and password
 * `--pubkey <key>` SSH Public key file name
 * `-u, --user <user:password>` Server user and password 
-
 `ping` Sends Ping
 * Options: `ping -c 5` Sends 5 pings
-
 `netstat` Shows open ports
-
 `uname` OS & system hardware info
 * Options: `a (--all)` All system info, 
 * `-n (-- nodename)` System network name 
@@ -132,12 +107,10 @@ Linux - Bash Commands
 * `-p (--processor)` Processor architecture 
 * `-i (--hardware-platform)` Hardware platform
 * `-o (--operating-system)` Operating system
-
 `nslookup` Lookup DNS Records
 * Options: `-type=(any, soa, ns, a, mx, txt)` Displays DNS record type
-# Archive & Compress
-
-Tar format is: `tar [option(s)] [archive_name.tar] [objects_to_archive]`
+## Archive & Compress
+Tar: `tar [option(s)] [archive_name.tar] [objects_to_archive]`
 * Full tar options list [tar {A|c|d|r|t|u|x}[GnSkUWOmpsMBiajJzZhPlRvwo]](https://linuxcommand.org/lc3_man_pages/tar1.html)
 * Options
 	* `c` create archive (also `--create`)
@@ -171,42 +144,31 @@ Tar format is: `tar [option(s)] [archive_name.tar] [objects_to_archive]`
 	* `-A` Apprend archive to another, must be same format. (also `catenate`, `--concatenate`)
 	* `--test-label` Test archive volume label, codes as `0` if match found, codes `1` if not.
 
-**<span style="text-decoration:underline;">Zip/Unzip</span>**
-Leaves behind original and creates new zip files
-zip command format is: zip [option(s)] [archive_name.zip] [objects_to_archive]
+Zip/Unzip
+- Leaves behind original and creates new zip files
+- zip command format is: `zip [option(s)] [archive_name.zip] [objects_to_archive]`
+* `tar -jxvf archive.tar.bz2` extracts the .bz2 “archive.tar” with verbose output
 * Options:
 	* `-[0-9]`: Level of compression, `-0` is none & `-9` is maximum
 	* `-e` Adds password protection (use this and **<span style="text-decoration:underline;">not</span>** `-P`)
-
-unzip command format is: `unzip [option(s)] [archive_name.zip]`
-* `-v` verbose
-* `-l` list files
-* `-t` test files to be unzipped
-
-**<span style="text-decoration:underline;">gzip/gunzip</span>**
-`gzip` creates new gzip file and removes original (default)
-Command format is: `gzip [option(s)] [archive_name.zip]`
+- unzip command format is: `unzip [option(s)] [archive_name.zip]`
+	* `-v` verbose
+	* `-l` list files
+	* `-t` test files to be unzipped
+gzip/gunzip
+- `gzip` creates new gzip file and removes original (default)
+- Format: `gzip [option(s)] [archive_name.zip]`
 * Options
 	* `-c`: Leaves original file [output needs to be redirected] (also `--stdout`, `--to-stdout`)
 	    * `>` to output to filename.type.gz
 	* `-r` Recursive compression down sub-directories
 	* -`[0-9]` Level of compression, `-0` is none & `-9` is maximum
-
-gunzip short options (also “gzip -d” to “decompress”)
-
-
-* `-t` test files to be gunzipped (silent if no issue)
+- gunzip short options (also “gzip -d” to “decompress”)
+	- `-t` test files to be gunzipped (silent if no issue)
     * `tar -tzf my_tar.tar.gz >/dev/null` tests & throws away output *without* unzipping
-
-**<span style="text-decoration:underline;">bzip2/bunzip2</span>**
-
-Very similar to gzip (greater compression), uses most of the same commands but with b_2
-
-
-* `tar -jxvf archive.tar.bz2` extracts the .bz2 “archive.tar” with verbose output
-
-
-# Scripting {#scripting}
+bzip2/bunzip2
+- Very similar to gzip (greater compression), uses most of the same commands but with b_2
+## Scripting
 
 [Bash Scripting Cheatsheet](https://devhints.io/bash)
 [Full BASH Scripting Reference](https://tldp.org/LDP/abs/html/index.html)

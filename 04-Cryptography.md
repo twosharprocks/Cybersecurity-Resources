@@ -6,15 +6,14 @@ Goals of Cryptography - P.A.I.N.
 * **Authentication** is used to confirm the identities of the sender and receiver of data.
 * **Integrity** ensures a message isn’t altered in transit
 * **Non-Repudiation** prevents the original sender from denying they were the sender.
-
 ## Crypto Tools
 * [CyberChef](https://gchq.github.io/CyberChef/)
 * [RapidTables](https://www.rapidtables.com/convert/number/binary-to-hex.html)
 * [Cryptii](https://cryptii.com/)
 * [JavaScript Deobfuscator](https://deobfuscate.io/)
 ## References
-* [Cryptography [Wikibooks - Comprehensive Resource]](https://en.wikibooks.org/wiki/Cryptography)
-* [Practical Cryptography [Online Book]](https://cryptobook.nakov.com/)
+* [Cryptography Wikibooks - Comprehensive Resource]](https://en.wikibooks.org/wiki/Cryptography)
+* [Practical Cryptography - Online Book](https://cryptobook.nakov.com/)
 * [KhanAcademy - Cryptography](https://www.khanacademy.org/computing/computer-science/cryptography)
 * [Transposition Cipher Solver](https://tholman.com/other/transposition/)
 * [Cryptanalysis of numerous classical ciphers](http://practicalcryptography.com/cryptanalysis/)
@@ -49,7 +48,7 @@ Goals of Cryptography - P.A.I.N.
     * [RSA Factoring Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge)
     * [Integer Factorisation](https://en.wikipedia.org/wiki/Integer_factorization)
 **Diffie-Hellman Key Exchange** is a mathematical method of securely exchanging cryptographic keys over a public channel [(Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange)* [Diffie-Hellman Explainer (Youtube)](https://www.youtube.com/watch?v=NmM9HA2MQGI)
-## Using GPG {#using-gpg}
+## Using GPG
 * [Quick and Easy GPG Cheetsheet](http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/)
 * Generate a new GPG key: `gpg --gen-key` (requires name, email, comment & passphrase)
 * List Public GPG keys on the system: `gpg --list-keys`
@@ -67,8 +66,7 @@ Goals of Cryptography - P.A.I.N.
 * Decrypt signed document: `gpg --output yourmsg.txt --decrypt yourmsg.txt.gpg`
 * Wrap file with ASCII-armored signature (no file modification): `gpg --clearsign yourmsg.txt`
 * Create a detached signature with signed file: `gpg --output Signed.sig --detach-sig yourmsg.txt` 
-
-## Hashing  {#hashing}
+## Hashing
 **Hashing** is a cryptographic method used to verify the integrity of data. It is also a way of storing password data without storing the passwords in plaintext.
 * [Illustrated Guide to Cryptographic Hashes](http://www.unixwiz.net/techtips/iguide-crypto-hashes.html) [[Excellent Resource]](http://www.unixwiz.net/techtips/iguide-crypto-hashes.html)
 * [Lifetimes of cryptographic hash functions](https://valerieaurora.org/hash.html)

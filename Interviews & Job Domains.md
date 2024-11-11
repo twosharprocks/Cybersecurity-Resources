@@ -2,7 +2,6 @@
 [Preparing for a Security Engineering Interview](https://tryhackme.com/r/resources/blog/security-engineer-interview-guide)
 * Research the company - Recent news articles & Glassdoor, investigate website, company values, specific security challenges
 * Stay up to date - OWASP Top 10, CVE's, NIST/ISO frameworks, reports from Microsoft, Crowdstrike, Symantec, ect
-
 ## Common "getting to know you" questions you may encounter:
    * What sparked your interest in cyber security?
    * How do you stay up-to-date with the latest cybersecurity trends and threats? Are there any security blogs, forums, or conferences you follow?
@@ -10,7 +9,6 @@
    * How do you prioritise tasks and manage your time effectively, especially when dealing with multiple security incidents or projects simultaneously?
    * Describe a challenging situation you faced in a previous job (or during your learning experience) and how you resolved it. What did you learn from that experience?
    * What motivates you to work in a high-pressure environment where security incidents may occur at any time?
- 
 ## Common Security Questions:
 `How do you ensure that a server is secure?
 Firstly, we need to ensure that strict access controls are implemented along with role-based permissions. Secondly, encrypting data in transit with TLS and data at rest using strong encryption methods. Regularly patching and updating the server is essential to fix known vulnerabilities. Implementing intrusion detection and prevention systems, conducting regular security audits, and having an incident response plan complete the strategy, providing robust protection against potential threats. Note: The security or hardening of any device is very relative and depends on the usage and deployment. For example, an email server being accessed by thousands of users would be secured differently than an FTP server dedicated for intranet.
