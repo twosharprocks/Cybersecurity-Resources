@@ -1,6 +1,5 @@
 # Glossary
 
-
 * **Basic Service Set Identifier (BSSID)**: Used by a router to announce its MAC address in a beacon signal.
 * **Brute force attack**: An attack that involves trying all possible authentication combinations to find a match.
 * **CIA Triad**: Confidentiality, Integrity and Availability

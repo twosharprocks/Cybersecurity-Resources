@@ -1,6 +1,6 @@
 # OSINT
 
-Easy lookup data
+## Easy Lookup
 * [OSINT Framework](https://osintframework.com/) - Comprehensive site referrer
 * [Nmmapper - Multiple OSINT Tools](https://www.nmmapper.com/)
 * [IP Lookup](https://iplocation.io/)
@@ -10,22 +10,8 @@ Easy lookup data
     * [Subdomain Finder c99](https://subdomainfinder.c99.nl/)
     * [sublist3r (Linux)](https://www.kali.org/tools/sublist3r/) [[Using sublist3r tutorial]](https://null-byte.wonderhowto.com/how-to/discover-hidden-subdomains-any-website-with-subfinder-0341687/)
 * [MAC Address Lookup](https://macaddress.io/)
-
-Google Dorking
-[Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
-
-Easy dorks
-* Exclude boring pages with -ves, eg. `site:<domain> -www -shop -otherboringshit`
-* Combine dorks with | (include both ) or & (require both)
-* Leftover code
-   * `site:pastebin.com "targetsite.com"`
-   * `site:jsfiddle.net "targetsite.com"`
-   * `site:codebeautify.org "targetsite.com"`
-   * `site:codepen.io "targetsite.com"`
-* Find php files with ext:php, eg. `site:targetsite.com ext:php inurl:?`
-* Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
-## OSINT Tools
-* [Maltego](https://www.maltego.com/) - Relationships among people, companies, domains and publicly accessible information
+## Tools
+- [Maltego](https://www.maltego.com/) - Relationships among people, companies, domains and publicly accessible information
 * [Mitaka](https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg) - Chrome Extension that searches IP addresses, domains, URLs, hashes, ASNs, Bitcoin wallet addresses, and various indicators of compromise (IOCs) from your web browser.
     * Alternative [“Sputnik”](https://github.com/mitchmoser/sputnik)
 * [SpiderFoot](https://github.com/smicallef/spiderfoot) - Run from Commandline or Web-based GUI
@@ -46,13 +32,23 @@ Easy dorks
 * [PhoneInfoga](https://github.com/sundowndev/phoneinfoga) - Scanning international phone numbers for information
 * [Sherlock](https://github.com/sherlock-project/sherlock) - Searching social networks
 * [Social Analyzer](https://github.com/qeeqbox/social-analyzer) - Searching social networks
-
+## Google Dorking
+[Google Search Operators: The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
+Easy dorks
+* Exclude boring pages with -ves, eg. `site:<domain> -www -shop -otherboringshit`
+* Combine dorks with | (include both ) or & (require both)
+* Leftover code
+   * `site:pastebin.com "targetsite.com"`
+   * `site:jsfiddle.net "targetsite.com"`
+   * `site:codebeautify.org "targetsite.com"`
+   * `site:codepen.io "targetsite.com"`
+* Find php files with ext:php, eg. `site:targetsite.com ext:php inurl:?`
+* Check Disclosed Bug Bounties with openbugbounty.org, eg. `site:openbugbounty.org inurl:reports intext:"targetsite.com"`
 # Network Exploitation Techniques
 * [Setting up a reverse shell [Network Chuck]](https://www.youtube.com/watch?v=bXCeFPNWjsM&list)
    * [Online Reverse SHell Generator](https://www.revshells.com/)   
 * [NullByte HowTo [Huge Resource]](https://null-byte.wonderhowto.com/)
 * [HackTricks - HUGE resource](https://book.hacktricks.xyz/welcome/readme)
-
 * [MFA Fatigue](https://www.bleepingcomputer.com/news/security/mfa-fatigue-hackers-new-favorite-tactic-in-high-profile-breaches/amp/) - Spamming a login that requires MFA until a user approves to stop the notifications, or follow up with a call pretending to be IT requesting approval
 * [Domain Shadowing](https://www.bleepingcomputer.com/news/security/domain-shadowing-becoming-more-popular-among-cybercriminals/amp/) - Subcategory of DNS hijacking, where threat actors compromise the DNS of a legitimate domain to host their own subdomains for use in malicious activity but do not modify the legitimate DNS entries that already exist. These subdomains are then used to create malicious pages on the cybercriminals' servers while the domain owner's site's web pages and DNS records remain unchanged, and the owners don't realize they have been breached.
 
@@ -61,9 +57,7 @@ Easy dorks
 * [Bypass Software Registration](https://null-byte.wonderhowto.com/how-to/hacks-behind-cracking-part-1-bypass-software-registration-0132568/) - Run program in a debugger
 * [Phishing Windows Credentials](https://pentestlab.blog/2020/03/02/phishing-windows-credentials/)
     * [FakeLogonScreen](https://github.com/bitsadmin/fakelogonscreen)
-
 # References
-
 * [Pentesttools.net](https://pentesttools.net/)
 * [Hacking Tools RESOURCE](https://en.m.wikibooks.org/wiki/Hacking/Tools) - Comprehensive Resource
 * [SecLists](https://github.com/danielmiessler/SecLists) - Comprehensive security lists for fuzzing, username/password, payloads, ect 
@@ -102,7 +96,7 @@ Easy dorks
 * [W3AF](https://w3af.org/) - Web Application Attack and Audit Framework
 * [Burp Suite](https://portswigger.net/burp)
 * [Amass](https://github.com/owasp-amass/amass) - In-depth attack surface mapping and asset discovery
-
+* [reNgine](https://github.com/yogeshojha/rengine) - Automated reconnaissance framework for web apps
 ### API Hacking
 * [API Security Testing Checklist](https://danaepp.com/an-api-security-testing-checklist-with-a-twist) [START HERE]
    * [Shieldfy API Security Checklist on Github](https://github.com/shieldfy/API-Security-Checklist)
@@ -110,13 +104,12 @@ Easy dorks
 * [Using Common Attack Patterns against an API](https://danaepp.com/3-ways-to-use-common-attack-patterns-to-abuse-an-api)
 * [API Discovery with CeWL](https://danaepp.com/a-cewl-way-for-api-discovery) - Custom Word List generator for API discovery
    * [CeWL on Github](https://github.com/digininja/CeWL)
-
 ### Web Fuzzing
 * [Dirsearch](https://github.com/maurosoria/dirsearch) - Brute force web path scanning
 * [ffuf](https://github.com/ffuf/ffuf) - "Fuzz Faster U Fool" Go-based fast web fuzzing tool
+	* [ffufai](https://github.com/jthack/ffufai) - AI powered ffuf wrapper
 * [GoBuster](https://github.com/OJ/gobuster) - Go-based fuzzing tool (Default with Kali)
 * [FuzzDB](https://github.com/fuzzdb-project/fuzzdb) - Database of attack patterns, wordlists, dictionaries, ect for fuzzing
-
 ### Network Vulnerability Scanning
 * [nmap](https://nmap.org/) - Network and vulnerability discovery
     * [How to use Nmap for vulnerability scanning - NSE](https://geekflare.com/nmap-vulnerability-scan/)
@@ -142,7 +135,10 @@ Easy dorks
     * Poison HTTP 301 browser cache
     * Hijack non-TLS URLs
     * Identify/Highlight 2FA vulnerabilities
-
+* [SessionProbe](https://github.com/dub-flow/sessionprobe) - Multithreaded pentesting/bug hunting tool
+	* [SessionProbe How-To](https://www.blackhatethicalhacking.com/tools/sessionprobe/#google_vignette)
+* [PWN](https://github.com/0dayInc/pwn) - Open source security automation framework
+* [Sherlock](https://github.com/gbiagomba/Sherlock) - Auto web testing (Nmap, sublist3r, metasploit,ect)
 ### Exploitation
 * [BeEF](https://beefproject.com/) - Browser Exploitation Framework using client-side attack vectors
     * [BeEF on GitHub](https://github.com/beefproject/beef)
@@ -164,9 +160,7 @@ Easy dorks
 * [Ettercap](https://www.ettercap-project.org/) - Man in the middle attack platform
 ### C2 Platforms
 * [Merlin](https://github.com/Ne0nd0g/merlin) 
-## Linux Specific Techniques
-
-### Privilege Escalation
+## Linux Privilege Escalation
 * [Basic Linux Privilege Escalation [Cheat sheet]](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 
 **<span style="text-decoration:underline;">Kernel Exploits </span>**
@@ -199,7 +193,6 @@ _Example_: [PwnKit](https://arstechnica.com/information-technology/2022/01/a-bug
     * \! sh
 
 **<span style="text-decoration:underline;">SUID Executable Exploits</span>**
-
 “Set user ID” executes file permissions with a specific user using ‘s’ instead of ‘x’ in the permission set (eg. -rwsr-xr-x allows low privilege users to execute with root privileges). 
 
 Avoid this by:
@@ -244,8 +237,7 @@ ls “PATH Variable” Exploit
 * List available commands `compgen -c`
 * start bash without source'ing either ~/.bashrc or ~/.bash_profile 
 * since such a shell wouldn't be a full login shell / have no tty attached, force ssh to attach a tty:
-## Windows Specific
-
+## Windows
 * [Windows Security Log Events](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
 * [Teamviewer Flaw for cracking user passwords](https://threatpost.com/teamviewer-fhigh-severity-flaw-windows-app/158204/)
 * [Remotely dumping Windows credentials](https://meriemlarouim.medium.com/credentials-in-windows-and-how-to-dump-them-remotely-b5c315bb76f4)
@@ -256,9 +248,16 @@ ls “PATH Variable” Exploit
 * [Active directory pentesting](https://www.hackthebox.com/blog/active-directory-penetration-testing-cheatsheet-and-guide) - Cheatsheet and beginner guide
 * [ScubaGear](https://github.com/cisagov/ScubaGear) - M365 security assessment tool, CISA-developed, run in Powershell
 * [UntitledGooseTool](https://github.com/cisagov/untitledgoosetool) - AzureAD/M365 security assessment tool, Python-based, CISA-developed
-# Cloud Techniques
+* [MFASweep](https://github.com/dafthack/MFASweep) - Powershell script to ID services with MFA
+# Cloud
 ## AWS 
 * [HTB - AWS Penetration Testing Guide](https://www.hackthebox.com/blog/aws-pentesting-guide)
 * [Infosec Writeups - Hacking AWS Cognito Misconfiguration](https://infosecwriteups.com/hacking-aws-cognito-misconfiguration-to-zero-click-account-takeover-36a209a0bd8a)
 * [Not so secure - Hacking AWS Cognito Misconfigurations](https://notsosecure.com/hacking-aws-cognito-misconfigurations)
 * [AdeliaRisk - 7 Ways I'd Hack You on AWS](https://adeliarisk.com/secure-cloud-computing-7-ways-id-hack-aws/)
+# Offensive AI/ML
+- [Arcanum Cyber Security Bot](https://chatgpt.com/g/g-HTsfg2w2z-arcanum-cyber-security-bot?utm_source=tldrinfosec) 
+- [PentestGPT](https://github.com/GreyDGL/PentestGPT) - GPT-powered pentesting tool
+- [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) - TTP's on Offensive ML attacks
+- [AI/ML Exploits](https://github.com/protectai/ai-exploits)
+- 

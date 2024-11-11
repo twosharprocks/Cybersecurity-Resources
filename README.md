@@ -1,6 +1,5 @@
 # Cybersecurity Resources
 A repository of useful resources for cybersecurity professionals
-
 ## Quick References
 * [Awesome Pentest Cheat Sheets](https://github.com/ByteSnipers/awesome-pentest-cheat-sheets) - Massive collection of cheat sheets useful for pentesting
 * [HackTricks](https://book.hacktricks.xyz/) - Comprehensive resource for pentesting, system hardening, crypto/stego, C2, ect
@@ -11,30 +10,27 @@ A repository of useful resources for cybersecurity professionals
 * [The Cybersecurity Handbook](https://guidesmiths.github.io/cybersecurity-handbook/) - Great resource for OWASP, Cheatsheets, Tools, Resources, ect
 * [Cybersec Cheat Sheets](https://github.com/hellmaster559/Cybersec-Cheat-Sheets/blob/09f47b126f086b1c56a0c4ac8abb5dedee8e1de1/README.md) - Huge cheatsheet resource for CTFs, Pentesting, General IT Security, Forensics, Incident Response, Cloud Security and more.
 * [Hak5 Ebook Resources](https://shop.hak5.org/collections/e-books)
-
 ## Web Tools
+* [Correct Horse Battery Staple]([Correct Horse Battery Staple](https://www.correcthorsebatterystaple.net/index.html) - Password Generator
 * [Wayback Machine](https://web.archive.org/) - Access archived websites & bypass paywalls
 * [Online HTML Editor](https://onlinehtmleditor.dev/)
 * [DB-Fiddle](https://www.db-fiddle.com/) - Online query testing for MYSQL, PostgreSQL and SQLite
-
 * [Pythex](https://pythex.org/) - Online testing for Python regular expressions
 * [Regex101](https://regex101.com/) - Online testing for regular expressions in numerous languages
-
 * [Gliffy](https://go.gliffy.com/go/html5/launch) - Online diagram drawing
-* [Draw.io](https://app.diagrams.net/) - Online diagram drawing
-* [Keepass Open Source Password Manager](https://keepass.info/)
-
+* [Draw.io](https://app.diagrams.net/) - Online Flowchart Maker
+* [MindMapMaker](https://app.mindmapmaker.org/#m:new)
 ### File & URL Checkers
-* [Virus Checker for Files](https://www.virustotal.com/gui/home/upload)
+* [Virus Total](https://www.virustotal.com/gui/home/upload)
+* [Hybrid Analysis](https://www.hybrid-analysis.com/) - Malware Analysis
 * [Java Script Checker](https://www.typescriptlang.org/)
 * [Scanurl.net](https://scanurl.net/)
 * [Google URL Checker](https://transparencyreport.google.com/safe-browsing/search)
-
+* [Security Headers](https://securityheaders.com/) - Web security scanner
 ### Secure Cloud Activity
 * [Internxt](https://internxt.com/) - Secure cloud storage (up to 10GB free)
 * [Linode](https://www.linode.com/lp/youtube-viewers/?ifso=networkchuck&utm_source=influencer&utm_medium=video&utm_campaign=networkchuck) - Cloud Computing (with $100/60 day credit via NetworkChuck)
 * [DigitalOcean](https://try.digitalocean.com/developer-cloud/) - $200 credit & 60-day free trial
-
 ### Learning Cybersecurity Resources
 * [Command Challenge](https://cmdchallenge.com/) [Resource for learning basic Linux commands - Free] 
 * [OverTheWire Wargames](https://overthewire.org/wargames/) [Resource for learning complex Linux commands - Free]

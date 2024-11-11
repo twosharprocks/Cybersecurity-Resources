@@ -7,24 +7,16 @@ Linux - Bash Commands
 [Full “Intro to BASH” Reference](https://programminghistorian.org/en/lessons/intro-to-bash)
 [BASH Beginners Guide \[HUGE reference\]](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 [BASH Cheat Sheet \[Top 25\]](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
-
 # **Basics**
 ----------
 
 `↑ ↓` - Scrolls through previous commands, `→` Completes partial path with available file/dir
-
 `CtrlC` - Cancels/stops your current line/command (displays as _^C_)
-
 `clear` Clear console, `reset` Reset console, `exit` Close console
-
 `start` Start argument (eg. `start folder_name` will open folder_name)
-
 `man` Manual & options for whatever command follows it
-
 `whatis` Provides a shorter version of `man`
-
 `--help` Help for whatever command you put in front (eg. `ls --help` shows help for “ls”)
-
 `ls` List directory contents 
 * `-la` Show size & permissions (& hidden files), `-s` file sizes, `-S` show the largest file first
 * `ln` link a file
@@ -32,21 +24,14 @@ Linux - Bash Commands
 * `cd` Change Directory (eg. cd /tmp/var)
 * `mkdir` Make Directory 
    `mkdir -p parent/{F1,F2,F3}/{temp1,temp2}` creates folder “Parent” with sub-directories F1, F2 & F3 each, with temp1 & temp2 directores inside each sub-directory.
-
 `rm` or `rmdir` Remove Directory, mv or mvdir (eg. mvdir folder /new/dir)
 * Options: `-r` or `-R` "Recursive", applies command throughout 
 * eg. `rm -r foldername` removes folder & it's contents
-
 `..` Parent Directory (One level above), `//` Root directory
-
 `touch` Create new file (eg. `touch dir/sample.txt`)
-
 `cp` Copy (eg. `cp test.txt dir/test2.txt` copies test.txt to directory dir and renames it test2.txt)
-
 `rm` to remove file
-
 `shred` to permanently delete file
-
 `*` Wildcard
  * eg. `rm test/*-geoff` removes all files in directory test that end in “-geoff”
  * eg. `rm *` will remove all files in the current directory
@@ -224,48 +209,23 @@ Very similar to gzip (greater compression), uses most of the same commands but w
 # Scripting {#scripting}
 
 [Bash Scripting Cheatsheet](https://devhints.io/bash)
-
 [Full BASH Scripting Reference](https://tldp.org/LDP/abs/html/index.html)
-
-
-
 * [BASH Options list](https://tldp.org/LDP/abs/html/options.html)
-
 [Bash Shell Scripting [Full Book]](https://en.m.wikibooks.org/wiki/Bash_Shell_Scripting)
-
 [Common Newbie Bash Mistakes](https://wiki.bash-hackers.org/scripting/newbie_traps)
-
-
-
 * `./script.sh` will run script.sh
     * `chmod +x script.sh` will compile the changes made after editing script.sh
-
 * `nano` Command line text editor (vim is also available)
     * `nano index.html` will open the index.html file for editing 
     * If the file does not already exist, nano/vim will create it
     * `CtrlS` saves the file, and CrtlX exits the editor
-
-* [Network Chuck - Scripting if, elif and case statements](https://youtu.be/Fq6gqi9Ubog)
-* [Network Chuck - Scripting for while, until, and for statements](https://youtu.be/nW9M0MQinfg) \
-
-* [Using Command Line Arguments](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
-* [Adding arguments and options to Bash Scripts](https://www.redhat.com/sysadmin/arguments-options-bash-scripts)
-    * Postional parameters - 10 parameters, `$0 to $9`
-* [Work with Variables in Bash](https://www.howtogeek.com/442332/how-to-work-with-variables-in-bash/)
-
 ----------
 
 # User, Group & System Management
 
 [Linux Handbook [Huge Free Resource]](https://linuxhandbook.com/)
-
-
 [Important Linux Directories and their structure](https://www.tecmint.com/linux-directory-structure-and-important-files-paths-explained/) {#important-linux-directories-and-their-structure}
-
-
 ## Important folders in /etc
-
-
 
 * `/etc/passwd` - used to keep track of every registered user that has access to a system
     * [List all usernames](https://linuxize.com/post/how-to-list-users-in-linux/) - `less /etc/passwd` or `awk -F: '{ print $1}' /etc/passwd`
@@ -274,9 +234,6 @@ Very similar to gzip (greater compression), uses most of the same commands but w
 * `/etc/shadow` - system file storing encrypted user passwords (accessible only to root)
 
 **<span style="text-decoration:underline;">sudo</span>**
-
-
-
 * `sudo su` Switch to root user
 * `sudo -l List` sudo permissions of current user
 * `sudo -lU :user` List sudo permissions of &lt;user>
