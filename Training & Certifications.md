@@ -18,3 +18,8 @@
 # CISSP
 * **[CISSP](https://www.isc2.org/Certifications/CISSP)** [TECHINCAL FOCUS]
    * [ISC2 Learning Resources - CISSP](https://www.isc2.org/Training/Self-Study-Resources/CISSP)
+
+# CREST Registered Threat Intelligence Analyst
+- [General Info](https://www.crest-approved.org/skills-certifications-careers/crest-registered-threat-intelligence-analyst/) with reading list
+- [Syllabus](https://www.crest-approved.org/wp-content/uploads/2022/06/CREST-Registered-Threat-Intelligence-Analyst-Syllabus.pdf) & [Course Notes](https://www.crest-approved.org/wp-content/uploads/2022/06/CREST-Registered-Threat-Intelligence-Analyst-Examination-Notes-for-Candidates.pdf)
+- Pre-req: 2 Years Threat intel experience
