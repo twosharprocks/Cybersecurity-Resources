@@ -1,20 +1,19 @@
 # Physical Attacks
 * [Youtube - I'll Let Myself In: Tactics of Physical Pen Testers](https://www.youtube.com/watch?v=rnmcRTnTNC8) - Deviant Ollam presenting at Wild West Hackin' Fest 2017
 * [UDemy - Physical Red Teaming](https://www.udemy.com/course/learn-physical-red-team-operations/?couponCode=OPPPOT42722) 
-* [Kindle - Unauthorised Access: Physical Penetration Testing For IT Security Teams](https://www.amazon.com.au/Unauthorised-Access-Physical-Penetration-Security-ebook/dp/B005DIAPKE)
+* [Book - Unauthorised Access: Physical Penetration Testing For IT Security Teams](https://www.amazon.com.au/Unauthorised-Access-Physical-Penetration-Security-ebook/dp/B005DIAPKE)
 ## Essentials
 - [Red Team Tools - Magnetic Search Pole - $7](https://www.redteamtools.com/magneticsearchpole)
 - [Red Team Tools - Hammerless Hinge Pine Tool - $17.50](https://www.redteamtools.com/hammerless-hinge-tool)
 - [Red Team Tools - Traveller Hook - $6](https://www.redteamtools.com/traveler-hook-steel)
-- [Red Team Tools - Film Canister - $14](https://www.redteamtools.com/film-canister)
 - [Red Team Tools - Comb Pick (Pair) - $8](https://www.redteamtools.com/covert-comb-pick-set-of-2)
 - [Red Team Tools - Tamper Bit Set - $9.45](https://www.redteamtools.com/best-tamper-bit-set/)
 ## Door Tools
 * [Amazon - J Tool Thumb Turn Bypass](https://www.amazon.com.au/Tool-Thumb-Turn-Bypass/dp/B09MT54HCD) 
 * [Pickpals - Double Door Tool](https://www.pickpals.com.au/buy-lockpicks/bypass-tools/sparrows-double-door-tool/) - DDT Bypass Demo [Video](https://www.youtube.com/watch?v=GLMyIvgG3zs)
+* [Red Team Tools - Film Canister - $14](https://www.redteamtools.com/film-canister)
 * [Car Tool Kit](https://www.amazon.com.au/Duolamila-Professional-Emergency-Multi-Function-Household/dp/B0B51CP743) - 173cm Long Reach, Air Wedges, and Plastic Wedges
 * [Super Mica Slipping Cards (Pack of 5) - $22](https://www.amazon.com.au/Super-Latch-Release-Slipping-Cards/dp/B0CB4CTRL4/ref=sr_1_1)
-### Under Door Tools
 * [Amazon - "Level Opening Tool"](https://www.amazon.com.au/dp/B0CHLVR76R) - Attach a borescope?
 * [Youtube - Collapsible Under Door Tool](https://www.youtube.com/watch?v=gdkCsC90RMc) - Uses threaded steel rod with joiners
 
@@ -27,7 +26,7 @@
 * [Pickpals - Core Shims](https://www.pickpals.com.au/buy-lockpicks/bypass-tools/sparrows-core-shims/) - Shim between core and body, pick pin then push shim to hold the shear line
 ## Hooligan Keys
 * [Australian "Dark Access" Set](https://dalp.com.au/product/dark-access-set/)
-	* [CH751](https://www.etsy.com/au/listing/1170364429/jayco-dual-water-filler-key-ch751-for), [C415A](https://www.etsy.com/au/listing/1766577873/c415a-replacement-key-compx-ncl), [CL001](https://www.etsy.com/au/listing/1728854738/cl001-electricians-master-key-for), LF8, [003](https://www.etsy.com/au/listing/1208809800/fire-brigade-003-key-essential-services), [A126](https://www.etsy.com/au/listing/1596355290/a126-allen-bradley-apem-a126-fire-panel) and a [T5 Elevator/Fire Service Key](https://www.etsy.com/au/listing/1552001306/t5-fire-service-lift-elevator-key-for) (Schindeler, Otis, KONE, Thyssenkrupp - TOK)
+	* [CH751](https://www.etsy.com/au/listing/1170364429/jayco-dual-water-filler-key-ch751-for), [C415A](https://www.etsy.com/au/listing/1766577873/c415a-replacement-key-compx-ncl), [CL001](https://www.etsy.com/au/listing/1728854738/cl001-electricians-master-key-for), LF8, [003](https://www.etsy.com/au/listing/1208809800/fire-brigade-003-key-essential-services), [A126](https://www.etsy.com/au/listing/1596355290/a126-allen-bradley-apem-a126-fire-panel) and a [T5 Elevator/Fire Service Key](https://www.etsy.com/au/listing/1552001306/t5-fire-service-lift-elevator-key-for) (Schindler, Otis, KONE, Thyssenkrupp - TOK)
 * [Amazon - US Pentesting Master Key Set](https://www.amazon.com.au/Pentesting-Master-Cabinet-Elevator-Security/dp/B0CGX56BJR)
 	* FEO-K1 = Elevator / Fire Service Key
 	* [Fire Brigade 003](https://www.etsy.com/au/listing/1208809800/fire-brigade-003-key-essential-services)
@@ -51,20 +50,17 @@
 * [USB Drives Are Still a Danger](https://www.gdatasoftware.com/blog/2021/11/usb-drives-still-a-danger)
 * [USB Attack Vectors](https://elie.net/blog/security/what-are-malicious-usb-keys-and-how-to-create-a-realistic-one/)
 * [USBvalve - Raspberry Pico device checks USBs for malicious filesystem activity](https://github.com/cecio/USBvalve)
-
 ### Payloads
 * [Hak5 Payload Library](https://github.com/hak5/usbrubberducky-payloads)
 * [Rubber Ducky Use](https://blog.teamascend.com/rubber-ducky)
 * [Ducky Reverse-Shell](https://github.com/TeaPixl/Pico-NetCat-Reverse-Shell)
 * [3-Second Reverse Shell](https://shop.hak5.org/blogs/usb-rubber-ducky/the-3-second-reverse-shell-with-a-usb-rubber-ducky)
-
 ### Converted USBs
 * [USB Firmware Resource](https://www.usbdev.ru/files/#gsc.tab=0)
 * [Phison 2251-03 microcontroller USBs](https://hackmag.com/security/rubber-ducky/)
 * [GitHub - Creating a ducky with Phison 2251-03](https://github.com/brandonlw/Psychson)
 * [Phison 2251-03 to Ducky walkthrough](https://null-byte.wonderhowto.com/how-to/make-your-own-bad-usb-0165419/) 
 * [Alternate microprocessor BadUSB](https://github.com/krakrukra/PocketAdmin)
-
 ### HID USBs
 * [Hak5 Rubber Ducky](https://shop.hak5.org/products/usb-rubber-ducky) 
     * [Modify the USB Rubber Ducky with Custom Firmware](https://null-byte.wonderhowto.com/how-to/modify-usb-rubber-ducky-with-custom-firmware-0177335/)
@@ -72,7 +68,6 @@
 * [Cactus WHiD - Cheap from China](https://www.tindie.com/products/aprbrother/cactus-whid-wifi-hid-injector-usb-rubberducky/)
 * [Hak5 O.MG Plug](https://hak5.org/collections/omg-row2/products/omg-plug) - Standard cable with HID Injector, Wifi & Key Logger
     * [Verge Article on O.MG cable](https://www.theverge.com/23321517/omg-elite-cable-hacker-tool-review-defcon) 
-
 ### Disguised Microprocessor USB's
 * Bash Bunny - [Buy](https://shop.hak5.org/products/bash-bunny) & [Official Documentation [Huge resource]](https://docs.hak5.org/bash-bunny/)
    * [Cron.dk - Poor Man’s Bash Bunny](https://www.cron.dk/poor-mans-bash-bunny/)
@@ -87,13 +82,12 @@
    * [Pico-Ducky - Pico based Ducky](https://github.com/dbisu/pico-ducky)
    * [Pico to Ducky](https://github.com/OCEANOFANYTHINGOFFICIAL/RPI-PICO-TO-BAD-USB-CONVERTER)
    * [PoisonTap - Raspberry Pi-based C2 Agent for WiFi & Unencrypted Data](https://www.dailydot.com/debug/poisontap-hacking-tool/)
-
-Arduino
-* [ATMEGA32U4 Leonardo BadUSB](https://github.com/asciiterminal/CJMCU_ATMEGA32U4_BADUSB)
-   * Upload [Duckduino-MicroSD.ino](https://www.arduino.cc/en/software) sketch to Leonardo via [Ardunio IDE](https://www.arduino.cc/en/software)
-      * Upload issues? Click reset button on Leonardo **after** starting sketch upload
-   * Use microSD card reader to copy Ducky payloads into "script.txt" on microSD card (not the Leonardo itself)
-   * [OverThruster - HID Attack Sketch Generator (Python) for ATMEGA32U4](https://github.com/RedLectroid/OverThruster)}
+- Arduino
+	* [ATMEGA32U4 Leonardo BadUSB](https://github.com/asciiterminal/CJMCU_ATMEGA32U4_BADUSB)
+	   * Upload [Duckduino-MicroSD.ino](https://www.arduino.cc/en/software) sketch to Leonardo via [Ardunio IDE](https://www.arduino.cc/en/software)
+	      * Upload issues? Click reset button on Leonardo **after** starting sketch upload
+	   * Use microSD card reader to copy Ducky payloads into "script.txt" on microSD card (not the Leonardo itself)
+	   * [OverThruster - HID Attack Sketch Generator (Python) for ATMEGA32U4](https://github.com/RedLectroid/OverThruster)}
 
 Hardware
 * [Buy Raspberry Pi Zero ](https://core-electronics.com.au/raspberry-pi-pico.html)
