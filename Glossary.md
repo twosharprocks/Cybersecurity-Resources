@@ -4,8 +4,7 @@
 * **Brute force attack**: An attack that involves trying all possible authentication combinations to find a match.
 * **CIA Triad**: Confidentiality, Integrity and Availability
     * <span style="text-decoration:underline;">Confidentiality:</span> Ensuring sensitive information is protected from access by unauthorized persons.
-    * <span style="text-decoration:underline;">Integrity</span>: Protecting information from being modified or tampered  \
-by unauthorized persons.
+    * <span style="text-decoration:underline;">Integrity</span>: Protecting information from being modified or tampered by unauthorized persons.
     * <span style="text-decoration:underline;">Availability:</span> Ensuring that all operating systems, equipment, and data are functioning correctly and accessible by those who need it.
 * **Code injection**: Type of attack that injects code that is then interpreted and executed by the target application.
 * **Cybersecurity**: The <span style="text-decoration:underline;">assessment of threats</span> and <span style="text-decoration:underline;">mitigation of risk</span>
