@@ -1,3 +1,14 @@
+# Job Domains
+* Security Architecture - Security design that addresses the requirements and potential risks of a given scenario or environment. 
+* Physical Security - Protection of personnel, hardware, software, networks, and data from physical actions and events that could cause serious loss or damage.
+* Risk Assessment - Analyzing what can go wrong, how likely it is to happen, what the potential consequences are, and how tolerable the identified risk is.
+* Security Operation - Process of identifying, containing, and remediating threats on behalf of a company or organization.
+* Threat Intelligence - Research and analysis of evidence-based knowledge regarding an existing or emerging menace.
+* User Education - Teaching users how to protect themselves from cyberattacks by informing them of risks, exploits, and external threats, and the skills needed to combat common attacks.
+* Career Development - Training of future cyber security professionals
+* Governance - Framework for managing performance and risk, oversight of compliance and control responsibilities, and defining the cyber mission by mapping the structure, authority, and processes to create an effective program.
+* Framework and Standard - Creation of new security frameworks and practices for professionals to follow.
+---
 # Interview Prep
 [Preparing for a Security Engineering Interview](https://tryhackme.com/r/resources/blog/security-engineer-interview-guide)
 * Research the company - Recent news articles & Glassdoor, investigate website, company values, specific security challenges
@@ -91,25 +102,3 @@ To ensure secure coding practices are followed, you would integrate security int
 To stay updated with evolving security regulations and ensure organisational compliance with GDPR or HIPAA, you should regularly monitor industry news, subscribe to relevant publications and mailing lists, attend conferences and workshops with cyber experts, and participate in professional networks!
 
 `Can you describe a specific security incident you've handled in the past? What were the key challenges you faced, and how did you resolve them?"
-
-# Job Domains
-* Security Architecture - Security design that addresses the requirements and potential risks of a given scenario or environment. 
-* Physical Security - Protection of personnel, hardware, software, networks, and data from physical actions and events that could cause serious loss or damage.
-* Risk Assessment - Analyzing what can go wrong, how likely it is to happen, what the potential consequences are, and how tolerable the identified risk is.
-* Security Operation - Process of identifying, containing, and remediating threats on behalf of a company or organization.
-* Threat Intelligence - Research and analysis of evidence-based knowledge regarding an existing or emerging menace.
-* User Education - Teaching users how to protect themselves from cyberattacks by informing them of risks, exploits, and external threats, and the skills needed to combat common attacks.
-* Career Development - Training of future cyber security professionals
-* Governance - Framework for managing performance and risk, oversight of compliance and control responsibilities, and defining the cyber mission by mapping the structure, authority, and processes to create an effective program.
-* Framework and Standard - Creation of new security frameworks and practices for professionals to follow.
-
-# Job Domains
-* Security Architecture - Security design that addresses the requirements and potential risks of a given scenario or environment. 
-* Physical Security - Protection of personnel, hardware, software, networks, and data from physical actions and events that could cause serious loss or damage.
-* Risk Assessment - Analyzing what can go wrong, how likely it is to happen, what the potential consequences are, and how tolerable the identified risk is.
-* Security Operation - Process of identifying, containing, and remediating threats on behalf of a company or organization.
-* Threat Intelligence - Research and analysis of evidence-based knowledge regarding an existing or emerging menace.
-* User Education - Teaching users how to protect themselves from cyberattacks by informing them of risks, exploits, and external threats, and the skills needed to combat common attacks.
-* Career Development - Training of future cyber security professionals
-* Governance - Framework for managing performance and risk, oversight of compliance and control responsibilities, and defining the cyber mission by mapping the structure, authority, and processes to create an effective program.
-* Framework and Standard - Creation of new security frameworks and practices for professionals to follow.

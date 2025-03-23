@@ -260,4 +260,3 @@ ls “PATH Variable” Exploit
 - [PentestGPT](https://github.com/GreyDGL/PentestGPT) - GPT-powered pentesting tool
 - [Offensive ML Playbook](https://wiki.offsecml.com/Welcome+to+the+Offensive+ML+Playbook) - TTP's on Offensive ML attacks
 - [AI/ML Exploits](https://github.com/protectai/ai-exploits)
-- 
