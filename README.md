@@ -11,7 +11,7 @@ A repository of useful resources for cybersecurity professionals
 * [Cybersec Cheat Sheets](https://github.com/hellmaster559/Cybersec-Cheat-Sheets/blob/09f47b126f086b1c56a0c4ac8abb5dedee8e1de1/README.md) - Huge cheatsheet resource for CTFs, Pentesting, General IT Security, Forensics, Incident Response, Cloud Security and more.
 * [Hak5 Ebook Resources](https://shop.hak5.org/collections/e-books)
 ## Web Tools
-* [Correct Horse Battery Staple]([Correct Horse Battery Staple](https://www.correcthorsebatterystaple.net/index.html) - Password Generator
+* [Correct Horse Battery Staple](https://www.correcthorsebatterystaple.net/index.html) - Password Generator
 * [Wayback Machine](https://web.archive.org/) - Access archived websites & bypass paywalls
 * [Online HTML Editor](https://onlinehtmleditor.dev/)
 * [DB-Fiddle](https://www.db-fiddle.com/) - Online query testing for MYSQL, PostgreSQL and SQLite
@@ -37,7 +37,7 @@ A repository of useful resources for cybersecurity professionals
 * [VulnHub](https://www.vulnhub.com/) - Huge collection of vulnerable VMs setup as challenges - Free
 * [Hack This Site](https://www.hackthissite.org/info/about) - Older resource (last updated 2016) for practising hacking - Free
 * [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) - Vulnerable online shop for testing - Free
-      *  [Pwning OWASP Juice Shop](https://pwning.owasp-juice.shop/) - Online book for pwning Juice Shop
+     * [Pwning OWASP Juice Shop](https://pwning.owasp-juice.shop/) - Online book for pwning Juice Shop
 * [Hack The Box](https://app.hackthebox.com/) - Penetration Testing Focus - Free & Paid
 * [TryHackMe](https://tryhackme.com/) - Penetration Testing Focus - Free & Paid
 * [PentesterLab](https://pentesterlab.com/) - Penetration Testing Focus - Free & Paid
@@ -79,8 +79,9 @@ A repository of useful resources for cybersecurity professionals
 * [2017UIUCTF Writeup](https://github.com/1337pwnie/ctf-writeups/tree/master/2017/UIUCTF)
 * [CTF-Katana](https://github.com/JohnHammond/ctf-katana) - GitHub repo of tools for use in CTFs
      * [Katana](https://github.com/JohnHammond/katana) - GitHub repo for Python script that automates search for low-hanging fruit in a CTF
+
 ## Random Links
-* [Creating a WiFi antenna from a Pringles Can](https://www.makeuseof.com/tag/how-to-make-a-wifi-antenna-out-of-a-pringles-can-nb/) - IN-DEPTH RESOURCE
+* [Creating a WiFi antenna from a Pringles Can](https://www.makeuseof.com/tag/how-to-make-a-wifi-antenna-out-of-a-pringles-can-nb/)
 * [Predictability of Android Unlock Patterns](https://arstechnica.com/information-technology/2015/08/new-data-uncovers-the-surprising-predictability-of-android-lock-patterns/amp/) & [Lock Patterns are not safe](https://www.androidauthority.com/lock-pattern-predictable-636267/)
 * [nwipe](https://en.m.wikipedia.org/wiki/Nwipe) - Secure File Destruction
 * [RedKey USB](https://redkeyusb.com/collections/data-wipe-tool)
@@ -90,6 +91,7 @@ A repository of useful resources for cybersecurity professionals
     * [Domain Search](https://haveibeenpwned.com/DomainSearch)
     * [Password Checker](https://haveibeenpwned.com/Passwords)
 * [“CyberSecure” rating label generator](https://cybersecure.eigenmagic.com/)
+
 ## Random Ideas
 * [Awesome-Hacking](https://github.com/rohankumardubey/awesome-hacking) - Huge list of hacking tools for hackers, pentesters & security researchers
 * Play with BadUSB
