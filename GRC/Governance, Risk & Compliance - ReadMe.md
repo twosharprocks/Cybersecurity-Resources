@@ -1,5 +1,4 @@
-# Governance, Risk & Compliance
-
+Governance, Risk & Compliance
 GRC is a framework for asking <span style="text-decoration:underline;">“What assets are most important?”</span> and <span style="text-decoration:underline;">“What is adequate protection?”</span>
 * <span style="text-decoration:underline;">Governance</span> - Creating management processes for implementing security practices across the organization. Codifying and enforcing proper behaviour and operations by establishing standards of “right” and “wrong”.
 * <span style="text-decoration:underline;">Risk Management</span> - Identifying an organization’s most important assets and determining how they might be compromised
@@ -62,21 +61,22 @@ NIST - [NIST Framework Documents](https://www.nist.gov/cyberframework/framework-
 SOC2 - [SOC for Service Organizations: Trust Services Criteria](https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report.html)
 South Australian Cyber Security Framework (SACSF) - [Overview (sa.gov)](https://www.dpc.sa.gov.au/responsibilities/protective-security-framework/cyber-security/the-sacsf)
 <span style="text-decoration:underline;">Australian Cyber Security Centre ([ACSC)](https://www.cyber.gov.au/)</span>
-* [Information Security Manual](https://www.cyber.gov.au/acsc/view-all-content/ism)
-* [Essential 8 Mitigation Strategies](https://www.cyber.gov.au/acsc/view-all-content/publications/essential-eight-maturity-model)
-1. Application Whitelisting/Application Control
-2. Application Patching
-3. Configure Office Macros
-4. Application Hardening
-5. Restrict Administrator Privileges
-6. Patch Operating Systems
-7. MFA
-8. Daily Backups
-* [Essential 8 Maturity Model](https://www.cyber.gov.au/acsc/view-all-content/publications/essential-eight-maturity-model)
-* <span style="text-decoration:underline;">Level Zero</span> - Weaknesses in the overall cyber security perimeter.
-* <span style="text-decoration:underline;">Level One</span> - Adversaries with minimal tradecraft and resources usually seeking an opportunity rather than a target. Using publicly available exploits, vulnerable systems and common social engineering techniques to gain entry and launch malicious applications.
-* <span style="text-decoration:underline;">Level Two</span> - A modest step-up in capability, these adversaries spend more time on a target as well as the effectiveness of their tools. Generally using similar techniques to a Level One, however spending far more time, money and effort in their attacking attempts.
-* <span style="text-decoration:underline;">Level Three</span> - The highest level of attacker doesn’t require public exploits and are much more adaptive. They can target even the slightest of weaknesses in cyber security perimeters, exploiting and bypassing security controls. Once gaining access, they seek privileged credentials and pivot to other parts of the network whilst continually covering traces of their activities.
+
+* [Information Security Manual (ISM)](https://www.cyber.gov.au/acsc/view-all-content/ism)
+* Essential 8 - [Mitigation Strategies](https://www.cyber.gov.au/acsc/view-all-content/publications/essential-eight-maturity-model)
+	1. Application Whitelisting/Application Control
+	2. Application Patching
+	3. Configure Office Macros
+	4. Application Hardening
+	5. Restrict Administrator Privileges
+	6. Patch Operating Systems
+	7. MFA
+	8. Daily Backups
+* Essential 8 - [Maturity Model](https://www.cyber.gov.au/acsc/view-all-content/publications/essential-eight-maturity-model)
+	* <span style="text-decoration:underline;">Level Zero</span> - Weaknesses in the overall cyber security perimeter.
+	* <span style="text-decoration:underline;">Level One</span> - Adversaries with minimal tradecraft and resources usually seeking an opportunity rather than a target. Using publicly available exploits, vulnerable systems and common social engineering techniques to gain entry and launch malicious applications.
+	* <span style="text-decoration:underline;">Level Two</span> - A modest step-up in capability, these adversaries spend more time on a target as well as the effectiveness of their tools. Generally using similar techniques to a Level One, however spending far more time, money and effort in their attacking attempts.
+	* <span style="text-decoration:underline;">Level Three</span> - The highest level of attacker doesn’t require public exploits and are much more adaptive. They can target even the slightest of weaknesses in cyber security perimeters, exploiting and bypassing security controls. Once gaining access, they seek privileged credentials and pivot to other parts of the network whilst continually covering traces of their activities.
 
 <span style="text-decoration:underline;">Contingency Planning for Business Continuity</span>
 Two types of breach
@@ -111,20 +111,6 @@ Disaster Recovery can also use <span style="text-decoration:underline;">Alternat
 * <span style="text-decoration:underline;">Hot Sites</span>: Ready at all times, equipment loaded with currently available data and can immediately continue operations. It is costly, but important for mission-critical data.
 * <span style="text-decoration:underline;">Cold Site:</span> Very little existing infrastructure. It is not typically used until after a disaster occurs, so there must be a strategy for setting it up quickly when the time comes.
 * <span style="text-decoration:underline;">Warm Site:</span> In-between, for example with servers, hardware, software, and other equipment set up but not loaded with the latest data.
-## Threat Modelling
-Threat Modelling Methologies
-* [PASTA - Process for Attack Simulation and Threat Analysis](https://threat-modeling.com/pasta-threat-modeling/) 
-    * Focuses on aligning considerations of business objectives with technical requirements.
-* [STRIDE - Spoofing, Tampering, Repudiation, Information Disclosure, DoS, Elevation](https://www.softwaresecured.com/stride-threat-modeling/)
-    * Focuses on identifying what can fail in the system being modelled.
-* [OWASP - Open Web Application Security Project](https://owasp.org/www-community/Threat_Modeling)
-    * Focuses on identifying possible threats, prioritizing risks, and planning mitigation strategies. It is mainly used with web and desktop applications.
-        * Determine assessment scope
-        * Identify threat agents.
-        * Identify potential attacks.
-        * Identify exploitable vulnerabilities.
-        * Prioritize identified risks.
-        * Mitigate risks.
 ## Risk Management
 <span style="text-decoration:underline;">Quantitative analysis</span> focuses on hard, numerical data.
 <span style="text-decoration:underline;">Qualitative analysis</span> focuses on things that cannot be measured through numerical data.
