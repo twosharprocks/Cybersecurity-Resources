@@ -1,19 +1,6 @@
 # Certification Guides
 [Cybersecurity Guide](https://cybersecurityguide.org/) - Comprehensive breakdown of every major security certification
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)
-
-Training & Certifications
-* [BurpSuite - PortSwigger Academy](https://portswigger.net/web-security)
-* Python - [Learn Python.org](https://www.learnpython.org/)
-	* [Automate with Python (Kindle)](https://www.amazon.com.au/Automate-Boring-Stuff-Python-Sweigart/dp/1593275994)
-    * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
-    * ***[Datacamp (Owned) - Python Programmer Track](https://app.datacamp.com/learn/career-tracks/python-programmer)
-    * [Stackskills (Owned) - Python3 Ethical Hacking](https://stackskills.com/courses/enrolled/1025194)
-    * [Stackskills (Owned) - Hacking with Python](https://stackskills.com/courses/enrolled/376387)
-    * [Stackskills (Owned) - Artificial Intelligence with Python (Book)](https://stackskills.com/courses/303786/lectures/4674836)
-    * [Kaggle (Owned) - Intro to Machine Learning (with Python)](https://www.kaggle.com/learn/intro-to-machine-learning)
-    * [Stackskills (Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
-    * [Stackskills (Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
 # ISC2 - CISSP
 Certified Information Systems Security Professional
 * **[CISSP](https://www.isc2.org/Certifications/CISSP)** - General Info
@@ -36,20 +23,8 @@ Certified Information Systems Security Professional
 	- Audiobook
 	- YouTube
 	- Practice Exams
-# Other Certs
-## CSU
-### Crowdstrike Certified Falcon Administrator (CCFA)
-- [Exam Guide (PDF)](https://www.crowdstrike.com/wp-content/uploads/2024/10/ccfa-certification-guide.pdf)
-### Crowdstrike Certified Falcon Responder (CCFR)
-- [Exam Guide (PDF)](https://assets.crowdstrike.com/is/content/crowdstrikeinc/CCFR_CertificationGuidepdf)
-### Crowdstrike Certified Falcon Hunter (CCFH)
-- [Exam Guide (PDF)](https://assets.crowdstrike.com/is/content/crowdstrikeinc/ccfh-certification-exam-guidepdf)
 
-## CREST - Registered Threat Intelligence Analyst
-- [General Info](https://www.crest-approved.org/skills-certifications-careers/crest-registered-threat-intelligence-analyst/) with reading list
-- [Syllabus](https://www.crest-approved.org/wp-content/uploads/2022/06/CREST-Registered-Threat-Intelligence-Analyst-Syllabus.pdf) & [Course Notes](https://www.crest-approved.org/wp-content/uploads/2022/06/CREST-Registered-Threat-Intelligence-Analyst-Examination-Notes-for-Candidates.pdf)
-- Pre-req: 2 Years Threat intel experience
-## CRISC
+# CRISC
 Certified in Risk and Information Systems Control
 - [Requirements for CRISC certification](https://support.isaca.org/s/article/What-are-the-requirements-to-become-CRISC-certified)
 	- Pass the CRISC Exam
@@ -64,7 +39,7 @@ Certified in Risk and Information Systems Control
 		- At least **three years of cumulative, professional-level work experience** in at least two of the four CRISC domains.
 		- At least one year of experience in either **IT Risk Identification** or **IT Risk Assessment**
 		- Experience must be verified and within the 10 years preceding the certification application or within five years after passing the exam.
-## IRAP Assessor
+# IRAP Assessor
 Information Security Registered Assessors Program
 - [ASD - Overview](https://www.cyber.gov.au/irap)
 - [How to become an IRAP Assessor](https://www.cyber.gov.au/resources-business-and-government/assessment-and-evaluation-programs/infosec-registered-assessors-program/who-are-irap-assessors)
@@ -76,3 +51,28 @@ Information Security Registered Assessors Program
 - When ASD has confirmed that the above requirements have been met, the individual can:
 	- attain a minimum NV1 security clearance (ASD will sponsor this if necessary), and
 	- submit a confidentiality deed. 
+
+---
+# Other Certs
+## CSU
+- Crowdstrike Certified Falcon Administrator (CCFA) [Exam Guide (PDF)](https://www.crowdstrike.com/wp-content/uploads/2024/10/ccfa-certification-guide.pdf)
+- Crowdstrike Certified Falcon Responder (CCFR) [Exam Guide (PDF)](https://assets.crowdstrike.com/is/content/crowdstrikeinc/CCFR_CertificationGuidepdf)
+- Crowdstrike Certified Falcon Hunter (CCFH) [Exam Guide (PDF)](https://assets.crowdstrike.com/is/content/crowdstrikeinc/ccfh-certification-exam-guidepdf)
+## CREST - Registered Threat Intelligence Analyst
+- [General Info](https://www.crest-approved.org/skills-certifications-careers/crest-registered-threat-intelligence-analyst/) with reading list
+- [Syllabus](https://www.crest-approved.org/wp-content/uploads/2022/06/CREST-Registered-Threat-Intelligence-Analyst-Syllabus.pdf) & [Course Notes](https://www.crest-approved.org/wp-content/uploads/2022/06/CREST-Registered-Threat-Intelligence-Analyst-Examination-Notes-for-Candidates.pdf)
+- Pre-req: 2 Years Threat intel experience
+
+---
+# Training
+* [BurpSuite - PortSwigger Academy](https://portswigger.net/web-security)
+* Python - [Learn Python.org](https://www.learnpython.org/)
+	* [Automate with Python (Kindle)](https://www.amazon.com.au/Automate-Boring-Stuff-Python-Sweigart/dp/1593275994)
+    * [10 Python Cybersecurity Projects - Beginner To Advanced](https://www.youtube.com/watch?v=kf1Zzcj2gV8&list=PLR0bgGon_WTJUGqvxr0reaqfpGd2ts29R&index=2)
+    * ***[Datacamp (Owned) - Python Programmer Track](https://app.datacamp.com/learn/career-tracks/python-programmer)
+    * [Stackskills (Owned) - Python3 Ethical Hacking](https://stackskills.com/courses/enrolled/1025194)
+    * [Stackskills (Owned) - Hacking with Python](https://stackskills.com/courses/enrolled/376387)
+    * [Stackskills (Owned) - Artificial Intelligence with Python (Book)](https://stackskills.com/courses/303786/lectures/4674836)
+    * [Kaggle (Owned) - Intro to Machine Learning (with Python)](https://www.kaggle.com/learn/intro-to-machine-learning)
+    * [Stackskills (Owned) - Deep Learning with Python](https://stackskills.com/courses/enrolled/122971)
+    * [Stackskills (Owned) - Python Deep Learning (Book)](https://stackskills.com/courses/enrolled/296315)
