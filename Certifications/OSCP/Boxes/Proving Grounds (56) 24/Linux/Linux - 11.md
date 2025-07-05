@@ -1,3 +1,4 @@
+Tags: [[OSCP]]
 # TJ Null - PG Play - 11
 - [ ] eLection1
 - [ ] Stapler

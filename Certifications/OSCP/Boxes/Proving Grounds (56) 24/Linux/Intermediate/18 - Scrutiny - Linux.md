@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-13
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -75,68 +76,68 @@ Service Info: Host:  onlyrands.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## ## Port 25 - SMTP (Postfix)
 - Created a list of potential email addresses (domain @onlyrands.com) in `usernames.txt` then ran `smtp-user-enum -U usernames.txt -t 192.168.215.91` to enumerate common SMTP usernames
-![[Pasted image 20241012223302.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012223302.png]]
 ## Port 80 - HTTP (nginx 1.18)
 - Navigated to `http://192.168.215.91:80`
-![[Pasted image 20241012220041.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012220041.png]]
 - Navigated to `http://192.168.215.91/teams.onlyrands.com`
-![[Pasted image 20241012220129.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012220129.png]]
 - Edited `/etc/hosts` file so `192.168.215.91  teams.onlyrands.com`
-![[Pasted image 20241012225008.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012225008.png]]
 - Navigated to `teams.onlyrands.com` and identified `TeamCity v2023.05.4`
-![[Pasted image 20241012225057.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012225057.png]]
 - Attempted password guessing with `admin:admin` & `admin:password`
-![[Pasted image 20241012225153.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012225153.png]]
 ---
 # Exploitation
 - Identified exploit `CVE-2024-27198-RCE.py` from [https://github.com/W01fh4cker/CVE-2024-27198-RCE/tree/main] - copied to local machine and ran `python3 /media/sf_Kali-Shared/Boxes/PG/Linux/Scrutiny/CVE-2024-27198-RCE.py -t http://teams.onlyrands.com` - Tested multiple commands without success
-![[Pasted image 20241013121540.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013121540.png]]
 - Logged into `teams.onlyrands.com` with credentials `cmnsjvgh:yhMNlvZ5b8` produced by exploit
-![[Pasted image 20241013120425.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013120425.png]]
 - Checked Freelancer builds and identified `id_rsa` removed from `Marco Tillman`
-![[Pasted image 20241013121744.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013121744.png]]
 - Identified and copied OPENSSH Private Key for user `marcot`
-![[Pasted image 20241013122333.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013122333.png]]
 - Used `ssh2john` to create `id_rsa.hash` of SSH private key then cracked with `john` to find credentials `marcot:cheer`
-![[Pasted image 20241013123033.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013123033.png]]
 - Ran `ssh -i id_rsa marcot@192.168.117.91` and logged in with credentials `marcot:cheer`
-![[Pasted image 20241013123201.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013123201.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Ran `cat /etc/passwd` to identify users
-![[Pasted image 20241013132000.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013132000.png]]
 - Navigated to `/home/freelancers` and identified 5th user `williamw`
-![[Pasted image 20241013123358.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013123358.png]]
 - Attempted access to other `/freelancers`
-![[Pasted image 20241013124426.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013124426.png]]
 - Ran `linpeas.sh`
-![[Pasted image 20241013124543.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013124543.png]]
 - Identified vulnerable to CVE-2021-2560
-![[Pasted image 20241013124522.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013124522.png]]
 - Identified Mail
-![[Pasted image 20241013125230.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013125230.png]]
 - Ran `find / -name local.txt -type f 2>/dev/null` to find & then printed `local.txt`
-![[Pasted image 20241013131143.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013131143.png]]
 - Ran `cat /var/mail/marcot` and identified credentials `matthewa:IdealismEngineAshen476`
-![[Pasted image 20241013125621.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013125621.png]]
 ## Lateral Movement vector
 - Used credentials `matthewa:IdealismEngineAshen476` to login via SSH
-![[Pasted image 20241013125808.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013125808.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Navigated to `~/` and ran `ls -lah` to view all file permissions
-![[Pasted image 20241013131626.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013131626.png]]
 - Identified hidden file `.~` and ran `cat .~` to view, identifying credentials `briand:RefriedScabbedWasting502`
-![[Pasted image 20241013131715.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013131715.png]]
 ## Privilege Escalation vector
 - Ran `su briand` with password `RefriedScabbedWasting502` to switch to user `briand` 
-![[Pasted image 20241013132209.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013132209.png]]
 - Ran `sudo -l` and identified no password required to run `/usr/bin/systemctl status teamcity-server.service` as `root`
-![[Pasted image 20241013132333.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013132333.png]]
 - Identified [GTFObins](https://gtfobins.github.io/gtfobins/systemctl/) for `systemctl` run as `sudo`. Ran `sudo /usr/bin/systemctl status teamcity-server.service` to start `teamcity-server.service` then `!sh` to establish shell as `root`
-![[Pasted image 20241013133645.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013133645.png]]
 - Ran `cat /root/proof.txt` to print `96a5b0fce4ac011046cd0406ec495da5`
 ---
 # Trophy & Loot

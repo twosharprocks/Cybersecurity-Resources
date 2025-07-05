@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-05
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -93,12 +94,12 @@ No enumeration conducted
 ## Port 80 - HTTP (nginx 1.18)
 - Navigated to `192.168.228.25:80` with FireFox 
   `403 Forbidden` for nginix/1.18.0
-![[Pasted image 20241005143137.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005143137.png]]
 ## Port 8082 - HTTP (Barracuda Web Server)
 - Navigated to `192.168.228.25:8082` with FireFox
   Default landing page for FuguHub, redirected to "set Administrator Account"
   Set admin account as `admin:password`
-  ![[Pasted image 20241005145539.png]]
+  ![[Cybersecurity-Resources/images/Pasted image 20241005145539.png]]
 ## Port 9999 - HTTP (Barracuda Web Server)
 No enumeration conducted
 
@@ -106,13 +107,13 @@ No enumeration conducted
 # Exploitation
 ## Malicious File Upload
 - Used newly set admin credentials to "Customize Server"
-![[Pasted image 20241005152459.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005152459.png]]
 - Added lsp payload to About page for reverse shell
-![[Pasted image 20241005155121.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005155121.png]]
 - Navigated to "About" page and caught reverse shell with Netcat listener
-![[Pasted image 20241005153942.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005153942.png]]
 - Attempted to print `proof.txt` in `/root` directory
-![[Pasted image 20241005155254.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005155254.png]]
 ---
 # Trophy & Loot
 `proof.txt` = `ffeee8550bcb0d874f6f01a7c072b9aa`

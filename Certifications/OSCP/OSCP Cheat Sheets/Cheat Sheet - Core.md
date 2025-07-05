@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 # Setup
 Create directories: `mkdir dc host1 host2`
 - Create sub directories: `mkdir enu loot files exploits`

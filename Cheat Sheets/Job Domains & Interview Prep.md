@@ -1,3 +1,6 @@
+Tags: [[Cyber]] [[Jobs]]
+
+---
 # Job Domains
 * Security Architecture - Security design that addresses the requirements and potential risks of a given scenario or environment. 
 * Physical Security - Protection of personnel, hardware, software, networks, and data from physical actions and events that could cause serious loss or damage.

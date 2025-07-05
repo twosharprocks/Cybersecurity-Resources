@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-21
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Easy
@@ -88,14 +89,14 @@ Host script results:
 # Enumeration
 ## Port 21 - FTP (Microsoft FTPD)
 - Ran `ftp 192.168.191.65` and accessed `FTP` service with `anonymous` login (no password)
-![[Pasted image 20241021203342.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021203342.png]]
 - Enumerated available directories and downloaded `/Logs/2020.05.12-administrative.log`
-![[Pasted image 20241021204417.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021204417.png]]
 - Ran `cat 2020.05.12-administrative.log` and identified username `admin` logging into `192.168.118.6`
-![[Pasted image 20241021204511.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021204511.png]]
 ## Port 80 - HTTP (Microsoft IIS)
 - Navigated to `http://192.168.191.65:80` and identified default page for `Microsoft IIS`
-![[Pasted image 20241021203154.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021203154.png]]
 
 ## Port 135 - MSRPC (Microsoft Windows RPC)
 No enumeration conducted
@@ -105,19 +106,19 @@ No enumeration conducted
 
 ## Port 9998 - HTTP (Microsoft IIS)
 - Navigated to `http://192.168.191.65:9998` and identified `SmarterMail`
-![[Pasted image 20241021202817.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021202817.png]]
 - Ran `gobuster dir -u http://192.168.191.65:9998 -w //usr/share/dirb/wordlists/big.txt` to identify any available web directories
-![[Pasted image 20241021203628.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021203628.png]]
 ---
 # Exploitation
 Ran `searchsploit SmarterMail` and identified exploit `49216.py` as potential initial access vector
-![[Pasted image 20241021205733.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021205733.png]]
 - Modified exploit `49216.py` to use target & local IP, and ran `nc -nvlp 80` to start netcat listener on port `80`
-![[Pasted image 20241021205915.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021205915.png]]
 - Ran `python3 49216.py` and caught reverse shell as `system` with netcat
-![[Pasted image 20241021210318.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021210318.png]]
 - Navigated to `C:\Users\Administrator\Desktop`, identified `proof.txt` and ran `type C:\Users\Administrator\Desktop\proof.txt` to print `1ab9224ec3c047b987a983a5d1e3c713`
-![[Pasted image 20241021210611.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241021210611.png]]
 
 ---
 # Trophy & Loot

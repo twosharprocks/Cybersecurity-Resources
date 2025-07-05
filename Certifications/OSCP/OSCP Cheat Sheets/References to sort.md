@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 OSCP [Exam Guide](https://help.offsec.com/hc/en-us/articles/360040165632-OSCP-Exam-Guide-Newly-Updated)
 
 OSCP Cheat Sheets

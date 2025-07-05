@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 # Links
 - PayloadAllTheThings https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master
 - Box Writeups https://0xdf.gitlab.io/

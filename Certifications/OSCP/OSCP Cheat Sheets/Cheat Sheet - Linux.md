@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 # Initial Access
 Launch Netcat Listener: `nc -nvlp 1234`
 Launch HTML server: `python3 -m http.server 80

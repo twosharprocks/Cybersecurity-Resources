@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-04
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -77,40 +78,40 @@ No enumeration conducted
 - Navigated to `192.168.210.23` to find Codologic default installation page
 	- Username "admin"
 	- CodoForum v5.1 has RCE vulnerability ([CVE-2022-31854](https://pentest-tools.com/vulnerabilities-exploits/codoforum-51-arbitrary-file-upload_3201))
-![[Pasted image 20241004095253.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004095253.png]]
 -  Found login page, tested credentials `admin:admin`, successfully logged in
-![[Pasted image 20241004100234.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004100234.png]]
 ---
 # Exploitation
 - Accessed admin panel at `http://192.168.210.23/admin/`
-![[Pasted image 20241004170724.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004170724.png]]
 - Modified Global settings to allow php upload
-![[Pasted image 20241004170818.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004170818.png]]
 - Started netcat listener: `nc -nvlp 4444`
 - Uploaded php with reverse shell to admin avatar
-![[Pasted image 20241004170930.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004170930.png]]
 - Caught reverse shell with netcat
-![[Pasted image 20241004171134.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004171134.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Enumerated passwd file with `cat /etc/passwd` to find `offsec` user
-![[Pasted image 20241004171329.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004171329.png]]
 - Checked binaries with `find / -perm -4000 2>/dev/null`
-![[Pasted image 20241004171606.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004171606.png]]
 - Uploaded & ran `linpeas.sh`
-![[Pasted image 20241004173444.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004173444.png]]
 - Found cleartext password `FatPanda123`
-![[Pasted image 20241004173345.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004173345.png]]
 ---
 # Privilege Escalation
 
 ## Privilege Escalation vector
 - Attempted to `su`to users `offsec` and `root` using password `FatPanda123`
-![[Pasted image 20241004173716.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004173716.png]]
 ---
 # Trophy & Loot
 - Navigated to `/root` and printed available txt files
-![[Pasted image 20241004174010.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241004174010.png]]
 `email2.txt` = `MTWlkW`
 `root.txt` = `bbe0a8834e7c29db8c1a2813c6907ba6`

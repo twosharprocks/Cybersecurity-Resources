@@ -1,3 +1,6 @@
+Tags: [[OSCP]] [[Cyber]]
+
+---
 In this article, you can find answers to the questions listed below:
 
 - [Exam report template](https://help.offsec.com/hc/en-us/articles/4412170923924-OSCP-Exam-FAQ#01HF79MCYA2J51F9EW5PC24D53) Word & Libre

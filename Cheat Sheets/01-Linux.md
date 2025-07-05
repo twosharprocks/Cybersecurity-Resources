@@ -1,3 +1,6 @@
+Tags: [[Cyber]]
+
+---
 # Bash
 [explainshell.com](https://explainshell.com/) - Lists out meaning of a line of script
 [Linux Command Resources](https://linuxcommand.org/lc3_resources.php) \[HUGE Resource with links to more\]

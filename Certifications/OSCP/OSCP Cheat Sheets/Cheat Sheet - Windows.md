@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 ## Quick Reference
 - `dir /s/b local.txt` - Usually `C:\` or `C:\users\username\desktop\`
 - `dir /s/b proof.txt` - Usually `C:\Users\Administrator\Desktop\`

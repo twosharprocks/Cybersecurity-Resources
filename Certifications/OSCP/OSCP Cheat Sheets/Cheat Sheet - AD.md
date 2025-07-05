@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 [HackTricks - AD Methodology](https://book.hacktricks.xyz/windows-hardening/active-directory-methodology)
 # Initial Access
 - `whoami`, `whoami /all` 

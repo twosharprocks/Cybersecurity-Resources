@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-05
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -94,47 +95,47 @@ No enumeration conducted
 ## Port 8000 - HTTP (Apache)
 - Navigated to `192.168.228.24:8000` with Firefox
 - Found login page, password guessed credentials `admin:admin`
-![[Pasted image 20241005111026.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005111026.png]]
 - Successfully logged in with `admin:admin` and identified Gerapy is version 0.9.7
-![[Pasted image 20241005112043.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005112043.png]]
 ---
 # Exploitation
 ## # CVE-2021-243857 (Authenticated RCE)
 - Attempted to run exploit `50640.py` against taregt with `admin:admin` credentials - exploit unsuccessful.
-![[Pasted image 20241005111905.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005111905.png]]
 - Identified [exploit requires atleast one "project" on platform](https://github.com/LongWayHomie/CVE-2021-43857) to work, so created & deployed `test project`;
-![[Pasted image 20241005112332.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005112332.png]]
 - Re-ran exploit `50640.py` successfully
-![[Pasted image 20241005113245.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005113245.png]]
 - Created bash reverse shell script on target to establish Full TTY
-![[Pasted image 20241005114213.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005114213.png]]
 - Caught shell with netcat listener of port `4545`
-![[Pasted image 20241005114255.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005114255.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Searched for users, sudo privileges & cronjobs
-![[Pasted image 20241005114632.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005114632.png]]
 - Checked `app` user's home directory, found `local.txt` flag
-![[Pasted image 20241005120125.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005120125.png]]
 - Downloaded `linpeas.sh` to target and executed
-![[Pasted image 20241005120531.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005120531.png]]
 - Identified Sudo version 1.9.9
 - Identified potentially vulnerable:
 	- CVE-2022-0847 (DirtyPipe)
 	- CVE-2017-5618 (Setuid screen)
 	- Python3.10 cap_setuid=ep
-	  ![[Pasted image 20241005122400.png]]
+	  ![[Cybersecurity-Resources/images/Pasted image 20241005122400.png]]
 ---
 # Privilege Escalation
 ## Privilege Escalation vector
 - Searched for file capabilities: `getcap -r / 2>/dev/null` & found `python3.10`
-![[Pasted image 20241005122541.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005122541.png]]
 - Searched [GTFObins for python capabilities](https://gtfobins.github.io/gtfobins/python/) & found privesc through cap_setuid
 - Ran python command; `/usr/bin/python3.10 -c 'import os; os.setuid(0); os.system("/bin/sh")'` for root access
-![[Pasted image 20241005122906.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005122906.png]]
 - Navigated to `/root` directory, found and printed `proof.txt`
-![[Pasted image 20241005123001.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241005123001.png]]
 ---
 # Trophy & Loot
 `local.txt` = `7359701ae43bc362a09bcf9b8c14e17e`

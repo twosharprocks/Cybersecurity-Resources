@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-09
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -63,32 +64,32 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache 2.4.41)
 - Navigated to `192.168.201.178:80` and identified ImageMagick
-![[Pasted image 20241009194802.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009194802.png]]
 - Attempted to "Upload and Identify" .jpg file, and received upload confirmation along with ImageMagick version (6.9.6-4)
 	- Identified [potential RCE exploit](https://github.com/overgrowncarrot1/ImageTragick_CVE-2023-34152) for this version [(CVE-2016-5118)](https://github.com/advisories/GHSA-6w95-mr48-gp8c)
-![[Pasted image 20241009200137.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009200137.png]]
 - Ran `gobuster dir -u  http://192.168.201.178 -w //usr/share/dirb/wordlists/big.txt` to try to identify other web directories
-![[Pasted image 20241009195235.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009195235.png]]
 ---
 # Exploitation
 ## Malicious File Upload
 - Ran `nc -nvlp 4444` to start NetCat listener on port `4444`
 - Created `.png` file with base64-encoded reverse shell in the filename
-![[Pasted image 20241009210327.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009210327.png]]
 - Uploaded file to `ImageMagick` web server
-![[Pasted image 20241009210359.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009210359.png]]
 - Caught reverse shell as `www-data` user
-![[Pasted image 20241009210445.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009210445.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Navigated to `/var/www` and printed `local.txt`
-![[Pasted image 20241009210850.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009210850.png]]
 ## Privilege Escalation vector
 - Ran `which strace` and `ls -lah /usr/bin/strace` to check `strace` privilege, finding SUID bit is set
-![[Pasted image 20241009211719.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009211719.png]]
 - Checked GTFObins to find `strace` with SUID bit set can be used for privilege escalation, and used it to achieve root
-![[Pasted image 20241009211835.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241009211835.png]]
 ---
 # Trophy & Loot
 `local.txt` = `8c86bb3b1bf55b83b43ad8a382009f33`

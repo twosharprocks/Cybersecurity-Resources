@@ -1,3 +1,6 @@
+Tags: [[OSCP]]
+
+---
 - phpInfo: Look for `Document_Root`
 - Wordpress https://sevenlayers.com/index.php/179-wordpress-plugin-reverse-shell
 

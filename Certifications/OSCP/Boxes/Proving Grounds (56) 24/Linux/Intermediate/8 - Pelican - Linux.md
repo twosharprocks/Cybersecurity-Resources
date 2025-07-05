@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-06
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -97,45 +98,45 @@ No enumeration conducted
 No enumeration conducted
 ## Port 8080/8081 - HTTP (Jetty 1.0/Nginx 1.14.2)
 - Attempted to access `http://192.168.228.98:8080` (Jetty 1.0)
-![[Pasted image 20241006165927.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006165927.png]]
 - Attempted to access `http://192.168.228.98:8081` (nginx 1.14.2)
   - Redirected to `http://192.168.228.98:8080/exhibitor/v1/ui/index.html`
-![[Pasted image 20241006170029.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006170029.png]]
   - Identified `Exhibitor v1.0` - vulnerable to command injection (CVE-2019-5029)
 ---
 # Exploitation
 ## Command Injection
 - Found potential exploit for Exhibitor v1.0 with Searchsploit (`EDB-ID 48654`)
 - Accessed Exhibitor config tab and added reverse shell to `java.env script`
-![[Pasted image 20241006172119.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006172119.png]]
 - Started Netcat listener on port `4444` and caught reverse shell
-![[Pasted image 20241006172211.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006172211.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Upgraded to full TTY: `python3 -c 'import pty; pty.spawn("/bin/bash")'`
 - Navigated to `charles` home directory and printed `local.txt`
-![[Pasted image 20241006172608.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006172608.png]]
 - Checked for other users: `cat /etc/passwd`
-![[Pasted image 20241006172753.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006172753.png]]
 - Checked sudo privilege: `sudo -l`
-![[Pasted image 20241006172859.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006172859.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Run `ps aux` to identify running processes
-![[Pasted image 20241006173841.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006173841.png]]
 - Identify process `513 -- /usr/bin/passwo` as likely `password-store` 
 - Run gcore as sudo against process 513 (core dump saved to `output` file)
-![[Pasted image 20241006174145.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006174145.png]]
 - Ran `strings core.513` on output file, and identified credentials 
   `root:ClogKingpinInning731`
-![[Pasted image 20241006174442.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006174442.png]]
 ## Privilege Escalation vector
 - Switched user to root with found credentials
-![[Pasted image 20241006174612.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006174612.png]]
 - Moved to `/root` directory and printed `proof.txt`
-![[Pasted image 20241006174804.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006174804.png]]
 ---
 # Trophy & Loot
 `local.txt` = `534c7b18e8c396fd0bee2fa3fdeef220`

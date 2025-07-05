@@ -1,3 +1,6 @@
+Tags: [[Cyber]]
+
+---
 # Networking
 **Network security** is the practices and policies used to protect and monitor a computer network’s resources against threats and risks.
 

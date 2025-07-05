@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-14
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -59,47 +60,47 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
 - Navigated to `http://192.168.164.28:80` and identified `Pluxml`
-![[Pasted image 20241015201118.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015201118.png]]
 	- Potentially vulnerable to CVE-2022-25018
 	- Potentially vulnerable to CVE-2024-22636
 - Ran `gobuster dir -u http://192.168.164.28 -w //usr/share/dirb/wordlists/big.txt` to identify other web directories
-![[Pasted image 20241015202159.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015202159.png]]
 - Navigated to `http://192.168.164.28:80/core/admin` then password guessed credentials `admin:admin` for administrator panel access
-![[Pasted image 20241015202114.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015202114.png]]
 
 ---
 # Exploitation
 - Navigated to "Static pages" (http://192.168.164.28/core/admin/statiques.php) and selected "Edit" for static page 001
-![[Pasted image 20241015202506.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015202506.png]]
 - Replaced PHP code with reverse shell script and saved page
-![[Pasted image 20241015202611.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015202611.png]]
 - Started netcat listener with `nc -nvlp 4444` then navigated to `http://192.168.164.28/index.php?static1/static-1` and caught reverse shell
-![[Pasted image 20241015202815.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015202815.png]]
 - Navigated to home directory of `www-data` and ran `cat /var/www/local.txt` to print `7d958bdaf701e8151b53669070f6cfc2`
-![[Pasted image 20241015203148.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015203148.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Ran `cat /etc/passwd` to identify any other users
-![[Pasted image 20241015202921.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015202921.png]]
 - Ran `sudo -l` and identified `www-data` requires password to run `sudo`
-![[Pasted image 20241015203301.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015203301.png]]
 - Downloaded `linpeas.sh` to target machine and ran `./linpeas.sh`
-![[Pasted image 20241015203811.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015203811.png]]
 - Identified files with interesting permissions
-![[Pasted image 20241015204733.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015204733.png]]
 - Identified interesting SGIDs
-![[Pasted image 20241015204815.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015204815.png]]
 - Interesting files in others home
-![[Pasted image 20241015205331.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015205331.png]]
 ## Privilege Escalation vector
 - Identified `exim4` as mail service, so navigated to `/var/mail` to check any available mail
-![[Pasted image 20241015211025.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015211025.png]]
 - Identified and viewed mail for user `www-data` with command `cat /var/mail/www-data`
-![[Pasted image 20241015211203.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015211203.png]]
 - Identified credentials `root:6s8kaZZNaZZYBMfh2YEW`
 - Ran `su root` to switch user to `root` with found credentials, and ran `cat /root/proof.txt` to print `cc1ebf8f904c8fcdc19afe9026e75ceb`
-![[Pasted image 20241015211356.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241015211356.png]]
 
 ---
 # Trophy & Loot

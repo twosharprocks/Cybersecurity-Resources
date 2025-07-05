@@ -1,5 +1,6 @@
 ---
 Date: 2024-08-31
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -98,15 +99,15 @@ Nmap done: 1 IP address (1 host up) scanned in 38.04 seconds
 ## Port 55 - NLnet Labs NSD
 ## Port 80 - HTTP (nginx 1.16.1)
 Mezzanine website
-![[Pasted image 20240831212036.png]]
+![[Cybersecurity-Resources/images/Pasted image 20240831212036.png]]
 Login page
-![[Pasted image 20240831212120.png]]
+![[Cybersecurity-Resources/images/Pasted image 20240831212120.png]]
 ## Port 4505 - ZeroMQ ZMTP 2.0 (SaltStack)
 ## Port 4506 -  ZeroMQ ZMTP 2.0 (SaltStack)
 ## Port 8000 - HTTP (Apache)
 `gobuster dir -u  http://192.168.222.62:8000 -w //usr/share/dirb/wordlists/common.txt
 ![[Pasted image 20240831200454.png]]`http:\\192.168.222.62:8000\index` (Same as `login` and `run`)
-![[Pasted image 20240831200636.png]]
+![[Cybersecurity-Resources/images/Pasted image 20240831200636.png]]
 # Exploitation
 ## Name of the technique
 https://github.com/Al1ex/CVE-2020-11652/blob/main/CVE-2020-11652.py

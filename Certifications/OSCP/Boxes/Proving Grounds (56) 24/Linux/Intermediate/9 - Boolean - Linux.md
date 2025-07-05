@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-07
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -70,43 +71,43 @@ PORT     STATE  SERVICE VERSION
 No enumeration conducted
 ## Port 80 - HTTP
 - Navigated to `http://192.168.137.231`, redirected to `http://192.168.137.231/login`
-![[Pasted image 20241007115750.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007115750.png]]
 - Ran `gobuster` to enumerate directories: `gobuster dir -u  http://192.168.137.231 -w //usr/share/dirb/wordlists/big.txt`
-![[Pasted image 20241007122544.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007122544.png]]
 - Used `gobuster` to further enumerate `filemaneger` directory with no results
-![[Pasted image 20241007122952.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007122952.png]]
 
 ---
 # Exploitation
 - Created user with credentials `offsec:password` & email `offsec@offsec.com`
-![[Pasted image 20241007120904.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007120904.png]]
 - Presented with email confirmation page, so tried changing email to `kali@offsec.com` & inspected request in Burpsuite, identifying `"confirmed":false,` in response
-![[Pasted image 20241007121135.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007121135.png]]
 - Modified request to include `&user%5Bconfirmed=True` and bypassed email confirmation
 Request (Burpsuite)
-![[Pasted image 20241007121404.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007121404.png]]
 Response (Browser)
-![[Pasted image 20241007121501.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007121501.png]]
 - Identified upload facility, so created reverse shell with MSFVenom
-![[Pasted image 20241007122001.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007122001.png]]
 - Successfully uploaded shell.php to target
-![[Pasted image 20241007122029.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007122029.png]]
 - File path: `http://192.168.137.231/?cwd=&file=shell.php&download=true`
 - Modified file path to `http://192.168.137.231/?cwd=&file=shell.php` - No change or shell established
 - Attempted directory traversal to `/etc/passwd` file: `http://192.168.137.231/?cwd=../../../../../../../../../etc/&file=passwd&download=true`
-![[Pasted image 20241007123838.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007123838.png]]
 - Identified user `remi`, and attempted to access user's `.ssh` directory: `http://192.168.137.231/?cwd=../../../../../../../home/remi&file=.ssh&download=true`
-![[Pasted image 20241007124641.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007124641.png]]
 - Identified `local.txt` and accessed `.ssh/keys`
-![[Pasted image 20241007124722.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007124722.png]]
 - Downloaded `root`, `id_rsa`, `id_rsa.1`, `id_rsa.2` SSH keys & attempted to crack password
-![[Pasted image 20241007125655.png]]![[Pasted image 20241007130100.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007125655.png]]![[Cybersecurity-Resources/images/Pasted image 20241007130100.png]]
 - Used `ssh-keygen` to generate an authorized key
-![[Pasted image 20241007134705.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007134705.png]]
 - Uploaded newly generated key `authorized_keys` to target
-![[Pasted image 20241007134727.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007134727.png]]
 - Used newly generated SSH key to login as `remi` user
-![[Pasted image 20241007134925.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007134925.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
@@ -115,11 +116,11 @@ Response (Browser)
 # Privilege Escalation
 ## Privilege Escalation vector
 - Navigated to previously identified `/.ssh/keys` to find `root` SSH key
-![[Pasted image 20241007141337.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007141337.png]]
 - Used SSH to switch to `root`: `ssh -i root root@127.0.0.1 -o IdentitiesOnly=yes`
-![[Pasted image 20241007141449.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007141449.png]]
 - Navigated to `/root` to find `proof.txt`
-![[Pasted image 20241007141603.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007141603.png]]
 ---
 # Trophy & Loot
 `local.txt` = `c31ba66829a7cf0167219e30ea8d0f4f`

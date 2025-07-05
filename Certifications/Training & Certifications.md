@@ -1,3 +1,6 @@
+Tags: [[OSCP]] [[Cyber]]
+
+---
 # Certification Guides
 [Cybersecurity Guide](https://cybersecurityguide.org/) - Comprehensive breakdown of every major security certification
 [Security Certification Roadmap](https://pauljerimy.com/security-certification-roadmap/)

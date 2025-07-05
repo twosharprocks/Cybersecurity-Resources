@@ -1,3 +1,6 @@
+Tags: [[OSCP]] [[Cyber]]
+
+---
 ProvingGrounds (very close to OSCP)
 - **PG Practice**: Structured, guided learning with focused challenges to teach specific skills.
 - **PG Play**: Open, unguided labs that simulate real-world penetration testing *(best for OSCP prep)*

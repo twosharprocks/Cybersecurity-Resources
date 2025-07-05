@@ -1,3 +1,6 @@
+Tags: [[Cyber]]
+
+---
 # Glossary
 
 * **Basic Service Set Identifier (BSSID)**: Used by a router to announce its MAC address in a beacon signal.
