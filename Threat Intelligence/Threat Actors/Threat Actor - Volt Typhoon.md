@@ -1,6 +1,6 @@
 Last Updated: 2025-04-07 {{}}
 Status: #In-Progress
-Tags: [[3 - Tags/Volt Typhoon|Volt Typhoon]]
+Tags: [[3 - Tags/Volt Typhoon|Volt Typhoon]], [[Threat Actor]], [[APT]], [[China]]
 # Volt Typhoon
 **Alternative Names**: 
 **Attribution**: 

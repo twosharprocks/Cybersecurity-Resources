@@ -1,6 +1,6 @@
-Last Updated: 2025-04-07 {{}}
+Last Updated: 2025-04-07
 Status: #In-Progress
-Tags: [[3 - Tags/EAGERBEE|EAGERBEE]]
+Tags: [[Cyber]] [[Threat Actor]] [[Threat Modelling]]
 # EAGERBEE
 **Alternative Names**: 
 **Attribution**: 

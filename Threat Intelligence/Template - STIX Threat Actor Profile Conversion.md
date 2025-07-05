@@ -1,4 +1,4 @@
-
+Tags: [[Cyber]] [[Threat Modelling]] [[Threat Actor]] 
 ## 1. Source Document Metadata (Not part of STIX, just for tracking)
 
 | Field              | Value                     |

@@ -1,6 +1,6 @@
 Last Updated: 2025-04-07 {{}}
 Status: #In-Progress
-Tags: [[3 - Tags/CodeFinger|CodeFinger]]
+Tags: [[Cyber]] [[Threat Modelling]] [[Threat Actor]]
 # CodeFinger
 **Alternative Names**: 
 **Attribution**: 

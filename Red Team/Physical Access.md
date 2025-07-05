@@ -1,3 +1,6 @@
+Tags: [[Cyber]], [[Pentesting]]
+
+---
 # Physical Attacks
 * [Youtube - I'll Let Myself In: Tactics of Physical Pen Testers](https://www.youtube.com/watch?v=rnmcRTnTNC8) - Deviant Ollam presenting at Wild West Hackin' Fest 2017
 * [UDemy - Physical Red Teaming](https://www.udemy.com/course/learn-physical-red-team-operations/?couponCode=OPPPOT42722) 

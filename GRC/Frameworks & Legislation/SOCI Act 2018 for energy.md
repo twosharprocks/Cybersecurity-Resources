@@ -1,3 +1,6 @@
+Tags: [[Cyber]], [[Cybersecurity-Resources/GRC/Frameworks & Legislation/SoCI Act]]
+
+---
 The legal obligations you have if you own, operate, or have direct interests in critical infrastructure assets are outlined in the [_Security of Critical Infrastructure Act 2018_ (SOCI Act)](https://www.legislation.gov.au/Series/C2018A00029). It also outlines how the government can support you if an incident occurs that impacts your critical infrastructure asset. 
 
 In the energy sector, responsible entities for all asset classes must comply with the obligation to notify data service providers. They must notify their third-party data storage or processing provider that the provider is storing or processing business critical data for a critical infrastructure asset.

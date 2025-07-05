@@ -1,3 +1,4 @@
+Tags: [[Cyber]], [[OSCP]], [[Pentesting]]
 # OSINT
 
 ## Easy Lookup

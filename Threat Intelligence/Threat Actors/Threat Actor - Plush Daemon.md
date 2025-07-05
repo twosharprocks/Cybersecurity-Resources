@@ -1,6 +1,6 @@
-Last Updated: 2025-04-07 {{}}
+Last Updated: 2025-04-07
 Status: #In-Progress
-Tags: [[]]
+Tags: [[Cyber]] [[Threat Modelling]] [[Threat Actor]]
 # Plush Daemon
 **Alternative Names**: 
 **Attribution**: 

@@ -1,3 +1,6 @@
+Tags: [[Cyber]]
+
+---
 # Cybersecurity Resources
 A repository of useful resources for cybersecurity professionals
 ## Quick References

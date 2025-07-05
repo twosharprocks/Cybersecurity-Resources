@@ -1,3 +1,6 @@
+Tags: [[Cyber]] [[AI]]
+
+---
 [GitHub Page](https://github.com/danielmiessler/fabric) 
 # Basics
 Using Fabric: `input | fabric options -sp pattern_name |save "File Name"`

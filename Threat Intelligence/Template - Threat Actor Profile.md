@@ -1,6 +1,6 @@
 Last Updated: {{date}} {{}}
 Status: #In-Progress
-Tags: [[]]
+Tags: [[Cyber]] [[Threat Modelling]] [[Threat Actor]]
 # {{Title}}
 **Alternative Names**: 
 **Attribution**: 

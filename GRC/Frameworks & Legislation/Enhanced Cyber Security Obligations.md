@@ -1,6 +1,7 @@
+Tags: [[Cyber]], [[Cybersecurity-Resources/GRC/Frameworks & Legislation/SoCI Act]] 
+
+---
 ## Enhanced Cyber Security Obligations
-
-
 
 ## Systems of National Significance (SoNS)  
 

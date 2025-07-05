@@ -1,3 +1,5 @@
+Tags: [[Cyber]],
+
 The _Security of Critical Infrastructure Act 2018_ (the SOCI Act) limits the use and disclosure of protected information as defined within the Act. Protected information includes information obtained in the course of exercising powers, or performing duties or functions under the SOCI Act. It also includes key documents such as a critical infrastructure risk management program. It is an offence to use or disclose protected information unless authorised.
 
 Importantly, the phrase “protected information” under the SOCI Act is different from the PROTECTED security classification under the Australian Government’s Protective Security Policy Framework (PSPF).

@@ -1,3 +1,4 @@
+#[[Scripts]]
 import subprocess
 import shlex
 

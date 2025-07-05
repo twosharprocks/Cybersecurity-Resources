@@ -1,3 +1,6 @@
+Tags: [[Cyber]], [[Cybersecurity-Resources/GRC/Frameworks & Legislation/SoCI Act]] [[SOCI (2024).pdf]] [[SOCI Act 2018 for energy]]
+
+---
 ## Overview
 
 The [_Security of Critical Infrastructure Act 2018_ (the SOCI Act).](https://www.legislation.gov.au/Series/C2018A00029) outlines the legal obligations you have if you own, operate, or have direct interests in critical infrastructure assets. The SOCI Act also outlines how the government can support you if an incident occurs that impacts your critical infrastructure asset.  

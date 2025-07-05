@@ -1,6 +1,6 @@
 Last Updated: 2025-04-07
 Status: #Complete
-Tags: [[RaaS]] [[Russia]] [[Criminal]] [[Ransomware]] [[Conti]] [[BlackBasta]] [[Grep]]
+Tags: [[RaaS]] [[Russia]] [[Criminal]] [[Ransomware]] [[Conti]] [[BlackBasta]] [[Grep]], [[Cyber]] [[Threat Modelling]]
 # HellCat
 **Alternative Names**: No widely known aliases
 **Attribution**: Cybercriminal, likely Russian-speaking ransomware group with connections to underground forums.

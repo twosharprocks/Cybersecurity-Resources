@@ -1,3 +1,4 @@
+#AI-content #[[Scripts]]
 import re
 import chardet
 

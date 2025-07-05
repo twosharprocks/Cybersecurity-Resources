@@ -1,3 +1,5 @@
+Tags: [[Cyber]], [[GRC]] 
+
 Governance, Risk & Compliance
 GRC is a framework for asking <span style="text-decoration:underline;">“What assets are most important?”</span> and <span style="text-decoration:underline;">“What is adequate protection?”</span>
 * <span style="text-decoration:underline;">Governance</span> - Creating management processes for implementing security practices across the organization. Codifying and enforcing proper behaviour and operations by establishing standards of “right” and “wrong”.

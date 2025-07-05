@@ -1,5 +1,5 @@
 Status: #AI-Content #In-Progress 
-Tags: [[Incidents]]
+Tags: [[Incidents]] [[Cyber]] [[Salt Typhoon]]
 ### Salt Typhoon Attacks on U.S. Telecom Infrastructure (2024)
 
 Reconnaissance & Weaponization: The Chinese state-sponsored hacking group Salt Typhoon identified vulnerabilities in major U.S. telecommunications networks.  
