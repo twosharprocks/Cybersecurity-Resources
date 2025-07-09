@@ -1,6 +1,6 @@
 Last Updated: 2025-04-07 {{}}
 Status: #In-Progress
-Tags: [[3 - Tags/Salt Typhoon|Salt Typhoon]] [[Cyber]] [[Threat Modelling]] [[Threat Actor]]
+Tags: [[Cyber]] [[Threat Modelling]] [[Threat Actor]]
 # Salt Typhoon
 **Alternative Names**: 
 **Attribution**: 

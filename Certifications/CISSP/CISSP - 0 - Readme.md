@@ -9,14 +9,14 @@ Sample Exams
 - [ThorTeaches](https://thorteaches.com/cissp/) - Range ($ 225/year), Hard-only ($ 120/year)
 
 Domains
-[[CISSP - 1 - Security & Risk Management]]
-[[CISSP - 2 - Asset Security]]
-[[CISSP - 3 - Security Architecture & Engineering]]
-[[CISSP - 4 - Communication & Network Security]]
-[[CISSP - 5 - Identity & Access Management (IAM)]]
-[[CISSP - 6 - Security Assessment & Testing]]
-[[CISSP - 7 - Security Operations]]
-[[CISSP - 8 - Software Development Security]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 1 - Security & Risk Management]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 2 - Asset Security]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 3 - Security Architecture & Engineering]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 4 - Communication & Network Security]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 5 - Identity & Access Management (IAM)]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 6 - Security Assessment & Testing]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 7 - Security Operations]]
+[[Cybersecurity-Resources/Certifications/CISSP/CISSP - 8 - Software Development Security]]
 
 ---
 # References
