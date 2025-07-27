@@ -1,4 +1,4 @@
-Tags: [[Cyber]] [[CISSP]]
+Tags: [[Cyber]] [[CISSP Study]]
 Reference: [CISSP 7th Edition - Self-paced Training](https://isc2.obrizum.io/org/cissp)
 
 Sample Exams

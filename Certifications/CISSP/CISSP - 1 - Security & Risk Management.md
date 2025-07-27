@@ -1,5 +1,5 @@
 Status: #tree
-Tags: [[CISSP]] [[Cyber]]
+Tags: [[CISSP Study]] [[Cyber]]
 Reference: https://cissprep.net/domain-1-security-and-risk-management/
 
 ---

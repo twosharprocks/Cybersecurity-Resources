@@ -1,6 +1,6 @@
 2025-04-14 15:22
 Status: #seed
-Tags: [[CISSP]] [[Cyber]]
+Tags: [[CISSP Study]] [[Cyber]]
 Reference: 
 
 ---
